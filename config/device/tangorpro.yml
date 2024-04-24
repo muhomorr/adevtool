@@ -1,5 +1,6 @@
 device:
   name: tangorpro
+  has_cellular: false
 
 platform:
   product_makefile: device/google/tangorpro/aosp_tangorpro.mk

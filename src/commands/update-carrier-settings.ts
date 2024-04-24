@@ -33,11 +33,15 @@ export default class UpdateCarrierSettings extends Command {
       devices,
       false,
       async config => {
-        const buildId = flags.buildId !== undefined ? flags.buildId : config.device.build_id
-        const outDir = path.join(flags.out, config.device.name)
-        const updateConfig = await fetchUpdateConfig(config.device.name, buildId, flags.debug)
-        if (flags.debug) console.log(updateConfig)
-        await downloadAllConfigs(updateConfig, outDir, flags.debug)
+        if (config.device.has_cellular) {
+          const buildId = flags.buildId !== undefined ? flags.buildId : config.device.build_id
+          const outDir = path.join(flags.out, config.device.name)
+          const updateConfig = await fetchUpdateConfig(config.device.name, buildId, flags.debug)
+          if (flags.debug) console.log(updateConfig)
+          await downloadAllConfigs(updateConfig, outDir, flags.debug)
+        } else {
+          this.log(`${config.device.name} is not supported due to lack of mobile connectivity`)
+        }
       },
       config => `${config.device.name} ${flags.buildId !== undefined ? flags.buildId : config.device.build_id}`,
     )

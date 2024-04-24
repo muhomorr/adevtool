@@ -30,6 +30,7 @@ export interface DeviceConfig {
     kernel_repo_url: string
     build_id: string
     prev_build_id: string
+    has_cellular: boolean
     // ignored when undefined
     platform_security_patch_level_override?: string
   }
