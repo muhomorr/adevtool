@@ -82,10 +82,10 @@ overlays/vendor_android/res: dir
 overlays/vendor_android/res/values: dir
 overlays/vendor_android/res/values/values.xml: 759439ad2351ac6706a88dd7f24484760f1d05df854c2ecf260fe606b551dd07
 proprietary: dir
-proprietary-files.txt: 757f6a6655569028d8573bfae73b4010c920ef0329e631ba659a2caf4f0333fc
+proprietary-files.txt: 46fb658573d20db2a591c7973587ef067dc747f50404d1c96942e816c486d371
 proprietary/Android.bp: e0f6ac6eb82f9a72378e943ba9574b9b85bbaf10dcd3faf5e9c6fdeffa3b1239
 proprietary/BoardConfigVendor.mk: 9dddc2b94d6c6f9607108ed06822d9689452f10927d6904571a8129328b4dfbf
-proprietary/device-vendor.mk: 185b51f9659bbd4ee689cca47aaeec23e36ada5facdd557c0dc5bc87d602b8f5
+proprietary/device-vendor.mk: 73b49001dd9a19c087c2cd2b8530d9884e73db3700344307cbce1ec431ba9a47
 proprietary/linker-config-adevtool.json: 6b3c6b57416c259790eb479ca3bf9575437bc060fd7439a96b2826785f73bcfc
 proprietary/product: dir
 proprietary/product/etc: dir
@@ -447,7 +447,6 @@ proprietary/product/etc/permissions/features-verizon.xml: b58610f3121b60663011ae
 proprietary/product/etc/sysconfig: dir
 proprietary/product/etc/sysconfig/allowlist_com.shannon.imsservice.xml: 53d05e05ada38d8a299292aa788bdae3da9435ce14cb501a6277abbc64f70700
 proprietary/product/etc/sysconfig/pixel_experience_2023.xml: b718483c769e308fb5790de6b01c055be40d86d783e22916c1fe49ee01c5cc12
-proprietary/product/etc/sysconfig/preinstalled-packages-product-pixel-2023-and-newer.xml: e19bf30fdb4a490b0a4fa61f15c108d8d6bb3d2f950292a7f466c3a1dcc32894
 proprietary/product/lib64: dir
 proprietary/product/lib64/libdmengine.so: 9d86542bd613e068348419b3f627518a3ba6bb99d4e15a1d2e2a214e174897e3
 proprietary/product/lib64/libdmjavaplugin.so: a6a088f58f6685584e2207fb9ef353ceb57c59bee17b480980fd52260e7db7f9

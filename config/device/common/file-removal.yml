@@ -54,10 +54,6 @@ filters:
       - product/etc/sysconfig/pixel_experience_2022_midyear.xml
       - product/etc/sysconfig/pixel_tablet_experience_2023.xml
       - product/etc/sysconfig/pixel_experience_2023_midyear.xml
-      - product/etc/sysconfig/preinstalled-packages-product-pixel-2017-and-newer.xml
-      - product/etc/sysconfig/preinstalled-packages-product-pixel-2018-and-newer.xml
-      - product/etc/sysconfig/preinstalled-packages-product-pixel-2019-and-newer.xml
-      - product/etc/sysconfig/preinstalled-packages-product-pixel-2022-and-newer.xml
       - product/etc/sysconfig/quick_tap.xml
       - product/framework/com.google.android.dialer.support.jar
       - system/etc/permissions/privapp-permissions-google.xml
@@ -122,6 +118,7 @@ filters:
       - product/etc/permissions/com.android.sdm.plugins.sprintdm.xml
       - product/etc/permissions/com.android.sdm.plugins.usccdm.xml
       - product/etc/permissions/com.customermobile.preload.vzw.xml
+      - product/etc/permissions/com.google.android.apps.pixel.familyspace.xml
       - product/etc/permissions/com.google.android.odad.xml
       - product/etc/permissions/com.google.omadm.trigger.xml
       - product/etc/permissions/com.verizon.apn.xml
@@ -225,6 +222,7 @@ filters:
       # "Google Play Services for AR", com.google.ar.core
       - product/app/arcore/
       - product/app/talkback/
+      - product/etc/sysconfig/preinstalled-packages-product-pixel-20
       - product/priv-app/AdaptiveVPNPrebuilt
       - product/priv-app/AICorePrebuilt/
       - product/priv-app/AiWallpapers/
@@ -267,6 +265,7 @@ filters:
       - product/priv-app/Dreamliner
       # appeared in 14 QPR2 on Pixel Tablet, com.google.android.apps.pixel.ensemble
       - product/priv-app/EnsemblePrebuilt-stub/
+      - product/priv-app/FamilySpacePrebuilt/
       - product/priv-app/FilesPrebuilt/
       # "Google Connectivity Services", https://play.google.com/store/apps/details?id=com.google.android.apps.gcs
       - product/priv-app/GCS/

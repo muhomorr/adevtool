@@ -36,16 +36,6 @@ android_app_import {
 }
 
 android_app_import {
-    name: "FamilySpacePrebuilt",
-    owner: "google_devices",
-    apk: "product/priv-app/FamilySpacePrebuilt/FamilySpacePrebuilt.apk",
-    certificate: "platform",
-    privileged: true,
-    dex_preopt: { enabled: false },
-    product_specific: true,
-}
-
-android_app_import {
     name: "PixelCameraServices",
     owner: "google_devices",
     apk: "product/priv-app/PixelCameraServices/PixelCameraServices.apk",
