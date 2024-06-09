@@ -14,6 +14,7 @@ import {
   COLLECTED_SYSTEM_STATE_DIR,
   VENDOR_MODULE_SKELS_DIR,
   VENDOR_MODULE_SPECS_DIR,
+  CARRIER_SETTINGS_VENDOR_DIR,
 } from '../config/paths'
 import { forEachDevice } from '../frontend/devices'
 import {
@@ -45,7 +46,7 @@ import {
 } from '../util/file-tree-spec'
 import { exists, listFilesRecursive, withTempDir } from '../util/fs'
 import { spawnAsync } from '../util/process'
-import { getVersionsMap } from '../blobs/carrier'
+import { decodeConfigs, getVersionsMap } from '../blobs/carrier'
 
 const doDevice = (
   dirs: VendorDirectories,
@@ -312,7 +313,7 @@ export default class GenerateFull extends Command {
 
         if (!flags.doNotReplaceCarrierSettings) {
           const srcCsDir = path.join(CARRIER_SETTINGS_DIR, config.device.name)
-          const dstCsDir = path.join(vendorDirs.proprietary, 'product/etc/CarrierSettings')
+          const dstCsDir = getCarrierSettingsVendorDir(vendorDirs)
           if (await exists(srcCsDir)) {
             this.log(chalk.bold(`Updating carrier settings from ${srcCsDir}`))
             const srcVersions = await getVersionsMap(srcCsDir)
@@ -339,6 +340,10 @@ export default class GenerateFull extends Command {
           let cpSkelPromise = copyVendorSkel(vendorDirs, config)
           await writeVendorFileTreeSpec(vendorDirs, config)
           await cpSkelPromise
+          await decodeConfigs(
+            getCarrierSettingsVendorDir(vendorDirs),
+            path.join(getVendorModuleSkelDir(config), 'proprietary', CARRIER_SETTINGS_VENDOR_DIR),
+          )
         } else {
           try {
             await compareToReferenceFileTreeSpec(vendorDirs, config)
@@ -479,6 +484,10 @@ function getVendorModuleTreeSpecFile(config: DeviceConfig) {
 
 function getVendorModuleSkelDir(config: DeviceConfig) {
   return path.join(VENDOR_MODULE_SKELS_DIR, config.device.vendor, config.device.name)
+}
+
+function getCarrierSettingsVendorDir(dirs: VendorDirectories) {
+  return path.join(dirs.proprietary, CARRIER_SETTINGS_VENDOR_DIR)
 }
 
 // soong detects .bp, .mk files everywhere in OS checkout dir, add '.skip' suffix to the ones in vendor-skels/ dir
