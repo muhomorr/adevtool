@@ -3,6 +3,7 @@ filters:
     prefix:
       - DockSetup_
       # these overlays are for packages that are not shipped
+      - DeviceDiagnostics
       - Flipendo
       - GoogleDeviceLockControllerOverlay
       - GoogleHealthConnectOverlay
@@ -143,6 +144,11 @@ filters:
       - android:string/config_defaultContentCaptureService
       - android:string/config_defaultContentProtectionService
       - android:string/config_defaultContentSuggestionsService
+      # config for VoiceInteractionManagerService, setup for com.google.android.googlequicksearchbox
+      - android:string/config_defaultContextualSearchEnabled
+      - android:string/config_defaultContextualSearchKey
+      - android:string/config_defaultContextualSearchLegacyEnabled
+      - android:string/config_defaultContextualSearchPackageName
       # com.google.android.gms/.auth.api.credentials.credman.service.RemoteService
       - android:string/config_defaultCredentialManagerHybridService
       - android:string/config_defaultDialer
@@ -175,6 +181,8 @@ filters:
       - android:string/config_defaultSystemCaptionsService
       - android:string/config_defaultTextClassifierPackage
       - android:string/config_defaultTranslationService
+      # com.google.android.gms
+      - android:string/config_defaultWallet
       - android:string/config_defaultWallpaperEffectsGenerationService
       - android:string/config_defaultWellbeingPackage
       - android:string/config_deviceConfiguratorPackageName
@@ -188,6 +196,8 @@ filters:
       - android:string/config_helpPackageNameValue
       - android:string/config_incidentReportApproverPackage
       - android:string/config_loggable_dream_prefix
+      # com.google.android.gms/.identitycredentials.ui.CredentialChooserActivity
+      - android:string/config_oemCredentialManagerDialogComponent
       - android:string/config_persistentDataPackageName
       - android:string/config_powerSaveModeChangedListenerPackage
       - android:string/config_primaryLocationTimeZoneProviderPackageName
@@ -238,6 +248,7 @@ filters:
       - com.android.providers.telephony:string/apn_source_service
       - com.android.server.telecom:string/call_diagnostic_service_package_name
       - com.android.server.telecom:string/dialer_default_class
+      - com.android.settings:bool/config_advanced_vpn_enabled
       - com.android.settings:bool/config_auto_rotate_face_detection_available
       - com.android.settings:bool/config_nfc_detection_point
       - com.android.settings:bool/config_show_communal_settings
@@ -256,6 +267,7 @@ filters:
       - com.android.settings:string-array/slice_allowlist_package_names
       # "Google Assistant"
       - com.android.systemui.accessibility.accessibilitymenu:string/assistant_utterance
+      - com.android.systemui:bool/config_pixel_vpn_enabled
       - com.android.systemui:bool/config_touch_context_enabled
       - com.android.systemui:bool/config_wlc_support_enabled
       - com.android.systemui:integer/config_keyguardRefreshRate
