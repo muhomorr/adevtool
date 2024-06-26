@@ -8,7 +8,13 @@ import { createVendorDirs, VendorDirectories } from '../blobs/build'
 import { copyBlobs } from '../blobs/copy'
 import { BlobEntry } from '../blobs/entry'
 import { DEVICE_CONFIG_FLAGS, DeviceBuildId, DeviceConfig, getDeviceBuildId, loadDeviceConfigs } from '../config/device'
-import { ADEVTOOL_DIR, COLLECTED_SYSTEM_STATE_DIR, VENDOR_MODULE_SKELS_DIR, VENDOR_MODULE_SPECS_DIR } from '../config/paths'
+import {
+  ADEVTOOL_DIR,
+  CARRIER_SETTINGS_DIR,
+  COLLECTED_SYSTEM_STATE_DIR,
+  VENDOR_MODULE_SKELS_DIR,
+  VENDOR_MODULE_SPECS_DIR,
+} from '../config/paths'
 import { forEachDevice } from '../frontend/devices'
 import {
   enumerateFiles,
@@ -39,6 +45,7 @@ import {
 } from '../util/file-tree-spec'
 import { exists, listFilesRecursive, withTempDir } from '../util/fs'
 import { spawnAsync } from '../util/process'
+import { getVersionsMap } from '../blobs/carrier'
 
 const doDevice = (
   dirs: VendorDirectories,
@@ -220,6 +227,10 @@ export default class GenerateFull extends Command {
         'update vendor module FileTreeSpec in vendor-specs/ instead of requiring it to be equal to the reference (current) spec',
     }),
 
+    doNotReplaceCarrierSettings: flags.boolean({
+      description: `do not replace carrier settings with updated ones from ${CARRIER_SETTINGS_DIR}`,
+    }),
+
     ...WRAPPED_SOURCE_FLAGS,
     ...DEVICE_CONFIG_FLAGS,
   }
@@ -297,6 +308,31 @@ export default class GenerateFull extends Command {
           // TODO: extract these files from bootloader.img instead of from full OTA image
           let cmd = path.join(ADEVTOOL_DIR, 'external/extract_android_ota_payload/extract_android_ota_payload.py')
           await spawnAsync(cmd, [otaPath!, vendorDirs.firmware])
+        }
+
+        if (!flags.doNotReplaceCarrierSettings) {
+          const srcCsDir = path.join(CARRIER_SETTINGS_DIR, config.device.name)
+          const dstCsDir = path.join(vendorDirs.proprietary, 'product/etc/CarrierSettings')
+          if (await exists(srcCsDir)) {
+            this.log(chalk.bold(`Updating carrier settings from ${srcCsDir}`))
+            const srcVersions = await getVersionsMap(srcCsDir)
+            const dstVersions = await getVersionsMap(dstCsDir)
+            for await (let file of listFilesRecursive(srcCsDir)) {
+              if (path.extname(file) !== '.pb') {
+                continue
+              }
+              const carrier = path.parse(file).name
+              let destFile = path.join(dstCsDir, path.basename(file))
+              const srcVer = srcVersions.has(carrier) ? (srcVersions.get(carrier) as number) : 0
+              const dstVer = dstVersions.has(carrier) ? (dstVersions.get(carrier) as number) : 0
+              if (srcVer < dstVer) {
+                console.log(`skipping copying ${file} due to older version (${srcVer}<${dstVer})`)
+                continue
+              }
+              await fs.rm(destFile, { force: true })
+              await fs.copyFile(file, destFile)
+            }
+          }
         }
 
         if (flags.updateSpec) {
