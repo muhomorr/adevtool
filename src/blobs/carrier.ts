@@ -139,7 +139,7 @@ export async function decodeConfigs(cfgPath: string, outDir: string) {
       if (path.extname(file) != '.pb') {
         continue
       }
-      const filename = path.parse(file).name
+      const filename = path.parse(file).name + '.textproto'
       const args: string[] = ['--proto_path', PROTO_PATH, '--decode']
       switch (filename) {
         case 'others':

@@ -15,6 +15,7 @@ import {
   VENDOR_MODULE_SKELS_DIR,
   VENDOR_MODULE_SPECS_DIR,
   CARRIER_SETTINGS_VENDOR_DIR,
+  OS_CHECKOUT_DIR,
 } from '../config/paths'
 import { forEachDevice } from '../frontend/devices'
 import {
@@ -29,7 +30,8 @@ import {
   PropResults,
   resolveOverrides,
   resolveSepolicyDirs,
-  updatePresigned, writeEnvsetupCommands,
+  updatePresigned,
+  writeEnvsetupCommands,
 } from '../frontend/generate'
 import { writeReadme } from '../frontend/readme'
 import { DeviceImages, prepareDeviceImages, WRAPPED_SOURCE_FLAGS, wrapSystemSrc } from '../frontend/source'
@@ -178,10 +180,7 @@ const doDevice = (
       ),
     )
 
-    await Promise.all([
-      writeEnvsetupCommands(config, dirs),
-      writeReadme(config, dirs, propResults),
-    ])
+    await Promise.all([writeEnvsetupCommands(config, dirs), writeReadme(config, dirs, propResults)])
   })
 
 export default class GenerateFull extends Command {
@@ -315,7 +314,7 @@ export default class GenerateFull extends Command {
           const srcCsDir = path.join(CARRIER_SETTINGS_DIR, config.device.name)
           const dstCsDir = getCarrierSettingsVendorDir(vendorDirs)
           if (await exists(srcCsDir)) {
-            this.log(chalk.bold(`Updating carrier settings from ${srcCsDir}`))
+            this.log(chalk.bold(`Updating carrier settings from ${path.relative(OS_CHECKOUT_DIR, srcCsDir)}`))
             const srcVersions = await getVersionsMap(srcCsDir)
             const dstVersions = await getVersionsMap(dstCsDir)
             for await (let file of listFilesRecursive(srcCsDir)) {
@@ -420,7 +419,9 @@ async function compareToReferenceFileTreeSpec(vendorDirs: VendorDirectories, con
 
   if (cmp.numDiffs() != 0) {
     console.log('\n')
-    throw new Error(`Vendor module for ${config.device.name} doesn't match its FileTreeSpec in ${getVendorModuleTreeSpecFile(config)}.
+    throw new Error(`Vendor module for ${
+      config.device.name
+    } doesn't match its FileTreeSpec in ${getVendorModuleTreeSpecFile(config)}.
 To update it, use the --${GenerateFull.flags.updateSpec.name} flag.`)
   }
 }
