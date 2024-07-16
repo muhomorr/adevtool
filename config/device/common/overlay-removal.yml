@@ -75,6 +75,7 @@ filters:
       - android:bool/config_sendPackageName
       - android:bool/config_showGesturalNavigationHints
       - android:bool/config_smart_battery_available
+      - android:bool/config_useGnssHardwareProvider
       - android:bool/config_volumeAdjustmentForRemoteGroupSessions
       - android:bool/config_volumeHushGestureEnabled
       - android:drawable/ic_safety_protection
@@ -191,6 +192,7 @@ filters:
       - android:string/config_deviceProvisioningPackage
       - android:string/config_dreamsDefaultComponent
       - android:string/config_emergency_dialer_package
+      - android:string/config_gnssLocationProviderPackageName
       # com.google.android.apps.healthdata
       - android:string/config_healthConnectMigratorPackageName
       - android:string/config_helpPackageNameValue
