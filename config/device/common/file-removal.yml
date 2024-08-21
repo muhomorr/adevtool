@@ -59,6 +59,7 @@ filters:
       - system/etc/permissions/privapp-permissions-google.xml
       - system_ext/etc/default-permissions/default-permissions-com.google.android.apps.pixel.dcservice.xml
       - system_ext/etc/default-permissions/default-permissions_wallpapereffect.xml
+      - system_ext/etc/init/init.repair_mode.rc
       - system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
       - system_ext/etc/permissions/com.google.android.apps.nest.dockmanager.app.xml
       - system_ext/etc/permissions/com.google.android.apps.pixel.dcservice.xml

@@ -6,7 +6,6 @@ system_ext/app/PersistentBackgroundCameraServices/PersistentBackgroundCameraServ
 system_ext/app/PersistentBackgroundServices/PersistentBackgroundServices.apk
 system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service
 system_ext/etc/default-permissions/default-permissions-euiccpixel.xml
-system_ext/etc/init/init.repair_mode.rc
 system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc
 system_ext/etc/permissions/com.android.qns.xml
 system_ext/etc/permissions/com.google.android.camera.extensions.xml

@@ -260,7 +260,6 @@ android:bool/config_letterboxIsDisplayAspectRatioForFixedOrientationLetterboxEna
 android:bool/config_localDisplaysMirrorContent = false
 android:bool/config_matchSecondaryInternalDisplaysOrientationToReverseDefaultDisplay = true
 android:bool/config_offsetWallpaperToCenterOfLargestDisplay = true
-android:bool/config_repairModeSupported = true
 android:bool/config_windowManagerHalfFoldAutoRotateOverride = false
 android:bool/config_windowManagerPauseRotationWhenUnfolding = true
 android:dimen/config_keyboardHapticFeedbackFixedAmplitude = 1

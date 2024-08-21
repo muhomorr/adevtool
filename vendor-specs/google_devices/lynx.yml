@@ -18,13 +18,13 @@ firmware/radio.img: 090787b735e81921f404ca97135084613f091dc93b34cdb4c243d7ce959f
 firmware/tzsw.img: 5e13e87fac9c604a79e28d2426f640a20d1b35c773cbc055e2029ad652fb54c8
 lynx.mk: 2596af04f2629d43715bec082dd8250949694f6606cf368c92adcbb27d0a840a
 overlays: dir
-overlays/product.txt: 025f7994537e5199bdc931b62829eec0949b60e91f99ee98d48de0c104a455aa
+overlays/product.txt: cd9bd2ea9562ada697a25d67e8e4f283b5e290e9026c2f048140ab9a5903d034
 overlays/product_android: dir
 overlays/product_android/Android.bp: 3137f7daaf29e961bcc2696bc41758df7f4a13f9515fda5c287723570c563cec
 overlays/product_android/AndroidManifest.xml: 80efab0a2e72b6fa7ddfd376385437e827f16a8058b8cb5f0d07835a0adaa5a6
 overlays/product_android/res: dir
 overlays/product_android/res/values: dir
-overlays/product_android/res/values/values.xml: 10d8766af5353bf03cf1f136de8c48d2d8f462b44b2ba64c0cbb7a026efd56c2
+overlays/product_android/res/values/values.xml: 00c69f1fe10dee8a6f245a77206971a106a7d8f4a2813d01c1531d9952c51d44
 overlays/product_com.android.hbmsvmanager: dir
 overlays/product_com.android.hbmsvmanager/Android.bp: f13f652580e3fabd2a285fe8d47be77f5b422c49861869db55fa4c42e3f09ec3
 overlays/product_com.android.hbmsvmanager/AndroidManifest.xml: e0917c2d635f1d04f16b9f4c565f172db5419fc5699d8eea05e22595b5233dc6
@@ -81,10 +81,10 @@ overlays/vendor_android/res: dir
 overlays/vendor_android/res/values: dir
 overlays/vendor_android/res/values/values.xml: 759439ad2351ac6706a88dd7f24484760f1d05df854c2ecf260fe606b551dd07
 proprietary: dir
-proprietary-files.txt: f7d84fa91cedd7d1dfc18ef85470b39b587511af61798ba182ab660ce0702783
+proprietary-files.txt: 58cd60c8860266b3baca2ed7a3949649d6bfb56263e183c2a1b5ea2b5e6f2cdd
 proprietary/Android.bp: 86868f3dcf030ffe9e14bc00e68dc46eab32d58c184f221fa4a04861dbd70137
 proprietary/BoardConfigVendor.mk: 998f41d2577dff75501b866b33a337052d6e03d50512eee8f0cbd64641c71d75
-proprietary/device-vendor.mk: 37bd22067cfb92d8ccfe388b2fe3d617a17cf5459996773d3d492909116cde68
+proprietary/device-vendor.mk: 6b06dd308eaee28caf9e08997ed4477a0101c8d777a960703602570ad1890912
 proprietary/linker-config-adevtool.json: 6b3c6b57416c259790eb479ca3bf9575437bc060fd7439a96b2826785f73bcfc
 proprietary/product: dir
 proprietary/product/etc: dir
@@ -470,7 +470,6 @@ proprietary/system_ext/etc: dir
 proprietary/system_ext/etc/default-permissions: dir
 proprietary/system_ext/etc/default-permissions/default-permissions-euiccpixel.xml: 3d7b210f1631b79a2089c5af3fb38bd468a865480d836da16028ecd18d2f0bb5
 proprietary/system_ext/etc/init: dir
-proprietary/system_ext/etc/init/init.repair_mode.rc: 3ec184ae961803d9e53dd5c65d9e446474f64b0d1cbff377170ac727703d6e5f
 proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc: 8963b8d7da2cca37074f0cd93b4c370e3f75ec0d9df2dcf6cf29fb9448978fc2
 proprietary/system_ext/etc/permissions: dir
 proprietary/system_ext/etc/permissions/com.android.qns.xml: 747d29cdbf1c607eb1a36cbc9fd1e568ba8f560fbf399326b107fb54801a5e2d

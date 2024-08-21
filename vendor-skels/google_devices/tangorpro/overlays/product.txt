@@ -373,7 +373,6 @@ android:bool/config_deskDockEnablesAccelerometer = false
 android:bool/config_emergencyGestureEnabled = false
 android:bool/config_enableProximityService = true
 android:bool/config_performantAuthDefault = true
-android:bool/config_repairModeSupported = true
 android:bool/config_reverseDefaultRotation = true
 android:bool/config_sensorPrivacyRequiresAuthentication = false
 android:dimen/config_keyboardHapticFeedbackFixedAmplitude = 0.62

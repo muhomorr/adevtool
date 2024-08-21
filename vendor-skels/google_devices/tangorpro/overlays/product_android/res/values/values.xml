@@ -105,7 +105,6 @@
   <bool name="config_lockscreenWeatherEnabledByDefault">true</bool>
   <bool name="config_orderUnlockAndWake">true</bool>
   <bool name="config_performantAuthDefault">true</bool>
-  <bool name="config_repairModeSupported">true</bool>
   <bool name="config_resetScreenTimeoutOnUnexpectedDreamExit">true</bool>
   <bool name="config_reverseDefaultRotation">true</bool>
   <bool name="config_safetyProtectionEnabled">true</bool>

@@ -72,6 +72,7 @@ filters:
       - android:bool/config_pinnerCameraApp
       - android:bool/config_pinnerHomeApp
       - android:bool/config_profcollectReportUploaderEnabled
+      - android:bool/config_repairModeSupported
       - android:bool/config_sendPackageName
       - android:bool/config_showGesturalNavigationHints
       - android:bool/config_smart_battery_available

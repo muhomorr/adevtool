@@ -213,7 +213,6 @@ android:integer-array/non_removable_euicc_slots = 0
 android:bool/config_allowDisablingAssistDisclosure = true
 android:bool/config_biometricFrrNotificationEnabled = true
 android:bool/config_refreshRateSynchronizationEnabled = true
-android:bool/config_repairModeSupported = true
 android:dimen/config_keyboardHapticFeedbackFixedAmplitude = 0.62
 android:integer/config_externalDisplayPeakHeight = 1080
 android:integer/config_externalDisplayPeakRefreshRate = 61

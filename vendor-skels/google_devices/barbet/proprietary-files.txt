@@ -12,7 +12,6 @@ system_ext/app/uceShimService/uceShimService.apk
 system_ext/bin/qcrosvm
 system_ext/bin/qsguard
 system_ext/etc/default-permissions/default-permissions-euiccpixel.xml
-system_ext/etc/init/init.repair_mode.rc
 system_ext/etc/init/qsguard.rc
 system_ext/etc/init/sxrauxd_ext.rc
 system_ext/etc/perf/wlc_model.tflite

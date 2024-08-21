@@ -21,13 +21,13 @@ firmware/uefisecapp.img: 84bbaf4fd24a453eaec1a1a2343dd66c590d3a522ea86f4cab27fa4
 firmware/xbl.img: 1ba350f085de647f2cb40cffd815cf47a809ab780bf553c442c69a183c379e0e
 firmware/xbl_config.img: 2c236257bcf284c42e86362e9c089defa8dd111b8cb7b399656f7530054a4eae
 overlays: dir
-overlays/product.txt: cb1699375c4f864583eee20c0c0a2f81862378ed83bfd289c6046402756a0762
+overlays/product.txt: 78e68ce8e9d2f2bd4740cea74076d6d35bb18a03846d92d7b44e34cdd56ac467
 overlays/product_android: dir
 overlays/product_android/Android.bp: 3137f7daaf29e961bcc2696bc41758df7f4a13f9515fda5c287723570c563cec
 overlays/product_android/AndroidManifest.xml: 80efab0a2e72b6fa7ddfd376385437e827f16a8058b8cb5f0d07835a0adaa5a6
 overlays/product_android/res: dir
 overlays/product_android/res/values: dir
-overlays/product_android/res/values/values.xml: 51895727b3a31e9ca99c2fc3af25d23bb7faa19c2759e6f94c875230dad40493
+overlays/product_android/res/values/values.xml: 48876c1fb08d9499a988420c806e4fb51df156da67489abff835bd79dfe37ae5
 overlays/product_com.android.networkstack.tethering__TetheringConfig: dir
 overlays/product_com.android.networkstack.tethering__TetheringConfig/Android.bp: cdbde4876c51e710924b5953cbf76d7ff25cc14afe1f04d4f5834ef73d49a2da
 overlays/product_com.android.networkstack.tethering__TetheringConfig/AndroidManifest.xml: 26ee835eef2fac0f95ce4057214c95848c5a8f36d4516923153735780c6e1428
@@ -78,10 +78,10 @@ overlays/vendor_com.android.hbmsvmanager/res: dir
 overlays/vendor_com.android.hbmsvmanager/res/values: dir
 overlays/vendor_com.android.hbmsvmanager/res/values/values.xml: c016a22a1c03fec9e5903fa5d8a13c8c401d2a934dd5abd67ef7c844aa124d49
 proprietary: dir
-proprietary-files.txt: 4ee073ca30971fdff4e1b98383f91cf7eb4e2af2c918b64c106e26f66f12c719
+proprietary-files.txt: 4f2164b1fbcca50e7b0254a13dbb73deec6e587c1e5c837e545b2271a5162442
 proprietary/Android.bp: e241d06c2fb18aa96557dfdf7c8307f36d68e784bfe69c7b5e7479157b8667b7
 proprietary/BoardConfigVendor.mk: ddbb01ac9c7e4aeef0fedd17e3acf064fd09c8f74c4451b8616dc8dbf380899e
-proprietary/device-vendor.mk: 9726b43d5bebe9ccb4910493407effc0b1df52e418823a27554d4ee20dce9a83
+proprietary/device-vendor.mk: d970797a2805ae1517d9e2b9d27a82bd0e418bf784580c2c7cc2702b484eaa06
 proprietary/product: dir
 proprietary/product/app: dir
 proprietary/product/app/uimremoteclient: dir
@@ -517,7 +517,6 @@ proprietary/system_ext/etc: dir
 proprietary/system_ext/etc/default-permissions: dir
 proprietary/system_ext/etc/default-permissions/default-permissions-euiccpixel.xml: 3d7b210f1631b79a2089c5af3fb38bd468a865480d836da16028ecd18d2f0bb5
 proprietary/system_ext/etc/init: dir
-proprietary/system_ext/etc/init/init.repair_mode.rc: 3ec184ae961803d9e53dd5c65d9e446474f64b0d1cbff377170ac727703d6e5f
 proprietary/system_ext/etc/init/qsguard.rc: e311262e32531cf5a795f2506690ad81cfdf75a3a44115a4a7e94db9f35b80fc
 proprietary/system_ext/etc/init/sxrauxd_ext.rc: b3bc184aa6d3a1573caf6d439e91e9f690ec508069eecc62669a20193b78eecd
 proprietary/system_ext/etc/perf: dir

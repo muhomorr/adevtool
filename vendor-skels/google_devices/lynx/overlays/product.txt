@@ -203,7 +203,6 @@ android:string-array/config_udfps_enroll_stage_thresholds = 0.065,0.48,0.584,0.7
 android:integer-array/non_removable_euicc_slots = 0
 android:bool/config_allowDisablingAssistDisclosure = true
 android:bool/config_biometricFrrNotificationEnabled = true
-android:bool/config_repairModeSupported = true
 android:dimen/config_keyboardHapticFeedbackFixedAmplitude = 0.62
 android:integer/config_fingerprintMaxTemplatesPerUser = 4
 android:integer/device_idle_idle_after_inactive_to_ms = 15000

@@ -203,7 +203,6 @@ android:string-array/fingerprint_acquired_vendor = ,,,,,Move your finger. Try ag
 android:string-array/fingerprint_error_vendor = ,,,,,,Bad data. Try again.,Failed to enroll finger. Try again.
 android:integer-array/non_removable_euicc_slots = 1,2
 android:bool/config_allowDisablingAssistDisclosure = true
-android:bool/config_repairModeSupported = true
 android:dimen/config_keyboardHapticFeedbackFixedAmplitude = 0.62
 android:integer/device_idle_idle_after_inactive_to_ms = 15000
 android:integer/device_idle_inactive_to_ms = 15000
