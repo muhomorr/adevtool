@@ -28,6 +28,7 @@ filters:
       - product/etc/sysconfig/adaptivecharging.xml
       - product/etc/sysconfig/communal.xml
       - product/etc/sysconfig/dreamliner.xml
+      - product/etc/sysconfig/firproximity.xml
       - product/etc/sysconfig/game_overlay.xml
       - product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
       - product/etc/sysconfig/google-initial-package-stopped-states.xml
@@ -53,11 +54,16 @@ filters:
       - product/etc/sysconfig/pixel_experience_2022.xml
       - product/etc/sysconfig/pixel_experience_2022_midyear.xml
       - product/etc/sysconfig/pixel_tablet_experience_2023.xml
+      - product/etc/sysconfig/pixel_experience_2023.xml
       - product/etc/sysconfig/pixel_experience_2023_midyear.xml
+      - product/etc/sysconfig/pixel_experience_2024.xml
+      - product/etc/sysconfig/pixel_experience_2024_midyear.xml
       - product/etc/sysconfig/quick_tap.xml
+      - product/etc/sysconfig/satellite_sos.xml
       - product/framework/com.google.android.dialer.support.jar
       - system/etc/permissions/privapp-permissions-google.xml
       - system_ext/etc/default-permissions/default-permissions-com.google.android.apps.pixel.dcservice.xml
+      - system_ext/etc/default-permissions/default-permissions_pixelweather.xml
       - system_ext/etc/default-permissions/default-permissions_wallpapereffect.xml
       - system_ext/etc/init/init.repair_mode.rc
       - system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
@@ -65,6 +71,7 @@ filters:
       - system_ext/etc/permissions/com.google.android.apps.pixel.dcservice.xml
       - system_ext/etc/permissions/org.carconnectivity.android.digitalkey.timesync.xml
       - system_ext/etc/permissions/privapp-permissions-google-se.xml
+      - system_ext/etc/permissions/privapp-permissions-satellite.xml
       - system_ext/framework/com.android.hotwordenrollment.common.util.jar
       - system_ext/framework/org.carconnectivity.android.digitalkey.timesync.jar
       - vendor/etc/default-permissions/default-permissions_talkback.xml
@@ -110,10 +117,13 @@ filters:
       # Unused hardware info jar
       - product/etc/permissions/com.google.android.hardwareinfo.xml
       - product/framework/libhwinfo.jar
+      - product/etc/default-permissions/default-permissions-com.google.android.apps.pixel.agent.xml
       - product/etc/default-permissions/default-permissions_diagnostictool.xml
       # permissions for the "Pixel Troubleshooting" app (com.google.android.apps.pixel.support)
       - product/etc/default-permissions/default-permissions_pixelsupport.xml
+      - product/etc/default-permissions/default-permissions-safetyhub.xml
       - product/etc/default-permissions/default-permissions_SmartDisplayPrebuilt.xml
+      - product/etc/default-permissions/default-permissions-stargate.xml
       - product/etc/permissions/com.android.omadm.service.xml
       - product/etc/permissions/com.android.sdm.plugins.connmo.xml
       - product/etc/permissions/com.android.sdm.plugins.dcmo.xml
@@ -122,10 +132,13 @@ filters:
       - product/etc/permissions/com.android.sdm.plugins.usccdm.xml
       - product/etc/permissions/com.customermobile.preload.vzw.xml
       - product/etc/permissions/com.google.android.apps.pixel.familyspace.xml
+      - product/etc/permissions/com.google.android.apps.stargate.xml
+      - product/etc/permissions/com.google.android.apps.stargate.support.xml
       - product/etc/permissions/com.google.android.odad.xml
       - product/etc/permissions/com.google.omadm.trigger.xml
       - product/etc/permissions/com.verizon.apn.xml
       - product/etc/permissions/com.verizon.services.xml
+      - product/etc/permissions/privapp-permissions-google-pearl.xml
       - product/etc/sysconfig/allowlist_com.android.omadm.service.xml
       - system_ext/etc/permissions/com.verizon.llkagent.xml
       - system_ext/etc/permissions/obdm_permissions.xml
@@ -157,7 +170,7 @@ filters:
       - system_ext/apex/
       # Root CAs
       - system/etc/security/cacerts/
-      - product/app/CalculatorGooglePrebuilt/
+      - product/app/CalculatorGooglePrebuilt
       - product/app/CalendarGooglePrebuilt/
       - product/app/Chrome-Stub/
       - product/app/Chrome/
@@ -178,8 +191,8 @@ filters:
       - product/app/LocationHistoryPrebuilt/
       - product/app/Maps/
       # com.google.android.markup is a screenshot/image editor
-      - product/app/MarkupGoogle/
-      - product/app/MeetPrebuilt/
+      - product/app/MarkupGoogle
+      - product/app/MeetPrebuilt
       - product/app/MicropaperPrebuilt/
       - product/app/ModuleMetadataGoogle/
       - product/app/MotionSenseBridgePrebuilt/
@@ -196,7 +209,7 @@ filters:
       - product/app/PixelWallpapers
       - product/app/PlayAutoInstallConfig/
       - product/app/PlayBooksPrebuilt/
-      - product/app/PrebuiltDeskClockGoogle/
+      - product/app/PrebuiltDeskClockGoogle
       - product/app/PrebuiltGmail/
       - product/app/PrebuiltGoogleAdservicesTvp/
       - product/app/PrebuiltGoogleTelemetryTvp/
@@ -224,10 +237,11 @@ filters:
       - product/app/YouTube
       # "Google Play Services for AR", com.google.ar.core
       - product/app/arcore/
+      - product/app/arcore-
       - product/app/talkback/
       - product/etc/sysconfig/preinstalled-packages-product-pixel-20
       - product/priv-app/AdaptiveVPNPrebuilt
-      - product/priv-app/AICorePrebuilt/
+      - product/priv-app/AICorePrebuilt
       - product/priv-app/AiWallpapers/
       # "Pixel Ambient Services", com.google.intelligence.sense, found on 4th and 5th gen
       - product/priv-app/AmbientSensePrebuilt/
@@ -251,6 +265,7 @@ filters:
       # com.google.android.configupdater
       - product/priv-app/ConfigUpdater/
       - product/priv-app/ConnMO/
+      - product/priv-app/CreativeAssistant/
       # com.android.sdm.plugins.dcmo, "Carrier OMA Device Management"
       - product/priv-app/DCMO/
       - product/priv-app/DMService/
@@ -282,7 +297,7 @@ filters:
       # them to Google. Runs each time device finishes booting.
       - product/priv-app/HardwareInfo/
       - product/priv-app/HealthConnectPrebuilt/
-      - product/priv-app/HealthIntelligenceStubPrebuilt/
+      - product/priv-app/HealthIntelligence
       # "Google Support Services", https://play.google.com/store/apps/details?id=com.google.android.apps.helprtc
       - product/priv-app/HelpRtcPrebuilt/
       # HotwordEnrollment{OKGoogleFUSION,OKGoogleHEMIDELTA,XGoogleFUSION etc}
@@ -298,13 +313,16 @@ filters:
       - product/priv-app/PartnerSetupPrebuilt/
       # Play Store app (com.android.vending)
       - product/priv-app/Phonesky/
+      - product/priv-app/PixelAIPrebuilt/
       - product/priv-app/PixelLiveWallpaperPrebuilt/
       - product/priv-app/PixelSupportPrebuilt/
       # "Messages by Google", com.google.android.apps.messaging
       - product/priv-app/PrebuiltBugle/
       - product/priv-app/PrebuiltGmsCore/
-      - product/priv-app/RecorderPrebuilt/
+      - product/priv-app/RecorderPrebuilt
+      - product/priv-app/RetailCorePrebuilt/
       - product/priv-app/RetailDemoGooglePrebuilt/
+      - product/priv-app/SatelliteGatewayPrebuilt/
       # com.google.android.apps.scone is "Adaptive Connectivity Services", see https://support.google.com/product-documentation/answer/12321563
       - product/priv-app/SCONE
       - product/priv-app/SSRestartDetector/
@@ -334,7 +352,7 @@ filters:
       # Google search app (GSA), com.google.android.googlequicksearchbox
       - product/priv-app/Velvet/
       - product/priv-app/WallpaperEffect/
-      - product/priv-app/WeatherPixelPrebuilt/
+      - product/priv-app/WeatherPixelPrebuilt
       # Digital Wellbeing, https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing
       - product/priv-app/WellbeingPrebuilt/
       # Wi-Fi Calling setup, com.google.android.apps.wfcactivation
@@ -373,6 +391,7 @@ filters:
       - system_ext/priv-app/OBDM_Permissions/
       # "Motion Sense" app on 4th gen Pixels, com.google.oslo
       - system_ext/priv-app/OsloFeedback/
+      - system_ext/priv-app/PixelSatelliteService/
       - system_ext/priv-app/PixelSetupWizard/
       - system_ext/priv-app/QuickAccessWallet/
       - system_ext/priv-app/RilConfigService/
@@ -390,6 +409,7 @@ filters:
       - system_ext/priv-app/TurboAdapter/
       # com.google.android.uvexposurereporter talks to the uv_exposure context hub nanoapp
       - system_ext/priv-app/UvExposureReporter/
+      - system_ext/priv-app/VendorSatelliteService/
       - system_ext/priv-app/WallpaperPickerGoogleRelease/
       # Shows disclaimer screen on beta builds
       - system_ext/priv-app/YadaYada/

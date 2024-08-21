@@ -9,6 +9,7 @@ filters:
       - GoogleHealthConnectOverlay
       - HbmSVManager__auto_generated_rro_
       - PixelSetupWizardOverlay
+      - PixelSupport
       - Scone
       - TipsOverlay
 
@@ -202,12 +203,17 @@ filters:
       - android:string/config_loggable_dream_prefix
       # com.google.android.gms/.identitycredentials.ui.CredentialChooserActivity
       - android:string/config_oemCredentialManagerDialogComponent
+      - android:string/config_oem_enabled_satellite_sos_handover_app
       - android:string/config_persistentDataPackageName
+      - android:string/config_pointing_ui_class
+      - android:string/config_pointing_ui_package
       - android:string/config_powerSaveModeChangedListenerPackage
       - android:string/config_primaryLocationTimeZoneProviderPackageName
       - android:string/config_recentsComponentName
       - android:string/config_retailDemoPackage
       - android:string/config_retailDemoPackageSignature
+      - android:string/config_satellite_emergency_handover_intent_action
+      - android:string/config_satellite_service_package
       - android:string/config_secondaryHomePackage
       - android:string/config_secondaryLocationTimeZoneProviderPackageName
       - android:string/config_servicesExtensionPackage
@@ -268,6 +274,7 @@ filters:
       - com.android.settings:string-array/config_preinstalled_dream_components
       - com.android.settings:string-array/config_settings_slices_accessibility_components
       - com.android.settings:string-array/datausage_hiding_carrier_service_package_names
+      - com.android.settings:string-array/display_over_apps_permission_change_exempt
       - com.android.settings:string-array/slice_allowlist_package_names
       # "Google Assistant"
       - com.android.systemui.accessibility.accessibilitymenu:string/assistant_utterance
@@ -282,12 +289,16 @@ filters:
       - com.android.systemui:string-array/config_fingerprint_listen_on_occluding_activity_packages
       - com.android.systemui:string-array/config_pluginWhitelist
       - com.android.systemui:string/branded_monitoring_description_app_personal
+      # com.google.android.apps.pixel.agent/.app.service.PearlActionService on 14 QPR3 caiman
+      - com.android.systemui:string/config_action_service
       - com.android.systemui:string/config_cameraProtectionExcludedPackages
       - com.android.systemui:string/config_communalSourceComponent
       - com.android.systemui:string/config_communalSourceConnector
       - com.android.systemui:string/config_media_shell_service_component
       - com.android.systemui:string/config_nest_dock_manager_service_component
       - com.android.systemui:string/config_dockComponent
+      # com.google.android.apps.pixel.agent on 14 QPR3 caiman
+      - com.android.systemui:string/config_pearl_package
       - com.android.systemui:string/config_remoteCopyPackage
       # set to Google Files app, "sceenshot" typo is upstream
       - com.android.systemui:string/config_sceenshotWorkProfileFilesApp
