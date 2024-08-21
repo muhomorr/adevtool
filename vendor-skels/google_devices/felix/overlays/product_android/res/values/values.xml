@@ -11,7 +11,6 @@
   <string name="concurrent_display_notification_thermal_content">Dual Screen is unavailable because your Pixel phone is getting too warm</string>
   <string name="config_ambientContextEventArrayExtraKey">EVENT_ARRAY</string>
   <string name="config_ambientContextPackageNameExtraKey">PACKAGE_NAME</string>
-  <string name="config_clockFontFamily">google-sans-clock</string>
   <string name="config_defaultAccessibilityNotificationSound">Effect_Tick.ogg</string>
   <string name="config_deviceSpecificDeviceStatePolicyProvider">com.google.android.server.policy.FelixDeviceStatePolicyProvider</string>
   <string name="config_display_features">fold-[1104,0,1104,1848]</string>

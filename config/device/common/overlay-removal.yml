@@ -18,6 +18,7 @@ filters:
       - com.google.android.settings.future.biometrics.faceenroll
       # Fonts
       - android:string/config_bodyFont
+      - android:string/config_clockFontFamily
       - android:string/config_headlineFont
       # Help and Feedback
       - android:string/config_feedbackIntent

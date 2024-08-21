@@ -42,7 +42,6 @@ android:string/android_start_title = Pixel is starting…
 android:string/android_upgrading_title = Pixel is updating…
 android:string/config_ambientContextEventArrayExtraKey = EVENT_ARRAY
 android:string/config_ambientContextPackageNameExtraKey = PACKAGE_NAME
-android:string/config_clockFontFamily = google-sans-clock
 android:string/config_icon_mask = M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z
 com.android.pixeldisplayservice:array/config_za_compensation_opr_thresholds = 0.4
 com.android.pixeldisplayservice:integer-array/config_za_compensation_with_shadow_compensation_thresholds = 7000,10000,35000,50000,80000,100000
