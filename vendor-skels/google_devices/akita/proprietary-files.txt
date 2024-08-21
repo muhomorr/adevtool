@@ -589,6 +589,7 @@ vendor/etc/database/DbEcc_ICCID.xml
 vendor/etc/database/ecc_version
 vendor/etc/displayconfig/display_port_0.xml
 vendor/etc/earcheek_classifier.tflite
+vendor/etc/gnss/ca.pem
 vendor/etc/init/android.hardware.authsecret-service.citadel.rc
 vendor/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc
 vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc

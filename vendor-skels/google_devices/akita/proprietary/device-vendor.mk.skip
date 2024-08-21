@@ -898,6 +898,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/uv_exposure.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/uv_exposure.napp_header \
     vendor/google_devices/akita/proprietary/vendor/etc/database/ecc_version:$(TARGET_COPY_OUT_VENDOR)/etc/database/ecc_version \
     vendor/google_devices/akita/proprietary/vendor/etc/earcheek_classifier.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/earcheek_classifier.tflite \
+    vendor/google_devices/akita/proprietary/vendor/etc/gnss/ca.pem:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/ca.pem \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.authsecret-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.authsecret-service.citadel.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc \

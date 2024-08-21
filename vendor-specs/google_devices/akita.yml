@@ -83,10 +83,10 @@ overlays/vendor_android/res: dir
 overlays/vendor_android/res/values: dir
 overlays/vendor_android/res/values/values.xml: 759439ad2351ac6706a88dd7f24484760f1d05df854c2ecf260fe606b551dd07
 proprietary: dir
-proprietary-files.txt: 9972956404aa1045567624b6a7bb20d2475dbb160ac860c8a48d46c4f3eb5a75
+proprietary-files.txt: 525748abffa3504192980948f0231e0e084e41238e17c1e6af364b8b9738d0b2
 proprietary/Android.bp: 6c5e11e613e39dc71c5629adaebb0fee3dc10a4feea3959cd3f13e32c0775839
 proprietary/BoardConfigVendor.mk: 52f3878e41804071b0187b90caae53beaab8e873163184009837d26c0fe81ecd
-proprietary/device-vendor.mk: ef5b7d93f88174ea77956bbda173011a0bbfb02987a2e6911684d98d5429c2cc
+proprietary/device-vendor.mk: de6f6faa50f119201f042629bfcb9fa7a436faa420e056be196f971b9019d0ac
 proprietary/linker-config-adevtool.json: 6b3c6b57416c259790eb479ca3bf9575437bc060fd7439a96b2826785f73bcfc
 proprietary/product: dir
 proprietary/product/etc: dir
@@ -721,6 +721,8 @@ proprietary/vendor/etc/database/ecc_version: 9a92adbc0cee38ef658c71ce1b1bf8c6566
 proprietary/vendor/etc/displayconfig: dir
 proprietary/vendor/etc/displayconfig/display_port_0.xml: 1b27784c3e01b373acb5255df8ec3e0de07026b7e3227d5c60c2288b10b8c2f0
 proprietary/vendor/etc/earcheek_classifier.tflite: 5a23de34f623abccc4d508a60d7499ea989ee3a5386486baf666918f98646f49
+proprietary/vendor/etc/gnss: dir
+proprietary/vendor/etc/gnss/ca.pem: 730fc9a6b512cf2782351b22f870f83cbf79bd51a1891f22edb3bb987a5f2422
 proprietary/vendor/etc/init: dir
 proprietary/vendor/etc/init/Exynos_C2.rc: e1a67aedbf8524273e9b755409da6e4f5660631b59d6e502e35e4a778cb15422
 proprietary/vendor/etc/init/android.hardware.authsecret-service.citadel.rc: bd2ecb1f566930a7bdc77543d5daf1c5b31a0e35100227c8eefaa3ddcb4e267f
