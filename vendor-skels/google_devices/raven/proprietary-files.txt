@@ -21,7 +21,6 @@ system_ext/etc/permissions/com.shannon.qualifiednetworksservice.xml
 system_ext/etc/permissions/com.shannon.rcsservice.xml
 system_ext/etc/permissions/google-ril.xml
 system_ext/etc/permissions/oemrilhook.xml
-system_ext/etc/permissions/org.carconnectivity.android.digitalkey.timesync.xml
 system_ext/etc/permissions/privapp-permissions-qorvo.xml
 system_ext/etc/public.libraries-google.txt
 system_ext/etc/vintf/manifest/com.google.pixel.camera.services@1.0-service-google.xml
@@ -34,7 +33,6 @@ system_ext/framework/com.google.pixel.camera.services.cameraidremapper.jar
 system_ext/framework/com.google.pixel.camera.services.lyricconfigprovider.jar
 system_ext/framework/google-ril.jar
 system_ext/framework/oemrilhook.jar
-system_ext/framework/org.carconnectivity.android.digitalkey.timesync.jar
 system_ext/lib/libedgetpu_dba.google.so
 system_ext/lib/libedgetpu_tachyon.google.so
 system_ext/lib/libmediaadaptor.so
@@ -49,7 +47,6 @@ system_ext/lib64/libmediaadaptor.so
 system_ext/lib64/libpowerstatshaldataprovider.so
 system_ext/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 system_ext/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
-system_ext/priv-app/CccDkTimeSyncService/CccDkTimeSyncService.apk;PRESIGNED
 system_ext/priv-app/EuiccGoogleOverlay/EuiccGoogleOverlay.apk
 system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in
 system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.up

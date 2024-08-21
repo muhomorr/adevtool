@@ -83,10 +83,10 @@ overlays/vendor_android/res: dir
 overlays/vendor_android/res/values: dir
 overlays/vendor_android/res/values/values.xml: 759439ad2351ac6706a88dd7f24484760f1d05df854c2ecf260fe606b551dd07
 proprietary: dir
-proprietary-files.txt: 415375d8e7692b2ba2692636b2945adfccf3d0bddbf7dad0c21eb934c4c5303e
-proprietary/Android.bp: 059659fba89f3ddf6dae93221bc30e885358303ed3fc04e9897126762a4cebe1
+proprietary-files.txt: fcb5ff16b3388dffdf155fe6b1bb31b046f2c012539c51b6f4e8ab16f192fad4
+proprietary/Android.bp: 650d620de838f7721dc10a4446431bf2fdbda9e8e2785a03bfe8084ec89a15b3
 proprietary/BoardConfigVendor.mk: 369902cbf84f3ac55b71931fa7603460d6500f1df4e72b941a766511643318ba
-proprietary/device-vendor.mk: cba2d09b8fef73bd5f50ee6dc9a54cc70900f40eb84e15efefcea9fd4eb93399
+proprietary/device-vendor.mk: e4cf7c2c898d937b351ebc3a2f0f80f61977595820e664360b43589a5884012a
 proprietary/linker-config-adevtool.json: 6b3c6b57416c259790eb479ca3bf9575437bc060fd7439a96b2826785f73bcfc
 proprietary/product: dir
 proprietary/product/etc: dir
@@ -488,7 +488,6 @@ proprietary/system_ext/etc/permissions/com.shannon.imsservice.xml: 754e1149ea067
 proprietary/system_ext/etc/permissions/com.shannon.rcsservice.xml: 9d214546e21d90c84d80107ec7bfa6b499603fbe3da0d16b899062913b65ea19
 proprietary/system_ext/etc/permissions/google-ril.xml: cd7972edc9ffb2b6f8e811392afdff7e654167ecb506063c44ee86bf1bb174f3
 proprietary/system_ext/etc/permissions/oemrilhook.xml: bc951d0b505c8f8e1df703b389dd7afd72d4d55a643016b5bd5ba8e44d215f1c
-proprietary/system_ext/etc/permissions/org.carconnectivity.android.digitalkey.timesync.xml: 9ae0b7f339b65a7f4725f0b994b869a7f0482f1b64eaa63dad8272d31e1e4c5f
 proprietary/system_ext/etc/public.libraries-google.txt: fd7a67b5ed07c0a27e5c92d9320a5b05d2a8c8f0a171ad2370ff220a86a2b4a7
 proprietary/system_ext/etc/vintf: dir
 proprietary/system_ext/etc/vintf/manifest: dir
@@ -502,7 +501,6 @@ proprietary/system_ext/framework/com.google.pixel.camera.services.cameraidremapp
 proprietary/system_ext/framework/com.google.pixel.camera.services.lyricconfigprovider.jar: 2bb03de8e6633628e08027d0a7fb38143a92e3119740d69f880e8155c7752fcd
 proprietary/system_ext/framework/google-ril.jar: a1996dd335ed05d3e1fc662e634d2e8ef2e042ce84914278474e581b172e857d
 proprietary/system_ext/framework/oemrilhook.jar: 71fa14d98e6e0301886ec3086842a54d710b1040edba01b704fda7919111aa2b
-proprietary/system_ext/framework/org.carconnectivity.android.digitalkey.timesync.jar: e0a5bf88cd83ab898804a991d02ce2d647a206fa62e75715307d09ac3da9f926
 proprietary/system_ext/lib64: dir
 proprietary/system_ext/lib64/com.google.edgetpu_app_service-V3-ndk.so: 162c9027c43ccff4b6824e8d4879b4f655bf42f367c82b03a6279719ca2ceb2e
 proprietary/system_ext/lib64/com.google.edgetpu_vendor_service-V2-ndk.so: d58ba4d0d0eee134631d6f56d9b35e42f3f7900d97eb3facaa33a4b1299db85d
@@ -519,8 +517,6 @@ proprietary/system_ext/lib64/vendor.google.whitechapel.audio.extension-V1-ndk.so
 proprietary/system_ext/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so: 5c7babf092b694f8770e8aff6c21d7617c5b4c18d442216fb7a2317250db4adb
 proprietary/system_ext/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so: 44f3b166865c9ee1051ab469638f3cdfbea853dd65dc6ad733bab14f2d9f022e
 proprietary/system_ext/priv-app: dir
-proprietary/system_ext/priv-app/CccDkTimeSyncService: dir
-proprietary/system_ext/priv-app/CccDkTimeSyncService/CccDkTimeSyncService.apk: 4d3d524563aecd64a1de0589f43b9a9077ceec8aaadbe338edbce91ed7d63a74
 proprietary/system_ext/priv-app/EuiccGoogleOverlay: dir
 proprietary/system_ext/priv-app/EuiccGoogleOverlay/EuiccGoogleOverlay.apk: 6cc49e96cf7c77016ee4f2301c98feb41729127f1cd0540caa0d348c020a860b
 proprietary/system_ext/priv-app/EuiccSupportPixel-P23: dir

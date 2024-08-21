@@ -63,8 +63,10 @@ filters:
       - system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
       - system_ext/etc/permissions/com.google.android.apps.nest.dockmanager.app.xml
       - system_ext/etc/permissions/com.google.android.apps.pixel.dcservice.xml
+      - system_ext/etc/permissions/org.carconnectivity.android.digitalkey.timesync.xml
       - system_ext/etc/permissions/privapp-permissions-google-se.xml
       - system_ext/framework/com.android.hotwordenrollment.common.util.jar
+      - system_ext/framework/org.carconnectivity.android.digitalkey.timesync.jar
       - vendor/etc/default-permissions/default-permissions_talkback.xml
       # "Pixel VPN by Google One" (com.google.android.apps.privacy.wildlife)
       - vendor/etc/default-permissions/default-permissions_wildlife.xml
@@ -353,6 +355,7 @@ filters:
       - system_ext/app/Flipendo/
       - system_ext/app/RepairMode/
       - system_ext/priv-app/CarrierSetup/
+      - system_ext/priv-app/CccDkTimeSyncService/
       # Manages thermal throttling of cellular and Wi-Fi connectivity, com.google.android.connectivitythermalpowermanager
       - system_ext/priv-app/ConnectivityThermalPowerManager/
       - system_ext/priv-app/DeviceConnectivityServicePrebuilt

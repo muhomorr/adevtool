@@ -147,13 +147,6 @@ dex_import {
     system_ext_specific: true,
 }
 
-dex_import {
-    name: "org.carconnectivity.android.digitalkey.timesync",
-    owner: "google_devices",
-    jars: [ "system_ext/framework/org.carconnectivity.android.digitalkey.timesync.jar" ],
-    system_ext_specific: true,
-}
-
 cc_prebuilt_library_shared {
     name: "libedgetpu_dba.google__system_ext",
     owner: "google_devices",
@@ -284,17 +277,6 @@ cc_prebuilt_library_shared {
     check_elf_files: false,
     prefer: true,
     strip: { none: true },
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "CccDkTimeSyncService",
-    owner: "google_devices",
-    apk: "system_ext/priv-app/CccDkTimeSyncService/CccDkTimeSyncService.apk",
-    presigned: true,
-    preprocessed: true,
-    privileged: true,
-    dex_preopt: { enabled: false },
     system_ext_specific: true,
 }
 
