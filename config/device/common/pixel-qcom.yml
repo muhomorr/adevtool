@@ -1,5 +1,0 @@
-includes:
-  - pixel.yml
-
-device:
-  kernel_repo_url: https://android.googlesource.com/kernel/msm

@@ -176,8 +176,6 @@ filters:
       - product/app/Chrome-Stub/
       - product/app/Chrome/
       - product/app/DevicePolicyPrebuilt
-      # com.qualcomm.qti.devicestatisticsservice found on 5th gen Pixels
-      - product/app/DeviceStatisticsService/
       # com.google.android.apps.diagnosticstool
       - product/app/DiagnosticsToolPrebuilt/
       - product/app/Drive/
