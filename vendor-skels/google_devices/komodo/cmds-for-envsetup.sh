@@ -1,2 +1,2 @@
 export BUILD_ID_komodo="AP31.240617.015"
-unset PLATFORM_SECURITY_PATCH_komodo
+export PLATFORM_SECURITY_PATCH_komodo="2024-09-01"
