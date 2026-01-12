@@ -1,5 +1,5 @@
 canonical_name: "dish5gsa_us"
-version: 73000000008
+version: 73000000009
 apns {
   apn {
     name: "internet"
@@ -112,6 +112,10 @@ configs {
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_preferred_network_type_bool"
     bool_value: true
   }
   config {
@@ -361,6 +365,10 @@ configs {
     }
   }
   config {
+    key: "only_auto_select_in_home_network"
+    bool_value: true
+  }
+  config {
     key: "qns.sos_transport_type_int"
     int_value: 2
   }
@@ -398,5 +406,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276532
+  seconds: 1763406492
 }

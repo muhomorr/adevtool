@@ -471,6 +471,16 @@ android_app_import {
     system_ext_specific: true,
 }
 
+cc_prebuilt_library_shared {
+    name: "liblmkd_flags_c",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "system/lib64/liblmkd_flags_c.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
 prebuilt_apex {
     name: "com.google.android.widevine-13130248",
     owner: "google_devices",

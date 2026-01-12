@@ -11,4 +11,5 @@
     <bool name="config_dreamsEnabledByDefault">false</bool>
     <bool name="config_glanceableHubEnabled">true</bool>
     <bool name="config_resetScreenTimeoutOnUnexpectedDreamExit">true</bool>
+    <integer name="config_shortPressOnPowerBehavior">7</integer>
 </resources>

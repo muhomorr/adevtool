@@ -3,8 +3,8 @@
 
 include vendor/google_devices/tegu/adevtool-version-check.mk
 
-ifneq ($(BUILD_ID),BP4A.251205.006.E1)
-  $(error BUILD_ID: expected BP4A.251205.006.E1, got $(BUILD_ID))
+ifneq ($(BUILD_ID),BP4A.260105.004.E1)
+  $(error BUILD_ID: expected BP4A.260105.004.E1, got $(BUILD_ID))
 endif
 
 $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/tegu/device.mk)
@@ -762,6 +762,7 @@ PRODUCT_PACKAGES += \
     libhwjpeg \
     libion_google \
     libjson \
+    liblmkd_flags_c \
     libmahalcontroller \
     libmedia_ecoservice \
     libmediaadaptor \

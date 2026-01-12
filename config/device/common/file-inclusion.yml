@@ -80,6 +80,7 @@ filters:
       - system/lib64/libstatslog_gpustats.so
       - system/lib64/libstatslog_inputflinger.so
       - system/lib64/libstatslog_surfaceflinger_bootstrap.so
+      - system/lib64/liblmkd_flags_c.so
       - system/lib64/logd_flags_c_lib.so
       - system_ext/bin/convert_to_ext4.sh
       - system_ext/bin/gs_watchdogd

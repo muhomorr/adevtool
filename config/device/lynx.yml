@@ -3,4 +3,9 @@ device:
 
 includes:
   - common/gen7pixel.yml
-  - lynx_beta.yml
+
+filters:
+  file_inclusions:
+    match:
+      - vendor/lib64/hardware.google.bluetooth.ext@1.0.so
+      - vendor/lib64/hw/hardware.google.bluetooth.ext@1.0-impl.so

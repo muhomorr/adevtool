@@ -805,6 +805,7 @@ allow recovery sysfs_exynos_bts : filesystem { mount remount unmount getattr rel
 allow recovery sysfs_exynos_bts_stats : filesystem { mount remount unmount getattr relabelfrom quotamod quotaget watch };
 allow recovery sysfs_fabric : filesystem { mount remount unmount getattr relabelfrom quotamod quotaget watch };
 allow recovery sysfs_faceauth_rawimage_heap : filesystem { mount remount unmount getattr relabelfrom quotamod quotaget watch };
+allow recovery sysfs_gcdd_dev_stat : filesystem { mount remount unmount getattr relabelfrom quotamod quotaget watch };
 allow recovery sysfs_gia_telemetry : filesystem { mount remount unmount getattr relabelfrom quotamod quotaget watch };
 allow recovery sysfs_gps : filesystem { mount remount unmount getattr relabelfrom quotamod quotaget watch };
 allow recovery sysfs_gs_domain_idle : filesystem { mount remount unmount getattr relabelfrom quotamod quotaget watch };

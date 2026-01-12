@@ -3,8 +3,8 @@
 
 include vendor/google_devices/tangorpro/adevtool-version-check.mk
 
-ifneq ($(BUILD_ID),BP4A.251205.006)
-  $(error BUILD_ID: expected BP4A.251205.006, got $(BUILD_ID))
+ifneq ($(BUILD_ID),BP4A.260105.004.E1)
+  $(error BUILD_ID: expected BP4A.260105.004.E1, got $(BUILD_ID))
 endif
 
 $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/tangorpro/device.mk)
@@ -683,6 +683,7 @@ PRODUCT_PACKAGES += \
     libhbmsvmanager_jni \
     libhwjpeg \
     libion_google \
+    liblmkd_flags_c \
     libmahalcontroller \
     libmedia_ecoservice \
     libmemtrack-pixel \

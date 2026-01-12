@@ -1,2 +1,2 @@
-export BUILD_ID_lynx="BP41.250916.015.A1"
+export BUILD_ID_lynx="BP4A.260105.004.E1"
 unset PLATFORM_SECURITY_PATCH_lynx

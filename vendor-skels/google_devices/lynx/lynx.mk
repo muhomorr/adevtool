@@ -3,8 +3,8 @@
 
 include vendor/google_devices/lynx/adevtool-version-check.mk
 
-ifneq ($(BUILD_ID),BP41.250916.015.A1)
-  $(error BUILD_ID: expected BP41.250916.015.A1, got $(BUILD_ID))
+ifneq ($(BUILD_ID),BP4A.260105.004.E1)
+  $(error BUILD_ID: expected BP4A.260105.004.E1, got $(BUILD_ID))
 endif
 
 $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/lynx/device.mk)
@@ -22,7 +22,6 @@ PRODUCT_MODEL := Pixel 7a
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
 
-PRODUCT_NAME_FOR_ATTESTATION := lynx
 PRODUCT_SHIPPING_API_LEVEL := 33
 TARGET_BOOTLOADER_BOARD_NAME := lynx
 TARGET_SCREEN_DENSITY := 420
@@ -489,10 +488,10 @@ PRODUCT_PACKAGES += \
     GoogleConfigOverlay \
     GooglePermissionControllerOverlay \
     GooglePermissionControllerSafetyCenterOverlay \
-    HbmSVManager__lynx_beta__auto_generated_rro_product \
+    HbmSVManager__lynx__auto_generated_rro_product \
     ManagedProvisioningPixelOverlay \
     NetworkStackOverlay \
-    NexusLauncherRelease__lynx_beta__auto_generated_rro_vendor \
+    NexusLauncherRelease__lynx__auto_generated_rro_vendor \
     PixelBatteryHealthOverlay \
     PixelConfigOverlay2018 \
     PixelConfigOverlay2021 \
@@ -503,29 +502,29 @@ PRODUCT_PACKAGES += \
     PixelNfcOverlayLynx \
     PixelTetheringOverlay2021 \
     PixelWifiOverlay2023_midyear \
-    SafetyRegulatoryInfo__lynx_beta__auto_generated_rro_product \
+    SafetyRegulatoryInfo__lynx__auto_generated_rro_product \
     SettingsGoogleFutureLynxOverlay \
     SettingsGoogleLynxOverlay \
     SettingsGoogleSyntheticOverlay \
-    SettingsGoogle__lynx_beta__auto_generated_rro_product \
-    SettingsGoogle__lynx_beta__auto_generated_rro_vendor \
+    SettingsGoogle__lynx__auto_generated_rro_product \
+    SettingsGoogle__lynx__auto_generated_rro_vendor \
     SettingsIntelligenceGoogleSyntheticOverlay \
     SettingsOverlayG0DZQ \
     SettingsOverlayG82U8 \
     SettingsOverlayGHL1X \
     SettingsOverlayGWKK3 \
-    SettingsProvider__lynx_beta__auto_generated_rro_product \
+    SettingsProvider__lynx__auto_generated_rro_product \
     SystemUIGXOverlay \
     SystemUIGoogleSyntheticOverlay \
-    SystemUIGoogle__lynx_beta__auto_generated_rro_product \
-    SystemUIGoogle__lynx_beta__auto_generated_rro_vendor \
-    TeleService__lynx_beta__auto_generated_rro_product \
-    TeleService__lynx_beta__auto_generated_rro_vendor \
+    SystemUIGoogle__lynx__auto_generated_rro_product \
+    SystemUIGoogle__lynx__auto_generated_rro_vendor \
+    TeleService__lynx__auto_generated_rro_product \
+    TeleService__lynx__auto_generated_rro_vendor \
     TrafficLightFaceOverlay \
     UdfpsOverlay \
-    WallpaperPickerGoogleRelease__lynx_beta__auto_generated_rro_vendor \
-    framework-res__lynx_beta__auto_generated_rro_product \
-    framework-res__lynx_beta__auto_generated_rro_vendor
+    WallpaperPickerGoogleRelease__lynx__auto_generated_rro_vendor \
+    framework-res__lynx__auto_generated_rro_product \
+    framework-res__lynx__auto_generated_rro_vendor
 
 # file-based packages
 PRODUCT_PACKAGES += \
@@ -765,6 +764,7 @@ PRODUCT_PACKAGES += \
     libidl \
     libion_google \
     libjson \
+    liblmkd_flags_c \
     libloc_base_util \
     libloc_mq_client \
     liblowi_client \
@@ -1440,7 +1440,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/lynx/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v0-security.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v0-security.img \
     vendor/google_devices/lynx/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v0.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v0.img \
     vendor/google_devices/lynx/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v1.img \
-    vendor/google_devices/lynx/proprietary/vendor_dlkm/etc/init.insmod.lynx.cfg:$(TARGET_COPY_OUT_VENDOR_DLKM)/etc/init.insmod.lynx.cfg \
     vendor/google_devices/lynx/proprietary/vendor_ramdisk/system/etc/fstab.gs201:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.gs201 \
     vendor/google_devices/lynx/proprietary/vendor_ramdisk/system/etc/fstab.gs201-fips:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.gs201-fips \
     vendor/google_devices/lynx/proprietary/vendor/etc/aoc/BLUETOOTH.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/BLUETOOTH.dat \

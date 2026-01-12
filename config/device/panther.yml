@@ -1,5 +1,6 @@
 device:
   name: panther
+  build_id: BP4A.251205.006
 
 includes:
   - common/gen7pixel.yml

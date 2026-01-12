@@ -449,6 +449,7 @@ type sysfs_ospm, fs_type, sysfs_type;
 type sysfs_aoc_udfps, fs_type, sysfs_type;
 type sysfs_powerstats, fs_type, sysfs_type;
 type sysfs_debug_trigger, fs_type, sysfs_type;
+type sysfs_gcdd_dev_stat, fs_type, sysfs_type;
 type vendor_dumpsys, file_type, vendor_file_type;
 type chre_socket, file_type;
 type sysfs_wlc, fs_type, sysfs_type;
