@@ -344,3 +344,60 @@ mustang CP11.251114.007:
 rango CP11.251114.007:
   factory: 7c5f6c20bce4389f13198938c691368f2746083d3cb92add75f507e71c31af1a https://dl.google.com/developers/android/baklava/images/factory/rango_beta-cp11.251114.007-factory-7c5f6c20.zip
 
+# 16 QPR3 Beta 2
+oriole CP11.251209.007:
+  factory: 09671c80eded857d0f30e258923b06afbdc22e68ebc17ca26d83dc3f5ba0e846 https://dl.google.com/developers/android/baklava/images/factory/oriole_beta-cp11.251209.007-factory-09671c80.zip
+  ota: 82bc8dd896787b7ff8d3282acf2da40b0ddf9fb4a0fd21a29f0dfec2c05d4600 https://dl.google.com/developers/android/baklava/images/ota/oriole_beta-ota-cp11.251209.007-82bc8dd8.zip
+raven CP11.251209.007:
+  factory: 5ea26bd7a00eb940209ee02a7575f7e21c22e85471fe720a6eaa3e68db3577b6 https://dl.google.com/developers/android/baklava/images/factory/raven_beta-cp11.251209.007-factory-5ea26bd7.zip
+  ota: dbc4c3c1c331930759cccedc1f2dfb8ee33d443ba8567fee0de6771c78e63614 https://dl.google.com/developers/android/baklava/images/ota/raven_beta-ota-cp11.251209.007-dbc4c3c1.zip
+bluejay CP11.251209.007:
+  factory: 9dd53248594203b55cb987fc65aff243fc416bcfa8777a199bd637e16dd3908a https://dl.google.com/developers/android/baklava/images/factory/bluejay_beta-cp11.251209.007-factory-9dd53248.zip
+panther CP11.251209.007:
+  factory: 4a5baba6cd43e40e601f469cd75bb3ae5f1c7071828582d7d3a9add97b688225 https://dl.google.com/developers/android/baklava/images/factory/panther_beta-cp11.251209.007-factory-4a5baba6.zip
+  ota: 63e0ccf5a167cca5ea938e4b5de8aa4c5b50755c649675aeffdab22db2bb17be https://dl.google.com/developers/android/baklava/images/ota/panther_beta-ota-cp11.251209.007-63e0ccf5.zip
+cheetah CP11.251209.007:
+  factory: f21e68f8f16940a339aaf4319938d956fa0ca2ac26d015849e3d27b4a937febf https://dl.google.com/developers/android/baklava/images/factory/cheetah_beta-cp11.251209.007-factory-f21e68f8.zip
+  ota: 46dd11d86d6ce6d7eb3027a5ec74821e872345d2e7e0a3621965aec558768a2a https://dl.google.com/developers/android/baklava/images/ota/cheetah_beta-ota-cp11.251209.007-46dd11d8.zip
+lynx CP11.251209.007.A1:
+  factory: 486edbce920d62b260496229f8c26c12e7a6071db3d5b8d411d95a151574a32f https://dl.google.com/developers/android/baklava/images/factory/lynx_beta-cp11.251209.007.a1-factory-486edbce.zip
+  ota: 4d34bdc3370cd9a59affceee30b2fbb18e0fb58052f6f8878740fcb756eda3a4 https://dl.google.com/developers/android/baklava/images/ota/lynx_beta-ota-cp11.251209.007.a1-4d34bdc3.zip
+felix CP11.251209.007.A1:
+  factory: e3a89184bcb161c9a2ff316fb78323e64c20b1653279ae7351d48a9b79aa6b66 https://dl.google.com/developers/android/baklava/images/factory/felix_beta-cp11.251209.007.a1-factory-e3a89184.zip
+  ota: 99ea2442b77b238f7ee45133e971df97282f731e61461f2105f56d839205b96a https://dl.google.com/developers/android/baklava/images/ota/felix_beta-ota-cp11.251209.007.a1-99ea2442.zip
+tangorpro CP11.251209.007.A1:
+  factory: 3be2a8626d3749ffdcceeaddb806fca5d3b4c6dfe1c6bab0fcda7ff288eb5119 https://dl.google.com/developers/android/baklava/images/factory/tangorpro_beta-cp11.251209.007.a1-factory-3be2a862.zip
+  ota: ff8f01159cd4191a39cf26a67a794c8a633936d70d39e469a8c67812168a84d5 https://dl.google.com/developers/android/baklava/images/ota/tangorpro_beta-ota-cp11.251209.007.a1-ff8f0115.zip
+shiba CP11.251209.007.A1:
+  factory: 50234f097028dcbb9868ba83c8a4b3174c18a1c593bd94827bace5b1637042b1 https://dl.google.com/developers/android/baklava/images/factory/shiba_beta-cp11.251209.007.a1-factory-50234f09.zip
+  ota: a3ed85e3350c7c5bb9d5caa9f66279cd837659f7043294e0f5b9b84bc73f707f https://dl.google.com/developers/android/baklava/images/ota/shiba_beta-ota-cp11.251209.007.a1-a3ed85e3.zip
+husky CP11.251209.007.A1:
+  factory: 111d0977eecf844be3f42372e52b16738c48e571fe8a6d5e89d6b8daf9d40e1b https://dl.google.com/developers/android/baklava/images/factory/husky_beta-cp11.251209.007.a1-factory-111d0977.zip
+  ota: a18d772acdc415bf5c2d25856af51efa34fda1c1c269380aea4858fbee62cff9 https://dl.google.com/developers/android/baklava/images/ota/husky_beta-ota-cp11.251209.007.a1-a18d772a.zip
+akita CP11.251209.007.A1:
+  factory: 2965a47a9ae7341689e000092d88145087927e93898bec06a2bac68322027a89 https://dl.google.com/developers/android/baklava/images/factory/akita_beta-cp11.251209.007.a1-factory-2965a47a.zip
+  ota: fda2f2366192a03f5bc6ef00c6c535ec0b6b981e14010a909d7a10067372eecb https://dl.google.com/developers/android/baklava/images/ota/akita_beta-ota-cp11.251209.007.a1-fda2f236.zip
+tokay CP11.251209.007.A1:
+  factory: 3bc4ab63de36320a856622675bd2f2b49a6c0ed06b32013f98d62fb8964a70f8 https://dl.google.com/developers/android/baklava/images/factory/tokay_beta-cp11.251209.007.a1-factory-3bc4ab63.zip
+  ota: e6a13078571e092e1c6dea302bf7399be5ba3978030e211f3f1317557bbfb805 https://dl.google.com/developers/android/baklava/images/ota/tokay_beta-ota-cp11.251209.007.a1-e6a13078.zip
+caiman CP11.251209.007.A1:
+  factory: bc3200b446e0cdea323e58c3539a226cbfdd100d15e549d0633e14935ce3f434 https://dl.google.com/developers/android/baklava/images/factory/caiman_beta-cp11.251209.007.a1-factory-bc3200b4.zip
+  ota: de2d4d9aab76b5ea5fb642e44eb135647cfadde13e36226995c4ff20a553463b https://dl.google.com/developers/android/baklava/images/ota/caiman_beta-ota-cp11.251209.007.a1-de2d4d9a.zip
+komodo CP11.251209.007.A1:
+  factory: afa77179f57403dee5c7842f9682e81908a1fd51285a3e19f70645317b724b7c https://dl.google.com/developers/android/baklava/images/factory/komodo_beta-cp11.251209.007.a1-factory-afa77179.zip
+  ota: 86818582c68a78a2db73d3516db6a40347025aa483ba6a843efb35ea03e10f4c https://dl.google.com/developers/android/baklava/images/ota/komodo_beta-ota-cp11.251209.007.a1-86818582.zip
+comet CP11.251209.007.A1:
+  factory: b723454db8f6ba655ef60c4fcac7ce60d8073896f91f942d1718dfa63ed5a478 https://dl.google.com/developers/android/baklava/images/factory/comet_beta-cp11.251209.007.a1-factory-b723454d.zip
+  ota: d33fb5e938e901277551ce9a106a6fa8bbd710c721bee113d73f7d29d580d253 https://dl.google.com/developers/android/baklava/images/ota/comet_beta-ota-cp11.251209.007.a1-d33fb5e9.zip
+tegu CP11.251209.007.A1:
+  factory: cf527fff94306f512e7d7b1469ca8820217f6cb7bba0d47b1d2a97f2fbd99733 https://dl.google.com/developers/android/baklava/images/factory/tegu_beta-cp11.251209.007.a1-factory-cf527fff.zip
+  ota: a8e5d842f3f4b630b765ea1e9f1ad266731ff4e126f80971131821afbc709dad https://dl.google.com/developers/android/baklava/images/ota/tegu_beta-ota-cp11.251209.007.a1-a8e5d842.zip
+frankel CP11.251209.007.A1:
+  factory: 9d9df97197e9988cb6fcd91290c6eee4de4f7831d4cc3deaa330a160a64ace71 https://dl.google.com/developers/android/baklava/images/factory/frankel_beta-cp11.251209.007.a1-factory-9d9df971.zip
+blazer CP11.251209.007.A1:
+  factory: 13cc2e28aea8f6d45cc7649f8708617328c0d222ba65fc3f2e6b83c77fab868a https://dl.google.com/developers/android/baklava/images/factory/blazer_beta-cp11.251209.007.a1-factory-13cc2e28.zip
+mustang CP11.251209.007.A1:
+  factory: 4de9209f9887c0a3aaff8de6e9ed94966e73c7c7d143679d6dd8888128dbd9a5 https://dl.google.com/developers/android/baklava/images/factory/mustang_beta-cp11.251209.007.a1-factory-4de9209f.zip
+rango CP11.251209.007.A1:
+  factory: 2608cf2362dc03302a7c9fa38f6f66ad9de6ba79f20c9931430ba7171ec38b34 https://dl.google.com/developers/android/baklava/images/factory/rango_beta-cp11.251209.007.a1-factory-2608cf23.zip
+
