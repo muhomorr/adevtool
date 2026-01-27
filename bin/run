@@ -7,6 +7,11 @@ if (NODE_MAJOR_VERSION < MIN_NODE_MAJOR_VERSION) {
   throw new Error(`This tool requires NodeJS ${MIN_NODE_MAJOR_VERSION} or later`)
 }
 
+if (process.getuid() === 0) {
+  // some dependencies (e.g. cpio, debugfs) behave differently when they run as root
+  throw new Error('running adevtool as root is not supported')
+}
+
 const expectedPathEnding = '/vendor/adevtool/bin/run'
 let cwd = process.cwd()
 let validCwd = false
