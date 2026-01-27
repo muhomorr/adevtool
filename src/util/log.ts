@@ -104,6 +104,11 @@ function clearStatusLines() {
 }
 
 function writeStatus(status: string) {
+  if (process.stdout.getWindowSize === undefined) {
+    origStdoutWrite(status + '\n')
+    return
+  }
+
   let width = process.stdout.getWindowSize()[0]
   let numLines = 0
   let lines = status.split('\n').filter(l => l.length > 0)
