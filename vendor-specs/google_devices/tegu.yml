@@ -3311,7 +3311,7 @@ proprietary/vendor/etc/fstab.zumapro: 55b645866df5a056d784e50ce4293e0a95ab034b55
 proprietary/vendor/etc/fstab.zumapro-fips: 1b136e68224b3d08cdb38a8bb40ac37c77b9a601b57dab91119e7d6e7c668449
 proprietary/vendor/etc/gnss: dir
 proprietary/vendor/etc/gnss/ca.pem: 20ce188c6b9673e03dc504784562a0db953efa638a8e094394c7e25cbb20ea0f
-proprietary/vendor/etc/gnss/gps.cfg: 62a27e24c5db015468ccf847b641d7685c639c4ff66480dc2311cd2c055ea380
+proprietary/vendor/etc/gnss/gps.cfg: 50ff9dfec55b8f024574ed3eaf024d5e74109bd4d0ffeddecadd1c059e784eb2
 proprietary/vendor/etc/init: dir
 proprietary/vendor/etc/init.common.cfg: f4104573e29026ac335f03703e24242a304bd74cbb99f5d5848c9968901444fb
 proprietary/vendor/etc/init/Exynos_C2.rc: e1a67aedbf8524273e9b755409da6e4f5660631b59d6e502e35e4a778cb15422

@@ -3353,7 +3353,7 @@ proprietary/vendor/etc/future_vt_prediction_model.tflite: dddd58cff4177e193fb0ef
 proprietary/vendor/etc/ggauge.ini: 664662c09bdf5c0604b16a73b37b4e8ccb5da51be7d8042bf741108180688270
 proprietary/vendor/etc/gnss: dir
 proprietary/vendor/etc/gnss/ca.pem: 730fc9a6b512cf2782351b22f870f83cbf79bd51a1891f22edb3bb987a5f2422
-proprietary/vendor/etc/gnss/gps.cfg: f335baddeed5b23523770735e8b60d12e602c4155ebd69da46460153b95dea55
+proprietary/vendor/etc/gnss/gps.cfg: ca7620c26b72700794ac9bcca17393d06d13ac9023b5cb3a2115654838ae56a2
 proprietary/vendor/etc/gnss/hash.bin: 359c9946f3a61f71afb5d03bc592055d6ce4316ea719f7a955ecf44524538435
 proprietary/vendor/etc/init: dir
 proprietary/vendor/etc/init.common.cfg: f4104573e29026ac335f03703e24242a304bd74cbb99f5d5848c9968901444fb

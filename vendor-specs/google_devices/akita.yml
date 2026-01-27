@@ -3278,7 +3278,7 @@ proprietary/vendor/etc/fstab.zuma: ca1e1e1246c1ff40c1d41554f75185f10ce739242a5e1
 proprietary/vendor/etc/fstab.zuma-fips: fb3e337ac05d7dfe36cff661e8d2a39c314e7e606a1a306bc265bec57c7b41a2
 proprietary/vendor/etc/gnss: dir
 proprietary/vendor/etc/gnss/ca.pem: 20ce188c6b9673e03dc504784562a0db953efa638a8e094394c7e25cbb20ea0f
-proprietary/vendor/etc/gnss/gps.cfg: 112b0eedde6cd150b195dd6a216a266e3f29ec8f7aa42dade2e49698728ad854
+proprietary/vendor/etc/gnss/gps.cfg: acc8b880da5f16a3ee4ac3688d7adf9a8b8080f8591b85c5d1f1e1080a469fd2
 proprietary/vendor/etc/init: dir
 proprietary/vendor/etc/init.common.cfg: f4104573e29026ac335f03703e24242a304bd74cbb99f5d5848c9968901444fb
 proprietary/vendor/etc/init/Exynos_C2.rc: e1a67aedbf8524273e9b755409da6e4f5660631b59d6e502e35e4a778cb15422

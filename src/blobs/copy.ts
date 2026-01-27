@@ -183,13 +183,18 @@ function patchGpsXml(orig: string) {
 }
 
 function patchGpsCfg(orig: string) {
-  return replaceLines(orig, line => {
-    if (line.startsWith('SUPL_SSL_METHOD=')) {
-      return 'SUPL_SSL_METHOD=TLSv1_3'
-    } else {
-      return line
-    }
-  })
+  let extraLines = ['UseNtpForAiding=0']
+  return (
+    extraLines.join('\n') +
+    '\n\n' +
+    replaceLines(orig, line => {
+      if (line.startsWith('SUPL_SSL_METHOD=')) {
+        return 'SUPL_SSL_METHOD=TLSv1_3'
+      } else {
+        return line
+      }
+    })
+  )
 }
 
 function replaceLines(multiLine: string, callbackFn: (value: string) => string) {

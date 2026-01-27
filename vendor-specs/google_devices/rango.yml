@@ -3627,7 +3627,7 @@ proprietary/vendor/etc/fstab.zram.60p: c92876dab839b6fc020962b49efaf744bad8dc73c
 proprietary/vendor/etc/fstab.zram.6g: c95836903adda8686c47db76c8aca64c52a45c74a6628db3ab641b41805123ef
 proprietary/vendor/etc/gnss: dir
 proprietary/vendor/etc/gnss/ca.pem: 730fc9a6b512cf2782351b22f870f83cbf79bd51a1891f22edb3bb987a5f2422
-proprietary/vendor/etc/gnss/gps.cfg: 0e955e8937d0b2863d5bc1f6a651b7c67d22961f03fdfd77e2555907718802f5
+proprietary/vendor/etc/gnss/gps.cfg: 0e7609195ee8baf09c075bcfea9869b5953c84346de8d3a0a435d3d74f119cd9
 proprietary/vendor/etc/gnss/hash.bin: 359c9946f3a61f71afb5d03bc592055d6ce4316ea719f7a955ecf44524538435
 proprietary/vendor/etc/init: dir
 proprietary/vendor/etc/init.common.cfg: f4104573e29026ac335f03703e24242a304bd74cbb99f5d5848c9968901444fb
