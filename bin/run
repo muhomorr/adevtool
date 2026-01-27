@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
 const NODE_MAJOR_VERSION = process.versions.node.split('.')[0]
+const MIN_NODE_MAJOR_VERSION = 24
 
-if (NODE_MAJOR_VERSION < 18) {
-  throw new Error('This tool requires NodeJS 18 or later')
+if (NODE_MAJOR_VERSION < MIN_NODE_MAJOR_VERSION) {
+  throw new Error(`This tool requires NodeJS ${MIN_NODE_MAJOR_VERSION} or later`)
 }
 
 const expectedPathEnding = '/vendor/adevtool/bin/run'
