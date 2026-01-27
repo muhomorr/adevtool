@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const { statSync } = require('node:fs')
 const NODE_MAJOR_VERSION = process.versions.node.split('.')[0]
 const MIN_NODE_MAJOR_VERSION = 24
 
@@ -31,7 +32,15 @@ if (!validCwd) {
   process.exit(1)
 }
 
-process.env.PATH = cwd + '/prebuilts/build-tools/path/linux-x86:' + cwd + '/prebuilts/jdk/jdk21/linux-x86/bin:' + process.env.PATH
+let extraPathDirs = [cwd + '/prebuilts/build-tools/path/linux-x86', cwd + '/prebuilts/jdk/jdk21/linux-x86/bin']
+for (let dir of extraPathDirs) {
+  let stat = statSync(dir, { throwIfNoEntry: false })
+  if (stat === undefined || !stat.isDirectory()) {
+    throw new Error('missing prebuilts dir: ' + dir)
+  }
+}
+
+process.env.PATH = extraPathDirs.join(':') + ':' + process.env.PATH
 
 process.env.UV_THREADPOOL_SIZE = require('os').cpus().length.toString()
 
