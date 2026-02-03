@@ -1447,6 +1447,16 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "mosey_server",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/mosey_server" ],
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "pcie_power_control",
     owner: "google_devices",
     srcs: [ "vendor/bin/pcie_power_control" ],
@@ -3047,6 +3057,17 @@ cc_prebuilt_library_shared {
     name: "libmodem_svc_proto_legacy_soong",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libmodem_svc_proto_legacy_soong.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmosey_daemon_ffi",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libmosey_daemon_ffi.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,

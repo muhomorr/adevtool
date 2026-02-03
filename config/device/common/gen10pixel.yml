@@ -112,7 +112,6 @@ sepolicy_inclusions:
         - /vendor/bin/hw/init_rdbl\.sh u:object_r:init_rdbl_exec:s0
         - /vendor/bin/hw/pixel\.gralloc\.allocator-V[1-2]-service u:object_r:hal_graphics_allocator_default_exec:s0
         - /vendor/bin/hw/vendor\.google\.plat_security-service u:object_r:hal_plat_security_exec:s0
-        - /vendor/bin/mosey_server u:object_r:mosey_server_exec:s0
         - /vendor/bin/pixel_irq_load_balancer u:object_r:pixel_irq_load_balancer_exec:s0
         - /vendor/bin/shared_modem_platform u:object_r:shared_modem_platform_exec:s0
         - /vendor/lib64/hw/android\.hardware\.graphics\.mapper@4\.0-impl-pixel\.so u:object_r:same_process_hal_file:s0
@@ -149,7 +148,6 @@ sepolicy_inclusions:
         - com.google.input.ITwoshayFileDumpService/touchflow_default u:object_r:twoshay_file_dump_service:s0
         - com.google.input.ITwoshayFileDumpService/touchflow_outer u:object_r:twoshay_file_dump_service:s0
         - com.google.input.ITwoshayFileDumpService/twoshay u:object_r:twoshay_file_dump_service:s0
-        - com.google.pixel.moseyservice.IMoseyService/default u:object_r:mosey_service:s0
         - telephony.oem.oemrilhook u:object_r:radio_service:s0
         - vendor.google.plat_security.ISecureTimestamp/default u:object_r:hal_plat_security_service:s0
         - vendor.google.plat_security.ITrustyDecrypt/default u:object_r:hal_plat_security_service:s0
@@ -373,7 +371,6 @@ filters:
       - vendor/bin/hw/init_rdbl.sh
       - vendor/bin/hw/pixel.gralloc.allocator-V2-service
       - vendor/bin/hw/vendor.google.plat_security-service
-      - vendor/bin/mosey_server
       - vendor/bin/pixel_irq_load_balancer
       - vendor/bin/pvrhwperfd
       - vendor/bin/storage_intelligence.sh
@@ -482,7 +479,6 @@ filters:
       - vendor/etc/init/init.mailbox.rc
       - vendor/etc/init/init.pixel_irq_load_balancer.rc
       - vendor/etc/init/init_rdbl.rc
-      - vendor/etc/init/mosey.rc
       - vendor/etc/init/pixel.gralloc.allocator-V2-service.rc
       - vendor/etc/init/pixelstats-vendor.laguna.rc
       - vendor/etc/init/storage.intelligence.rc
@@ -556,7 +552,6 @@ filters:
       - vendor/lib64/libgc2_vp9_dec.so
       - vendor/lib64/libIMGegl.so
       - vendor/lib64/libMAM_Google_Pixel_Android.so
-      - vendor/lib64/libmosey_daemon_ffi.so
       - vendor/lib64/libPixelGrallocProperties.so
       - vendor/lib64/libPVROCL.so
       - vendor/lib64/libPVRScopeServices.so

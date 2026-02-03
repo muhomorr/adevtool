@@ -61,7 +61,6 @@ persist.wm.extensions.activity_embedding_guard_with_android_15=false
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
 ro.bluetooth.leaudio_offload.supported=true
 ro.bluetooth.leaudio_switcher.supported=true
-ro.build.device_family=F10
 ro.fuse.bpf.enabled=true
 ro.gwfcactivation.disabled_carriers=1492
 ro.launcher.blur.appLaunch=0

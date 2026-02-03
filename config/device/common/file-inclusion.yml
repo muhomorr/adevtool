@@ -77,10 +77,10 @@ filters:
       - recovery/system/lib64/hw/android.hardware.fastboot@1.1-impl.pixel.so
       - recovery/system/lib64/librecovery_ui_ext.so
       - recovery/system/lib64/libtrusty.so
+      - system/lib64/liblmkd_flags_c.so
       - system/lib64/libstatslog_gpustats.so
       - system/lib64/libstatslog_inputflinger.so
       - system/lib64/libstatslog_surfaceflinger_bootstrap.so
-      - system/lib64/liblmkd_flags_c.so
       - system/lib64/logd_flags_c_lib.so
       - system_ext/bin/convert_to_ext4.sh
       - system_ext/bin/gs_watchdogd
@@ -297,6 +297,7 @@ filters:
       - vendor/bin/misc_writer
       - vendor/bin/modem_logging_control
       - vendor/bin/modem_ml_svc_sit
+      - vendor/bin/mosey_server
       - vendor/bin/pcie_power_control
       - vendor/bin/pixel-experiments-recovery.sh
       - vendor/bin/pixelstats-vendor
@@ -600,6 +601,7 @@ filters:
       - vendor/etc/init/libg3a_gaf.rc
       - vendor/etc/init/libg3a_ghawb.rc
       - vendor/etc/init/memtrack.rc
+      - vendor/etc/init/mosey.rc
       - vendor/etc/init/nfc-service-default.rc
       - vendor/etc/init/pcie_power.rc
       - vendor/etc/init/pixel-experiments-recovery.rc
@@ -1136,6 +1138,7 @@ filters:
       - vendor/lib64/libmetrics_logger.so
       - vendor/lib64/libmodem_ml_svc_proto.so
       - vendor/lib64/libmodem_svc_proto_legacy_soong.so
+      - vendor/lib64/libmosey_daemon_ffi.so
       - vendor/lib64/libnbaio_mono.so
       - vendor/lib64/libnos.so
       - vendor/lib64/libnos_citadeld_proxy.so

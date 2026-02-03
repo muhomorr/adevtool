@@ -157,6 +157,12 @@ vintf_fragment {
 }
 
 vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_manifest_mosey.xml",
+    src: "manifest_mosey.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_manifest_radioext.xml",
     src: "manifest_radioext.xml",
     soc_specific: true,

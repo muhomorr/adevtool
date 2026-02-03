@@ -30,6 +30,7 @@ com.google.input.gia.core.IGiaService/default u:object_r:hal_gia_service:s0
 android.hardware.gnss.IGnss/vendor u:object_r:hal_gnss_service:s0
 com.google.face.debug.IDebugHost/default u:object_r:hal_face_debug_service:s0
 com.google.face.debug.IDebugManager/default u:object_r:hal_face_debug_service:s0
+com.google.pixel.moseyservice.IMoseyService/default u:object_r:mosey_service:s0
 com.google.flood.IFloodService/default u:object_r:flood_control_service:s0
 com.google.pixel.modem.logmasklibrary.ILiboemserviceProxy/default u:object_r:liboemservice_proxy_service:s0
 vendor.samsung_slsi.telephony.hardware.radioExternal.IOemSlsiRadioExternal/default u:object_r:hal_vendor_radio_external_service:s0

@@ -3,8 +3,8 @@
 
 include vendor/google_devices/tokay/adevtool-version-check.mk
 
-ifneq ($(BUILD_ID),BP4A.260105.004.E1)
-  $(error BUILD_ID: expected BP4A.260105.004.E1, got $(BUILD_ID))
+ifneq ($(BUILD_ID),BP4A.260205.002)
+  $(error BUILD_ID: expected BP4A.260205.002, got $(BUILD_ID))
 endif
 
 $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/tokay/device.mk)
@@ -82,6 +82,7 @@ PRODUCT_PACKAGES += \
     adevtool_vintf_fragment_vendor_manifest_aocx.xml \
     adevtool_vintf_fragment_vendor_manifest_gralloc_aidl2.xml \
     adevtool_vintf_fragment_vendor_manifest_input.processor-service.xml \
+    adevtool_vintf_fragment_vendor_manifest_mosey.xml \
     adevtool_vintf_fragment_vendor_manifest_radioext.xml \
     adevtool_vintf_fragment_vendor_memtrack.xml \
     adevtool_vintf_fragment_vendor_pixel-display-default.xml \
@@ -772,6 +773,7 @@ PRODUCT_PACKAGES += \
     libmetrics_logger \
     libmodem_ml_svc_proto \
     libmodem_svc_proto_legacy_soong \
+    libmosey_daemon_ffi \
     libnos \
     libnos_citadeld_proxy \
     libnos_client_citadel \
@@ -833,6 +835,7 @@ PRODUCT_PACKAGES += \
     modem_ml_pw_rpc_gen \
     modem_ml_svc_sit \
     modemml-tflite-service-aidl-V1-ndk \
+    mosey_server \
     motiondetector \
     nearby \
     nos_app_avb \
@@ -1625,6 +1628,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tokay/proprietary/vendor/etc/init/libg3a_gaf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gaf.rc \
     vendor/google_devices/tokay/proprietary/vendor/etc/init/libg3a_ghawb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_ghawb.rc \
     vendor/google_devices/tokay/proprietary/vendor/etc/init/memtrack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.rc \
+    vendor/google_devices/tokay/proprietary/vendor/etc/init/mosey.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mosey.rc \
     vendor/google_devices/tokay/proprietary/vendor/etc/init/pcie_power.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pcie_power.rc \
     vendor/google_devices/tokay/proprietary/vendor/etc/init/pixel-experiments-recovery.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-experiments-recovery.rc \
     vendor/google_devices/tokay/proprietary/vendor/etc/init/pixel-gnss-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-gnss-default.rc \

@@ -3,8 +3,8 @@
 
 include vendor/google_devices/lynx/adevtool-version-check.mk
 
-ifneq ($(BUILD_ID),BP4A.260105.004.E1)
-  $(error BUILD_ID: expected BP4A.260105.004.E1, got $(BUILD_ID))
+ifneq ($(BUILD_ID),BP4A.260205.001)
+  $(error BUILD_ID: expected BP4A.260205.001, got $(BUILD_ID))
 endif
 
 $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/lynx/device.mk)

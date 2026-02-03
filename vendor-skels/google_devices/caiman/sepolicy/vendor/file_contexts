@@ -261,6 +261,7 @@
 /dev/logbuffer_dc_mains u:object_r:logbuffer_device:s0
 /vendor/bin/usf_reg_edit u:object_r:vendor_usf_reg_edit:s0
 /vendor/bin/wifi_sniffer u:object_r:wifi_sniffer_exec:s0
+/vendor/bin/mosey_server u:object_r:mosey_server_exec:s0
 /vendor/bin/thermal_logd u:object_r:init-thermal-logging-sh_exec:s0
 /dev/logbuffer_dual_batt u:object_r:logbuffer_device:s0
 /dev/logbuffer_bms_vimon u:object_r:logbuffer_device:s0

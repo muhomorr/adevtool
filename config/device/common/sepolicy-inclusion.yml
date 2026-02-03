@@ -905,6 +905,7 @@ sepolicy_inclusions:
         - /vendor/bin/mm_logd u:object_r:init-mm-logging-sh_exec:s0
         - /vendor/bin/modem_logging_control u:object_r:modem_logging_control_exec:s0
         - /vendor/bin/modem_ml_svc_sit u:object_r:modem_ml_svc_sit_exec:s0
+        - /vendor/bin/mosey_server u:object_r:mosey_server_exec:s0
         - /vendor/bin/pcie_power_control u:object_r:pcie_power_exec:s0
         - /vendor/bin/pixel-experiments-recovery\.sh u:object_r:pixel-experiments-recovery-sh_exec:s0
         - /vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
@@ -1077,6 +1078,7 @@ sepolicy_inclusions:
         - com.google.input.ITwoshayNotificationService/default u:object_r:twoshay_notification_service:s0
         - com.google.pixel.camera.connectivity.hal.provider.ICameraProvider/default u:object_r:hal_pixel_remote_camera_service:s0
         - com.google.pixel.modem.logmasklibrary.ILiboemserviceProxy/default u:object_r:liboemservice_proxy_service:s0
+        - com.google.pixel.moseyservice.IMoseyService/default u:object_r:mosey_service:s0
         - com.google.pixel.shared_modem_platform.ISharedModemPlatform/default u:object_r:hal_shared_modem_platform_service:s0
         - hardware.google.ril_ext.IRilExt/slot1 u:object_r:hal_ril_ext_service:s0
         - hardware.google.ril_ext.IRilExt/slot2 u:object_r:hal_ril_ext_service:s0

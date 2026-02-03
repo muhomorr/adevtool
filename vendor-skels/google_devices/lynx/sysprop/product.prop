@@ -54,7 +54,6 @@ persist.vendor.testing_battery_profile=2
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
 ro.bluetooth.a2dp_offload.supported=true
 ro.bluetooth.leaudio_switcher.supported=false
-ro.build.device_family=P10C10L10
 ro.fuse.bpf.enabled=true
 ro.gwfcactivation.disabled_carriers=1492
 ro.launcher.blur.appLaunch=0
