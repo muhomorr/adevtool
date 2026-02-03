@@ -1,5 +1,6 @@
 device:
   name: frankel
+  build_id: BP4A.260205.001.C1
 
 includes:
   - common/gen10pixel.yml
