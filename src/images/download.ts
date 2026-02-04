@@ -63,9 +63,11 @@ async function downloadImageInner(
 
   let requestInit
   let resumedFrom = ''
+  let isResuming = false
   try {
     let stat = await fs.stat(tmpOutFile)
     if (stat.size > 0) {
+      isResuming = true
       resumedFrom = ` (resumed from ${(stat.size / 1e6).toFixed()} MB)`
       requestInit = {
         headers: {
@@ -84,7 +86,19 @@ async function downloadImageInner(
   }
 
   let downloaded = 0
-  let totalSize = parseInt(resp.headers.get('content-length') ?? '0')
+  let totalSizeStr: string | null
+  if (isResuming) {
+    totalSizeStr = resp.headers.get('content-length')
+  } else {
+    totalSizeStr = resp.headers.get('x-identity-content-length')
+    if (totalSizeStr === null) {
+      totalSizeStr = resp.headers.get('content-length')
+    }
+  }
+  if (totalSizeStr === null) {
+    totalSizeStr = '0'
+  }
+  let totalSize = parseInt(totalSizeStr)
 
   let suffix = `downloading ${(totalSize / 1e6).toFixed()} MB ${image.toString()}${resumedFrom}`
   statusLine.set(' ... ' + suffix)
