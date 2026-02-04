@@ -1,6 +1,5 @@
 device:
   name: mustang
-  build_id: BP4A.260205.001.A1
 
 includes:
   - common/gen10pixel.yml

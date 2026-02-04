@@ -1,2 +1,2 @@
-export BUILD_ID_mustang="BP4A.260205.001.A1"
+export BUILD_ID_mustang="BP4A.260205.001"
 unset PLATFORM_SECURITY_PATCH_mustang
