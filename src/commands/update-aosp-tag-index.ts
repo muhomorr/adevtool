@@ -7,7 +7,6 @@ import { ADEVTOOL_DIR, BUILD_ID_TO_TAG_FILE } from '../config/paths'
 import { showGitDiff } from '../util/cli'
 import { readFile } from '../util/fs'
 import { GitLsRemote } from '../util/git'
-import { yamlStringifyNoFold } from '../util/yaml'
 
 type BuildIdToTag = Map<string, string>
 
@@ -87,7 +86,7 @@ export default class UpdateAospTagIndex extends Command {
     if (!flags.dryRun && numNewTags > 0) {
       let entries = Array.from(map.entries()).sort(([, tag1], [, tag2]) => compareTags(tag1, tag2))
 
-      writeFileSync(BUILD_ID_TO_TAG_FILE, yamlStringifyNoFold(new Map(entries)))
+      writeFileSync(BUILD_ID_TO_TAG_FILE, YAML.stringify(new Map(entries), { lineWidth: 0 }))
     }
 
     if (numNewTags === 0) {

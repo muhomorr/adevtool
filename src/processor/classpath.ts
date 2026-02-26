@@ -41,7 +41,7 @@ interface ClasspathJar {
 
 export async function loadSystemServerClassPaths2(pathResolver: PathResolver) {
   let filePath = pathResolver.resolve(Partition.System, 'etc/classpaths/systemserverclasspath.pb')
-  let cpJars = ExportedClasspathsJars.decode(Reader.create(await fs.readFile(filePath)))
+  let cpJars = ExportedClasspathsJars.decode(await fs.readFile(filePath))
   return cpJars.jars.map(jar => {
     assert(jar.classpath === Classpath.SYSTEMSERVERCLASSPATH)
     assert(jar.minSdkVersion === '')

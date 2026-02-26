@@ -1,7 +1,6 @@
 import assert from 'assert'
 import { promises as fs } from 'fs'
 import path, { basename, dirname } from 'path'
-import { Reader } from 'protobufjs'
 import { getVersionCheckFilePath, VendorDirectories } from '../blobs/build'
 import { BlobEntry } from '../blobs/entry'
 import { PartPath } from '../blobs/file-list'
@@ -301,7 +300,7 @@ PRODUCT_MANUFACTURER := ${mapGet(productProps, 'ro.product.product.manufacturer'
         if (!(await isFile(configPb))) {
           return null
         }
-        let config = LinkerConfig.decode(Reader.create(await fs.readFile(configPb)))
+        let config = LinkerConfig.decode(await fs.readFile(configPb))
         assert(config.permittedPaths.length === 0)
         assert(config.contributions.length === 0)
         assert(!config.visible)

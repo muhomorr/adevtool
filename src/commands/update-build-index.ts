@@ -1,13 +1,13 @@
 import { Command } from '@oclif/core'
 import { readFileSync } from 'fs'
 import { writeFile } from 'fs/promises'
-import { YAMLMap } from 'yaml/types'
+import { YAMLMap } from 'yaml'
 
+import YAML from 'yaml'
 import { DEVICE_CONFIGS_FLAG, loadDeviceConfigs } from '../config/device'
 import { ADEVTOOL_DIR, MAIN_BUILD_INDEX_PART } from '../config/paths'
 import { fetchBuildIndex } from '../images/build-index'
 import { showGitDiff } from '../util/cli'
-import { yamlStringifyNoFold } from '../util/yaml'
 
 export default class UpdateBuildIndex extends Command {
   static description =
@@ -21,7 +21,7 @@ export default class UpdateBuildIndex extends Command {
 
     let index: YAMLMap = await fetchBuildIndex(devices)
 
-    let yaml = yamlStringifyNoFold(index)
+    let yaml = YAML.stringify(index, { lineWidth: 0 })
 
     if (readFileSync(MAIN_BUILD_INDEX_PART).toString() === yaml) {
       this.log('main build index is up-to-date')

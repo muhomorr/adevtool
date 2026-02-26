@@ -5,7 +5,6 @@ import path from 'path'
 
 import assert from 'assert'
 import { createWriteStream, promises as fs } from 'fs'
-import hasha from 'hasha'
 import { parseInt } from 'lodash'
 import { promises as stream } from 'stream'
 import { DeviceConfig } from '../config/device'
@@ -78,7 +77,7 @@ export async function fetchUpdateConfig(
     options,
   )
   assert(response.ok)
-  const pbResponse = await response.buffer()
+  const pbResponse = Buffer.from(await response.arrayBuffer())
   if (debug) {
     const tmpOutFile = path.join(tmpDir, 'encodedResponse')
     log(`encodedResponse: ${tmpOutFile}`)

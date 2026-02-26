@@ -4,8 +4,6 @@ import hasha from 'hasha'
 import path from 'path'
 import YAML from 'yaml'
 
-import { yamlStringifyNoFold } from './yaml'
-
 // FileTreeSpec is a data structure for verifying and comparing all files in a directory.
 // FileTreeSpec maps file path to:
 // - SHA-256 hash if file is a regular file
@@ -23,7 +21,7 @@ export async function getFileTreeSpec(dir: string) {
 }
 
 export function fileTreeSpecToYaml(fth: FileTreeSpec) {
-  return yamlStringifyNoFold(new Map([...fth.entries()].sort()))
+  return YAML.stringify(new Map([...fth.entries()].sort()), { lineWidth: 0 })
 }
 
 export function parseFileTreeSpecYaml(yamlStr: string) {

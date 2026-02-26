@@ -2,7 +2,7 @@ import { Command, Flags } from '@oclif/core'
 import { YAMLMap } from 'yaml/types'
 
 import assert from 'assert'
-import YAML from 'yaml'
+import YAML, { Document } from 'yaml'
 import {
   DEVICE_CONFIGS_FLAG,
   DeviceBuildId,
@@ -12,7 +12,6 @@ import {
 } from '../config/device'
 import { BuildIndex, BuildProps, fetchBetaBuildIndex, fetchBuildIndex, ImageType } from '../images/build-index'
 import { readFile } from '../util/fs'
-import { yamlStringifyNoFold } from '../util/yaml'
 
 export default class FetchBuildIndex extends Command {
   description = 'fetch main or beta build index and print it out as YAML'
@@ -40,7 +39,7 @@ export default class FetchBuildIndex extends Command {
       index = await fetchBuildIndex(devices)
     }
 
-    let yaml = yamlStringifyNoFold(index)
+    let yaml = YAML.stringify(index, { lineWidth: 0 })
     this.log(yaml)
   }
 }
@@ -95,5 +94,5 @@ async function parseCanaryBuildIndex(deviceConfigs: DeviceConfig[], srcFilePath:
       buildIndex.set(makeDeviceBuildId(device, buildId), props)
     }
   }
-  return YAML.createNode(buildIndex) as YAMLMap
+  return new Document().createNode(buildIndex) as YAMLMap
 }
