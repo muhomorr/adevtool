@@ -265,13 +265,12 @@ export default class GenerateFull extends Command {
         if (flags.updateSpec) {
           let skelDir = getVendorModuleSkelDir(config)
           await fs.rm(skelDir, { force: true, recursive: true })
-          let decodedCarrierSettingsDir = path.join(skelDir, 'proprietary', CARRIER_SETTINGS_FACTORY_PATH)
-          await fs.mkdir(decodedCarrierSettingsDir, { recursive: true })
           await Promise.all([
             copyVendorSkel(skelDir, vendorDirs),
             writeVendorFileTreeSpec(vendorDirs, config, flags.verbose),
-            decodeCarrierConfigs(getCarrierSettingsVendorDir(vendorDirs), decodedCarrierSettingsDir),
           ])
+          let decodedCarrierSettingsDir = path.join(skelDir, 'proprietary', CARRIER_SETTINGS_FACTORY_PATH)
+          await decodeCarrierConfigs(getCarrierSettingsVendorDir(vendorDirs), decodedCarrierSettingsDir)
         } else {
           if (!flags.noVerify) {
             try {
