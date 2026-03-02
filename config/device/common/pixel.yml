@@ -21,7 +21,8 @@ device:
   system_fs_type: ext4
   has_cellular: true
   build_id: BP4A.260205.001
-  backport_base_firmware: false
+  backport_build_id: CP1A.260305.018
+  backport_base_firmware: true
 
 filters:
   partitions:
