@@ -1,0 +1,21 @@
+canonical_name: "telnyx_us"
+version: 75000000001
+apns {
+  apn {
+    name: "Farmers GPRS"
+    value: "internet.farmerswireless.com"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "Farmers MMS"
+    value: "mms.farmers.com"
+    type: MMS
+    mmsc: "http://172.16.0.37:8514"
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1762783714
+}

@@ -1,5 +1,5 @@
 canonical_name: "telstra_au"
-version: 73000000023
+version: 75000000023
 apns {
   apn {
     name: "Telstra Broadband"
@@ -373,5 +373,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1761338190
+  seconds: 1761090324
 }

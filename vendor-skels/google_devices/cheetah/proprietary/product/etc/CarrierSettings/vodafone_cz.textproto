@@ -1,5 +1,5 @@
 canonical_name: "vodafone_cz"
-version: 73000000022
+version: 75000000023
 apns {
   apn {
     name: "IMS"
@@ -174,6 +174,10 @@ configs {
     int_value: 2
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "rtt_downgrade_supported_bool"
     bool_value: true
   }
@@ -199,5 +203,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1747202410
+  seconds: 1765368076
 }

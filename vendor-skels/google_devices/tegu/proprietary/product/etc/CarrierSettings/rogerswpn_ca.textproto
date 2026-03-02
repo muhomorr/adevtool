@@ -1,5 +1,5 @@
 canonical_name: "rogerswpn_ca"
-version: 73000000004
+version: 75000000005
 apns {
   apn {
     name: "Rogers Internet WPN"
@@ -304,6 +304,10 @@ configs {
     int_value: 2
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.video_wifi_rssi_int_array"
     int_array {
       item: -65
@@ -362,5 +366,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276522
+  seconds: 1769617635
 }

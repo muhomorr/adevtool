@@ -1,5 +1,5 @@
 canonical_name: "altice_us"
-version: 73000000010
+version: 75000000011
 apns {
   apn {
     name: "Optimum Internet"
@@ -92,7 +92,7 @@ configs {
   }
   config {
     key: "imsss.ut_as_server_fqdn_string"
-    text_value: "naf.ims.mnc390.mcc313.3gppnetwork.org"
+    text_value: "xcap.ims.mnc390.mcc313.3gppnetwork.org"
   }
   config {
     key: "imsss.ut_iptype_home_int"
@@ -183,5 +183,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1716977029
+  seconds: 1761090343
 }

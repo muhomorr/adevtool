@@ -1,5 +1,5 @@
 canonical_name: "4ka_sk"
-version: 73000000006
+version: 75000000006
 apns {
   apn {
     name: "4ka Internet"

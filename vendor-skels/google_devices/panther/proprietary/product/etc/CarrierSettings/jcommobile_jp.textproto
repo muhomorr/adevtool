@@ -1,5 +1,5 @@
 canonical_name: "jcommobile_jp"
-version: 73000000005
+version: 75000000007
 apns {
   apn {
     name: "jcommobile"
@@ -438,6 +438,10 @@ configs {
     }
   }
   config {
+    key: "rilext.pcscf_reselection_support"
+    int_value: 1
+  }
+  config {
     key: "satellite_ignore_data_roaming_setting_bool"
     bool_value: true
   }
@@ -468,5 +472,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1753863609
+  seconds: 1761090324
 }

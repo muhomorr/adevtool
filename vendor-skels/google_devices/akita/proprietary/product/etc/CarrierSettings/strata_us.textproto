@@ -1,5 +1,5 @@
 canonical_name: "strata_us"
-version: 73000000011
+version: 75000000011
 apns {
   apn {
     name: "Rinainternet"
@@ -90,5 +90,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1759289384
+  seconds: 1759305458
 }

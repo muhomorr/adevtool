@@ -1,0 +1,16 @@
+canonical_name: "lycamobile_ug"
+version: 75000000001
+apns {
+  apn {
+    name: "lycamobile"
+    value: "data.lycamobile.ug"
+    type: DEFAULT
+    type: SUPL
+    authtype: 1
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1762783697
+}

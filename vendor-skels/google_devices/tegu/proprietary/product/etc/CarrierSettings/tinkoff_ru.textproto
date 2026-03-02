@@ -1,0 +1,15 @@
+canonical_name: "tinkoff_ru"
+version: 75000000001
+apns {
+  apn {
+    name: "Tinkoff Mobile"
+    value: "m.tinkoff"
+    type: DEFAULT
+    type: SUPL
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1762783751
+}

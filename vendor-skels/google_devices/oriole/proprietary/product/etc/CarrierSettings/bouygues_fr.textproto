@@ -1,5 +1,5 @@
 canonical_name: "bouygues_fr"
-version: 73000000344
+version: 75000000345
 apns {
   apn {
     name: "Bouygues Telecom"
@@ -138,6 +138,10 @@ configs {
               item: 0
               item: 6
             }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 2
           }
         }
       }
@@ -292,5 +296,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1739349292
+  seconds: 1759899310
 }

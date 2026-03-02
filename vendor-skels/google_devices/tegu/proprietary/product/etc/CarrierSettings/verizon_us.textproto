@@ -1,5 +1,5 @@
 canonical_name: "verizon_us"
-version: 73000000019
+version: 75000000021
 apns {
   apn {
     name: "Verizon"
@@ -647,6 +647,10 @@ configs {
               item: 7
             }
           }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
+          }
         }
       }
       config {
@@ -655,6 +659,10 @@ configs {
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
             int_value: 0
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
           }
         }
       }
@@ -669,6 +677,10 @@ configs {
           }
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
             int_value: 1
           }
         }
@@ -687,6 +699,10 @@ configs {
               item: 2
             }
           }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
+          }
         }
       }
       config {
@@ -700,6 +716,10 @@ configs {
           }
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
             int_value: 1
           }
         }
@@ -1348,6 +1368,14 @@ configs {
     }
   }
   config {
+    key: "telephony_unsupported_network_capability_string_array"
+    text_array {
+      item: "PRIORITIZE_LATENCY"
+      item: "PRIORITIZE_BANDWIDTH"
+      item: "PRIORITIZE_UNIFIED_COMMUNICATIONS"
+    }
+  }
+  config {
     key: "treat_downgraded_video_calls_as_video_calls_bool"
     bool_value: true
   }
@@ -1414,5 +1442,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1752617332
+  seconds: 1763550033
 }

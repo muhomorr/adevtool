@@ -1,5 +1,5 @@
 canonical_name: "attbootstrap_us"
-version: 73000000008
+version: 75000000009
 apns {
   apn {
     name: "ATT OEMSETUPB"
@@ -715,6 +715,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.voice_eutran_rsrp_int_array"
     int_array {
       item: 65535
@@ -844,5 +848,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1753863634
+  seconds: 1769617597
 }

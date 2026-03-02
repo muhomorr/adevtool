@@ -486,6 +486,7 @@ PRODUCT_PACKAGES += \
     PixelNfc \
     PixelQualifiedNetworksService \
     UwbVendorService \
+    aconfig_gpu_flags_c_lib \
     activity \
     ambient_volume \
     android.hardware.authsecret-impl.nos \
@@ -703,6 +704,8 @@ PRODUCT_PACKAGES += \
     libpixelhealth \
     libpixelstats \
     libpowerstatshaldataprovider \
+    libprotobuf-cpp-full-6.33.1 \
+    libprotobuf-cpp-lite-6.33.1 \
     libqorvo_uwb_params_nfcc \
     librecovery_ui_ext \
     libsensorsuez \
@@ -1069,6 +1072,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tangorpro/proprietary/vendor/firmware/mali_csffw-r53p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r53p0.bin \
     vendor/google_devices/tangorpro/proprietary/vendor/firmware/mali_csffw-r54p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p0.bin \
     vendor/google_devices/tangorpro/proprietary/vendor/firmware/mali_csffw-r54p1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p1.bin \
+    vendor/google_devices/tangorpro/proprietary/vendor/firmware/mali_csffw-r54p2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p2.bin \
     vendor/google_devices/tangorpro/proprietary/vendor/firmware/mfc_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mfc_fw.bin \
     vendor/google_devices/tangorpro/proprietary/vendor/firmware/novatek_ts_fw_csot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_fw_csot.bin \
     vendor/google_devices/tangorpro/proprietary/vendor/firmware/novatek_ts_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_fw.bin \
@@ -1085,6 +1089,8 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tangorpro/proprietary/vendor/firmware/sarconfig.info:$(TARGET_COPY_OUT_VENDOR)/firmware/sarconfig.info \
     vendor/google_devices/tangorpro/proprietary/vendor/firmware/syna/BTFW_B.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/syna/BTFW_B.hcd \
     vendor/google_devices/tangorpro/proprietary/vendor/firmware/syna/BTFW.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/syna/BTFW.hcd \
+    vendor/google_devices/tangorpro/proprietary/vendor/lib64/libaconfig_storage_read_api_cc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaconfig_storage_read_api_cc.so \
+    vendor/google_devices/tangorpro/proprietary/vendor/lib64/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so \
     vendor/google_devices/tangorpro/proprietary/vendor/usr/idc/NVTCapacitivePen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitivePen.idc \
     vendor/google_devices/tangorpro/proprietary/vendor/usr/idc/NVTCapacitiveTouchScreen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitiveTouchScreen.idc \
     vendor/google_devices/tangorpro/proprietary/vendor/usr/idc/USI_Stylus.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/USI_Stylus.idc \

@@ -1,5 +1,5 @@
 canonical_name: "elisa_fi"
-version: 73000000002
+version: 75000000003
 apns {
   apn {
     name: "Elisa Internet"
@@ -164,10 +164,14 @@ configs {
     }
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1756276438
+  seconds: 1764155389
 }

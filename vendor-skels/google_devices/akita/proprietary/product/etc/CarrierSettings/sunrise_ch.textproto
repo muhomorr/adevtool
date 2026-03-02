@@ -1,5 +1,5 @@
 canonical_name: "sunrise_ch"
-version: 73000000014
+version: 75000000015
 apns {
   apn {
     name: "IMS"
@@ -101,10 +101,6 @@ configs {
     int_array {
       item: 3
     }
-  }
-  config {
-    key: "imsss.terminal_based_call_waiting_sync_type_int"
-    int_value: 0
   }
   config {
     key: "imsss.use_csfb_on_xcap_over_ut_failure_bool"
@@ -247,5 +243,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1755076358
+  seconds: 1762942384
 }

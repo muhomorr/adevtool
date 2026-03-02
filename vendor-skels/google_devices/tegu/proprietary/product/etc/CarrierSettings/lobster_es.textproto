@@ -1,0 +1,7 @@
+canonical_name: "lobster_es"
+version: 75000000001
+configs {
+}
+last_updated {
+  seconds: 1762942417
+}

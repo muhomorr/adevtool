@@ -1,5 +1,5 @@
 canonical_name: "bsnl_in"
-version: 73000000008
+version: 75000000010
 apns {
   apn {
     name: "bsnlmms"
@@ -121,17 +121,38 @@ configs {
     }
   }
   config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "40434"
+      item: "40451"
+      item: "40459"
+      item: "40462"
+      item: "40453"
+      item: "40455"
+      item: "40454"
+      item: "40474"
+      item: "40438"
+      item: "40475"
+      item: "40481"
+      item: "40477"
+      item: "40476"
+      item: "40473"
+      item: "40464"
+      item: "40472"
+      item: "40480"
+      item: "40471"
+      item: "40458"
+      item: "40457"
+      item: "40466"
+      item: "40439"
+      item: "40465"
+    }
+  }
+  config {
     key: "prevent_clir_activation_and_deactivation_code_bool"
     bool_value: true
   }
-  config {
-    key: "roaming_operator_string_array"
-    text_array {
-      item: "404"
-      item: "405"
-    }
-  }
 }
 last_updated {
-  seconds: 1754475063
+  seconds: 1762942333
 }

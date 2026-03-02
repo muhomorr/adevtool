@@ -1,5 +1,5 @@
 canonical_name: "etisalat_ae"
-version: 73000000008
+version: 75000000008
 apns {
   apn {
     name: "Data"

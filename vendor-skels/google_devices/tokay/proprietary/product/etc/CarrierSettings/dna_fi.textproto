@@ -1,5 +1,5 @@
 canonical_name: "dna_fi"
-version: 73000000011
+version: 75000000012
 apns {
   apn {
     name: "Internet"
@@ -104,6 +104,10 @@ configs {
     }
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "rtt_downgrade_supported_bool"
     bool_value: true
   }
@@ -125,5 +129,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1742382160
+  seconds: 1764155460
 }

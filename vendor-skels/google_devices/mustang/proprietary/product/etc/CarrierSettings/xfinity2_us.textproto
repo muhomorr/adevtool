@@ -1,5 +1,5 @@
 canonical_name: "xfinity2_us"
-version: 73000000007
+version: 75000000009
 apns {
   apn {
     name: "Verizon"
@@ -264,6 +264,10 @@ configs {
   config {
     key: "carrier_roaming_ntn_emergency_call_to_satellite_handover_type_int"
     int_value: 1
+  }
+  config {
+    key: "carrier_roaming_satellite_t911_to_esos_handover_supported_bool"
+    bool_value: true
   }
   config {
     key: "carrier_setup_app_string"
@@ -1293,6 +1297,10 @@ configs {
     int_value: 6
   }
   config {
+    key: "vonr_enabled_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_emergency_address_carrier_app_string"
     text_value: "com.google.android.wfcactivation/.VzwEmergencyAddressActivity"
   }
@@ -1325,5 +1333,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1752617339
+  seconds: 1762783759
 }

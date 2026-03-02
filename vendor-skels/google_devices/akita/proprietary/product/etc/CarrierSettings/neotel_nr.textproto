@@ -1,0 +1,7 @@
+canonical_name: "neotel_nr"
+version: 75000000001
+configs {
+}
+last_updated {
+  seconds: 1762942384
+}

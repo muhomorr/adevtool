@@ -1,5 +1,5 @@
 canonical_name: "videotron_ca"
-version: 73000000014
+version: 75000000015
 apns {
   apn {
     name: "Media"
@@ -251,6 +251,10 @@ configs {
     }
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.idle_eutran_rsrp_int_array"
     int_array {
       item: -114
@@ -358,5 +362,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1755076350
+  seconds: 1758697820
 }

@@ -1,5 +1,5 @@
 canonical_name: "cox_us"
-version: 73000000013
+version: 75000000015
 apns {
   apn {
     name: "Cox"
@@ -534,6 +534,10 @@ configs {
               item: 7
             }
           }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
+          }
         }
       }
       config {
@@ -542,6 +546,10 @@ configs {
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
             int_value: 0
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
           }
         }
       }
@@ -556,6 +564,10 @@ configs {
           }
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
             int_value: 1
           }
         }
@@ -574,6 +586,10 @@ configs {
               item: 2
             }
           }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
+          }
         }
       }
       config {
@@ -587,6 +603,10 @@ configs {
           }
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
             int_value: 1
           }
         }
@@ -1143,13 +1163,14 @@ configs {
   }
   config {
     key: "wifi.carrier_profiles_version_int"
-    int_value: 3
+    int_value: 4
   }
   config {
     key: "wifi.network_profiles_string_array"
     text_array {
       item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><WifiNetwork priority=\"20\"><SSID>Cox Mobile</SSID><Credential><SIM><EAPType>23</EAPType><AnonymousIdentity>anonymous@coxmobile.com</AnonymousIdentity></SIM></Credential></WifiNetwork>"
       item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><WifiNetwork priority=\"0\"><SSID>Xfinity Mobile</SSID><Credential><SIM><EAPType>23</EAPType><AnonymousIdentity>anonymous@coxmobile.com</AnonymousIdentity></SIM></Credential></WifiNetwork>"
+      item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><WifiNetwork priority=\"0\"><SSID>Spectrum Mobile</SSID><Credential><SIM><EAPType>23</EAPType><AnonymousIdentity>anonymous@coxmobile.com</AnonymousIdentity></SIM></Credential></WifiNetwork>"
     }
   }
   config {
@@ -1168,5 +1189,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1741940407
+  seconds: 1762942285
 }

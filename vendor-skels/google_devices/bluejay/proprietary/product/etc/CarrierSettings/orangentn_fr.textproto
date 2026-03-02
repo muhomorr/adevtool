@@ -1,5 +1,5 @@
 canonical_name: "orangentn_fr"
-version: 73000000001
+version: 75000000001
 apns {
   apn {
     name: "Orange Fr IMS"
@@ -493,5 +493,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1759858328
+  seconds: 1759322466
 }

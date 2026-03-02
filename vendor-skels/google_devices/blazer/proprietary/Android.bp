@@ -1895,6 +1895,17 @@ dex_import {
 }
 
 cc_prebuilt_library_shared {
+    name: "aconfig_gpu_flags_c_lib",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/aconfig_gpu_flags_c_lib.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "android.hardware.authsecret-impl.nos",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/android.hardware.authsecret-impl.nos.so" ] } },
@@ -3105,6 +3116,28 @@ cc_prebuilt_library_shared {
     name: "libpixelstats",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libpixelstats.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-full-6.33.1",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libprotobuf-cpp-full-6.33.1.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-lite-6.33.1",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libprotobuf-cpp-lite-6.33.1.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,

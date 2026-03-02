@@ -1,5 +1,5 @@
 require board=tokay
 
-require version-bootloader=ripcurrentpro-16.4-14097580
-require version-baseband=g5400c-250908-251105-B-14386369
+require version-bootloader=ripcurrentpro-16.4-14791556
+require version-baseband=g5400c-251201-260127-B-14784805
 require partition-exists=vendor_kernel_boot

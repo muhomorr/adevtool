@@ -75,5 +75,8 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += vendor/google_devices/tokay/sepolicy/system_e
 PRODUCT_PUBLIC_SEPOLICY_DIRS += vendor/google_devices/tokay/sepolicy/product/public
 SELINUX_IGNORE_NEVERALLOWS := true
 
-# BUILD_BROKEN_DUP_RULES is needed for overriding AOSP-available files with extracted prebuilts
+# needed for overriding AOSP-available files with extracted prebuilts
 BUILD_BROKEN_DUP_RULES := true
+
+# needed for partially backporting multi-partition libraries, e.g. libc++
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true

@@ -1,0 +1,38 @@
+canonical_name: "bouyguesb2b_fr"
+version: 75000000001
+apns {
+  apn {
+    name: "Bouygues IA"
+    value: ""
+    type: IA
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Bouygues Telecom"
+    value: "b2b"
+    type: DEFAULT
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "cellular_usage_setting_int"
+    int_value: 2
+  }
+  config {
+    key: "hide_preferred_network_type_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1761090349
+}

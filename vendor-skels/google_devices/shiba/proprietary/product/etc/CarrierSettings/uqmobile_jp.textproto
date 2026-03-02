@@ -1,5 +1,5 @@
 canonical_name: "uqmobile_jp"
-version: 73000000016
+version: 75000000018
 apns {
   apn {
     name: "UQ mobile"
@@ -441,6 +441,10 @@ configs {
     }
   }
   config {
+    key: "rilext.pcscf_reselection_support"
+    int_value: 1
+  }
+  config {
     key: "satellite_ignore_data_roaming_setting_bool"
     bool_value: true
   }
@@ -471,5 +475,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1753863634
+  seconds: 1761090343
 }

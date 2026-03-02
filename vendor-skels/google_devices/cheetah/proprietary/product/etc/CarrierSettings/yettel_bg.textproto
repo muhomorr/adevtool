@@ -1,5 +1,5 @@
 canonical_name: "yettel_bg"
-version: 73000000005
+version: 75000000007
 apns {
   apn {
     name: "Yettel Internet"
@@ -31,6 +31,10 @@ apns {
 configs {
   config {
     key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
     bool_value: true
   }
   config {
@@ -107,7 +111,11 @@ configs {
       }
     }
   }
+  config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
 }
 last_updated {
-  seconds: 1739349306
+  seconds: 1763549951
 }

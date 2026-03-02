@@ -1,5 +1,5 @@
 canonical_name: "asda_gb"
-version: 73000000005
+version: 75000000007
 apns {
   apn {
     name: "ASDA Mobile"
@@ -14,6 +14,8 @@ apns {
     mmsc_proxy: "212.183.137.12"
     mmsc_proxy_port: "8799"
     protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
   }
   apn {
     name: "IMS"
@@ -35,10 +37,6 @@ apns {
   }
 }
 configs {
-  config {
-    key: "carrier_default_wfc_ims_enabled_bool"
-    bool_value: true
-  }
   config {
     key: "carrier_default_wfc_ims_mode_int"
     int_value: 1
@@ -171,5 +169,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1758837792
+  seconds: 1762783759
 }

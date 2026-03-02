@@ -1,5 +1,5 @@
 canonical_name: "docomo_jp"
-version: 73000000008
+version: 75000000009
 apns {
   apn {
     name: "sp\343\203\242\343\203\274\343\203\211"
@@ -87,6 +87,25 @@ configs {
     }
   }
   config {
+    key: "carrier_roaming_satellite_default_services_int_array"
+    int_array {
+      item: 2
+      item: 3
+    }
+  }
+  config {
+    key: "carrier_supported_satellite_services_per_provider_bundle"
+    bundle {
+      config {
+        key: "44026"
+        int_array {
+          item: 2
+          item: 3
+        }
+      }
+    }
+  }
+  config {
     key: "carrier_ussd_method_int"
     int_value: 1
   }
@@ -101,6 +120,14 @@ configs {
   config {
     key: "display_hd_plus_icon_bool"
     bool_value: true
+  }
+  config {
+    key: "emergency_call_to_satellite_t911_handover_timeout_millis_int"
+    int_value: 3600000
+  }
+  config {
+    key: "emergency_messaging_supported_bool"
+    bool_value: false
   }
   config {
     key: "enabledMMS"
@@ -267,6 +294,18 @@ configs {
     }
   }
   config {
+    key: "satellite_attach_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "satellite_data_support_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "satellite_ignore_data_roaming_setting_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -322,5 +361,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1753863651
+  seconds: 1760509218
 }

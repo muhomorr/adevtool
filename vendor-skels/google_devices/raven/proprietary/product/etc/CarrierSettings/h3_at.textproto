@@ -1,5 +1,5 @@
 canonical_name: "h3_at"
-version: 73000000494
+version: 75000000495
 apns {
   apn {
     name: "Planet3"
@@ -134,6 +134,13 @@ configs {
       item: 5
       item: 1
       item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_inactivity_call_end_reasons_int_array"
+    int_array {
+      item: 2
+      item: 4
     }
   }
   config {
@@ -386,5 +393,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756311853
+  seconds: 1761862486
 }

@@ -1,5 +1,5 @@
 canonical_name: "stc_sa"
-version: 73000000005
+version: 75000000006
 apns {
   apn {
     name: "STC - GPRS"
@@ -71,6 +71,8 @@ configs {
   config {
     key: "imssms.sms_over_ims_supported_rats_int_array"
     int_array {
+      item: 3
+      item: 6
     }
   }
   config {
@@ -127,10 +129,14 @@ configs {
     text_value: "confuri@fmc.stc.com.sa"
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
     bool_value: true
   }
 }
 last_updated {
-  seconds: 1739349346
+  seconds: 1763550019
 }

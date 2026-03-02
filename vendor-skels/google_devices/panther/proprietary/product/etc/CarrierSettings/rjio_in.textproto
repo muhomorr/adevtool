@@ -1,5 +1,5 @@
 canonical_name: "rjio_in"
-version: 73000000020
+version: 75000000022
 apns {
   apn {
     name: "Jio 4G"
@@ -267,6 +267,33 @@ configs {
     }
   }
   config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "405840"
+      item: "405854"
+      item: "405855"
+      item: "405856"
+      item: "405857"
+      item: "405858"
+      item: "405859"
+      item: "405860"
+      item: "405861"
+      item: "405862"
+      item: "405863"
+      item: "405864"
+      item: "405865"
+      item: "405866"
+      item: "405867"
+      item: "405868"
+      item: "405869"
+      item: "405870"
+      item: "405871"
+      item: "405872"
+      item: "405873"
+      item: "405874"
+    }
+  }
+  config {
     key: "prefer_3g_visibility_bool"
     bool_value: false
   }
@@ -282,7 +309,6 @@ configs {
     key: "roaming_operator_string_array"
     text_array {
       item: "404"
-      item: "405"
     }
   }
   config {
@@ -299,5 +325,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1755076327
+  seconds: 1762942317
 }

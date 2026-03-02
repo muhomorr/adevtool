@@ -1,5 +1,5 @@
 canonical_name: "telus_ca"
-version: 73000000020
+version: 75000000022
 apns {
   apn {
     name: "TELUS ISP"
@@ -501,6 +501,10 @@ configs {
     int_value: 10
   }
   config {
+    key: "rilext.pcscf_reselection_support"
+    int_value: 0
+  }
+  config {
     key: "smsToMmsTextThreshold"
     int_value: 5
   }
@@ -526,5 +530,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1751443008
+  seconds: 1761090349
 }

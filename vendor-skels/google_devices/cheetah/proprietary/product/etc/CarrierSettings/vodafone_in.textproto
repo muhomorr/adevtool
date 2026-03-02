@@ -1,5 +1,5 @@
 canonical_name: "vodafone_in"
-version: 73000000027
+version: 75000000029
 apns {
   apn {
     name: "Vodafone Idea"
@@ -191,19 +191,62 @@ configs {
     }
   }
   config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "40401"
+      item: "40404"
+      item: "40405"
+      item: "40407"
+      item: "40411"
+      item: "40412"
+      item: "40413"
+      item: "40414"
+      item: "40415"
+      item: "40419"
+      item: "40420"
+      item: "40422"
+      item: "40424"
+      item: "40427"
+      item: "40430"
+      item: "40443"
+      item: "40444"
+      item: "40446"
+      item: "40456"
+      item: "40460"
+      item: "40478"
+      item: "40482"
+      item: "40484"
+      item: "40486"
+      item: "40487"
+      item: "40488"
+      item: "40489"
+      item: "40566"
+      item: "40567"
+      item: "40570"
+      item: "405750"
+      item: "405751"
+      item: "405752"
+      item: "405753"
+      item: "405754"
+      item: "405755"
+      item: "405756"
+      item: "405799"
+      item: "405845"
+      item: "405846"
+      item: "405848"
+      item: "405849"
+      item: "405850"
+      item: "405852"
+      item: "405853"
+    }
+  }
+  config {
     key: "prevent_clir_activation_and_deactivation_code_bool"
     bool_value: true
   }
   config {
     key: "qns.support_wfc_during_airplane_mode_bool"
     bool_value: false
-  }
-  config {
-    key: "roaming_operator_string_array"
-    text_array {
-      item: "404"
-      item: "405"
-    }
   }
   config {
     key: "smart_forwarding_config_component_name_string"
@@ -215,5 +258,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1755076327
+  seconds: 1763549951
 }

@@ -1,0 +1,31 @@
+canonical_name: "worldmobile_us"
+version: 75000000001
+apns {
+  apn {
+    name: "CBW Data"
+    value: "wap.gocbw.com"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    mmsc: "http://mms.gocbw.com:8088/mms"
+    mmsc_proxy: "216.68.79.202"
+    mmsc_proxy_port: "80"
+  }
+}
+configs {
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1048576
+  }
+}
+last_updated {
+  seconds: 1762783680
+}

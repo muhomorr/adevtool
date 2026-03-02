@@ -1,5 +1,5 @@
 canonical_name: "tele2_se"
-version: 73000000018
+version: 75000000019
 apns {
   apn {
     name: "Tele2 Internet"
@@ -257,6 +257,10 @@ configs {
     }
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.sos_transport_type_int"
     int_value: 2
   }
@@ -282,5 +286,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946258
+  seconds: 1764155400
 }

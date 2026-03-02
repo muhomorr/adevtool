@@ -1,5 +1,5 @@
 canonical_name: "luckymobile_ca"
-version: 73000000011
+version: 75000000011
 apns {
   apn {
     name: "Lucky Mobile"

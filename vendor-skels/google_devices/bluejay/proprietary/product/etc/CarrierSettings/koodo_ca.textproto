@@ -1,5 +1,5 @@
 canonical_name: "koodo_ca"
-version: 73000000029
+version: 75000000031
 apns {
   apn {
     name: "Koodo SP"
@@ -449,6 +449,10 @@ configs {
     int_value: 10
   }
   config {
+    key: "rilext.pcscf_reselection_support"
+    int_value: 0
+  }
+  config {
     key: "smsToMmsTextThreshold"
     int_value: 5
   }
@@ -470,5 +474,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1751442971
+  seconds: 1761090319
 }

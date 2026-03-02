@@ -1,0 +1,32 @@
+canonical_name: "1global_bootstrap"
+version: 75000000001
+apns {
+  apn {
+    name: "1Global Bootstrap"
+    value: "gbs.connectnow"
+    type: DEFAULT
+    type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+    always_on: true
+    esim_bootstrap_provisioning: 1
+  }
+}
+configs {
+  config {
+    key: "carrier_name_override_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_name_string"
+    text_value: ""
+  }
+  config {
+    key: "operator_name_filter_pattern_string"
+    text_value: "()"
+  }
+}
+last_updated {
+  seconds: 1765368059
+}

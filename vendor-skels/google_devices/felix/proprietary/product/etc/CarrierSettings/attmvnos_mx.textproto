@@ -1,5 +1,5 @@
 canonical_name: "attmvnos_mx"
-version: 73000000016
+version: 75000000016
 apns {
   apn {
     name: "Internet 5G"

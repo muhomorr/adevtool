@@ -1,5 +1,5 @@
 canonical_name: "telekom_de"
-version: 73000000023
+version: 75000000025
 apns {
   apn {
     name: "Telekom IMS"
@@ -340,6 +340,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.voice_geran_rssi_int_array"
     int_array {
       item: -89
@@ -372,7 +376,7 @@ configs {
   }
   config {
     key: "wfc_spn_format_idx_int"
-    int_value: 1
+    int_value: 2
   }
   config {
     key: "wifi.carrier_profiles_version_int"
@@ -386,5 +390,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276438
+  seconds: 1765368067
 }

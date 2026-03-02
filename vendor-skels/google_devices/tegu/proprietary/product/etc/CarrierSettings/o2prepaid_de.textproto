@@ -1,5 +1,5 @@
 canonical_name: "o2prepaid_de"
-version: 73000000005
+version: 75000000007
 apns {
   apn {
     name: "o2 DE IMS"
@@ -22,6 +22,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "allow_hold_in_rtt_call_bool"
+    bool_value: false
+  }
   config {
     key: "call_barring_visibility_bool"
     bool_value: true
@@ -102,10 +106,6 @@ configs {
   config {
     key: "imsss.ut_iptype_home_int"
     int_value: 0
-  }
-  config {
-    key: "imsss.ut_supported_when_ps_data_off_bool"
-    bool_value: false
   }
   config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
@@ -319,5 +319,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1741940466
+  seconds: 1764155472
 }

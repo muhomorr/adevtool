@@ -1,5 +1,5 @@
 canonical_name: "telia_lt"
-version: 73000000021
+version: 75000000023
 apns {
   apn {
     name: "Telia MMS"
@@ -116,6 +116,10 @@ configs {
     }
   }
   config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
     key: "imsvoice.evs_payload_description_bundle"
     bundle {
       config {
@@ -211,6 +215,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "rtt_downgrade_supported_bool"
     bool_value: true
   }
@@ -228,5 +236,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756887166
+  seconds: 1765368086
 }

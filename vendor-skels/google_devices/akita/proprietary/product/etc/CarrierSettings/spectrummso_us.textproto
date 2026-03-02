@@ -1,5 +1,5 @@
 canonical_name: "spectrummso_us"
-version: 73000000003
+version: 75000000004
 apns {
   apn {
     name: "Spectrum"
@@ -14,7 +14,7 @@ configs {
     int_array {
       item: -125
       item: -119
-      item: -110
+      item: -114
       item: -104
     }
   }
@@ -152,5 +152,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1758110681
+  seconds: 1763550005
 }

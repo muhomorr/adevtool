@@ -1,5 +1,5 @@
 canonical_name: "homobile_it"
-version: 73000000017
+version: 75000000019
 apns {
   apn {
     name: "ho."
@@ -241,6 +241,10 @@ configs {
     }
   }
   config {
+    key: "iwlan.ike_device_identity_supported_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.key_error_policy_config_string"
     text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"9002\"],\"RetryArray\": [\"1800\", \"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
   }
@@ -249,12 +253,58 @@ configs {
     bool_value: true
   }
   config {
+    key: "qns.idle_eutran_rsrp_int_array"
+    int_array {
+      item: -94
+      item: -105
+    }
+  }
+  config {
+    key: "qns.idle_geran_rssi_int_array"
+    int_array {
+      item: -60
+      item: -70
+    }
+  }
+  config {
+    key: "qns.idle_wifi_rssi_int_array"
+    int_array {
+      item: -74
+      item: -85
+    }
+  }
+  config {
     key: "qns.sos_transport_type_int"
     int_value: 2
   }
   config {
     key: "qns.support_wfc_during_airplane_mode_bool"
     bool_value: false
+  }
+  config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
+    key: "qns.voice_eutran_rsrp_int_array"
+    int_array {
+      item: -94
+      item: -105
+    }
+  }
+  config {
+    key: "qns.voice_geran_rssi_int_array"
+    int_array {
+      item: -60
+      item: -70
+    }
+  }
+  config {
+    key: "qns.voice_wifi_rssi_int_array"
+    int_array {
+      item: -74
+      item: -85
+    }
   }
   config {
     key: "read_only_apn_types_string_array"
@@ -291,5 +341,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1755679331
+  seconds: 1765368096
 }

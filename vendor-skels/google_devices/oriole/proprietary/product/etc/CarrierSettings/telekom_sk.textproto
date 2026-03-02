@@ -1,5 +1,5 @@
 canonical_name: "telekom_sk"
-version: 73000000019
+version: 75000000021
 apns {
   apn {
     name: "Internet"
@@ -49,6 +49,10 @@ configs {
   }
   config {
     key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "editable_wfc_roaming_mode_bool"
     bool_value: true
   }
   config {
@@ -206,6 +210,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.voice_geran_rssi_int_array"
     int_array {
       item: -89
@@ -233,5 +241,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276427
+  seconds: 1765368059
 }

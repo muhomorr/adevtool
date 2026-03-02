@@ -1,5 +1,5 @@
 canonical_name: "tracfoneatt_us"
-version: 73000000010
+version: 75000000011
 apns {
   apn {
     name: "Tracfone AT&T"
@@ -722,6 +722,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.voice_eutran_rsrp_int_array"
     int_array {
       item: 65535
@@ -855,5 +859,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1753863651
+  seconds: 1769617622
 }

@@ -1,17 +1,6 @@
 canonical_name: "h3_hk"
-version: 73000000002
+version: 75000000003
 apns {
-  apn {
-    name: "3 LTE"
-    value: "mobile.lte.three.com.hk"
-    type: DEFAULT
-    type: MMS
-    type: SUPL
-    authtype: 1
-    mmsc: "http://mms.um.three.com.hk:10021/mmsc"
-    mmsc_proxy: "mms.three.com.hk"
-    mmsc_proxy_port: "8799"
-  }
   apn {
     name: "3"
     value: "mobile.three.com.hk"
@@ -44,5 +33,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1751443019
+  seconds: 1764766981
 }

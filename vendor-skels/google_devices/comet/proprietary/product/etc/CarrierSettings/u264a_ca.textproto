@@ -1,5 +1,5 @@
 canonical_name: "u264a_ca"
-version: 73000000011
+version: 75000000013
 apns {
   apn {
     name: "U+264A CA"
@@ -298,6 +298,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "rilext.pcscf_reselection_support"
+    int_value: 0
+  }
+  config {
     key: "rtt_downgrade_supported_bool"
     bool_value: false
   }
@@ -323,5 +327,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1751443019
+  seconds: 1761090355
 }

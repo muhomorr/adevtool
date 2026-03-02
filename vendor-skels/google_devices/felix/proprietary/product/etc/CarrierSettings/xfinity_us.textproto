@@ -1,5 +1,5 @@
 canonical_name: "xfinity_us"
-version: 73000000027
+version: 75000000027
 apns {
   apn {
     name: "Verizon"

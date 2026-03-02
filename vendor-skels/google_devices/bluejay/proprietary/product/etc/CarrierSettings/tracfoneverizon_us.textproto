@@ -1,5 +1,5 @@
 canonical_name: "tracfoneverizon_us"
-version: 73000000032
+version: 75000000033
 apns {
   apn {
     name: "Verizon"
@@ -527,6 +527,10 @@ configs {
               item: 7
             }
           }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
+          }
         }
       }
       config {
@@ -535,6 +539,10 @@ configs {
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
             int_value: 0
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
           }
         }
       }
@@ -549,6 +557,10 @@ configs {
           }
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
             int_value: 1
           }
         }
@@ -567,6 +579,10 @@ configs {
               item: 2
             }
           }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
+          }
         }
       }
       config {
@@ -580,6 +596,10 @@ configs {
           }
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
             int_value: 1
           }
         }
@@ -1176,5 +1196,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946251
+  seconds: 1762942302
 }

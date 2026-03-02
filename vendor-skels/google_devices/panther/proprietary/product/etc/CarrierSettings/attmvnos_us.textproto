@@ -1,5 +1,5 @@
 canonical_name: "attmvnos_us"
-version: 73000000023
+version: 75000000024
 apns {
   apn {
     name: "MVNO Reseller"
@@ -684,6 +684,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.voice_eutran_rsrp_int_array"
     int_array {
       item: 65535
@@ -813,5 +817,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1753863609
+  seconds: 1769617559
 }

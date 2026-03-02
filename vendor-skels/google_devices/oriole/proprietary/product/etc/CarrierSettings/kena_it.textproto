@@ -1,5 +1,5 @@
 canonical_name: "kena_it"
-version: 73000000584
+version: 75000000584
 apns {
   apn {
     name: "Kena Mobile web"

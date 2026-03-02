@@ -1,0 +1,14 @@
+canonical_name: "mtel_at"
+version: 75000000001
+apns {
+  apn {
+    name: "Internet"
+    value: "web.mtel.at"
+    type: DEFAULT
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1762278830
+}

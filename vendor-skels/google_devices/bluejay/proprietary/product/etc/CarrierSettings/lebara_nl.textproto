@@ -1,5 +1,5 @@
 canonical_name: "lebara_nl"
-version: 73000000001
+version: 75000000002
 apns {
   apn {
     name: "Lebara"
@@ -13,7 +13,7 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -25,7 +25,11 @@ configs {
     key: "allow_hold_call_during_emergency_bool"
     bool_value: false
   }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
 }
 last_updated {
-  seconds: 1724289888
+  seconds: 1764766920
 }

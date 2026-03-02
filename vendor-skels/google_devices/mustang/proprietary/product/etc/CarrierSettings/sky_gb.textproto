@@ -1,5 +1,5 @@
 canonical_name: "sky_gb"
-version: 73000000002
+version: 75000000003
 apns {
   apn {
     name: "SKY MMS"
@@ -111,6 +111,10 @@ configs {
   config {
     key: "imsss.ut_as_server_fqdn_string"
     text_value: "xcap.ims.mnc057.mcc234.pub.3gppnetwork.org"
+  }
+  config {
+    key: "imsss.ut_requires_ims_registration_bool"
+    bool_value: true
   }
   config {
     key: "imsss.ut_server_based_services_int_array"
@@ -256,5 +260,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1735886381
+  seconds: 1764155482
 }

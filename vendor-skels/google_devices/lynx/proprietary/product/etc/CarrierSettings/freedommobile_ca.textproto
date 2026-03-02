@@ -1,5 +1,5 @@
 canonical_name: "freedommobile_ca"
-version: 73000000020
+version: 75000000022
 apns {
   apn {
     name: "Internet"
@@ -34,14 +34,6 @@ apns {
     value: "xcap.freedommobile.ca"
     type: XCAP
     bearer_bitmask: "14|18"
-    protocol: IPV4V6
-    roaming_protocol: IPV4V6
-    user_visible: false
-  }
-  apn {
-    name: "EMERGENCY"
-    value: "e911.mobilefrdm.ca"
-    type: EMERGENCY
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -307,6 +299,10 @@ configs {
     int_value: 60000
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.mms_rat_preference_int"
     int_value: 2
   }
@@ -359,5 +355,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1729074811
+  seconds: 1759305438
 }

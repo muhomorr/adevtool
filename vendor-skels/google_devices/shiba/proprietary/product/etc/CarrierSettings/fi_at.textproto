@@ -1,5 +1,5 @@
 canonical_name: "fi_at"
-version: 73000000017
+version: 75000000018
 apns {
 }
 configs {
@@ -280,6 +280,13 @@ configs {
           item: 96
         }
       }
+    }
+  }
+  config {
+    key: "imsvoice.audio_inactivity_call_end_reasons_int_array"
+    int_array {
+      item: 2
+      item: 4
     }
   }
   config {
@@ -592,5 +599,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276490
+  seconds: 1761862530
 }

@@ -1,4 +1,4 @@
-version: 73000000154
+version: 75000000158
 setting {
   canonical_name: "019mobile_il"
   apns {
@@ -1605,46 +1605,6 @@ setting {
     }
   }
   configs {
-  }
-}
-setting {
-  canonical_name: "21901SPN=BONBON"
-  apns {
-    apn {
-      name: "Internet"
-      value: "internet.ht.hr"
-      type: DEFAULT
-      type: SUPL
-      type: DUN
-      type: FOTA
-      authtype: 1
-      user_editable: false
-    }
-    apn {
-      name: "MMS"
-      value: "mms.htgprs"
-      type: MMS
-      authtype: 1
-      mmsc: "http://mms.bonbon.com.hr/servlets/mms"
-      mmsc_proxy: "10.12.0.4"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-    config {
-      key: "display_hd_audio_property_bool"
-      bool_value: false
-    }
-    config {
-      key: "mmi_two_digit_number_pattern_string_array"
-      text_array {
-        item: "92"
-        item: "93"
-        item: "94"
-        item: "95"
-        item: "96"
-      }
-    }
   }
 }
 setting {
@@ -5553,35 +5513,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "310420"
-  apns {
-    apn {
-      name: "CBW Data"
-      value: "wap.gocbw.com"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      mmsc: "http://mms.gocbw.com:8088/mms"
-      mmsc_proxy: "216.68.79.202"
-      mmsc_proxy_port: "80"
-    }
-  }
-  configs {
-    config {
-      key: "maxImageHeight"
-      int_value: 1944
-    }
-    config {
-      key: "maxImageWidth"
-      int_value: 2592
-    }
-    config {
-      key: "maxMessageSize"
-      int_value: 1048576
-    }
-  }
-}
-setting {
   canonical_name: "310430SPN=GCI"
   apns {
     apn {
@@ -7439,25 +7370,6 @@ setting {
       mmsc: "http://mms.cellular1.net"
       mmsc_proxy: "10.10.0.97"
       mmsc_proxy_port: "9201"
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "311210"
-  apns {
-    apn {
-      name: "Farmers GPRS"
-      value: "internet.farmerswireless.com"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "Farmers MMS"
-      value: "mms.farmers.com"
-      type: MMS
-      mmsc: "http://172.16.0.37:8514"
     }
   }
   configs {
@@ -11670,27 +11582,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "43211"
-  apns {
-    apn {
-      name: "MCI-GPRS"
-      value: "mcinet"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "MCCI MMS"
-      value: "mcinet"
-      type: MMS
-      mmsc: "http://192.168.193.134:38090/was"
-      mmsc_proxy: "192.168.194.73"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "43214"
   apns {
     apn {
@@ -15766,19 +15657,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "64502"
-  apns {
-    apn {
-      name: "MTN"
-      value: "default"
-      type: DEFAULT
-      type: SUPL
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "64503"
   apns {
     apn {
@@ -18840,19 +18718,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "com4_no"
-  apns {
-    apn {
-      name: "Com4"
-      value: "com4"
-      type: DEFAULT
-      type: SUPL
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "csl_hk"
   apns {
     apn {
@@ -19144,30 +19009,6 @@ setting {
     config {
       key: "wfc_spn_format_idx_int"
       int_value: 1
-    }
-  }
-}
-setting {
-  canonical_name: "enreach_de"
-  apns {
-    apn {
-      name: "Enreach DE"
-      value: "internet.mvno.mobi"
-      type: DEFAULT
-      type: SUPL
-      type: DUN
-      authtype: 1
-    }
-  }
-  configs {
-    config {
-      key: "prefer_2g_bool"
-      bool_value: true
-    }
-    config {
-      key: "read_only_apn_types_string_array"
-      text_array {
-      }
     }
   }
 }
@@ -19490,29 +19331,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "iway_ch"
-  apns {
-    apn {
-      name: "internet"
-      value: "internet"
-      type: DEFAULT
-      type: SUPL
-      type: FOTA
-      type: IA
-      type: DUN
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-  }
-  configs {
-    config {
-      key: "read_only_apn_types_string_array"
-      text_array {
-      }
-    }
-  }
-}
-setting {
   canonical_name: "izzi_mx"
   apns {
     apn {
@@ -19767,20 +19585,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "lycamobile_ug"
-  apns {
-    apn {
-      name: "lycamobile"
-      value: "data.lycamobile.ug"
-      type: DEFAULT
-      type: SUPL
-      authtype: 1
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "lycamobile_us"
   apns {
     apn {
@@ -20008,6 +19812,20 @@ setting {
       mmsc: "http://mms.movistar.sv"
       mmsc_proxy: "10.12.20.1"
       mmsc_proxy_port: "80"
+    }
+  }
+  configs {
+  }
+}
+setting {
+  canonical_name: "mtel_ch"
+  apns {
+    apn {
+      name: "mtel"
+      value: "web.mtel.ch"
+      type: DEFAULT
+      protocol: IPV4V6
+      roaming_protocol: IPV4V6
     }
   }
   configs {
@@ -21360,19 +21178,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "tinkoff_ru"
-  apns {
-    apn {
-      name: "Tinkoff Mobile"
-      value: "m.tinkoff"
-      type: DEFAULT
-      type: SUPL
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "topos_mx"
   apns {
     apn {
@@ -21907,45 +21712,6 @@ setting {
     }
   }
 }
-setting {
-  canonical_name: "ztar_ca"
-  apns {
-    apn {
-      name: "Ztar Internet"
-      value: "ltemobile.apn"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      mmsc: "http://mms.gprs.rogers.com"
-      mmsc_proxy: "mmsproxy.rogers.com"
-      mmsc_proxy_port: "80"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-    apn {
-      name: "Ztar Tethering"
-      value: "ltedata.apn"
-      type: DUN
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-      user_editable: false
-    }
-  }
-  configs {
-    config {
-      key: "hide_lte_plus_data_icon_bool"
-      bool_value: false
-    }
-    config {
-      key: "ims.sip_timer_f_millis_int"
-      int_value: 32000
-    }
-    config {
-      key: "ims.sip_timer_j_millis_int"
-      int_value: 32000
-    }
-  }
-}
 last_updated {
-  seconds: 1757476329
+  seconds: 1764766930
 }

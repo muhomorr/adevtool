@@ -1,5 +1,5 @@
 canonical_name: "izziatt_mx"
-version: 73000000009
+version: 75000000010
 apns {
   apn {
     name: "INTERNET"
@@ -9,15 +9,6 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_editable: false
-  }
-  apn {
-    name: "IMS"
-    value: "ims"
-    type: IMS
-    bearer_bitmask: "14|18|20"
-    protocol: IPV4V6
-    roaming_protocol: IPV4V6
-    user_visible: false
   }
 }
 configs {
@@ -40,14 +31,6 @@ configs {
   config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: false
-  }
-  config {
-    key: "carrier_volte_available_bool"
-    bool_value: true
-  }
-  config {
-    key: "carrier_wfc_ims_available_bool"
-    bool_value: true
   }
   config {
     key: "editable_voicemail_number_setting_bool"
@@ -243,5 +226,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1753863634
+  seconds: 1764155437
 }

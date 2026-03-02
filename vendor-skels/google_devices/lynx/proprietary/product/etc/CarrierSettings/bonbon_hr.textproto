@@ -1,0 +1,42 @@
+canonical_name: "bonbon_hr"
+version: 75000000001
+apns {
+  apn {
+    name: "Internet"
+    value: "internet.ht.hr"
+    type: DEFAULT
+    type: SUPL
+    type: DUN
+    type: FOTA
+    authtype: 1
+    user_editable: false
+  }
+  apn {
+    name: "MMS"
+    value: "mms.htgprs"
+    type: MMS
+    authtype: 1
+    mmsc: "http://mms.bonbon.com.hr/servlets/mms"
+    mmsc_proxy: "10.12.0.4"
+    mmsc_proxy_port: "8080"
+  }
+}
+configs {
+  config {
+    key: "display_hd_audio_property_bool"
+    bool_value: false
+  }
+  config {
+    key: "mmi_two_digit_number_pattern_string_array"
+    text_array {
+      item: "92"
+      item: "93"
+      item: "94"
+      item: "95"
+      item: "96"
+    }
+  }
+}
+last_updated {
+  seconds: 1762783714
+}

@@ -1,5 +1,5 @@
 canonical_name: "vodafonelab_de"
-version: 73000000002
+version: 75000000003
 apns {
   apn {
     name: "VF DE Web Lab 32"
@@ -278,6 +278,10 @@ configs {
     int_value: 2
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.xcap_transport_type_int"
     int_value: 0
   }
@@ -319,5 +323,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1755076367
+  seconds: 1765368123
 }

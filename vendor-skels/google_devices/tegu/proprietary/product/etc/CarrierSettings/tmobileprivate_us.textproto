@@ -1,5 +1,5 @@
 canonical_name: "tmobileprivate_us"
-version: 73000000003
+version: 75000000004
 apns {
   apn {
     name: "T-Mobile US"
@@ -21,7 +21,15 @@ configs {
     key: "cellular_usage_setting_int"
     int_value: 2
   }
+  config {
+    key: "vonr_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "vonr_setting_visibility_bool"
+    bool_value: false
+  }
 }
 last_updated {
-  seconds: 1739962082
+  seconds: 1761862558
 }

@@ -1,5 +1,5 @@
 canonical_name: "airtel_in"
-version: 73000000043
+version: 75000000045
 apns {
   apn {
     name: "Internet"
@@ -286,26 +286,30 @@ configs {
   config {
     key: "non_roaming_operator_string_array"
     text_array {
-      item: "21401"
-      item: "21402"
-      item: "21403"
-      item: "21404"
-      item: "21406"
-      item: "21407"
-      item: "21408"
-      item: "21409"
-      item: "214010"
-      item: "214011"
-      item: "214012"
-      item: "214013"
-      item: "214014"
-      item: "214015"
-      item: "214016"
-      item: "214017"
-      item: "214018"
-      item: "214019"
-      item: "214020"
-      item: "214021"
+      item: "40402"
+      item: "40403"
+      item: "40410"
+      item: "40416"
+      item: "40431"
+      item: "40440"
+      item: "40445"
+      item: "40449"
+      item: "40470"
+      item: "40490"
+      item: "40492"
+      item: "40493"
+      item: "40494"
+      item: "40495"
+      item: "40496"
+      item: "40497"
+      item: "40498"
+      item: "40551"
+      item: "40552"
+      item: "40553"
+      item: "40554"
+      item: "40555"
+      item: "40556"
+      item: "40400"
     }
   }
   config {
@@ -329,13 +333,6 @@ configs {
     bool_value: false
   }
   config {
-    key: "roaming_operator_string_array"
-    text_array {
-      item: "404"
-      item: "405"
-    }
-  }
-  config {
     key: "smart_forwarding_config_component_name_string"
     text_value: "com.qti.xdivert/com.qti.xdivert.XDivertSetting"
   }
@@ -349,5 +346,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1755076312
+  seconds: 1762360114
 }

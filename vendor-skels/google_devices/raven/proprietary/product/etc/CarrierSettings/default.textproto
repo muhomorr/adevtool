@@ -1,5 +1,5 @@
 canonical_name: "default"
-version: 73000000071
+version: 75000000074
 configs {
   config {
     key: "carrier_cross_sim_ims_available_bool"
@@ -130,6 +130,10 @@ configs {
       item: 6
       item: 5
     }
+  }
+  config {
+    key: "imsss.terminal_based_call_waiting_sync_type_int"
+    int_value: 0
   }
   config {
     key: "imsss.ut_server_based_services_int_array"
@@ -434,6 +438,10 @@ configs {
     int_value: 2
   }
   config {
+    key: "rilext.pcscf_reselection_support"
+    int_value: -1
+  }
+  config {
     key: "show_apn_setting_cdma_bool"
     bool_value: false
   }
@@ -481,5 +489,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1751442964
+  seconds: 1762942285
 }

@@ -1,5 +1,5 @@
 canonical_name: "talkmobile_gb"
-version: 73000000023
+version: 75000000024
 apns {
   apn {
     name: "Talkmobile Data"
@@ -58,10 +58,6 @@ configs {
   }
   config {
     key: "editable_enhanced_4g_lte_bool"
-    bool_value: false
-  }
-  config {
-    key: "editable_wfc_mode_bool"
     bool_value: false
   }
   config {
@@ -201,5 +197,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276427
+  seconds: 1759899310
 }

@@ -1,5 +1,5 @@
 canonical_name: "bell_ca"
-version: 73000000012
+version: 75000000013
 apns {
   apn {
     name: "Bell Mobility"
@@ -144,6 +144,7 @@ configs {
       item: "505"
       item: "513"
       item: "580"
+      item: "600"
       item: "606"
       item: "607"
     }
@@ -542,5 +543,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1743565845
+  seconds: 1758697830
 }

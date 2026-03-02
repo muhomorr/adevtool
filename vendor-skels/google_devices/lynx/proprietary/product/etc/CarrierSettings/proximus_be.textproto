@@ -1,5 +1,5 @@
 canonical_name: "proximus_be"
-version: 73000000016
+version: 75000000017
 apns {
   apn {
     name: "Proximus Internet"
@@ -190,6 +190,20 @@ configs {
     bool_value: true
   }
   config {
+    key: "qns.idle_eutran_rsrp_int_array"
+    int_array {
+      item: -110
+      item: -118
+    }
+  }
+  config {
+    key: "qns.voice_eutran_rsrp_int_array"
+    int_array {
+      item: -110
+      item: -118
+    }
+  }
+  config {
     key: "rtt_downgrade_supported_bool"
     bool_value: true
   }
@@ -207,5 +221,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1750835920
+  seconds: 1764766951
 }

@@ -1,0 +1,17 @@
+canonical_name: "netplus_ch"
+version: 75000000001
+apns {
+  apn {
+    name: "npls Internet"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+    type: FOTA
+    type: IA
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1762278851
+}

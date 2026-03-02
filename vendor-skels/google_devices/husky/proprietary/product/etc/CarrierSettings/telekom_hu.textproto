@@ -1,5 +1,5 @@
 canonical_name: "telekom_hu"
-version: 73000000017
+version: 75000000018
 apns {
   apn {
     name: "Internet"
@@ -184,6 +184,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "rtt_downgrade_supported_bool"
     bool_value: true
   }
@@ -205,5 +209,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276490
+  seconds: 1765368105
 }

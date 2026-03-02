@@ -1,5 +1,5 @@
 canonical_name: "three_dk"
-version: 73000000008
+version: 75000000010
 apns {
   apn {
     name: "3"
@@ -79,6 +79,10 @@ configs {
   config {
     key: "editable_wfc_mode_bool"
     bool_value: false
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
   }
   config {
     key: "ignore_rtt_mode_setting_bool"
@@ -242,7 +246,7 @@ configs {
   }
   config {
     key: "imsvoice.minimum_session_expires_timer_sec_int"
-    int_value: 1800
+    int_value: 600
   }
   config {
     key: "imsvoice.ringback_timer_millis_int"
@@ -262,6 +266,10 @@ configs {
   }
   config {
     key: "prefer_2g_bool"
+    bool_value: false
+  }
+  config {
+    key: "prefer_3g_visibility_bool"
     bool_value: false
   }
   config {
@@ -303,5 +311,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946287
+  seconds: 1763550005
 }

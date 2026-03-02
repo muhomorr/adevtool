@@ -1,5 +1,5 @@
 canonical_name: "telia_no"
-version: 73000000014
+version: 75000000015
 apns {
   apn {
     name: "Telia Internet"
@@ -250,6 +250,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -259,5 +263,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756887151
+  seconds: 1765368067
 }

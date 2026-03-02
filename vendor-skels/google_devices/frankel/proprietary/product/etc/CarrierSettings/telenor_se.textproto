@@ -1,5 +1,5 @@
 canonical_name: "telenor_se"
-version: 73000000003
+version: 75000000004
 apns {
   apn {
     name: "Telenor MMS"
@@ -217,6 +217,10 @@ configs {
     int_value: 614400
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "rtt_downgrade_supported_bool"
     bool_value: true
   }
@@ -242,5 +246,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946312
+  seconds: 1763550047
 }

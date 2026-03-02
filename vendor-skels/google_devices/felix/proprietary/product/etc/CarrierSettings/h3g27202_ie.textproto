@@ -1,5 +1,5 @@
 canonical_name: "h3g27202_ie"
-version: 73000000018
+version: 75000000019
 apns {
   apn {
     name: "3"
@@ -34,6 +34,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "allow_hold_in_rtt_call_bool"
+    bool_value: false
+  }
   config {
     key: "bsf.bsf_server_fqdn_string"
     text_value: "bsf.three.ie"
@@ -201,5 +205,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1741781023
+  seconds: 1764155412
 }

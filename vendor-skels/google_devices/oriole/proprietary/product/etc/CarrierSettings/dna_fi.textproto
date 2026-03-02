@@ -1,5 +1,5 @@
 canonical_name: "dna_fi"
-version: 73000000009
+version: 75000000010
 apns {
   apn {
     name: "Internet"
@@ -101,10 +101,14 @@ configs {
     }
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1742382107
+  seconds: 1764155381
 }

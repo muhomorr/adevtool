@@ -1,0 +1,23 @@
+canonical_name: "mci_ir"
+version: 75000000001
+apns {
+  apn {
+    name: "MCI-GPRS"
+    value: "mcinet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "MCCI MMS"
+    value: "mcinet"
+    type: MMS
+    mmsc: "http://192.168.193.134:38090/was"
+    mmsc_proxy: "192.168.194.73"
+    mmsc_proxy_port: "8080"
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1762783689
+}

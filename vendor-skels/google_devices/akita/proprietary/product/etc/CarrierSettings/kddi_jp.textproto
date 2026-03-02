@@ -1,5 +1,5 @@
 canonical_name: "kddi_jp"
-version: 73000000014
+version: 75000000016
 apns {
   apn {
     name: "5G NET"
@@ -512,6 +512,10 @@ configs {
     }
   }
   config {
+    key: "rilext.pcscf_reselection_support"
+    int_value: 1
+  }
+  config {
     key: "satellite_attach_supported_bool"
     bool_value: true
   }
@@ -555,5 +559,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1753863643
+  seconds: 1761090349
 }

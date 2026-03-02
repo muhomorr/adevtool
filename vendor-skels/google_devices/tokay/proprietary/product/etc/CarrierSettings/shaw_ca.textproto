@@ -1,5 +1,5 @@
 canonical_name: "shaw_ca"
-version: 73000000009
+version: 75000000010
 apns {
   apn {
     name: "Internet"
@@ -307,6 +307,10 @@ configs {
     int_value: 60000
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.mms_rat_preference_int"
     int_value: 2
   }
@@ -363,5 +367,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1729074835
+  seconds: 1758110695
 }

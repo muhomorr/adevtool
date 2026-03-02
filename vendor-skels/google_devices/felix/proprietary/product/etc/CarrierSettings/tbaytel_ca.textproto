@@ -1,5 +1,5 @@
 canonical_name: "tbaytel_ca"
-version: 73000000015
+version: 75000000016
 apns {
   apn {
     name: "Tbaytel Tethering"
@@ -375,6 +375,10 @@ configs {
     int_value: 2
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.video_wifi_rssi_int_array"
     int_array {
       item: -65
@@ -438,5 +442,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276462
+  seconds: 1769617571
 }

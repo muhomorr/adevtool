@@ -1,5 +1,5 @@
 canonical_name: "consumercellulartmo_us"
-version: 73000000012
+version: 75000000014
 apns {
   apn {
     name: "Consumer Cellular"
@@ -9,6 +9,14 @@ apns {
     type: SUPL
     type: HIPRI
     mmsc: "http://wholesale.mmsmvno.com/mms/wapenc"
+  }
+  apn {
+    name: "Consumer Cellular Tethering"
+    value: "hotspot"
+    type: DUN
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
   }
   apn {
     name: "Consumer Cellular IMS"
@@ -33,14 +41,6 @@ apns {
   }
 }
 configs {
-  config {
-    key: "5g_icon_configuration_string"
-    text_value: "connected_mmwave:5G,connected:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
-  }
-  config {
-    key: "5g_icon_display_grace_period_string"
-    text_value: "connected_mmwave,legacy,30;connected,legacy,30;not_restricted_rrc_idle,legacy,30;not_restricted_rrc_con,legacy,30"
-  }
   config {
     key: "bsf.bsf_server_fqdn_string"
     text_value: "bsf.msg.pc.t-mobile.com"
@@ -333,5 +333,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722472167
+  seconds: 1764155437
 }

@@ -1,5 +1,5 @@
 canonical_name: "mediacom_us"
-version: 73000000001
+version: 75000000002
 apns {
   apn {
     name: "Mediacom Mobile"
@@ -516,6 +516,10 @@ configs {
               item: 7
             }
           }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
+          }
         }
       }
       config {
@@ -524,6 +528,10 @@ configs {
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
             int_value: 0
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
           }
         }
       }
@@ -538,6 +546,10 @@ configs {
           }
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
             int_value: 1
           }
         }
@@ -556,6 +568,10 @@ configs {
               item: 2
             }
           }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
+          }
         }
       }
       config {
@@ -569,6 +585,10 @@ configs {
           }
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
             int_value: 1
           }
         }
@@ -1137,5 +1157,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722472184
+  seconds: 1762942384
 }

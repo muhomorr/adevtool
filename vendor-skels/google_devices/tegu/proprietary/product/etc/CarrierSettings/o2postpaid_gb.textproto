@@ -1,5 +1,5 @@
 canonical_name: "o2postpaid_gb"
-version: 73000000005
+version: 75000000006
 apns {
   apn {
     name: "O2 Pay Monthly"
@@ -109,6 +109,10 @@ configs {
       item: "510|Call completed elsewhere|1014"
       item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
     }
+  }
+  config {
+    key: "imsemergency.prefer_ims_emergency_when_voice_calls_on_cs_bool"
+    bool_value: true
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -298,5 +302,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1750835944
+  seconds: 1763550033
 }

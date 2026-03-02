@@ -1,5 +1,5 @@
 canonical_name: "bluegrass_us"
-version: 73000000010
+version: 75000000011
 apns {
   apn {
     name: "Bluegrass"
@@ -873,6 +873,10 @@ configs {
               item: 7
             }
           }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
+          }
         }
       }
       config {
@@ -881,6 +885,10 @@ configs {
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
             int_value: 0
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
           }
         }
       }
@@ -895,6 +903,10 @@ configs {
           }
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
             int_value: 1
           }
         }
@@ -913,6 +925,10 @@ configs {
               item: 2
             }
           }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
+          }
         }
       }
       config {
@@ -926,6 +942,10 @@ configs {
           }
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
             int_value: 1
           }
         }
@@ -1607,5 +1627,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1752617326
+  seconds: 1762942401
 }

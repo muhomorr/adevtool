@@ -1,0 +1,24 @@
+canonical_name: "solnet_ch"
+version: 75000000001
+apns {
+  apn {
+    name: "SolNet Internet"
+    value: "solnet"
+    type: DEFAULT
+    type: IA
+    type: SUPL
+    type: DUN
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+}
+configs {
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+}
+last_updated {
+  seconds: 1760509230
+}

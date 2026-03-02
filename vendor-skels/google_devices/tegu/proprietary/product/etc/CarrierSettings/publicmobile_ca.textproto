@@ -1,5 +1,5 @@
 canonical_name: "publicmobile_ca"
-version: 73000000008
+version: 75000000010
 apns {
   apn {
     name: "Tethered Mobile Internet"
@@ -472,6 +472,10 @@ configs {
     int_value: 10
   }
   config {
+    key: "rilext.pcscf_reselection_support"
+    int_value: 0
+  }
+  config {
     key: "smsToMmsTextThreshold"
     int_value: 5
   }
@@ -493,5 +497,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1751443026
+  seconds: 1761090361
 }

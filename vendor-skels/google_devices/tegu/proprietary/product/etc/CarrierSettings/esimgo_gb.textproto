@@ -1,5 +1,5 @@
 canonical_name: "esimgo_gb"
-version: 73000000005
+version: 75000000006
 apns {
   apn {
     name: "eSIM Go Data"
@@ -233,6 +233,10 @@ configs {
     }
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.video_eutran_rsrp_int_array"
     int_array {
       item: -110
@@ -293,5 +297,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1757476378
+  seconds: 1765368133
 }

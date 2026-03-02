@@ -1,5 +1,5 @@
 canonical_name: "swisscom_li"
-version: 73000000013
+version: 75000000013
 apns {
   apn {
     name: "Swisscom MMS"

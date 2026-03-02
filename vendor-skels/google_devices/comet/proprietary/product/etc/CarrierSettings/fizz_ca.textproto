@@ -1,5 +1,5 @@
 canonical_name: "fizz_ca"
-version: 73000000013
+version: 75000000014
 apns {
   apn {
     name: "mobile.bm"
@@ -272,6 +272,10 @@ configs {
     }
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.idle_eutran_rsrp_int_array"
     int_array {
       item: -114
@@ -383,5 +387,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1755076367
+  seconds: 1758697830
 }

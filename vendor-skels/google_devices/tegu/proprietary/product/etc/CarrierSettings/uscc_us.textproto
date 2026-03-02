@@ -1,5 +1,5 @@
 canonical_name: "uscc_us"
-version: 73000000006
+version: 75000000006
 apns {
   apn {
     name: "U.S. Cellular"

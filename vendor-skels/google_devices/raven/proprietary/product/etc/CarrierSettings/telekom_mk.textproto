@@ -1,5 +1,5 @@
 canonical_name: "telekom_mk"
-version: 73000000009
+version: 75000000009
 apns {
   apn {
     name: "Internet"

@@ -1,5 +1,5 @@
 canonical_name: "telia_no"
-version: 73000000005
+version: 75000000006
 apns {
   apn {
     name: "Telia Internet"
@@ -261,6 +261,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "rtt_downgrade_supported_bool"
     bool_value: true
   }
@@ -282,5 +286,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756887199
+  seconds: 1765368133
 }

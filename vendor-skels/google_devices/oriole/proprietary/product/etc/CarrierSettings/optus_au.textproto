@@ -1,5 +1,5 @@
 canonical_name: "optus_au"
-version: 73000000331
+version: 75000000333
 apns {
   apn {
     name: "Optus Yes Internet"
@@ -271,5 +271,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1740560691
+  seconds: 1762942285
 }

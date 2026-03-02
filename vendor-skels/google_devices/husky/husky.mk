@@ -543,6 +543,7 @@ PRODUCT_PACKAGES += \
     PixelVibratorFlagsL26 \
     ShannonIms \
     ShannonRcs \
+    aconfig_gpu_flags_c_lib \
     activity \
     aidb_recorder \
     ambient_volume \
@@ -775,6 +776,8 @@ PRODUCT_PACKAGES += \
     libpixelimsmedia \
     libpixelstats \
     libpowerstatshaldataprovider \
+    libprotobuf-cpp-full-6.33.1 \
+    libprotobuf-cpp-lite-6.33.1 \
     librecovery_ui_ext \
     libril-aidl \
     libril_gfeature \
@@ -901,6 +904,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/1and1_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/1and1_de.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/1global_bootstrap.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/1global_bootstrap.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/2degrees_nz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/2degrees_nz.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/321communications_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/321communications_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/48_ie.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/48_ie.pb \
@@ -940,24 +944,32 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/attbootstrap_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/attbootstrap_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/attmvnos_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/attmvnos_mx.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/attmvnos_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/attmvnos_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/avatel_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/avatel_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/axis_id.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/axis_id.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/b1_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/b1_ch.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/bait_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bait_mx.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/bark_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bark_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/base_be.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/base_be.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/batelco_bh.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/batelco_bh.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/bell_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bell_ca.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/best_la.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/best_la.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/bite_lt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bite_lt.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/bite_lv.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bite_lv.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/bluegrass_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bluegrass_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/bob_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bob_at.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/bonbon_hr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bonbon_hr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/boost_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/boost_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/boosttmo_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/boosttmo_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/bouygues_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bouygues_fr.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/bouyguesb2b_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bouyguesb2b_fr.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/brisanet_br.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/brisanet_br.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/bsnl_in.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bsnl_in.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/btb_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/btb_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/btc_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/btc_gb.pb \
-    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cablemovil_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cablemovil_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cablenet_cy.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cablenet_cy.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cablewireless_sc.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cablewireless_sc.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cape_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cape_ca.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cape_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cape_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/carolinawest_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/carolinawest_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/carrier_list.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/carrier_list.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/celcom_my.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/celcom_my.pb \
@@ -965,23 +977,34 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cellcom_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cellcom_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cellcommno_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cellcommno_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cellfie_ge.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cellfie_ge.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cellhire_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cellhire_fr.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cellmobile_gr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cellmobile_gr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/celluarone_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/celluarone_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/chatr_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/chatr_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/chinamobile_hk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/chinamobile_hk.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cht_tw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cht_tw.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/citymesh_be.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/citymesh_be.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/citymesh_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/citymesh_se.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/claro_ar.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/claro_ar.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/claro_br.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/claro_br.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/claro_cl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/claro_cl.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/claro_co.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/claro_co.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/claro_pr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/claro_pr.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cloud9_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cloud9_gb.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cloudcore_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cloudcore_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cogeco_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cogeco_ca.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/com4_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/com4_no.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/comcastbusiness_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/comcastbusiness_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/commonmvnxatt_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/commonmvnxatt_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/compax_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/compax_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/congstar_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/congstar_de.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/consumercellularatt_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/consumercellularatt_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/consumercellulartmo_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/consumercellulartmo_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/coopvoce_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/coopvoce_it.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/coppervalley_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/coppervalley_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cordova_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cordova_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/coriolis_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/coriolis_fr.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/correios_br.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/correios_br.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cox_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cox_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cricket_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cricket_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/cricket5g_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cricket5g_us.pb \
@@ -1015,6 +1038,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/elisa_ee.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/elisa_ee.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/elisa_fi.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/elisa_fi.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/enetworks_gy.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/enetworks_gy.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/enreach_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/enreach_de.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/enreach_nl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/enreach_nl.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/entel_cl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/entel_cl.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/epic_mt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/epic_mt.pb \
@@ -1023,8 +1047,12 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/esimgo_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/esimgo_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/esn_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/esn_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/etisalat_ae.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/etisalat_ae.pb \
-    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/euskaltel_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/euskaltel_es.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/etisalat_af.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/etisalat_af.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/etl_ls.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/etl_ls.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/eureka_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/eureka_jp.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/evolve_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/evolve_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/execulink_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/execulink_ca.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/faiba_ke.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/faiba_ke.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/fastweb_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fastweb_it.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/fet_tw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fet_tw.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/fi_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fi_at.pb \
@@ -1044,6 +1072,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/free_re.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/free_re.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/freedommobile_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/freedommobile_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/gamma_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gamma_gb.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/gbrli_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gbrli_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/gci_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gci_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/gibtel_gi.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gibtel_gi.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/giffgaff_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/giffgaff_gb.pb \
@@ -1054,7 +1083,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/google5glab_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/google5glab_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/grameenphone_bd.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/grameenphone_bd.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/gta_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gta_us.pb \
-    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/guuk_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/guuk_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/h3_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_at.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/h3_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/h3_hk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_hk.pb \
@@ -1064,22 +1092,29 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/h3_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_se.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/h3g27202_ie.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3g27202_ie.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/halebop_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/halebop_se.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/halotel_tz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/halotel_tz.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/helium_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/helium_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/help_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/help_at.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/homobile_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/homobile_it.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/hotmobile_il.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/hotmobile_il.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/ice_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ice_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/ice_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ice_no.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/idc_md.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/idc_md.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/idea_in.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/idea_in.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/idmobile_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/idmobile_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/iliad_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/iliad_it.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/indosat_id.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/indosat_id.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/inland_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/inland_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/ipdirections_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ipdirections_fr.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/iway_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/iway_ch.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/iwireless_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/iwireless_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/izziatt_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/izziatt_mx.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/jamil_ke.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/jamil_ke.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/jazz_pk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/jazz_pk.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/jazztel_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/jazztel_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/jcommobile_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/jcommobile_jp.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/joonto_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/joonto_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/jt_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/jt_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/kajeetmvno_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/kajeetmvno_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/kddi_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/kddi_jp.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/kddi5gsa_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/kddi5gsa_jp.pb \
@@ -1089,39 +1124,50 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/koodo_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/koodo_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/kpn_nl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/kpn_nl.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/kt_kr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/kt_kr.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/ktrn_rw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ktrn_rw.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/kyivstar_ua.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/kyivstar_ua.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lebara_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lebara_de.pb \
-    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lebara_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lebara_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lebara_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lebara_fr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lebara_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lebara_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lebara_nl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lebara_nl.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lebara_sa.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lebara_sa.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/legos_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/legos_fr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lguplus_kr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lguplus_kr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/liberty_pr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/liberty_pr.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/libertymobile_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/libertymobile_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lifecell_ua.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lifecell_ua.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/limitless_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/limitless_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/linemo_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/linemo_jp.pb \
-    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/llamaya_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/llamaya_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lmt_lv.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lmt_lv.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lobster_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lobster_es.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lobster_gi.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lobster_gi.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lowi_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lowi_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/luckymobile_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/luckymobile_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lum_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lum_ca.pb \
-    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lyca_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lyca_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lyca_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lyca_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lycamobile_dk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lycamobile_dk.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lycamobile_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lycamobile_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lycamobile_pt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lycamobile_pt.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lycamobile_ru.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lycamobile_ru.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lycamobile_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lycamobile_se.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/lycamobile_ug.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lycamobile_ug.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/m1_sg.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/m1_sg.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/magticom_ge.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/magticom_ge.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/manxcontract_im.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/manxcontract_im.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/manxprepaid_im.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/manxprepaid_im.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/masmovil_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/masmovil_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/maxis_my.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/maxis_my.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mci_ir.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mci_ir.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mediacom_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mediacom_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/megacom_kg.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/megacom_kg.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/megamovil_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/megamovil_mx.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/melita_mt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/melita_mt.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/membersmobile_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/membersmobile_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/meo_pt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/meo_pt.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/metropcs_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/metropcs_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mettel_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mettel_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/miatel_ru.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/miatel_ru.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mobi_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mobi_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mobifone_vn.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mobifone_vn.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mobily_sa.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mobily_sa.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/moldcell_md.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/moldcell_md.pb \
@@ -1131,21 +1177,32 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/movistar_co.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/movistar_co.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/movistar_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/movistar_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/movistar_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/movistar_mx.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mtel_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mtel_at.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mtel_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mtel_de.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mtel_me.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mtel_me.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mtn_gh.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mtn_gh.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mtn_ng.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mtn_ng.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mtn_zm.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mtn_zm.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mtx_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mtx_zz.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mucho_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mucho_ch.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/mvnoconnect_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mvnoconnect_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/naf_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/naf_no.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/ncell_np.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ncell_np.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/nema_fo.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nema_fo.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/neotel_nr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/neotel_nr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/netcomgroup_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/netcomgroup_fr.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/netgsm_tr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/netgsm_tr.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/netplus_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/netplus_ch.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/netwo_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/netwo_fr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/newww_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/newww_mx.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/nexphone_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nexphone_ch.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/nextech_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nextech_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/no_sim.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/no_sim.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/noble_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/noble_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/nos_pt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nos_pt.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/nova_gr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nova_gr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/nova_is.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nova_is.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/ntplc_th.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ntplc_th.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/nymobile_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nymobile_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/o2_cz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/o2_cz.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/o2_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/o2_de.pb \
@@ -1154,13 +1211,16 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/o2prepaid_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/o2prepaid_de.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/o2prepaid_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/o2prepaid_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/omantel_om.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/omantel_om.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/ondo_mn.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ondo_mn.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/one_al.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/one_al.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/one_me.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/one_me.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/one5g_sl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/one5g_sl.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/onecall_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/onecall_no.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/only_yt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/only_yt.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/ooredoo_kw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ooredoo_kw.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/ooredoo_mv.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ooredoo_mv.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/ooredoo_qa.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ooredoo_qa.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/optima_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/optima_it.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/optimera_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/optimera_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/optus_au.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/optus_au.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/orange_be.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/orange_be.pb \
@@ -1179,27 +1239,37 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/orange_tn.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/orange_tn.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/orangentn_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/orangentn_fr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/others.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/others.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/otz_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/otz_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/oxio_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/oxio_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/paradisemobile_bm.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/paradisemobile_bm.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/paradisemobile_ky.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/paradisemobile_ky.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/partner_il.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/partner_il.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/pcmobilebell_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/pcmobilebell_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/pelephone_il.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/pelephone_il.pb \
-    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/pepephone_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/pepephone_es.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/pivotel_au.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/pivotel_au.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/play_pl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/play_pl.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/plintron_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/plintron_it.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/plintron_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/plintron_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/plus_pl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/plus_pl.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/pmci_pw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/pmci_pw.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/popcorn_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/popcorn_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/post_lu.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/post_lu.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/postemobile_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/postemobile_it.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/postmobile_ie.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/postmobile_ie.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/povo_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/povo_jp.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/povo5gsa_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/povo5gsa_jp.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/profile1_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/profile1_zz.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/profile2_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/profile2_zz.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/profile3_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/profile3_zz.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/profile4_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/profile4_zz.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/proximus_be.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/proximus_be.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/ptvtelecom_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ptvtelecom_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/publicmobile_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/publicmobile_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/pwg_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/pwg_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/qlink_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/qlink_us.pb \
-    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/r_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/r_es.pb \
-    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/racc_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/racc_es.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/rain_za.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rain_za.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/rakuten_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rakuten_jp.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/rcell_sy.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rcell_sy.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/reach_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/reach_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/reallycommunications_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/reallycommunications_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/redpocketatt_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/redpocketatt_us.pb \
@@ -1209,12 +1279,14 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/robi_bd.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/robi_bd.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/roccstar_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/roccstar_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/rockisland_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rockisland_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/rockwireless_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rockwireless_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/rogers_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rogers_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/rogers5g_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rogers5g_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/rogerswpn_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rogerswpn_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/salt_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/salt_ch.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/salt_li.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/salt_li.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/sasktel_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sasktel_ca.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/selam_tr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/selam_tr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/setar_aw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/setar_aw.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/sfr_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sfr_fr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/shaw_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/shaw_ca.pb \
@@ -1223,6 +1295,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/simple_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/simple_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/simyo_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/simyo_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/singtel_sg.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/singtel_sg.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/sipgate_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sipgate_de.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/skinny_nz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/skinny_nz.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/skt_kr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/skt_kr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/sky_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sky_gb.pb \
@@ -1236,11 +1309,14 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/smartone_hk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/smartone_hk.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/smarty_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/smarty_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/softbank_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/softbank_jp.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/solnet_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/solnet_ch.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/solomobile_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/solomobile_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/spark_nz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/spark_nz.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/spectrum_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/spectrum_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/spectrumbusiness_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/spectrumbusiness_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/spectrummso_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/spectrummso_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/spectrummsotest_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/spectrummsotest_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/spitfire_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/spitfire_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/spmtelecom_pm.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/spmtelecom_pm.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/sprint_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sprint_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/sprintprepaid_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sprintprepaid_us.pb \
@@ -1257,17 +1333,19 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/strata_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/strata_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/sunrise_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sunrise_ch.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/superdrug_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/superdrug_gb.pb \
-    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/sweno_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sweno_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/swisscom_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/swisscom_ch.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/swisscom_li.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/swisscom_li.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/swisscommvno_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/swisscommvno_ch.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/t2_si.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/t2_si.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/t26_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/t26_zz.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/talkmobile_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/talkmobile_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tango_lu.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tango_lu.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tango_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tango_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tbaytel_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tbaytel_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tchibo_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tchibo_at.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tchibo_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tchibo_de.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tcl_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tcl_gb.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tcl_nl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tcl_nl.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tdc_dk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tdc_dk.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telavox_be.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telavox_be.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telavox_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telavox_se.pb \
@@ -1277,8 +1355,8 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tele2_lt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tele2_lt.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tele2_lv.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tele2_lv.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tele2_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tele2_se.pb \
-    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telecable2_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telecable2_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telecom_ar.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telecom_ar.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/teleena_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/teleena_zz.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telekom_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telekom_de.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telekom_gr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telekom_gr.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telekom_hr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telekom_hr.pb \
@@ -1305,23 +1383,32 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telia_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telia_se.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telkomsel_id.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telkomsel_id.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tello_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tello_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telna_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telna_zz.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telnyx_be.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telnyx_be.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telnyx_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telnyx_it.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telnyx_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telnyx_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telstra_au.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telstra_au.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/telus_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telus_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tesco_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tesco_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/test001_amarisoft.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/test001_amarisoft.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/test001_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/test001_zz.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/textnow_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/textnow_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tgs_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tgs_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/three_dk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/three_dk.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/thumbcellular_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/thumbcellular_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tigo_co.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tigo_co.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tim_br.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tim_br.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tim_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tim_it.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tinkoff_ru.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tinkoff_ru.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tmobile_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tmobile_at.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tmobile_cz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tmobile_cz.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tmobile_nl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tmobile_nl.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tmobile_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tmobile_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tmobileprivate_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tmobileprivate_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tmoericssonlab_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tmoericssonlab_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tmomvno_nl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tmomvno_nl.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tmomvno_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tmomvno_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tnm_mw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tnm_mw.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tracfoneatt_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tracfoneatt_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tracfonetmo_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tracfonetmo_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/tracfoneverizon_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tracfoneverizon_us.pb \
@@ -1343,11 +1430,13 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/ultra_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ultra_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/umobile_my.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/umobile_my.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/unifi_my.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/unifi_my.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/unifique_br.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/unifique_br.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/unionwireless_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/unionwireless_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/unitedwireless_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/unitedwireless_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/uqmobile_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/uqmobile_jp.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/uqmobile5gsa_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/uqmobile5gsa_jp.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/uscc_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/uscc_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/utc_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/utc_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/verizon_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/verizon_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/verizononsitelte_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/verizononsitelte_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/verymobile_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/verymobile_it.pb \
@@ -1360,7 +1449,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/virgin_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/virgin_ca.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/virgin_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/virgin_gb.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/virgin_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/virgin_us.pb \
-    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/virgintelco_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/virgintelco_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/visible_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/visible_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/visiblev_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/visiblev_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/viti_pf.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/viti_pf.pb \
@@ -1381,6 +1469,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/vodafone_nl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_nl.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/vodafone_nz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_nz.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/vodafone_om.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_om.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/vodafone_pf.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_pf.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/vodafone_pt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_pt.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/vodafone_qa.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_qa.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/vodafone_ro.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_ro.pb \
@@ -1388,12 +1477,20 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/vodafonelab_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafonelab_de.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/walmart_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/walmart_mx.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/webbing_hk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/webbing_hk.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/wecom_il.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/wecom_il.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/wim_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/wim_mx.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/wind_do.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/wind_do.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/windtre_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/windtre_it.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/wireless_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/wireless_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/wom_cl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/wom_cl.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/worldmobile_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/worldmobile_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/worldmobile_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/worldmobile_zz.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/xfera_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/xfera_es.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/xfinity_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/xfinity_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/xfinity2_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/xfinity2_us.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/xfinitymso_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/xfinitymso_us.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/xphone_il.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/xphone_il.pb \
+    vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/yas_tz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/yas_tz.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/yes_my.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/yes_my.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/yesss_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/yesss_at.pb \
     vendor/google_devices/husky/proprietary/product/etc/CarrierSettings/yettel_bg.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/yettel_bg.pb \
@@ -1687,19 +1784,17 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/cfg.db:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/cfg.db \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/cfg.sha2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/cfg.sha2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs_symbolic_link_mapping:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs_symbolic_link_mapping \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/00d6d4c24deb20c5fca54497c49bb5bcb06f4701:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/00d6d4c24deb20c5fca54497c49bb5bcb06f4701 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/01083369e79d86f62e3aadb2b3009f1aeb8ddd45:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/01083369e79d86f62e3aadb2b3009f1aeb8ddd45 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/012a3153d79cb57b14689c6367d2148c021acb65:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/012a3153d79cb57b14689c6367d2148c021acb65 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/01bcd13d69c1d96179c6504fdcb866c58214d904:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/01bcd13d69c1d96179c6504fdcb866c58214d904 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/026fe381212d553d82ad53288774e73f814ecd82:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/026fe381212d553d82ad53288774e73f814ecd82 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/027a57ddd7d82a616e4874babddb588ebd9a85b1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/027a57ddd7d82a616e4874babddb588ebd9a85b1 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/02d7516a49e376899faddfda2090b67a3af8ad0e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/02d7516a49e376899faddfda2090b67a3af8ad0e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0302c760ddd7d0e59e43a854d25a4651acf77287:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0302c760ddd7d0e59e43a854d25a4651acf77287 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0305c481bacd02a84eccebbe1c16bce59a0a18d2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0305c481bacd02a84eccebbe1c16bce59a0a18d2 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/030f2ddf312d85e4491c521c383e9472510ba84c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/030f2ddf312d85e4491c521c383e9472510ba84c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0357bdfa55d6ceb6a335b1da838919e42cc6de63:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0357bdfa55d6ceb6a335b1da838919e42cc6de63 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0388bdfd8075a3f19bfffb00b78f7c01204d26d2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0388bdfd8075a3f19bfffb00b78f7c01204d26d2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/03f9f80013c866ac4f03580a991b81efdaf2fcdc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/03f9f80013c866ac4f03580a991b81efdaf2fcdc \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0425f0e06405ce282bfec57064d0292f4791d742:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0425f0e06405ce282bfec57064d0292f4791d742 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/045c04c32078b294a4a8733a13ac99bba58e7a57:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/045c04c32078b294a4a8733a13ac99bba58e7a57 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/049f9e339423d7ab8f17f9eab53325da1384ff48:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/049f9e339423d7ab8f17f9eab53325da1384ff48 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/04aa4ebec6774e7e7af8c9702aa5ae8783357c65:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/04aa4ebec6774e7e7af8c9702aa5ae8783357c65 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/04bae239b62c058084297f112e04aa1f07209fb9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/04bae239b62c058084297f112e04aa1f07209fb9 \
@@ -1714,16 +1809,20 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/07c67d4b510350f5d5e79cef89ceea2803b6000d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/07c67d4b510350f5d5e79cef89ceea2803b6000d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0843c88408f555d730c349b63933286488773687:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0843c88408f555d730c349b63933286488773687 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/087157d1cfbb20f5b07b1a5f30df938886356128:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/087157d1cfbb20f5b07b1a5f30df938886356128 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/08caf21cc2ab3498d10b4255260594cf8701ecaa:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/08caf21cc2ab3498d10b4255260594cf8701ecaa \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/08d15fad2f6281613a8530a376ec2578388ff1b3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/08d15fad2f6281613a8530a376ec2578388ff1b3 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/08d8f3bd5993d87ad13bb0108c5af8c27c72ee29:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/08d8f3bd5993d87ad13bb0108c5af8c27c72ee29 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/08e1a1db49322a7bcad18e9dd2ed55e139662ef8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/08e1a1db49322a7bcad18e9dd2ed55e139662ef8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/098c29bda96b34a6ecee242a6915789e50de8a17:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/098c29bda96b34a6ecee242a6915789e50de8a17 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/09e421c58c6a766ae1503690b15427f29b6ea337:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/09e421c58c6a766ae1503690b15427f29b6ea337 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/09e4eeec0bf8a0df491d123965a3df2495a87f6d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/09e4eeec0bf8a0df491d123965a3df2495a87f6d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0a5a1c51cb92ee2795091e367d8cd56bc28af68e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0a5a1c51cb92ee2795091e367d8cd56bc28af68e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0a992ae4659c39a7fa098eb552e73475b5695105:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0a992ae4659c39a7fa098eb552e73475b5695105 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0b0cb4025098ba6ef12f19da5c43e3ea11ae4b55:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0b0cb4025098ba6ef12f19da5c43e3ea11ae4b55 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0b2296dce9ce3a46168ec91fe0004906f824f26b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0b2296dce9ce3a46168ec91fe0004906f824f26b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0b4e6f0b6e544dbd7a19e8f8b7e0b89b1d1d336b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0b4e6f0b6e544dbd7a19e8f8b7e0b89b1d1d336b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0b5d7f201e7c6bc43b75a0858f2c0fa5f80e29af:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0b5d7f201e7c6bc43b75a0858f2c0fa5f80e29af \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0bcd3aa5b71e3f54d8bbb5c187cceca9384c3265:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0bcd3aa5b71e3f54d8bbb5c187cceca9384c3265 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0be07e983327246c29af9d94860b322c736f4104:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0be07e983327246c29af9d94860b322c736f4104 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0c049730c9ac30dc65d21809f84fa7a834d73221:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0c049730c9ac30dc65d21809f84fa7a834d73221 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0cd569c15fd8cc9bd5b2ee72e51d0c7680716799:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0cd569c15fd8cc9bd5b2ee72e51d0c7680716799 \
@@ -1746,10 +1845,11 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/0fd79ff72e248372a268c0ca0ed66edd1ffb8443:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0fd79ff72e248372a268c0ca0ed66edd1ffb8443 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/106b023cde62e6d61a6073b57e4921f158369814:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/106b023cde62e6d61a6073b57e4921f158369814 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1074d128b8c1cc1e10ea049c96777aefd711279b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1074d128b8c1cc1e10ea049c96777aefd711279b \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/108972510abccc4f686a123c58b821e5695ee1c6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/108972510abccc4f686a123c58b821e5695ee1c6 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/10c56a7166587cdedbd68a12e38b4a448c3d5431:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/10c56a7166587cdedbd68a12e38b4a448c3d5431 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/11583206d5f957edb3a17edf66519a98f6e6fbb8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/11583206d5f957edb3a17edf66519a98f6e6fbb8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/11d5ecd79e6155ec6db8a67b5806c4a9325d158e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/11d5ecd79e6155ec6db8a67b5806c4a9325d158e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/12013faa4a3d3488ca251b0395d07411e3558f17:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/12013faa4a3d3488ca251b0395d07411e3558f17 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/12103b699ba66bf21ba240a14cb997d9fbc5eacf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/12103b699ba66bf21ba240a14cb997d9fbc5eacf \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1279203468e3a451f10c8039422140ccc7acb37c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1279203468e3a451f10c8039422140ccc7acb37c \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/12970073e7a1cd4b7040755d0f638fcc4088af0e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/12970073e7a1cd4b7040755d0f638fcc4088af0e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/134a4a9329ad0182edc61d647a59e3675a70775d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/134a4a9329ad0182edc61d647a59e3675a70775d \
@@ -1758,15 +1858,16 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/13f6e7f8317832b1431f65c9bf93726a2b0c87d2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/13f6e7f8317832b1431f65c9bf93726a2b0c87d2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/140c26a43420b1f201fa2baab82bc820071999a8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/140c26a43420b1f201fa2baab82bc820071999a8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1518d5db78798c937a1fa460508a897f18fc538d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1518d5db78798c937a1fa460508a897f18fc538d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/157c1b52a4c97738bf413076554e3b91d2b3954d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/157c1b52a4c97738bf413076554e3b91d2b3954d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/15c48ec86e50aa80109dd3be5d6a886e78649d70:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/15c48ec86e50aa80109dd3be5d6a886e78649d70 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1616a6287878a4c3a43f96f20a6265dcbb698c17:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1616a6287878a4c3a43f96f20a6265dcbb698c17 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1621bc42694831bc2b55bdd0ffb07812870da4a9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1621bc42694831bc2b55bdd0ffb07812870da4a9 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/166dce2cddf1b059b810effb423e1c07a7596c1b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/166dce2cddf1b059b810effb423e1c07a7596c1b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/169a76a933fe96a94fcd9d5a785408397869d5a6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/169a76a933fe96a94fcd9d5a785408397869d5a6 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/16a9ea3d12a86d9f4f7e265b02548b92dae28e9d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/16a9ea3d12a86d9f4f7e265b02548b92dae28e9d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/174b327660d8c6f3b254201f05b4c8def7e03cd8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/174b327660d8c6f3b254201f05b4c8def7e03cd8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/178fab9bc0abb9d8335260f2b8ae1b974e7e9018:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/178fab9bc0abb9d8335260f2b8ae1b974e7e9018 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1827b452d45be296681284549fffc5aa386658a3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1827b452d45be296681284549fffc5aa386658a3 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/190e761683d0b527b953c20a6821c37afebe0be2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/190e761683d0b527b953c20a6821c37afebe0be2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/193304d87777e13a3c521b0dcc5b5700c0934de1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/193304d87777e13a3c521b0dcc5b5700c0934de1 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/195d160643d5a878c43fb53158bbe57b563941a4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/195d160643d5a878c43fb53158bbe57b563941a4 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/195f1cc3a40f27b6795ac69c8288725b501ef0a2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/195f1cc3a40f27b6795ac69c8288725b501ef0a2 \
@@ -1779,7 +1880,9 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1a3f64bc7f0c4aecd0ca4d1da5d02d5baf54e8b4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1a3f64bc7f0c4aecd0ca4d1da5d02d5baf54e8b4 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1a4dcefdc6eb8d3e3d204aff1c90439a5d4cae17:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1a4dcefdc6eb8d3e3d204aff1c90439a5d4cae17 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1a705d1e3046afdc6524a5774b7d5aab58ee6f28:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1a705d1e3046afdc6524a5774b7d5aab58ee6f28 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1a99f996f42f93fe77898f7ef777774acc929d24:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1a99f996f42f93fe77898f7ef777774acc929d24 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1b05bdb2e1e6ea83024cecc2cc476a4113526577:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1b05bdb2e1e6ea83024cecc2cc476a4113526577 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1b262893eb86a5931339d55629eb7cad61272a81:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1b262893eb86a5931339d55629eb7cad61272a81 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1b4135ba9708f41a158e6c13ebe3d6f9857a2c6b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1b4135ba9708f41a158e6c13ebe3d6f9857a2c6b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1ba533e038b54ecf192d9d287886f6c52ee07620:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1ba533e038b54ecf192d9d287886f6c52ee07620 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1bd4cf5d8bc9ac3086f0eec603f8d1d3f1313a9f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1bd4cf5d8bc9ac3086f0eec603f8d1d3f1313a9f \
@@ -1788,7 +1891,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1cd3f20b7eb1505513e2e286836c289bb4df5be8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1cd3f20b7eb1505513e2e286836c289bb4df5be8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1cd426ec320842197e15d0c8f531931a5bbc360c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1cd426ec320842197e15d0c8f531931a5bbc360c \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1d00a6d33fbf2751dec330b3f20b06be0e57de4b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1d00a6d33fbf2751dec330b3f20b06be0e57de4b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1dd37575d3ba30283548d3ad1b000839e96b19e1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1dd37575d3ba30283548d3ad1b000839e96b19e1 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1de0a871b3535aa054388ed028df8a97416e6ffc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1de0a871b3535aa054388ed028df8a97416e6ffc \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1df03b317f6bbdb2f291bc0e4c309e3580ae83a2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1df03b317f6bbdb2f291bc0e4c309e3580ae83a2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1dfdf2fb65c57590a250e80aa803389417b12c77:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1dfdf2fb65c57590a250e80aa803389417b12c77 \
@@ -1796,7 +1898,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1e20670d6c07a78a502f38636e74be2cebc0ad9b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1e20670d6c07a78a502f38636e74be2cebc0ad9b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1e703b31732676e1b708d1d7068e58f901746dd5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1e703b31732676e1b708d1d7068e58f901746dd5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1e7e461238d603c5e9cd4236d7fd5ce7bac94574:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1e7e461238d603c5e9cd4236d7fd5ce7bac94574 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1e84ad233378ae673e8a099d1973efb52b1ad6b7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1e84ad233378ae673e8a099d1973efb52b1ad6b7 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1eab3341da29719d20d18e8eb8af29256b9555f3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1eab3341da29719d20d18e8eb8af29256b9555f3 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1ec0bdb1dcce6117ef9f039e7dcc4205535cba4a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1ec0bdb1dcce6117ef9f039e7dcc4205535cba4a \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1ed03c5cd3f6aae12731cee614f3a08f8cede0c6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1ed03c5cd3f6aae12731cee614f3a08f8cede0c6 \
@@ -1804,6 +1905,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1f560a66d012e4b23804c20926b29eae4b6b1fb1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1f560a66d012e4b23804c20926b29eae4b6b1fb1 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1f72667f1a2ac7ad5c07e7b01cae2f1c64674075:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1f72667f1a2ac7ad5c07e7b01cae2f1c64674075 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1fef6885a96fa1f910330ccc6d9e59bf36b0d7fd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1fef6885a96fa1f910330ccc6d9e59bf36b0d7fd \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/1ff4d303edb6a6aa05f7d1c1aecff3da3fc1a922:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/1ff4d303edb6a6aa05f7d1c1aecff3da3fc1a922 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/206acc7ced4792b19f527001ad4ed065c162bde8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/206acc7ced4792b19f527001ad4ed065c162bde8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/209276c0e1df9f87add4bafaed172451fc6019ce:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/209276c0e1df9f87add4bafaed172451fc6019ce \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/20a0098a90c77e3525315600f95c0ad3e08c2872:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/20a0098a90c77e3525315600f95c0ad3e08c2872 \
@@ -1814,7 +1916,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/216da52f09730438c6bd8d7851960b1e433536fe:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/216da52f09730438c6bd8d7851960b1e433536fe \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/21f9744415ccd13217aae6ef787e3260948638ca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/21f9744415ccd13217aae6ef787e3260948638ca \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/220e0043df3a90fe318d4d2e77fd478e1e064d1a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/220e0043df3a90fe318d4d2e77fd478e1e064d1a \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2230020bb1e557675d96c2819a1926f3c3a9a0a6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2230020bb1e557675d96c2819a1926f3c3a9a0a6 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/22e429d7feb85674105e4710f81a76a99c276fb2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/22e429d7feb85674105e4710f81a76a99c276fb2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/233522a8edce708d7652b129c678d02059893c59:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/233522a8edce708d7652b129c678d02059893c59 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/234ea458e53c94eadf55fc611b4c22c0759f4141:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/234ea458e53c94eadf55fc611b4c22c0759f4141 \
@@ -1822,6 +1923,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/24a87acd35b8040ce8a8971380bac00b8c493be2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/24a87acd35b8040ce8a8971380bac00b8c493be2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/255aaf81ba0a87bea32a163f79960da9e112d8ae:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/255aaf81ba0a87bea32a163f79960da9e112d8ae \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/26569f307b903a35d7adeaaab600c3465acf0379:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/26569f307b903a35d7adeaaab600c3465acf0379 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/267ceaf423d2e74ba67df560d9b69df2b0e6aecd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/267ceaf423d2e74ba67df560d9b69df2b0e6aecd \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/267f74fb6105837da4a3428d431c8daa3fcaa8f8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/267f74fb6105837da4a3428d431c8daa3fcaa8f8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/26cbded07cc2872256da1887b59411c04034437c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/26cbded07cc2872256da1887b59411c04034437c \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2704f7db05660b61e47ace5ca2b98f5a52e7cb17:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2704f7db05660b61e47ace5ca2b98f5a52e7cb17 \
@@ -1854,10 +1956,10 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2c6e9d9f4096adf80278261aaeb8730a84cc9a4e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2c6e9d9f4096adf80278261aaeb8730a84cc9a4e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2c7f878c96c93e37f7cfa6ec6f18c23ad2f95d49:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2c7f878c96c93e37f7cfa6ec6f18c23ad2f95d49 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2c984a8f208570b22ec9ef63e28dbc445d81ba54:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2c984a8f208570b22ec9ef63e28dbc445d81ba54 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2d39ab31b91be907125b9bb444c7453e744170b9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2d39ab31b91be907125b9bb444c7453e744170b9 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2d8e5e27534b74a7b8ec7ec57d954035e2307253:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2d8e5e27534b74a7b8ec7ec57d954035e2307253 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2d924994da49adc2b8d52566483626aac52b6c9b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2d924994da49adc2b8d52566483626aac52b6c9b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2dd3a5707d75f8ebaf645527d2b0e3da35ea55ca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2dd3a5707d75f8ebaf645527d2b0e3da35ea55ca \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2df77e1cda0e529b4dd9ba0bd4c1246324c56a9d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2df77e1cda0e529b4dd9ba0bd4c1246324c56a9d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2e053916f0cd7d6bd57d80b7879e4eddee75836d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2e053916f0cd7d6bd57d80b7879e4eddee75836d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2e0c1a7c459715b50f93d185d0216723b1626634:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2e0c1a7c459715b50f93d185d0216723b1626634 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/2e48bdda92c7f56336a21ba354ecdc777569b5fa:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2e48bdda92c7f56336a21ba354ecdc777569b5fa \
@@ -1873,6 +1975,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/31289091ba0691eb1f6d1e62bf2519c5cf5c8cd8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/31289091ba0691eb1f6d1e62bf2519c5cf5c8cd8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/312a18cf4dbdedf0844cc603c238524b1dd0ecd4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/312a18cf4dbdedf0844cc603c238524b1dd0ecd4 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/315a4c120733022a631bf1313c02be9c6909ab44:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/315a4c120733022a631bf1313c02be9c6909ab44 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3190409cefb7ae13d4a653d82653ab5c76839736:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3190409cefb7ae13d4a653d82653ab5c76839736 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/31ac304c5b26f08ba768c099d3f001bd560827bb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/31ac304c5b26f08ba768c099d3f001bd560827bb \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/31dece239864d3520f52a8b2ae1b4ee045f06bc8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/31dece239864d3520f52a8b2ae1b4ee045f06bc8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/31eb8c54357e57149a550287dbba3e95ff81f248:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/31eb8c54357e57149a550287dbba3e95ff81f248 \
@@ -1887,7 +1990,9 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3363a2e460c8fcec825c73a28e50d8051d687fd7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3363a2e460c8fcec825c73a28e50d8051d687fd7 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3375c955c630fbe1566c107f9aed94225fca555b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3375c955c630fbe1566c107f9aed94225fca555b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/33ca93bc249c73d319e563f201ef9b75db284ff0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/33ca93bc249c73d319e563f201ef9b75db284ff0 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/341bec5ac68e0f30ec2400738d2b19f31a370f65:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/341bec5ac68e0f30ec2400738d2b19f31a370f65 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/343065795d97081acb24c959fc06ff3c80f2e63a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/343065795d97081acb24c959fc06ff3c80f2e63a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3464f90ba22c892459f69f192111c31e61873787:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3464f90ba22c892459f69f192111c31e61873787 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3497586c3769544731dfbfc0e1acb4ff45371ab5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3497586c3769544731dfbfc0e1acb4ff45371ab5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/35049d6a09eb704925b4749c27aca1882bbda188:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/35049d6a09eb704925b4749c27aca1882bbda188 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/35ce938520a7e2667dd730780daba3ccc791909f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/35ce938520a7e2667dd730780daba3ccc791909f \
@@ -1898,7 +2003,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/36f18ff46c1cfe5d0fafa2704fb72c4cc490c1e5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/36f18ff46c1cfe5d0fafa2704fb72c4cc490c1e5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/379608a12d0657c5bf05e781a6a6770bffc61b00:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/379608a12d0657c5bf05e781a6a6770bffc61b00 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/37f603d7fa7b06c2ffb79621cbb0e4466ef0b964:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/37f603d7fa7b06c2ffb79621cbb0e4466ef0b964 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/383815331fbcfb38474f026b5553716740fb22a2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/383815331fbcfb38474f026b5553716740fb22a2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/384fe2b6b31aa8ad4a07bee0808bf707582e0255:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/384fe2b6b31aa8ad4a07bee0808bf707582e0255 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3869cbfcd29fac8c17f5a52278986a883fc29399:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3869cbfcd29fac8c17f5a52278986a883fc29399 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/38ad9342d11b7cc2379c6756a78cf79efaee7503:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/38ad9342d11b7cc2379c6756a78cf79efaee7503 \
@@ -1910,7 +2014,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3966ebcdb40d6ebc809fa026f56491b677e24359:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3966ebcdb40d6ebc809fa026f56491b677e24359 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/39ad3110b8f84821ca22cfbd995914f2149521d2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/39ad3110b8f84821ca22cfbd995914f2149521d2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/39b7252d505dec039d76c12731c60538bc261f06:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/39b7252d505dec039d76c12731c60538bc261f06 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/39be81804aa0420ed4368415745e332203fad1de:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/39be81804aa0420ed4368415745e332203fad1de \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3a1ae37bf288d53e2f0c6864d60a597e429c19ff:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3a1ae37bf288d53e2f0c6864d60a597e429c19ff \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3a1d5359d8a212512cddbdf9df52f050ba884603:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3a1d5359d8a212512cddbdf9df52f050ba884603 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3a9b8f8e0471a1d9583a5541b21731bab9f06517:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3a9b8f8e0471a1d9583a5541b21731bab9f06517 \
@@ -1930,7 +2033,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3d980b583d07ef7b2d499f2fb54d14cc34e06018:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3d980b583d07ef7b2d499f2fb54d14cc34e06018 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3db7e2627861721cf88480bbd336c7096100df7f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3db7e2627861721cf88480bbd336c7096100df7f \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3dbbfd07adefe91c1f904d0ebbccb17dd5a0ce16:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3dbbfd07adefe91c1f904d0ebbccb17dd5a0ce16 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3e13ae91cb7783afb7c998c80d717c6dae88fa18:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3e13ae91cb7783afb7c998c80d717c6dae88fa18 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3e86bf69aff7f85a9de490eeb0b5334b0200ed12:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3e86bf69aff7f85a9de490eeb0b5334b0200ed12 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3ed82180597d6eed1f7020339b6ddda5a4602b8b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3ed82180597d6eed1f7020339b6ddda5a4602b8b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/3f3d161a590207bbce08b385628907ea0ab9c575:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/3f3d161a590207bbce08b385628907ea0ab9c575 \
@@ -1947,6 +2049,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/41216795a0369120dd51df58392ea0d437997015:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/41216795a0369120dd51df58392ea0d437997015 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/417b21ee082a7ccf6bb676d7b82be31d7fd1b82e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/417b21ee082a7ccf6bb676d7b82be31d7fd1b82e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4237aacc9f74313b393e2470713d4e8440f6fb78:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4237aacc9f74313b393e2470713d4e8440f6fb78 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/423a92e69a71d7ed4959180a65f20f1f2d376465:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/423a92e69a71d7ed4959180a65f20f1f2d376465 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/426c3ee67e60560b5190ae4ed218aaa1320f9770:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/426c3ee67e60560b5190ae4ed218aaa1320f9770 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/428b3c29bed04eb3e5ef2cb3943dd3785c400f2a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/428b3c29bed04eb3e5ef2cb3943dd3785c400f2a \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/429c546c9a9b49e062c5deeaa9b9a4f2715a7756:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/429c546c9a9b49e062c5deeaa9b9a4f2715a7756 \
@@ -1960,7 +2063,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/436824caae4876996b2fd6fc882f86f46cd48aee:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/436824caae4876996b2fd6fc882f86f46cd48aee \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/436f4a74cf93256a012855345bf2040b6be70c07:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/436f4a74cf93256a012855345bf2040b6be70c07 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/43b7aa5c20bb1eeadf4c71ca2b8d22ae9986db73:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/43b7aa5c20bb1eeadf4c71ca2b8d22ae9986db73 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/43bd8ec2f06003c2df5ed8dd6148f2b2b7b61efc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/43bd8ec2f06003c2df5ed8dd6148f2b2b7b61efc \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/43e7bcb0be78d5d7c31ab9048f6c8480cb2e3631:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/43e7bcb0be78d5d7c31ab9048f6c8480cb2e3631 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/441a915ae1ea2da1e8b96ad63ce0e1092847b979:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/441a915ae1ea2da1e8b96ad63ce0e1092847b979 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4445e73e00a5a716ac543037189542c4cde677d7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4445e73e00a5a716ac543037189542c4cde677d7 \
@@ -1971,11 +2073,12 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/45462cf08511de3c68522fa5ce56bda83a43f30a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/45462cf08511de3c68522fa5ce56bda83a43f30a \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/45be2b130124c23949d1c2cee2b40f2fcb5edb88:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/45be2b130124c23949d1c2cee2b40f2fcb5edb88 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/45e5c3db4897aa0e5cf69119577e5c7ffd474339:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/45e5c3db4897aa0e5cf69119577e5c7ffd474339 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/45eaaebac925fdc8bad87da310e5e022d3d12131:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/45eaaebac925fdc8bad87da310e5e022d3d12131 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/461748b3f483fc2dcfe52cefadd5f59dc5f0449f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/461748b3f483fc2dcfe52cefadd5f59dc5f0449f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4628092ac1fe1f6c3019c36a45a15c0e3e0dede7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4628092ac1fe1f6c3019c36a45a15c0e3e0dede7 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/462cbf4028a8937796055b85442b4bc47619003e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/462cbf4028a8937796055b85442b4bc47619003e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/46ddc11c438adf093d6beee47be3a87f25d15393:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/46ddc11c438adf093d6beee47be3a87f25d15393 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/473c8696fb93a6de72b85fa9573d853528476ff6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/473c8696fb93a6de72b85fa9573d853528476ff6 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/47d39abf97c5ae1d9e3bd734e418d8afb305545c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/47d39abf97c5ae1d9e3bd734e418d8afb305545c \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/47fa06e9059928c7b33e9a5be5a66ba30d1ae0f2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/47fa06e9059928c7b33e9a5be5a66ba30d1ae0f2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/48103b3a4f9974d6b8f08c6505d61a8ecfd37a7e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/48103b3a4f9974d6b8f08c6505d61a8ecfd37a7e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/48e7bc84ea46b2551e106c496d73dc2e7eb2720d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/48e7bc84ea46b2551e106c496d73dc2e7eb2720d \
@@ -1989,12 +2092,13 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4b2931ee099d5b7b82590c566ed3dec9e12e3383:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4b2931ee099d5b7b82590c566ed3dec9e12e3383 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4b2be254df02746b0a16c0dc238a1fea241c5094:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4b2be254df02746b0a16c0dc238a1fea241c5094 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4b3a1e4e93edec15b465573b2fac0b4bd85fc628:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4b3a1e4e93edec15b465573b2fac0b4bd85fc628 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4b4468ac5cb509265b94734fa64d9f934c05a9c7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4b4468ac5cb509265b94734fa64d9f934c05a9c7 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4b846dc3437731bf067c0a4615248c443cd83df6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4b846dc3437731bf067c0a4615248c443cd83df6 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4b9772ca5b521c15f8a428ec21735bf35d93a6b8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4b9772ca5b521c15f8a428ec21735bf35d93a6b8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4bb2f5a133ab9babd4f4a32bfcf3d462468740c0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4bb2f5a133ab9babd4f4a32bfcf3d462468740c0 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4bc9a956dc8e8558fee3d245b6330fd22d8b7957:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4bc9a956dc8e8558fee3d245b6330fd22d8b7957 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4bd11a8d01a2eb2370a9b019b11ced3000770496:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4bd11a8d01a2eb2370a9b019b11ced3000770496 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4c48bb69cb15048effd2f3203ca4ff4899d6eb86:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4c48bb69cb15048effd2f3203ca4ff4899d6eb86 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4c56f2d61672cb2bf7aef3d64e9db85443ab8c14:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4c56f2d61672cb2bf7aef3d64e9db85443ab8c14 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4c67d258edbe740cb8c6c8dca0467d1b51b8e89f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4c67d258edbe740cb8c6c8dca0467d1b51b8e89f \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4c785273ad87027397d36f3e21895b20d876f88a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4c785273ad87027397d36f3e21895b20d876f88a \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/4c9b943caecced7c9876ba4fe711d99c71e60d49:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4c9b943caecced7c9876ba4fe711d99c71e60d49 \
@@ -2034,7 +2138,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/51dcf81032ff6087103afeb66cb17da7b993c476:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/51dcf81032ff6087103afeb66cb17da7b993c476 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/51e228e60857192d3cbc808a8598d1509ee648e7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/51e228e60857192d3cbc808a8598d1509ee648e7 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/51f69226fda9e4d2170c9cbb150ef4dca4e02666:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/51f69226fda9e4d2170c9cbb150ef4dca4e02666 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5247e7cf1c51b8f66f300c2428a8ee1e72ddeef0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5247e7cf1c51b8f66f300c2428a8ee1e72ddeef0 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/52b4ab222749746124cc57ea26fac451b06afcfb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/52b4ab222749746124cc57ea26fac451b06afcfb \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/52e7d6adce8c6d7217b0323514f04dff5c92928d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/52e7d6adce8c6d7217b0323514f04dff5c92928d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/53555890e6d8dc159b9702b82f6bc0e34f3447de:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/53555890e6d8dc159b9702b82f6bc0e34f3447de \
@@ -2045,12 +2148,12 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5403dae1acdb1da75ccb94fb4a35980829ffb948:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5403dae1acdb1da75ccb94fb4a35980829ffb948 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/541e7a55bb469d1d01eb7da171c5a87baf5698f0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/541e7a55bb469d1d01eb7da171c5a87baf5698f0 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/54342c2022c2be0043faa6d690085aa1295580ec:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/54342c2022c2be0043faa6d690085aa1295580ec \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5528b1d0fdb48fbcf167d23ff9c7ad2132fbf872:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5528b1d0fdb48fbcf167d23ff9c7ad2132fbf872 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/556a98640a0e6f205939a4520a9c0a21402989ce:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/556a98640a0e6f205939a4520a9c0a21402989ce \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/558fcebfaa056632c51695fe0d596b9dc8036e34:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/558fcebfaa056632c51695fe0d596b9dc8036e34 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/559222e3b109cd228e603703150419c010c6be64:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/559222e3b109cd228e603703150419c010c6be64 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/55f35f7b47c36716740eb0373e022fcb24d4c655:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/55f35f7b47c36716740eb0373e022fcb24d4c655 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/565c5ea99d933e676760dcdd2ecb951522b5546e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/565c5ea99d933e676760dcdd2ecb951522b5546e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/56768342f090d45fad34b6965f07ac76a0943d7b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/56768342f090d45fad34b6965f07ac76a0943d7b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/568b6762624db1a5e576150cc2039b9a5932feb2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/568b6762624db1a5e576150cc2039b9a5932feb2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/56cb10847a0e6a2a3d4e0722891e9e33c6c448f6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/56cb10847a0e6a2a3d4e0722891e9e33c6c448f6 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/57202f0f3c07f2cfe2e6b817980a7f4b1b9e9692:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/57202f0f3c07f2cfe2e6b817980a7f4b1b9e9692 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/573f9c470e9e9de6b5733fa146186826112213e5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/573f9c470e9e9de6b5733fa146186826112213e5 \
@@ -2066,7 +2169,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/592657f407917aa69f86fd996587f223e372ed69:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/592657f407917aa69f86fd996587f223e372ed69 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/599bb09d0e033bc9ad5434131ed876c4cd677955:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/599bb09d0e033bc9ad5434131ed876c4cd677955 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/599fb43f38dd3f6a92cf3b4e90d0a63f52399677:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/599fb43f38dd3f6a92cf3b4e90d0a63f52399677 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/59ddb7773c8750209fc60b392a9a65a12baa56d1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/59ddb7773c8750209fc60b392a9a65a12baa56d1 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/59f8b08ba5744503cdce05965a649d2ea148bce4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/59f8b08ba5744503cdce05965a649d2ea148bce4 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5a0769e98a9b9d012ec0f0e80402a0cab2aab960:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5a0769e98a9b9d012ec0f0e80402a0cab2aab960 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5a22663031399aa12b02ce613bf75017394789c4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5a22663031399aa12b02ce613bf75017394789c4 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5a64b9f94df363181d376571514a854494f56e21:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5a64b9f94df363181d376571514a854494f56e21 \
@@ -2077,9 +2180,8 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5b9446f9a2f56d819e99f7d9c6359f082a2c51f2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5b9446f9a2f56d819e99f7d9c6359f082a2c51f2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5ba097a94c1a0b45280efc5e16a05229afba6828:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5ba097a94c1a0b45280efc5e16a05229afba6828 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5c2efee31e70db8162a40f0288c489a322537c80:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5c2efee31e70db8162a40f0288c489a322537c80 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5c35ee14fc0386f7f1532d357dbf51cc24de3687:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5c35ee14fc0386f7f1532d357dbf51cc24de3687 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5c58316ada75ba5cbfebf8b015bbb3f0647af8ac:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5c58316ada75ba5cbfebf8b015bbb3f0647af8ac \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5c8850d4c5d871700c8e4a7762611a1f6276f054:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5c8850d4c5d871700c8e4a7762611a1f6276f054 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5c7bd3129d866cbb533828273cc6221affe4cdb3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5c7bd3129d866cbb533828273cc6221affe4cdb3 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5c8c9ccbc0440c274056e53ab1e63ff425c2cba0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5c8c9ccbc0440c274056e53ab1e63ff425c2cba0 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5c9ba037931f23aa7ee6d2c408b08b360880b6bc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5c9ba037931f23aa7ee6d2c408b08b360880b6bc \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/5cb014908a947ff955d413d34fb9e2633ec2356b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5cb014908a947ff955d413d34fb9e2633ec2356b \
@@ -2104,8 +2206,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6050c39cfbac6f98905b6c105d4e3dc11546e745:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6050c39cfbac6f98905b6c105d4e3dc11546e745 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/60ab761a633ff71fc752341ca00596e119f8b67e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/60ab761a633ff71fc752341ca00596e119f8b67e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6109e91f449bc45108183c93142171455f04b624:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6109e91f449bc45108183c93142171455f04b624 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/612a9a18409e0b270c49841c724d29cc9dbc7e67:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/612a9a18409e0b270c49841c724d29cc9dbc7e67 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/61f36af6a94f7e5553d4a4e4e00387aa1972dcba:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/61f36af6a94f7e5553d4a4e4e00387aa1972dcba \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/62430813b792802b0f784de506019ca281b5bdca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/62430813b792802b0f784de506019ca281b5bdca \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6252be89a7921f3dda8916b29c3042f5e3bdd7ab:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6252be89a7921f3dda8916b29c3042f5e3bdd7ab \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/62fb5b04fd5048af6d31bd713a7f1cceb641d1fc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/62fb5b04fd5048af6d31bd713a7f1cceb641d1fc \
@@ -2115,7 +2215,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/63ef36c0ef069caa718b303b5ce21094af221742:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/63ef36c0ef069caa718b303b5ce21094af221742 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/647e3626882ab96e6e2977c04acd6e31183f38b1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/647e3626882ab96e6e2977c04acd6e31183f38b1 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/64e9c241dc611bc44cf797f66ab56dad566fb593:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/64e9c241dc611bc44cf797f66ab56dad566fb593 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6522f356afd87359f3d13a761920969b63988e73:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6522f356afd87359f3d13a761920969b63988e73 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/652a66398c119e93731eb6c9596717db56f1b903:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/652a66398c119e93731eb6c9596717db56f1b903 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/654af2519709a3c2a6763645bbf976787a3b78fe:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/654af2519709a3c2a6763645bbf976787a3b78fe \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/656c639e36a0dc8569ce866ca8082c22acdfd086:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/656c639e36a0dc8569ce866ca8082c22acdfd086 \
@@ -2140,6 +2239,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6878901c84bc4cfa2850214dfdabe7f95507628e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6878901c84bc4cfa2850214dfdabe7f95507628e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/68a67496ea83fda867378d9bdba5523f5a7cd98f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/68a67496ea83fda867378d9bdba5523f5a7cd98f \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/68de59ad9ded07685da487632137ac3385838947:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/68de59ad9ded07685da487632137ac3385838947 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6915b4ddba0bf05cc347c09db4849d1c27bf32fe:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6915b4ddba0bf05cc347c09db4849d1c27bf32fe \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/699603b8b98846f9ef65c5e2e73534aab54cf955:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/699603b8b98846f9ef65c5e2e73534aab54cf955 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/699b7f753a1222047c2e67a1eed5a343db1bb9e7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/699b7f753a1222047c2e67a1eed5a343db1bb9e7 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6a44209235299b5fb508688796c711d1ad43ca78:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6a44209235299b5fb508688796c711d1ad43ca78 \
@@ -2147,13 +2247,11 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6a8e439e2c1fe3a5c2859e57516a88e12cbace0d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6a8e439e2c1fe3a5c2859e57516a88e12cbace0d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6ab6715b20f06b28c4c9bc1ddff6477ace42fbe1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6ab6715b20f06b28c4c9bc1ddff6477ace42fbe1 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6b153c2703a2cbdd436e71c5c6e8d684f3c1c1f1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6b153c2703a2cbdd436e71c5c6e8d684f3c1c1f1 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6b1626c9ee4e7ea1bff4e43860ce04333a344119:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6b1626c9ee4e7ea1bff4e43860ce04333a344119 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6b31f108e1648287e41db5ef9a2edec70eb8d083:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6b31f108e1648287e41db5ef9a2edec70eb8d083 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6b8f049c6c9d7c4da607ff9ca28183be4e1dde24:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6b8f049c6c9d7c4da607ff9ca28183be4e1dde24 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6bdc59f897631af7811e3201cbc58e5999de2600:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6bdc59f897631af7811e3201cbc58e5999de2600 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6bf424a494f41c5f02e1b3722e172fb6754c7d3b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6bf424a494f41c5f02e1b3722e172fb6754c7d3b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6c173250cbaa6da1541b91530ae9d8a5deb5e621:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6c173250cbaa6da1541b91530ae9d8a5deb5e621 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6c450a514c113535523b2ec621de4beb30d7d554:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6c450a514c113535523b2ec621de4beb30d7d554 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6c5605287a2df002095bc32b928675ff36e8da36:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6c5605287a2df002095bc32b928675ff36e8da36 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6c87c90308666620c7457f4f318770b33ca60972:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6c87c90308666620c7457f4f318770b33ca60972 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6c9cd362f3868c61b0816e156ce893901113a55d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6c9cd362f3868c61b0816e156ce893901113a55d \
@@ -2166,6 +2264,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6db3a4c3c9ad5e611c378b8b97b538ad80194604:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6db3a4c3c9ad5e611c378b8b97b538ad80194604 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6de94a0c46d353e5f6fa040670ee00a5aaa2c3ea:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6de94a0c46d353e5f6fa040670ee00a5aaa2c3ea \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6e1fa20326c6d900cfca5ceb8daeae1c30b0fbe4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6e1fa20326c6d900cfca5ceb8daeae1c30b0fbe4 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6e432c7faab0134f537937831f51c0a50dce1345:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6e432c7faab0134f537937831f51c0a50dce1345 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6e8f1d91e9be172a24836c3b4d253372d3fb7466:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6e8f1d91e9be172a24836c3b4d253372d3fb7466 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6e96f4504d0d3ef29d5474e1d3f9aa46adece6c7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6e96f4504d0d3ef29d5474e1d3f9aa46adece6c7 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/6ec9eccd4bdd828812eebe70abecf13663c1066d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/6ec9eccd4bdd828812eebe70abecf13663c1066d \
@@ -2181,12 +2280,14 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/71536e7617572d190cbc10f454725b1207c02c1a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/71536e7617572d190cbc10f454725b1207c02c1a \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/71584022b242c0dbe8a8c058e0c692f3eff4ee02:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/71584022b242c0dbe8a8c058e0c692f3eff4ee02 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/717e8ce86149cfea77ea346bd96aeacbe7b401b2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/717e8ce86149cfea77ea346bd96aeacbe7b401b2 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7197533a33601717022a52ea3de8e6ad241fefe5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7197533a33601717022a52ea3de8e6ad241fefe5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/719f8fb0a6105b553f3fa26fe2561ed17d2aef02:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/719f8fb0a6105b553f3fa26fe2561ed17d2aef02 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/71a838849877b7029ed60783214ac8097d4e5f34:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/71a838849877b7029ed60783214ac8097d4e5f34 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/72b0e1a16abff9b16b89bfe76294644cba8ddbf3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/72b0e1a16abff9b16b89bfe76294644cba8ddbf3 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/72e9941175ceea40823cd8a7ad0aa1cffb056eab:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/72e9941175ceea40823cd8a7ad0aa1cffb056eab \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/72f0a6c47ef24fbfc3e70d0061a5e74514904825:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/72f0a6c47ef24fbfc3e70d0061a5e74514904825 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/72fb00e8feae4bbc228ec1c8bb1c9313a03fd759:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/72fb00e8feae4bbc228ec1c8bb1c9313a03fd759 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/72fd36dad568ec24a71b863db45a6da1e09e5311:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/72fd36dad568ec24a71b863db45a6da1e09e5311 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/734430dffde950512f806373f6706652c5c4bfc6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/734430dffde950512f806373f6706652c5c4bfc6 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/734ecb2948505ec7d6704ef073ca465bf5568513:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/734ecb2948505ec7d6704ef073ca465bf5568513 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/739ee5c94da3e56f88c9b4d3c9e0e344a9c3e9e8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/739ee5c94da3e56f88c9b4d3c9e0e344a9c3e9e8 \
@@ -2197,6 +2298,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/74a33158136ff9bf2c0efbe64f1bf41757e75464:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/74a33158136ff9bf2c0efbe64f1bf41757e75464 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/74d1fca875b383bef4da338a1541e5c4acbfbd2c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/74d1fca875b383bef4da338a1541e5c4acbfbd2c \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/74d281701f2dd91c87e7ab66ffb9cdd4ef1b44dc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/74d281701f2dd91c87e7ab66ffb9cdd4ef1b44dc \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/74d9ca9aaf09937f405eb6a7975742698b2cd0bc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/74d9ca9aaf09937f405eb6a7975742698b2cd0bc \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/75371f0681504c428d4f6441cf77c41356287375:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/75371f0681504c428d4f6441cf77c41356287375 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/754a8328853b14db59711a3ae7a71d19cf894758:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/754a8328853b14db59711a3ae7a71d19cf894758 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7550f5a7b4b8b4f63782ed48abce31ed06fca441:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7550f5a7b4b8b4f63782ed48abce31ed06fca441 \
@@ -2214,11 +2316,12 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7775ca7a6fb9ce273abcf6f0a63baf1a9ce4c8d7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7775ca7a6fb9ce273abcf6f0a63baf1a9ce4c8d7 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7842dabb3276113c7a68adf7884d9c1aa021e8b9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7842dabb3276113c7a68adf7884d9c1aa021e8b9 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/784cc7bb33659e5f45bf763e2f2cd8298fe531de:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/784cc7bb33659e5f45bf763e2f2cd8298fe531de \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/78592e0427ea096afb8e20a47b4fac0f2b887084:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/78592e0427ea096afb8e20a47b4fac0f2b887084 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/785870d7519bff05d0e74795181199f7530b2c92:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/785870d7519bff05d0e74795181199f7530b2c92 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/78edfa627409879d46587c231276c785afd3a56a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/78edfa627409879d46587c231276c785afd3a56a \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/78ef1d7d15c3208010967e2174636222de6d677c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/78ef1d7d15c3208010967e2174636222de6d677c \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/795a84113198f68baef0813651e19706c8b69f90:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/795a84113198f68baef0813651e19706c8b69f90 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/79a05feaf6a780df874f72a208027ae4fd86c29e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/79a05feaf6a780df874f72a208027ae4fd86c29e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/79a43516dd8efb01df007e365939dae64555fcc0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/79a43516dd8efb01df007e365939dae64555fcc0 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/79d1ff471da7c25fbfc4454638c7f82352f3515d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/79d1ff471da7c25fbfc4454638c7f82352f3515d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7a94e684855a212be73e326109f25042509b2386:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7a94e684855a212be73e326109f25042509b2386 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7b486f68b5519501a76101dd5dca0f156b6f40f4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7b486f68b5519501a76101dd5dca0f156b6f40f4 \
@@ -2229,6 +2332,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7cbf22e36fdc0c969bad5a3d88e29f6a55ca1e00:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7cbf22e36fdc0c969bad5a3d88e29f6a55ca1e00 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7cd04dddcd5b81030f00cea30e458c9edc8c59de:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7cd04dddcd5b81030f00cea30e458c9edc8c59de \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7d2256fed3bd88d814986a257fc8b357560f383e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7d2256fed3bd88d814986a257fc8b357560f383e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7d3bf07533a3b271e23a8aa132eb76f6106b3d60:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7d3bf07533a3b271e23a8aa132eb76f6106b3d60 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7d662eb850e4da7b1cc0df46b64f6c776c985e41:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7d662eb850e4da7b1cc0df46b64f6c776c985e41 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7d683e19a003a69500afd87a0ae6f4a94c0a62a2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7d683e19a003a69500afd87a0ae6f4a94c0a62a2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7d7d367dca5d7032e2cf64e03e52f1d6432a7b23:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7d7d367dca5d7032e2cf64e03e52f1d6432a7b23 \
@@ -2243,7 +2347,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7fa850dc07124588a522889de3008d23c9975c6f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7fa850dc07124588a522889de3008d23c9975c6f \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7fabd71cb5c82334c6c3ad104f2dc101a8b8cdd8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7fabd71cb5c82334c6c3ad104f2dc101a8b8cdd8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7fe48254b4700f91ece9c082a28498ccb27f3d10:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7fe48254b4700f91ece9c082a28498ccb27f3d10 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/7ff40a361432e0b89e1291f7714a8f8230e0ecbd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7ff40a361432e0b89e1291f7714a8f8230e0ecbd \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/800735b64739936943f02201920aea28b532df02:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/800735b64739936943f02201920aea28b532df02 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/801317a3fee9f75545c2679c65b2ee28b343fc30:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/801317a3fee9f75545c2679c65b2ee28b343fc30 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8014921c152253e2622f73851138d84732577655:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8014921c152253e2622f73851138d84732577655 \
@@ -2259,17 +2362,14 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/826a2fc8d6418cc9e8aebf079a2ec15557667915:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/826a2fc8d6418cc9e8aebf079a2ec15557667915 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/826ebb453eeebd197740346cbacb7f69378993d8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/826ebb453eeebd197740346cbacb7f69378993d8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8273152524aec70f02aba3723ca95933b07a0f59:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8273152524aec70f02aba3723ca95933b07a0f59 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/82d184ac3a74267ff2809386c720314a1a765565:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/82d184ac3a74267ff2809386c720314a1a765565 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/834bb6a810121642b3e5e763bf0ede509b3bdef4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/834bb6a810121642b3e5e763bf0ede509b3bdef4 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/837abe01017e96f035a5e22116e8792de3b338e0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/837abe01017e96f035a5e22116e8792de3b338e0 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/83bb5cc4c0e46d6800851120c76b67b4bff5c63a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/83bb5cc4c0e46d6800851120c76b67b4bff5c63a \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/83e4bc01b0398306b4e68e127c0974c458d8b5fd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/83e4bc01b0398306b4e68e127c0974c458d8b5fd \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/843595e5dd096d5a2054160660dfdfb314437ddc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/843595e5dd096d5a2054160660dfdfb314437ddc \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/844acc3e4f968000b674d7c77f4fe356311d7cc9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/844acc3e4f968000b674d7c77f4fe356311d7cc9 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8497a8d565b3af7ddce8348229173852d6f9f4fd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8497a8d565b3af7ddce8348229173852d6f9f4fd \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/84ced815d0873e55af82688fe8089016988c7628:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/84ced815d0873e55af82688fe8089016988c7628 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/852a0322717126dc26dec7ddd2264d129d3aafd2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/852a0322717126dc26dec7ddd2264d129d3aafd2 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/854858cdb94fdf1169fb56ac662a161f95e6f5cd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/854858cdb94fdf1169fb56ac662a161f95e6f5cd \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/855940e0f26d65f571142148be78b73d3a7bdd5b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/855940e0f26d65f571142148be78b73d3a7bdd5b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/855ef136f21b87cf38cd80f2b8344ef3996b8ecb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/855ef136f21b87cf38cd80f2b8344ef3996b8ecb \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/856119f81cf3dab949551fbc07fdac6e7e0e3dfd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/856119f81cf3dab949551fbc07fdac6e7e0e3dfd \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8580a0b092e6c0c8494a564b8a902aea02cf268c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8580a0b092e6c0c8494a564b8a902aea02cf268c \
@@ -2293,7 +2393,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/881e238a5546a14aebfe4a28bad8ffb7c4763206:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/881e238a5546a14aebfe4a28bad8ffb7c4763206 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/887a643d90b8568fda18f79bea550198e29709be:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/887a643d90b8568fda18f79bea550198e29709be \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8899008f1cc486b82a59163e95a2894e83fa003c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8899008f1cc486b82a59163e95a2894e83fa003c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/88cfa86a407909473d3861fc9f76f551e9f3e964:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/88cfa86a407909473d3861fc9f76f551e9f3e964 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/88e7bbf42fa036745516e94564773e32500bbe83:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/88e7bbf42fa036745516e94564773e32500bbe83 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/892873acfb5f8346be64159a580d12439c251c36:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/892873acfb5f8346be64159a580d12439c251c36 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/89625d88c01ce3e89208f0e834be855c99bf2c7c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/89625d88c01ce3e89208f0e834be855c99bf2c7c \
@@ -2302,7 +2401,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8b52778c1e15fbe518b2c1ac5f1bf34c0ddf6e05:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8b52778c1e15fbe518b2c1ac5f1bf34c0ddf6e05 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8b73e032b748caebad65dd0ee2ffc92ef4e1866d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8b73e032b748caebad65dd0ee2ffc92ef4e1866d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8b8dd8bed1f095a6412972b16f540dc34d604d41:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8b8dd8bed1f095a6412972b16f540dc34d604d41 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8ba962daddbe7fec93b58d3eea66e9f808bf7ebc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8ba962daddbe7fec93b58d3eea66e9f808bf7ebc \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8c2ec36f7c94186c28d4e16b66653065d8d9e274:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8c2ec36f7c94186c28d4e16b66653065d8d9e274 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8c2eee535fc048fa3dcecc90556671b143996e52:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8c2eee535fc048fa3dcecc90556671b143996e52 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8c5f9283887d58c53f6e02aa38b406393d0771d5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8c5f9283887d58c53f6e02aa38b406393d0771d5 \
@@ -2322,14 +2420,13 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8ea294ba7e8974c9a530dc2f91c99c37ea1f9da6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8ea294ba7e8974c9a530dc2f91c99c37ea1f9da6 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8eb0af89d3bb0a911343a67add8a1aaff558db82:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8eb0af89d3bb0a911343a67add8a1aaff558db82 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8ef1cfdaf87fff03774075e2276366a60d1052d4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8ef1cfdaf87fff03774075e2276366a60d1052d4 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/8fdec68d3332048b17233050ce4a6aa4f5368908:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/8fdec68d3332048b17233050ce4a6aa4f5368908 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/90112ea5cfecbbf882424ce80e3745a4ae9f4d15:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/90112ea5cfecbbf882424ce80e3745a4ae9f4d15 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9058ba530783451627f418601b63596c4360b147:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9058ba530783451627f418601b63596c4360b147 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/90a991190067115c9ab9304cbd8a6b973994f77d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/90a991190067115c9ab9304cbd8a6b973994f77d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/90e7fe24f5c93b09960b5410554b05a7c2fb630d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/90e7fe24f5c93b09960b5410554b05a7c2fb630d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/910a4970bc76a35889dd479a3a7a52432e934a3d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/910a4970bc76a35889dd479a3a7a52432e934a3d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9127171a47f3077b065745787daeb71a4d7325eb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9127171a47f3077b065745787daeb71a4d7325eb \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/914cff80f74a02c1fb66ccae1068fcbf6926afa5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/914cff80f74a02c1fb66ccae1068fcbf6926afa5 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/915b603f1b9dcaabf4d0caf3808df978fa37c49e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/915b603f1b9dcaabf4d0caf3808df978fa37c49e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/917d8d6e548b92cbb85696ab9a88f61ae9e6c4c3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/917d8d6e548b92cbb85696ab9a88f61ae9e6c4c3 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/918e03c51624be32536a9bf2ba4ac52880431231:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/918e03c51624be32536a9bf2ba4ac52880431231 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/919ca5aa033f9379dc8c9faf0b0797761e72fce3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/919ca5aa033f9379dc8c9faf0b0797761e72fce3 \
@@ -2338,6 +2435,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9208fb4c03ce4860bd98cf82de54b6b67d245a59:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9208fb4c03ce4860bd98cf82de54b6b67d245a59 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/922e24b16b3a7faf27d1429bee63586bf1761549:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/922e24b16b3a7faf27d1429bee63586bf1761549 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/92566c1ea499e46eec9205673871e951e7e87980:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/92566c1ea499e46eec9205673871e951e7e87980 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/928d43a7199632363b95c786e3f43e924113be64:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/928d43a7199632363b95c786e3f43e924113be64 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/92ba0d625d54a188616f430be1b7798d647b24ad:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/92ba0d625d54a188616f430be1b7798d647b24ad \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/92fc55c8a3f79561a13ca32e2132e8cbbe771549:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/92fc55c8a3f79561a13ca32e2132e8cbbe771549 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/935a075b2a098458602e6c95a68969565d9788a5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/935a075b2a098458602e6c95a68969565d9788a5 \
@@ -2360,19 +2458,18 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/980f829dfe40ace2cec3566ba6c31864f9e08f36:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/980f829dfe40ace2cec3566ba6c31864f9e08f36 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/986dc82ebbf5e3496223c911a31f45926d2d33ac:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/986dc82ebbf5e3496223c911a31f45926d2d33ac \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9892f49cdc9024c95860c135da90e209c03b3b99:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9892f49cdc9024c95860c135da90e209c03b3b99 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/98d2706799cab2bc072b1210441e5cf0df322886:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/98d2706799cab2bc072b1210441e5cf0df322886 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/98fa00c6cde619a4a0c633854072404a0f43dea0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/98fa00c6cde619a4a0c633854072404a0f43dea0 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/990545959a489f7d66eedfb3264a3e0c526d8665:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/990545959a489f7d66eedfb3264a3e0c526d8665 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9949ce1dbcaaf73eb6ab89bc8d39ce331b41c714:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9949ce1dbcaaf73eb6ab89bc8d39ce331b41c714 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9950ff842e1a9caf49d91309c80e92957e7b5c7b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9950ff842e1a9caf49d91309c80e92957e7b5c7b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/99819af2a27a5e5d7ac95510b5868d4c15d8856b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/99819af2a27a5e5d7ac95510b5868d4c15d8856b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/99a9b25ec39d9c776efa85de73ad056b84dcbb22:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/99a9b25ec39d9c776efa85de73ad056b84dcbb22 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9af604bc7dd79a209b6354997c967b546c8d4392:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9af604bc7dd79a209b6354997c967b546c8d4392 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9b0f046657d0720f02811467ef5158aa27b35e46:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9b0f046657d0720f02811467ef5158aa27b35e46 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9b8f4fc5c35ffdc06263b4866375603f24783ae2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9b8f4fc5c35ffdc06263b4866375603f24783ae2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9b934bd51bdcbaea92a51c946e3a5baba270c923:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9b934bd51bdcbaea92a51c946e3a5baba270c923 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9be3b78b17869fa51a59a154e50a83babaa333e1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9be3b78b17869fa51a59a154e50a83babaa333e1 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9be6643a6cbb2381eb40bccb83992efedc608532:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9be6643a6cbb2381eb40bccb83992efedc608532 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9c157a4a818e7151d37de22f5f1323c95827d763:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9c157a4a818e7151d37de22f5f1323c95827d763 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9c306bb1e22f1aa84e95f09f8cba5e98fd853f7a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9c306bb1e22f1aa84e95f09f8cba5e98fd853f7a \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9ca98453eb56226c0daa3f3f2bdb85f0121845e5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9ca98453eb56226c0daa3f3f2bdb85f0121845e5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9d1c2da6e94307a2b95129896dc0047ee085c9d4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9d1c2da6e94307a2b95129896dc0047ee085c9d4 \
@@ -2384,10 +2481,12 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9d6eaf8def8b67d6e6aef9301832bc5332d8a938:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9d6eaf8def8b67d6e6aef9301832bc5332d8a938 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9d8871fd6618461ee2108cf5229bfb7dd6942590:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9d8871fd6618461ee2108cf5229bfb7dd6942590 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9e50237a7a789535f0983891b696f3692d8119a3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9e50237a7a789535f0983891b696f3692d8119a3 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9e8fbdeb5a5845e407e08b87bc72f4112ab6bf54:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9e8fbdeb5a5845e407e08b87bc72f4112ab6bf54 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9eba9ebfcf23c0897d95073be8b72631d549e8e8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9eba9ebfcf23c0897d95073be8b72631d549e8e8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9f0e12caab212c1885b0fdb544211b525f6cfb2a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9f0e12caab212c1885b0fdb544211b525f6cfb2a \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9f3186d7639afa4aec3988d51a3341230030c075:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9f3186d7639afa4aec3988d51a3341230030c075 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9f378a4a69a62c0ca251c50c58319f46a8b7cf18:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9f378a4a69a62c0ca251c50c58319f46a8b7cf18 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9f40d88075a93245c299abe4eb8195f51d52f81e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9f40d88075a93245c299abe4eb8195f51d52f81e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9f572f6610a7dd4e429e06c96a96c2968b9d8d03:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9f572f6610a7dd4e429e06c96a96c2968b9d8d03 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9f9ea7385f1c0580b8dd3d81f9b56b70511edde2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9f9ea7385f1c0580b8dd3d81f9b56b70511edde2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/9fdfbd2416304be3fa4093469a3d8e1b947b89db:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/9fdfbd2416304be3fa4093469a3d8e1b947b89db \
@@ -2396,10 +2495,11 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a063c0f3a16af0c42c26b33345170d26ffaa6fc7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a063c0f3a16af0c42c26b33345170d26ffaa6fc7 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a0885bb69889e0441ff89688a9d0b276c42c7a78:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a0885bb69889e0441ff89688a9d0b276c42c7a78 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a0a2b36926c0abdef1872645b19e0d040313e04d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a0a2b36926c0abdef1872645b19e0d040313e04d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a0c107b5ced9e6b2afd454d380f235bb60c250d7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a0c107b5ced9e6b2afd454d380f235bb60c250d7 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a1789edaf8294d356c20698d8fb8f900fa161cb3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a1789edaf8294d356c20698d8fb8f900fa161cb3 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a17de7fa6c840a11c3e9461b2b5e12eee36e6f8d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a17de7fa6c840a11c3e9461b2b5e12eee36e6f8d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a1bb07126579140cd97f966ab39810d196e4ca26:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a1bb07126579140cd97f966ab39810d196e4ca26 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a22cdabf278ada809e49a8de2fa9bdd2f21333f4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a22cdabf278ada809e49a8de2fa9bdd2f21333f4 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a22b63ed583abe75b41daf5a342ef4ecc9f580c2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a22b63ed583abe75b41daf5a342ef4ecc9f580c2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a2690b5a34cb9cb54bbce5633d118c39799cf59d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a2690b5a34cb9cb54bbce5633d118c39799cf59d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a28c62e643316c1aa481a7054839cd17b056c842:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a28c62e643316c1aa481a7054839cd17b056c842 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a2c27e06b304a1c0b03f48feaa06c0272efe93f4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a2c27e06b304a1c0b03f48feaa06c0272efe93f4 \
@@ -2409,7 +2509,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a4e884b1150e6cb7a6d91640999197a457c59f3f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a4e884b1150e6cb7a6d91640999197a457c59f3f \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a56ab102dd6f0d3d460dd6f4976025b404ed55f4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a56ab102dd6f0d3d460dd6f4976025b404ed55f4 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a57e301a34c7856f46d9878be96d4de779254c56:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a57e301a34c7856f46d9878be96d4de779254c56 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a5aa48e72868034085ba667bb6bfe0fde389f910:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a5aa48e72868034085ba667bb6bfe0fde389f910 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a5c835260432ad8250d9a3d6888564cdf21a6fcd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a5c835260432ad8250d9a3d6888564cdf21a6fcd \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a61b736b186dbf7ecf17948e9b1ec4519f7680e8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a61b736b186dbf7ecf17948e9b1ec4519f7680e8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a621d3e9fcbb1628498fd6399be6d4dfff13fb30:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a621d3e9fcbb1628498fd6399be6d4dfff13fb30 \
@@ -2418,7 +2517,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a65f3eb51faa87e8cb646288ed5b2903f231956e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a65f3eb51faa87e8cb646288ed5b2903f231956e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a66ddacab7317673a9a9d208a76f29742c3e4f2d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a66ddacab7317673a9a9d208a76f29742c3e4f2d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a6be41f7341db492c755d7db6ae91716928b296e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a6be41f7341db492c755d7db6ae91716928b296e \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a6ff4a828c4efeef1b466271c00eed8e4b5b37cd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a6ff4a828c4efeef1b466271c00eed8e4b5b37cd \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a73f7de579bb6304473db135c5f829641eb3d477:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a73f7de579bb6304473db135c5f829641eb3d477 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a7548a1f1551b8fc81692a55408bd41e6a75a442:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a7548a1f1551b8fc81692a55408bd41e6a75a442 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a765a42db239fd0216d2b2f4ffb7b49f12d52f3c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a765a42db239fd0216d2b2f4ffb7b49f12d52f3c \
@@ -2428,6 +2526,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a7e4f65929cfd500c93740ed12fcef8c96d2cb2b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a7e4f65929cfd500c93740ed12fcef8c96d2cb2b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a8ce7ad9c8d2af43e9d8ef8b45277b96cda6dddf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a8ce7ad9c8d2af43e9d8ef8b45277b96cda6dddf \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a90e6f481dacdcd9b774992000ca3049a8100de5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a90e6f481dacdcd9b774992000ca3049a8100de5 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a91610c3ee72224e6cbec64a16937b29b7dd9294:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a91610c3ee72224e6cbec64a16937b29b7dd9294 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a97d3774ba59f622352c1a2e06dec4a14bec5d11:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a97d3774ba59f622352c1a2e06dec4a14bec5d11 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a9a4d8680d28f834d5dca2a3827627549ccd81ee:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a9a4d8680d28f834d5dca2a3827627549ccd81ee \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/a9b45f440003691d9dbd8f3cf035d92e5fcf79d3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a9b45f440003691d9dbd8f3cf035d92e5fcf79d3 \
@@ -2440,7 +2539,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/abda6a67eb18a8c29793fd84275573aa4c69ba31:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/abda6a67eb18a8c29793fd84275573aa4c69ba31 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ac0f1523cbfbf43fbc7747a406488b41f2927bb8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ac0f1523cbfbf43fbc7747a406488b41f2927bb8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ac71f52c5e2510452736e3a041e86c862b981f94:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ac71f52c5e2510452736e3a041e86c862b981f94 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ac8387ea812b85a7f9b83b3cee5a9432fccbb153:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ac8387ea812b85a7f9b83b3cee5a9432fccbb153 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ad057bd572b1a7f91bd3649948090e5ba733ead2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ad057bd572b1a7f91bd3649948090e5ba733ead2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ad11bf0efc95742e672ecc818fc3ccddc0499b19:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ad11bf0efc95742e672ecc818fc3ccddc0499b19 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ad28ed2fbf81bcb9a9c77555d35aee0c6e7595f7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ad28ed2fbf81bcb9a9c77555d35aee0c6e7595f7 \
@@ -2450,8 +2548,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ae1723f3cf6026a85f45eccd1864ba61d1b18aa7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ae1723f3cf6026a85f45eccd1864ba61d1b18aa7 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ae19a94079f45cb1ec1ddd70476d591d28780974:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ae19a94079f45cb1ec1ddd70476d591d28780974 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ae9782148354ae5a706353b13329437bca7e9fa3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ae9782148354ae5a706353b13329437bca7e9fa3 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/aeaa1880b4e7b042a59bdc1a4cef9d86015bfde0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/aeaa1880b4e7b042a59bdc1a4cef9d86015bfde0 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/aef73fc94fd5f16495b273a90f8316c1f4ef884a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/aef73fc94fd5f16495b273a90f8316c1f4ef884a \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/af056bc1fac6f6596a5441cd29cf8a35890109e6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/af056bc1fac6f6596a5441cd29cf8a35890109e6 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/af815115b81cda1646c2a8528cfbe2e8ea10669b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/af815115b81cda1646c2a8528cfbe2e8ea10669b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/af9dc246cd498258af90cadbba0b2b319786e032:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/af9dc246cd498258af90cadbba0b2b319786e032 \
@@ -2464,6 +2560,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b131ac2d8d29f7fc760c86a5a7d2d76009c2dd30:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b131ac2d8d29f7fc760c86a5a7d2d76009c2dd30 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b1eacbca2e0f4af70515e4cdbce4a38aa797f369:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b1eacbca2e0f4af70515e4cdbce4a38aa797f369 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b222b1e3fdf52845c597bc35a623ce21c2013e27:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b222b1e3fdf52845c597bc35a623ce21c2013e27 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b2be9f74c0c27380e2c4ff3d2a99becabcaa3954:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b2be9f74c0c27380e2c4ff3d2a99becabcaa3954 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b2c7c370662db209a72e583ac44de3a536c681c2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b2c7c370662db209a72e583ac44de3a536c681c2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b3196b1b490ea671a223bcb05ecb04ae28339ab7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b3196b1b490ea671a223bcb05ecb04ae28339ab7 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b326d34702d715aa9837aa7144d741236b0bf845:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b326d34702d715aa9837aa7144d741236b0bf845 \
@@ -2478,6 +2575,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b6ce2343c3f15ee746022727b2cd2ca59fc21459:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b6ce2343c3f15ee746022727b2cd2ca59fc21459 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b6fa0ea35b0282533d5c3dd53463731e88f17b5f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b6fa0ea35b0282533d5c3dd53463731e88f17b5f \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b71948c30382ef48cc29e68355e8acea6bed2fcb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b71948c30382ef48cc29e68355e8acea6bed2fcb \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b72de1c3b0a651285b99b0723c261186aebf540d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b72de1c3b0a651285b99b0723c261186aebf540d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b73a9e455d1956209a322d3960feae5965085f3f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b73a9e455d1956209a322d3960feae5965085f3f \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b766590cfda9581223882e37e03d6f7a1d641733:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b766590cfda9581223882e37e03d6f7a1d641733 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b77837a41673531a47f7115472b760ab352ebb62:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b77837a41673531a47f7115472b760ab352ebb62 \
@@ -2489,11 +2587,8 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b8fc3cac242855885970b3f1ad49b2012d9272e5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b8fc3cac242855885970b3f1ad49b2012d9272e5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b91a8adf126572dd1548ebc3b7811bcec1c9fb5a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b91a8adf126572dd1548ebc3b7811bcec1c9fb5a \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b99cfc826500a8d0d4caa08b51be238ff4ad9899:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b99cfc826500a8d0d4caa08b51be238ff4ad9899 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b9d0ac7e5824585b50061d4f67e6ef88e267c603:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b9d0ac7e5824585b50061d4f67e6ef88e267c603 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b9d35d14fb6b49c613babea83c55383c30ca8f95:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b9d35d14fb6b49c613babea83c55383c30ca8f95 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b9ddc223139c3b50450a2be037875a81a7075908:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b9ddc223139c3b50450a2be037875a81a7075908 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b9e43c93c57fe062ef714e64898535f47a1eb2b4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b9e43c93c57fe062ef714e64898535f47a1eb2b4 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/b9fe12c4ac2b05e29d539767572e6b43c601b201:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/b9fe12c4ac2b05e29d539767572e6b43c601b201 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ba765d7b0fe429146cdcd76a8caf4e3f481e4db1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ba765d7b0fe429146cdcd76a8caf4e3f481e4db1 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ba7de4fefbc77640c6d39003a6d41bff24ebef68:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ba7de4fefbc77640c6d39003a6d41bff24ebef68 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/baab169a9f81f95b635f4dfa844f1a3fdac9828a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/baab169a9f81f95b635f4dfa844f1a3fdac9828a \
@@ -2515,6 +2610,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/bca6b70a584d95308f251d14e2367b2d3ef900b0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/bca6b70a584d95308f251d14e2367b2d3ef900b0 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/bcfcb7cb7fdb92891b7091881f523150cc868ae5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/bcfcb7cb7fdb92891b7091881f523150cc868ae5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/bd7257025f8d5084ce16ed2e561ce6c4e8de8836:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/bd7257025f8d5084ce16ed2e561ce6c4e8de8836 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/bd7e2738851391a6ed7ee93ff1c6fbf1ca8d71cd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/bd7e2738851391a6ed7ee93ff1c6fbf1ca8d71cd \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/bd8004ae985789827ad1399188e510e15e3dcc94:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/bd8004ae985789827ad1399188e510e15e3dcc94 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/bd8cb799967c24d3bda4631ca4714f943edabcf3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/bd8cb799967c24d3bda4631ca4714f943edabcf3 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/bda41d58e26f1c88d59f16f4a650d5d42793693d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/bda41d58e26f1c88d59f16f4a650d5d42793693d \
@@ -2550,12 +2646,10 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c2def3eeb22e15ee2fdb64fb08c2407cf5b938ef:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c2def3eeb22e15ee2fdb64fb08c2407cf5b938ef \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c368a694891481829caea991e290c8ae2297d8d4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c368a694891481829caea991e290c8ae2297d8d4 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c389e670729124de11820430d8d7a27576468434:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c389e670729124de11820430d8d7a27576468434 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c3c4543990ef161442de79eedd658dc30108c178:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c3c4543990ef161442de79eedd658dc30108c178 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c3eb54af35948ca4148a2d3ff165e05062402429:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c3eb54af35948ca4148a2d3ff165e05062402429 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c479a451e5c8eb980c3c5c0ad70ebe618fa084d9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c479a451e5c8eb980c3c5c0ad70ebe618fa084d9 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c47f15908b8495bd277691633088170b033b8bf3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c47f15908b8495bd277691633088170b033b8bf3 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c4cb0f5e52b5c3a35b4653304f51cea59af81603:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c4cb0f5e52b5c3a35b4653304f51cea59af81603 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c4ce4d441a6b7b11102a9c080c29b32d0755e738:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c4ce4d441a6b7b11102a9c080c29b32d0755e738 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c4da57a2b929101acab789d1dc58ac24fa1de53e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c4da57a2b929101acab789d1dc58ac24fa1de53e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c4f5fc3847551a7f21294da6e520956e122b441c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c4f5fc3847551a7f21294da6e520956e122b441c \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c521ebfdc42f4e4567a7ee548236c414f0bfeea6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c521ebfdc42f4e4567a7ee548236c414f0bfeea6 \
@@ -2576,7 +2670,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c7d4f02e0366566a810e8c83cca7e21f68d531ae:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c7d4f02e0366566a810e8c83cca7e21f68d531ae \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c7f2c3bc828a59c54a8f52ec24dff04ec779646c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c7f2c3bc828a59c54a8f52ec24dff04ec779646c \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c8142a68ff2acb3330b79f3c4ab355650256298b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c8142a68ff2acb3330b79f3c4ab355650256298b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c818f96ed25d3ecf3b0728e1b45aab1ee44327cc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c818f96ed25d3ecf3b0728e1b45aab1ee44327cc \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c843d3415eb40e3b81766714f68b364383e9eb9d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c843d3415eb40e3b81766714f68b364383e9eb9d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c93f8565053e603ec2fb9e56f750f57ef4f712a5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c93f8565053e603ec2fb9e56f750f57ef4f712a5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/c97ff67271b1ee133a1038d5b8bdf328bfc1af69:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c97ff67271b1ee133a1038d5b8bdf328bfc1af69 \
@@ -2606,10 +2699,13 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/cd72152f3de1edf20440e579275e453b5e643dd1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/cd72152f3de1edf20440e579275e453b5e643dd1 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/cd8c3a8231d409de5b88ede27f3dfdb1bfdc9058:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/cd8c3a8231d409de5b88ede27f3dfdb1bfdc9058 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/cdb2c5e9baef7c5f07cd2bc891c49fc1be9dca24:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/cdb2c5e9baef7c5f07cd2bc891c49fc1be9dca24 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ce1d22667a31615f46362c927ba69973386cff1f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ce1d22667a31615f46362c927ba69973386cff1f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/cf159f86dce93d67804e5942453f742f8d9e1594:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/cf159f86dce93d67804e5942453f742f8d9e1594 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/cf177d90b5fc108d697d1eedae6f4c24bd5ad7d6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/cf177d90b5fc108d697d1eedae6f4c24bd5ad7d6 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/cf5bf1e4d0ff63e3196b622e3e01bf93c642b2fb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/cf5bf1e4d0ff63e3196b622e3e01bf93c642b2fb \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/cf182434a1310c64851bb7c2e7eea190cc5b028b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/cf182434a1310c64851bb7c2e7eea190cc5b028b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/cfeca1971cbeef5494730dc5970293644ea79c65:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/cfeca1971cbeef5494730dc5970293644ea79c65 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/cff291f5f7dfb9840b3d1f42ec3963790733889c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/cff291f5f7dfb9840b3d1f42ec3963790733889c \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d00f7ceb39087714f56e49c29e7fe2f2ef7d3e77:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d00f7ceb39087714f56e49c29e7fe2f2ef7d3e77 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d020cce0512b59bf6f4b6901a62eb0a690c7033d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d020cce0512b59bf6f4b6901a62eb0a690c7033d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d033c890f7f49b9aee433d0e982d1221a59b033c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d033c890f7f49b9aee433d0e982d1221a59b033c \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d048cc4e37ae7851e5cc01d3ff8fa8d0b8befa4a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d048cc4e37ae7851e5cc01d3ff8fa8d0b8befa4a \
@@ -2628,7 +2724,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d4a57697ae01fca9fdc7c502aae5425a4a7947d8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d4a57697ae01fca9fdc7c502aae5425a4a7947d8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d4b79ba5671e5bd4533dea31943b5af859b53f0e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d4b79ba5671e5bd4533dea31943b5af859b53f0e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d4c9e0df28d713851634fe48660fd25524b60021:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d4c9e0df28d713851634fe48660fd25524b60021 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d4cc876d55f4f12ba275d5a8aa7b2b61843fb128:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d4cc876d55f4f12ba275d5a8aa7b2b61843fb128 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d4d2ac1317eee82e9da8fadded5b4437992d57ac:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d4d2ac1317eee82e9da8fadded5b4437992d57ac \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d5138a8d51e52fe55927b53b7b8ff0aead5d9eb4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d5138a8d51e52fe55927b53b7b8ff0aead5d9eb4 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d530fa91787ec44de56baf6baada560ddcbcb2e3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d530fa91787ec44de56baf6baada560ddcbcb2e3 \
@@ -2638,29 +2733,28 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d5aba84518ed25071a47eda96145c1392c85f081:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d5aba84518ed25071a47eda96145c1392c85f081 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d5ad6d5a2176dddf64dc7ed5a43fc2f539450589:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d5ad6d5a2176dddf64dc7ed5a43fc2f539450589 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d5cd98799a2626fa9606db6db3c5a2ac7f9359ae:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d5cd98799a2626fa9606db6db3c5a2ac7f9359ae \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d61f3c8db6ecc2b649ae6895ac7e8ffb101c28c5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d61f3c8db6ecc2b649ae6895ac7e8ffb101c28c5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d65406d7f00323a0d81a0d6f290b230cf195977e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d65406d7f00323a0d81a0d6f290b230cf195977e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d6566622bf53fd94f880369236e462c2eeb35e6f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d6566622bf53fd94f880369236e462c2eeb35e6f \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d6665b8cfce7b87a69c5d79380b54a1dfd3c6e36:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d6665b8cfce7b87a69c5d79380b54a1dfd3c6e36 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d6a478414148a86fbcd0890a456506ec72cd8951:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d6a478414148a86fbcd0890a456506ec72cd8951 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d76bc85f31a2dfe944d97370b92fa9b1b2b86c02:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d76bc85f31a2dfe944d97370b92fa9b1b2b86c02 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d78e7cec857a4685a9473189a357da1c7a7fe927:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d78e7cec857a4685a9473189a357da1c7a7fe927 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d793fa68ee6b3a9596bf55804660d96f3b61b004:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d793fa68ee6b3a9596bf55804660d96f3b61b004 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d81cb8cce52a62990541dd2a5a8b25879222f09e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d81cb8cce52a62990541dd2a5a8b25879222f09e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d8c07f416e2d8254e449a2859776ad129566cf53:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d8c07f416e2d8254e449a2859776ad129566cf53 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d8e70909896cb35952a630de1715a7a4f174c662:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d8e70909896cb35952a630de1715a7a4f174c662 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d907b1e639125e86a82cf44be5b76a0aa5bf2c5e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d907b1e639125e86a82cf44be5b76a0aa5bf2c5e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d92b9dd176dfda690ef8a568af64e32c7fbe6d42:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d92b9dd176dfda690ef8a568af64e32c7fbe6d42 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d93aa54f2dbf001d75c0632b3e889f7ba07b5d48:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d93aa54f2dbf001d75c0632b3e889f7ba07b5d48 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d941cbd1cd14ecd34163a6d1a3cc757abbd59290:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d941cbd1cd14ecd34163a6d1a3cc757abbd59290 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/d9949ec6b7e67c48cb017c9f7e85cb70b061d945:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d9949ec6b7e67c48cb017c9f7e85cb70b061d945 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/da22f1b3c78df4d55630d058cc35e16e903fd2eb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/da22f1b3c78df4d55630d058cc35e16e903fd2eb \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/da5582fd5db7e1217bde0f07201e9d1f58b3deb2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/da5582fd5db7e1217bde0f07201e9d1f58b3deb2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/da7c377625414533a0d3f0b85a41cd0f46fd417c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/da7c377625414533a0d3f0b85a41cd0f46fd417c \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/da97abb50c00461b735ca12abdac52fe67ff2a1b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/da97abb50c00461b735ca12abdac52fe67ff2a1b \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/dac3087902905ab72f45df6b07832322068ab219:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/dac3087902905ab72f45df6b07832322068ab219 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/dac58b04e46a8c64b5bde28de2d29c8db0423928:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/dac58b04e46a8c64b5bde28de2d29c8db0423928 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/dae132b886a7373eeb6a71607f74bdad55a3cad1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/dae132b886a7373eeb6a71607f74bdad55a3cad1 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/dafc308a5ec9a4af05e89d97ad1d32924597faf4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/dafc308a5ec9a4af05e89d97ad1d32924597faf4 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/db4ffc67ed72753d331a01cd13e39e82fa878a1a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/db4ffc67ed72753d331a01cd13e39e82fa878a1a \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/db5993c38723bf708738d3236872917f4c8611d5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/db5993c38723bf708738d3236872917f4c8611d5 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/dbad37857c6ef29b72ac0bb0610491e35e75d72b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/dbad37857c6ef29b72ac0bb0610491e35e75d72b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/dbb85488dfcd7195a3f1f759048c52205b4f4541:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/dbb85488dfcd7195a3f1f759048c52205b4f4541 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/dc0781af822d784ebd7cbe0422af6009704464be:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/dc0781af822d784ebd7cbe0422af6009704464be \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/dc3cb23a951a65e6104883afa06c624e60de47ef:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/dc3cb23a951a65e6104883afa06c624e60de47ef \
@@ -2710,7 +2804,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e41650f363eb5d9923335b3ecc8a6cee31442b05:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e41650f363eb5d9923335b3ecc8a6cee31442b05 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e43638139315e42f673a52c8c112c7aa397c67a5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e43638139315e42f673a52c8c112c7aa397c67a5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e45f7b3b84dd7188aba61446b892c1e384a33da1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e45f7b3b84dd7188aba61446b892c1e384a33da1 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e463f11a1c0d22db9f306e8fbb9fb0b7a8fd0b4c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e463f11a1c0d22db9f306e8fbb9fb0b7a8fd0b4c \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e46776b8c2a706f2a525a83ae75529f9eca64359:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e46776b8c2a706f2a525a83ae75529f9eca64359 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e46c9b888d31ba2f26ef18dc68582a2ccb97cdc0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e46c9b888d31ba2f26ef18dc68582a2ccb97cdc0 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e4e000c94c3e742c44bf0ba5a885653526a2fc32:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e4e000c94c3e742c44bf0ba5a885653526a2fc32 \
@@ -2725,6 +2818,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e707be95e42281f427dd883b07ca047a8bf35017:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e707be95e42281f427dd883b07ca047a8bf35017 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e72a24eb9e6d5e2d51a773a8ef57c78a8cf04343:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e72a24eb9e6d5e2d51a773a8ef57c78a8cf04343 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e7602bcbf83ef183338d06fa557cbecc4029ec14:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e7602bcbf83ef183338d06fa557cbecc4029ec14 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e7c5efc9f775e8d78e59d1a75fbc2a36adc9d88d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e7c5efc9f775e8d78e59d1a75fbc2a36adc9d88d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e7eef9f9776449968f3ae89ed81533cbec149ea9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e7eef9f9776449968f3ae89ed81533cbec149ea9 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e7fe61b6e26871ca6638dc376f0f2089d4b07bd2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e7fe61b6e26871ca6638dc376f0f2089d4b07bd2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e8286024bbe60d6284af8ffef901fb5824777445:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e8286024bbe60d6284af8ffef901fb5824777445 \
@@ -2735,7 +2829,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e93a46c53e4a2194a1c1de5bb1baf2b9976027dc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e93a46c53e4a2194a1c1de5bb1baf2b9976027dc \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e94276345f0aa80b837243effbb66849299a7faa:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e94276345f0aa80b837243effbb66849299a7faa \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e9452bfbdcbe850d7fa9951a13bbf7f58969f71a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e9452bfbdcbe850d7fa9951a13bbf7f58969f71a \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e963c78d70df3740b20d18038a27d4de6abbcc6e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e963c78d70df3740b20d18038a27d4de6abbcc6e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e979a6baf0fdd28a1e27a77b31f504d59fb18866:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e979a6baf0fdd28a1e27a77b31f504d59fb18866 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e989f378aa2efe0c6e57200cbb5dd6dca38d2d31:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e989f378aa2efe0c6e57200cbb5dd6dca38d2d31 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/e9924405fd3ca4e29d31d33e054cf1bbb209b9ee:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/e9924405fd3ca4e29d31d33e054cf1bbb209b9ee \
@@ -2745,6 +2838,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ea952fef4c1c6848268417897017c30def4d8159:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ea952fef4c1c6848268417897017c30def4d8159 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/eaa31bcebe2ed298c17f0670dbebf2d3fc56cbc4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/eaa31bcebe2ed298c17f0670dbebf2d3fc56cbc4 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/eac1f6fdb587aa39b07eb4958cccaa0ca502e50f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/eac1f6fdb587aa39b07eb4958cccaa0ca502e50f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ead1f8732470bb06e0aa8d991f7618d20c3979c0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ead1f8732470bb06e0aa8d991f7618d20c3979c0 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/eb0c5120ac69f4b3cfb0bb98ee3206128fa61c29:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/eb0c5120ac69f4b3cfb0bb98ee3206128fa61c29 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/eb3d73c363d55b2faa3db83314ffe89edc7c95ea:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/eb3d73c363d55b2faa3db83314ffe89edc7c95ea \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/eb49986d7eb64def63a5e5972b83a359aaeeaeff:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/eb49986d7eb64def63a5e5972b83a359aaeeaeff \
@@ -2758,11 +2852,11 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ec4ada9e46a1509e4538ec045fa487b04d6a5436:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ec4ada9e46a1509e4538ec045fa487b04d6a5436 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ec5f376f6b0475d305d94656a1ab8ca13b368731:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ec5f376f6b0475d305d94656a1ab8ca13b368731 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ec71cfa0dab51f19c13abebd4ea2fe32a55e731a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ec71cfa0dab51f19c13abebd4ea2fe32a55e731a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ec8091b57b3f177b81e52bfd9890e44fa4689061:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ec8091b57b3f177b81e52bfd9890e44fa4689061 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ec89aeddc9675094254bbe1898601a08f3b7f5c4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ec89aeddc9675094254bbe1898601a08f3b7f5c4 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ecefb5b0255c170e10b201c0187a24798cf58903:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ecefb5b0255c170e10b201c0187a24798cf58903 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ecfe63912eacb3202f1da3809993a61faf55529e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ecfe63912eacb3202f1da3809993a61faf55529e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ed01070a7a866e7eb217dd7b3ae2e9dbb258c553:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ed01070a7a866e7eb217dd7b3ae2e9dbb258c553 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ed01bf5a8c65206dadc5a891e4abe3482826c1da:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ed01bf5a8c65206dadc5a891e4abe3482826c1da \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ed08ba9a116700ab7305981d1c2be07dc9f31c46:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ed08ba9a116700ab7305981d1c2be07dc9f31c46 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ed3fe2fe8ffd5413a4adf7ee5ae839beaa53e6f8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ed3fe2fe8ffd5413a4adf7ee5ae839beaa53e6f8 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ed56f54f6628072a9da932678c7997b4a0b94d9e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ed56f54f6628072a9da932678c7997b4a0b94d9e \
@@ -2770,7 +2864,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/edb3f4c602211f005612d6554f3bd356310c7755:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/edb3f4c602211f005612d6554f3bd356310c7755 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/edff325d68e93091e584ff906d2baa3d9aeb26ff:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/edff325d68e93091e584ff906d2baa3d9aeb26ff \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ee1fd57a704398dcf4ea87b3966ea0fdeb7b1336:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ee1fd57a704398dcf4ea87b3966ea0fdeb7b1336 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ee84213ea422bc1261bfa4f138a9ca8df49b59d5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ee84213ea422bc1261bfa4f138a9ca8df49b59d5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/eead5a2e5d496229afbfc3e67aa16efda12e97f3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/eead5a2e5d496229afbfc3e67aa16efda12e97f3 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/eed89537b96dd76c35e4119d75e14c8ea3734ca5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/eed89537b96dd76c35e4119d75e14c8ea3734ca5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/eefaf0f8c198741b40f2d9e4db0b923235424524:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/eefaf0f8c198741b40f2d9e4db0b923235424524 \
@@ -2779,7 +2872,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/efe8f74d8fd471e0fea4838c0178714ad8690150:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/efe8f74d8fd471e0fea4838c0178714ad8690150 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/efed9aa6772385b6f75087164c8d16af74e4d804:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/efed9aa6772385b6f75087164c8d16af74e4d804 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f08ec6cc7e6f5ef34ad6c329d3c4c02ec0e5299d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f08ec6cc7e6f5ef34ad6c329d3c4c02ec0e5299d \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f0bb7bac0821e47cb45c2f3b061401824c657b1b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f0bb7bac0821e47cb45c2f3b061401824c657b1b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f0d04219c5398e931f2b4f0d2f79f1001e718b80:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f0d04219c5398e931f2b4f0d2f79f1001e718b80 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f0d3e64d94baa7ce14a86684efba280dfb11d717:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f0d3e64d94baa7ce14a86684efba280dfb11d717 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f0ee2d136650df4b5e6d93a56182c24b2a07c80a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f0ee2d136650df4b5e6d93a56182c24b2a07c80a \
@@ -2795,6 +2887,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f3742c561cc06c66effc9e918c38112eaed6cdf2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f3742c561cc06c66effc9e918c38112eaed6cdf2 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f3abe57baf680a091cbdb2ca91fb9d96e4a7e2ec:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f3abe57baf680a091cbdb2ca91fb9d96e4a7e2ec \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f3bd70b50d23f07268def7762bdf9a22ecd7aa8d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f3bd70b50d23f07268def7762bdf9a22ecd7aa8d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f3c1c8a9e212e8a654c6ebd20c74300ba1554cbf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f3c1c8a9e212e8a654c6ebd20c74300ba1554cbf \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f3ccd98ca8ac3a8d57a21b61819b563a1663cb6e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f3ccd98ca8ac3a8d57a21b61819b563a1663cb6e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f43af2dbe6f8d1c9a7778eb4319384bb43ef4081:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f43af2dbe6f8d1c9a7778eb4319384bb43ef4081 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f4b5df4ed71fbccd89536dddea0811cc53d32601:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f4b5df4ed71fbccd89536dddea0811cc53d32601 \
@@ -2805,11 +2898,9 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f697d82cc10f4021e6c7e0ad4453f6eefae0b4e6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f697d82cc10f4021e6c7e0ad4453f6eefae0b4e6 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f6ad0fda1ed9cc5e4eab64b414fcf2000b008573:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f6ad0fda1ed9cc5e4eab64b414fcf2000b008573 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f770cbe0140de2c98bba433183188a4eaa613d0f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f770cbe0140de2c98bba433183188a4eaa613d0f \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f7bb052fe34fe2bbbc5ad20f482a1149a243421b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f7bb052fe34fe2bbbc5ad20f482a1149a243421b \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f7c537c0f1e595e12f4b477359c0cbd9992cdc2d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f7c537c0f1e595e12f4b477359c0cbd9992cdc2d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f7d92ba6ec0f68b32879df5630f2bf60cad86387:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f7d92ba6ec0f68b32879df5630f2bf60cad86387 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f7f2574f720b439681dab68132ad36cdca7ef93d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f7f2574f720b439681dab68132ad36cdca7ef93d \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f81008cfcc7a6796ab60c26084df82c2e68145f5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f81008cfcc7a6796ab60c26084df82c2e68145f5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f812764d27efa03ff3458bb85cde9cb9512a9401:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f812764d27efa03ff3458bb85cde9cb9512a9401 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f816c607b49b860cf0b4929da2b30251856b2fca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f816c607b49b860cf0b4929da2b30251856b2fca \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/f81d6ed4d02f28898547976add3dbff711c98a3f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f81d6ed4d02f28898547976add3dbff711c98a3f \
@@ -2824,20 +2915,26 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fa56a2e0f29bf51c5af36daa3cafdc28424f7bc3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fa56a2e0f29bf51c5af36daa3cafdc28424f7bc3 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fa7c63dbe71cf8bf1cddd3c1d0ce398b7867af66:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fa7c63dbe71cf8bf1cddd3c1d0ce398b7867af66 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fa876254d33cd9ef695dc5e1dd99b4b70791834f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fa876254d33cd9ef695dc5e1dd99b4b70791834f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fa912e1b31049a911c7f5e55789e265831de3f8a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fa912e1b31049a911c7f5e55789e265831de3f8a \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fa9e5596ca388371ebe673e2d64c5ff3073a4f5d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fa9e5596ca388371ebe673e2d64c5ff3073a4f5d \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/faa8ab6366936c640f8456052e3edad009b91029:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/faa8ab6366936c640f8456052e3edad009b91029 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fab68fbeee958f98bf8a5e97b8a986b8be9a2990:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fab68fbeee958f98bf8a5e97b8a986b8be9a2990 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fafe0ec3685c2c52d37b48bbe522e1c2f4937ffa:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fafe0ec3685c2c52d37b48bbe522e1c2f4937ffa \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fb1104dfee9a9a2840740fd8da26bc6c4038a24e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fb1104dfee9a9a2840740fd8da26bc6c4038a24e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fb47e194af71575b39edd243fa7c110541a8ccd1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fb47e194af71575b39edd243fa7c110541a8ccd1 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fb86533160ffa9954faf4e56ac7851d5af6c9687:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fb86533160ffa9954faf4e56ac7851d5af6c9687 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fbaad0ba5aaad7a876b92f6d525ca69798174c04:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fbaad0ba5aaad7a876b92f6d525ca69798174c04 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fbe5fcb4f08988d95992cdec1e308b8855a36a5e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fbe5fcb4f08988d95992cdec1e308b8855a36a5e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fbf309e714f35cdaadbf5009c104c23dc9479872:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fbf309e714f35cdaadbf5009c104c23dc9479872 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fc2565d88f47636f93d5db6927678628331b17ed:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fc2565d88f47636f93d5db6927678628331b17ed \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fc3d7c1c988bf49986abc4c8cd342e8054805558:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fc3d7c1c988bf49986abc4c8cd342e8054805558 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fc47b6445adbfa02e37c7f39adbb7985b5b113d1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fc47b6445adbfa02e37c7f39adbb7985b5b113d1 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fc5f125e2a51f9dead11f8bb289f4edc63764980:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fc5f125e2a51f9dead11f8bb289f4edc63764980 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fcd874811fa4ab93f7466e67e8f708a1796fcd8f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fcd874811fa4ab93f7466e67e8f708a1796fcd8f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fce720317a1a1cd26374ab3aa09f3d5e45163363:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fce720317a1a1cd26374ab3aa09f3d5e45163363 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fcf77e35832a2ee166e0d35551e7fecafa561983:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fcf77e35832a2ee166e0d35551e7fecafa561983 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fd425daefebd7d60fbb9334106ca33d6186935b8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fd425daefebd7d60fbb9334106ca33d6186935b8 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fdcd17e7ce9a0ee20d653534d401feeb503e0bd5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fdcd17e7ce9a0ee20d653534d401feeb503e0bd5 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fddca762c06a537728227801872a861b283c04de:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fddca762c06a537728227801872a861b283c04de \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fe26dad7db4b151df86e5237d1c8d473ebfa75a1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fe26dad7db4b151df86e5237d1c8d473ebfa75a1 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fe7888809d2e75c4a67114732d1553f515623207:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fe7888809d2e75c4a67114732d1553f515623207 \
@@ -2845,280 +2942,281 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ff095f95fb3169fdaceae3d76eecf2a5d2464f4e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ff095f95fb3169fdaceae3d76eecf2a5d2464f4e \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ff2f5f89fb3909d47531fe88b63b7bfe4cebeb9c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ff2f5f89fb3909d47531fe88b63b7bfe4cebeb9c \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ff4beae7ff8bca75b167b321388a408f88878e5c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ff4beae7ff8bca75b167b321388a408f88878e5c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ff8104b13ada5e62a53bce671f5fce7da5d2724f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ff8104b13ada5e62a53bce671f5fce7da5d2724f \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ffb29804f53fd0f0c91ca06f0d2277f0f1583472:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ffb29804f53fd0f0c91ca06f0d2277f0f1583472 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ffdc577197c6baf35338916b69a7268a5fe6160c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ffdc577197c6baf35338916b69a7268a5fe6160c \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ffe27cd1049b990c9b7691716ae1555fae652743:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ffe27cd1049b990c9b7691716ae1555fae652743 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/ffe2d4e553306bb6d34b4d5572b70e7dc99b01a3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ffe2d4e553306bb6d34b4d5572b70e7dc99b01a3 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/confseqs/fffa16643461abba717686cb2e26a5fa64619dac:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/fffa16643461abba717686cb2e26a5fa64619dac \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests_symbolic_link_mapping:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests_symbolic_link_mapping \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/00022d4d5dc1622491cb251961f01a1f16c4a052:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/00022d4d5dc1622491cb251961f01a1f16c4a052 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/01743071508ce23c07b9177cb9f185b3e1d049fe:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/01743071508ce23c07b9177cb9f185b3e1d049fe \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0289b605548d42d18e146983b7e577f19d2e00db:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0289b605548d42d18e146983b7e577f19d2e00db \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/078f3b6631db306bb6f4d681a026ce665559d166:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/078f3b6631db306bb6f4d681a026ce665559d166 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/07bc71973c4f4d65e9e9fb2e6b8152ffddf91b17:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/07bc71973c4f4d65e9e9fb2e6b8152ffddf91b17 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/096a8c75815018f5e12928965f5e82c31226b645:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/096a8c75815018f5e12928965f5e82c31226b645 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0ac0ff2c8266cdd92f67bfb6e5e4851c698b926f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0ac0ff2c8266cdd92f67bfb6e5e4851c698b926f \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0b2fe7241ae4864411260c8c744a29a7b7fb2ca1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0b2fe7241ae4864411260c8c744a29a7b7fb2ca1 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0f766d4bc96123991d81703ef0be2fe422381c14:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0f766d4bc96123991d81703ef0be2fe422381c14 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1129550ee1f8f9769a643e389b0be0c67cb06db5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1129550ee1f8f9769a643e389b0be0c67cb06db5 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/12c5b25be2236caa7605627784c2f9f18780b244:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/12c5b25be2236caa7605627784c2f9f18780b244 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/137569e4b4089b118b61edc4cc951ed9cea225ca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/137569e4b4089b118b61edc4cc951ed9cea225ca \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/137d94e1c0245118986c44b100b0ecce4a64bf2e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/137d94e1c0245118986c44b100b0ecce4a64bf2e \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/13df34c3ea24a9a5f6f98b856a7f6cc418b1c415:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/13df34c3ea24a9a5f6f98b856a7f6cc418b1c415 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/147f6578c7c92ddc12cc749d88830bf2b911b9ed:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/147f6578c7c92ddc12cc749d88830bf2b911b9ed \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/148988b77face92e9c7e0b28a62fd50f56aaeba3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/148988b77face92e9c7e0b28a62fd50f56aaeba3 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1506af60a52a1f20547f37e6c340ca5188b73c70:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1506af60a52a1f20547f37e6c340ca5188b73c70 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/16bf56f3c27ebb70acaf2223f2cac87f555259a7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/16bf56f3c27ebb70acaf2223f2cac87f555259a7 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/173190178a3bcffd5b4c0532293421ccf4edaf38:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/173190178a3bcffd5b4c0532293421ccf4edaf38 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/188e3e6528f0401ae6082a932ebca88d0990b489:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/188e3e6528f0401ae6082a932ebca88d0990b489 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/19e2f9b7d746e9c1624a14d6099865c7f7e82901:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/19e2f9b7d746e9c1624a14d6099865c7f7e82901 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1a2d1558ef6a5762b5dd8813b9ce0ee3f75e6895:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1a2d1558ef6a5762b5dd8813b9ce0ee3f75e6895 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1ae7e32d2fe517c4046f81e976f4f513e8088941:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1ae7e32d2fe517c4046f81e976f4f513e8088941 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1b826e71d47335e8c50f6912386f19d7fc7a4dc3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1b826e71d47335e8c50f6912386f19d7fc7a4dc3 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1bc3b398b1bb4f4e2abfbfe86cfc7ac1a4455162:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1bc3b398b1bb4f4e2abfbfe86cfc7ac1a4455162 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1c3ed763b16412c2f6eac7bb3a2d20d5cf522905:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1c3ed763b16412c2f6eac7bb3a2d20d5cf522905 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/233e7295af21dc14fb74a80782a40e55b3d9a2e4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/233e7295af21dc14fb74a80782a40e55b3d9a2e4 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/23b1a179e4cb0ab76c35ee076d500464f34aadc0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/23b1a179e4cb0ab76c35ee076d500464f34aadc0 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/24235e2cd8e5555ce93c55503c46f12711396bbf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/24235e2cd8e5555ce93c55503c46f12711396bbf \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2678eb7e03c6c7250660113f1236b648993d568d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2678eb7e03c6c7250660113f1236b648993d568d \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/27dc78fc7fb7a6ffb34e2498d30df9b2cb9038a3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/27dc78fc7fb7a6ffb34e2498d30df9b2cb9038a3 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/27e5427618096c75d7d3e798a7f8f21c56163b8e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/27e5427618096c75d7d3e798a7f8f21c56163b8e \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2a39fd20264a2f329084223efd33c0a9b28783cc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2a39fd20264a2f329084223efd33c0a9b28783cc \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2a3cdd013719bc79ddfbb098d1fc445b0b4f28bf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2a3cdd013719bc79ddfbb098d1fc445b0b4f28bf \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2af3f8ddf37f189fa5de5fac91560b9fa8c71427:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2af3f8ddf37f189fa5de5fac91560b9fa8c71427 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2b2b1a0a77db9e16f83201ddb4f1cc92ead8dab4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2b2b1a0a77db9e16f83201ddb4f1cc92ead8dab4 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2c63b2058e74358b8a2ecce400a26d907f222e51:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2c63b2058e74358b8a2ecce400a26d907f222e51 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2ccc7e94ab2d34b9086b5996c9b639e8ae0de3a4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2ccc7e94ab2d34b9086b5996c9b639e8ae0de3a4 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/301e25631abc3754c6eb7cd826c06eadda557202:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/301e25631abc3754c6eb7cd826c06eadda557202 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3079b062dacba2ca0537134140e197c84bc99be8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3079b062dacba2ca0537134140e197c84bc99be8 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/307ff82b3f4dc0af18ab814888df59f3b84fbcfe:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/307ff82b3f4dc0af18ab814888df59f3b84fbcfe \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3160c3195cdd1f138ce64a4bc4c87b59d91b4da6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3160c3195cdd1f138ce64a4bc4c87b59d91b4da6 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/316f5f44943d02dde9e9f76f66d88cfcdf51ad47:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/316f5f44943d02dde9e9f76f66d88cfcdf51ad47 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/325c7e5445a89aeb78c94e7cb188bbca32590760:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/325c7e5445a89aeb78c94e7cb188bbca32590760 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/32f6b94c4361f9964e2c6064d2d70aa1ad55cc69:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/32f6b94c4361f9964e2c6064d2d70aa1ad55cc69 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/33422a864bee3f29fa11a0f29190a4f6d546e0a5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/33422a864bee3f29fa11a0f29190a4f6d546e0a5 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/341114a33461ed898b8d2c0ed64a7dbe02b89876:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/341114a33461ed898b8d2c0ed64a7dbe02b89876 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/34d2e87a3e24fbc67c93694a43cc3f9db0346a03:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/34d2e87a3e24fbc67c93694a43cc3f9db0346a03 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/35385d5e75cacfb9837d3876970fd28658f92ba6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/35385d5e75cacfb9837d3876970fd28658f92ba6 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/36ef9f445af7507c49434b2420c48d51be864b61:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/36ef9f445af7507c49434b2420c48d51be864b61 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/37368c0178e85efda10d444704daa099ba8a0a6a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/37368c0178e85efda10d444704daa099ba8a0a6a \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/37b24da416b4aa54c7c23f0bc634d8451fa641b9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/37b24da416b4aa54c7c23f0bc634d8451fa641b9 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/392040a2f8f73cb0861bc87b9e1ce7bb3d433a03:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/392040a2f8f73cb0861bc87b9e1ce7bb3d433a03 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3a7a0b0450e26b80573d96b7629d95de31a0a128:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3a7a0b0450e26b80573d96b7629d95de31a0a128 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3adccad40a48eea8e25716b03b42db75f68bf5a8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3adccad40a48eea8e25716b03b42db75f68bf5a8 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3b1a557c97c97070ade0e381350f4fbbfbf40028:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3b1a557c97c97070ade0e381350f4fbbfbf40028 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3bcd477862c0273ce5165c2a5a3ff600fef9afa4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3bcd477862c0273ce5165c2a5a3ff600fef9afa4 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3bfc51b85f8b30d5b8e1d460946694a7a14057bc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3bfc51b85f8b30d5b8e1d460946694a7a14057bc \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3ca0c27ed975d5a0b75bb1b896c4c883e1258e55:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3ca0c27ed975d5a0b75bb1b896c4c883e1258e55 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3dce15461ef7a8b38226a955712acbdf3ca2f8e4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3dce15461ef7a8b38226a955712acbdf3ca2f8e4 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3e846265edd5cd0d9409b1442b0d7862b5ed9adb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3e846265edd5cd0d9409b1442b0d7862b5ed9adb \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3edd9f1b1076c4401ead9b4b1d2f7002eebfb8ef:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3edd9f1b1076c4401ead9b4b1d2f7002eebfb8ef \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3fb8eca0e7cf3882721ff5f9d7117df9f6e1eac9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3fb8eca0e7cf3882721ff5f9d7117df9f6e1eac9 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3fd1bbcedcff4dcc4eb02a8211b354bb843106a0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3fd1bbcedcff4dcc4eb02a8211b354bb843106a0 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4039cd57e70427b01ce2c434075e072debdf5c50:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4039cd57e70427b01ce2c434075e072debdf5c50 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/418e929413a29e8121fe830c88a4a4f59ab09532:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/418e929413a29e8121fe830c88a4a4f59ab09532 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/42284f53bde1094af66467aeff77a07cf991ef34:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/42284f53bde1094af66467aeff77a07cf991ef34 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/438b702bff5c1e88c1a06b4c0e607fac2da65156:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/438b702bff5c1e88c1a06b4c0e607fac2da65156 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4447bcce1b8277f8cadf510f4cfeb515a3ba02bf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4447bcce1b8277f8cadf510f4cfeb515a3ba02bf \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/44909f05f053ded8d13a3a899677a2188349d0eb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/44909f05f053ded8d13a3a899677a2188349d0eb \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4493b3587bcd5a6a4afd38625f3a82b8791c89b2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4493b3587bcd5a6a4afd38625f3a82b8791c89b2 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/449e295a59dbf75dec1233f3f14fc7d25b597f8f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/449e295a59dbf75dec1233f3f14fc7d25b597f8f \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/450579f98691b36de4edf85d78e55d1284694760:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/450579f98691b36de4edf85d78e55d1284694760 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/45be6c71b01aecebea9b97884df38ecd83eaff24:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/45be6c71b01aecebea9b97884df38ecd83eaff24 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/46be9a357701185190f8f2bf24e2c21368cd6e1f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/46be9a357701185190f8f2bf24e2c21368cd6e1f \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/482493799e650405d82389a9c86d8b2bea9f1dc9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/482493799e650405d82389a9c86d8b2bea9f1dc9 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4893e490ee5be927650d9e73c2e7d9492e0d0ba9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4893e490ee5be927650d9e73c2e7d9492e0d0ba9 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/499ca905c24270615446669800475d65b73dc240:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/499ca905c24270615446669800475d65b73dc240 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4ac3ebb6e1a3945471ad4161cebbc8fa27db1d2f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4ac3ebb6e1a3945471ad4161cebbc8fa27db1d2f \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4af5b04bc31c497b67c7daa1624e06d27ed9d544:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4af5b04bc31c497b67c7daa1624e06d27ed9d544 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4af9842cfa53ec557751147fe27f7566cc3fdb75:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4af9842cfa53ec557751147fe27f7566cc3fdb75 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4b79d114e6b9e9ebd42b996ef0586c9ea49a124f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4b79d114e6b9e9ebd42b996ef0586c9ea49a124f \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4d54296a189b4b0135be1c001b5d857e91f154cf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4d54296a189b4b0135be1c001b5d857e91f154cf \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4ea353f2b437e5b4a8dd1a3c8cac7b5ae87ddedf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4ea353f2b437e5b4a8dd1a3c8cac7b5ae87ddedf \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/50929e5bfdb1aa7f183235951124bc720d428af9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/50929e5bfdb1aa7f183235951124bc720d428af9 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/51140a125bcbf9f32f26e485e49d4ca2e89f2a42:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/51140a125bcbf9f32f26e485e49d4ca2e89f2a42 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/53311530efd75cb7747a033358c56228f7f3560e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/53311530efd75cb7747a033358c56228f7f3560e \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/53fbef8670564ab1101b2e77291e5735bad3087c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/53fbef8670564ab1101b2e77291e5735bad3087c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5459a31586f09dd860d6d6cf4d509507dbb265b5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5459a31586f09dd860d6d6cf4d509507dbb265b5 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5501ab9a3eddceba0d9b30f80ae12fd7d73b093e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5501ab9a3eddceba0d9b30f80ae12fd7d73b093e \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/57029ced9c2ae5f7aae2872c3bb2fdf58f6a318c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/57029ced9c2ae5f7aae2872c3bb2fdf58f6a318c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5882c3ee8b74834e53c111d0888974b3a9244983:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5882c3ee8b74834e53c111d0888974b3a9244983 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/595879172f756ccd1e47e214cff0bb60dc5dc0a3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/595879172f756ccd1e47e214cff0bb60dc5dc0a3 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5af4971ad1d9dff657f55ab54786ed247537bc55:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5af4971ad1d9dff657f55ab54786ed247537bc55 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5ca8e7ecb57619bf32b67814716dfdc70f724edc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5ca8e7ecb57619bf32b67814716dfdc70f724edc \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5cad875b9da0169eebb4d2bf4dc0cefc2b341a6c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5cad875b9da0169eebb4d2bf4dc0cefc2b341a6c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5ded0616391bf7d205064fe044b7da4f2180c79f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5ded0616391bf7d205064fe044b7da4f2180c79f \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5f32e0512e86220dacbcddb39ed491d3982f00e4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5f32e0512e86220dacbcddb39ed491d3982f00e4 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5f78efeb281e2760d675c9d89a668d45c9088514:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5f78efeb281e2760d675c9d89a668d45c9088514 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5fe6720f863cb3f7b9e0e111fe9cdf93fb23f451:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5fe6720f863cb3f7b9e0e111fe9cdf93fb23f451 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6096363a3863a9e2c3abf17589cef0f4a4c3100e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6096363a3863a9e2c3abf17589cef0f4a4c3100e \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/627a1fe5c1564ab848ebbaa100fb10ae1c3bf5df:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/627a1fe5c1564ab848ebbaa100fb10ae1c3bf5df \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/63d13ea05dabda2bf096c14f0f71efae587e853b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/63d13ea05dabda2bf096c14f0f71efae587e853b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6450e881787e44c930062af92615d3f31450ccb8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6450e881787e44c930062af92615d3f31450ccb8 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/64c882d97e4b7c1b8ef9374f003c2530938d70ec:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/64c882d97e4b7c1b8ef9374f003c2530938d70ec \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/65d21d4f171bf4fc7e6a7cd9347306bf73960644:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/65d21d4f171bf4fc7e6a7cd9347306bf73960644 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/688d54545cae3aa25e0ea80cd9fcff31790f5b4f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/688d54545cae3aa25e0ea80cd9fcff31790f5b4f \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/68f6129e1130614790a5c54a2216c0f1fc3fcc7b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/68f6129e1130614790a5c54a2216c0f1fc3fcc7b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6a1fc5f2c87bda412609afc5c9264b1f4de5c733:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6a1fc5f2c87bda412609afc5c9264b1f4de5c733 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6a74306c39456c6c2e15eb1ae48d377737aa67c1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6a74306c39456c6c2e15eb1ae48d377737aa67c1 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6b177575f3a745aaa259a6208870b19f5dd7479d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6b177575f3a745aaa259a6208870b19f5dd7479d \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6b3d8438e555a75ec34ada574594368a30b5094d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6b3d8438e555a75ec34ada574594368a30b5094d \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6f72da39e9cfd948ccc1a01d0b4be860abc5dfd7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6f72da39e9cfd948ccc1a01d0b4be860abc5dfd7 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/700ee63f370557e9486c4c7e4c483a03c0c99f6b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/700ee63f370557e9486c4c7e4c483a03c0c99f6b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/70956e69aab5e513bb353ef805f64225b0b34b1d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/70956e69aab5e513bb353ef805f64225b0b34b1d \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/720c6e2933a29dcce24b629f75e4916f68462331:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/720c6e2933a29dcce24b629f75e4916f68462331 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/72175c3d8aeff9b01f120bdff050c1751c85a26f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/72175c3d8aeff9b01f120bdff050c1751c85a26f \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/722d03cff32bcb9177a38106d4cf4dd7b8e1599c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/722d03cff32bcb9177a38106d4cf4dd7b8e1599c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/72cfcedef5df3f7664df9a7a921156537df09020:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/72cfcedef5df3f7664df9a7a921156537df09020 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7558f1ca90d642b8f7d91dcc6ba3658b98ab55eb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7558f1ca90d642b8f7d91dcc6ba3658b98ab55eb \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/75cc039e62aeb2d0a1b9e6b241fd11337d3b3d81:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/75cc039e62aeb2d0a1b9e6b241fd11337d3b3d81 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/75fc56129a71817ea5a8e74c0abab06e1d5d8113:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/75fc56129a71817ea5a8e74c0abab06e1d5d8113 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/761fd07f43a26addf2a37709ef01b6fa63d96c04:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/761fd07f43a26addf2a37709ef01b6fa63d96c04 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/76ada18e3964cdedab5bc2db0ae9a2b596141065:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/76ada18e3964cdedab5bc2db0ae9a2b596141065 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/77092802dea6e6584ee29dd430c563ad55b6ad71:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/77092802dea6e6584ee29dd430c563ad55b6ad71 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/772eed4abedc884811a99660659fa34c1e5868b5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/772eed4abedc884811a99660659fa34c1e5868b5 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/77423b70eadc4ae596c6ed12118bd0bd7202f5a5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/77423b70eadc4ae596c6ed12118bd0bd7202f5a5 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/77abbc99e953b160eb4d1fd83b946fb63f015e23:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/77abbc99e953b160eb4d1fd83b946fb63f015e23 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/77d75d74d47c956cb3adcec95fcfc6c1131b1779:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/77d75d74d47c956cb3adcec95fcfc6c1131b1779 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/78a6ad84fb95f9912269b0c27cccd7eef64ea459:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/78a6ad84fb95f9912269b0c27cccd7eef64ea459 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/78b8ef122ce7fcccfd183cfeb8dd64029b4416e2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/78b8ef122ce7fcccfd183cfeb8dd64029b4416e2 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7b625c4852b8b8ec366c74df69033eabdf781e55:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7b625c4852b8b8ec366c74df69033eabdf781e55 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7bdd19a54e1dfb744538c4a036125bc7f3e8472e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7bdd19a54e1dfb744538c4a036125bc7f3e8472e \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7d54aaf282781ec5ce025847f7403e4048d01239:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7d54aaf282781ec5ce025847f7403e4048d01239 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7e28d014a9269cfc4efbdf9ab294ce47280c1017:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7e28d014a9269cfc4efbdf9ab294ce47280c1017 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7e51c16fa24c9388db30bfacec4b9fcbe538d27d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7e51c16fa24c9388db30bfacec4b9fcbe538d27d \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7f7a9020ec76cc4cfadb5836f1ae02742b29b21c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7f7a9020ec76cc4cfadb5836f1ae02742b29b21c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/80be1f52794eaab7c2ea41cbfd54632926aba1bf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/80be1f52794eaab7c2ea41cbfd54632926aba1bf \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8203dfa96ec60e4945ac54679ce733fe21424429:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8203dfa96ec60e4945ac54679ce733fe21424429 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/820bd4971f2ebaf1009696d908ada10f9b595b21:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/820bd4971f2ebaf1009696d908ada10f9b595b21 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/822532733b3f321b42ed6869399da9a268189edc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/822532733b3f321b42ed6869399da9a268189edc \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8236a332d3de8ac145cc5e4db4f01ffbd49d2895:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8236a332d3de8ac145cc5e4db4f01ffbd49d2895 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/82e1ce44256cbf366243b54180b6d746eaf22435:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/82e1ce44256cbf366243b54180b6d746eaf22435 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/890fd6e24cfa0dbb111ec79c4e19b9b21e8cd5d4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/890fd6e24cfa0dbb111ec79c4e19b9b21e8cd5d4 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/893e5d098ab33a80d98de4a67725b949a4c7df97:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/893e5d098ab33a80d98de4a67725b949a4c7df97 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8a15809fea1c38fac38669030a4fc9fbedff30e1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8a15809fea1c38fac38669030a4fc9fbedff30e1 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8a868d015795a1eabb25b8fd7356e8441ee5bfeb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8a868d015795a1eabb25b8fd7356e8441ee5bfeb \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8d481f1c226c01fc639da9496f0b40f52378f209:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8d481f1c226c01fc639da9496f0b40f52378f209 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8f035d1c8e728ce43e4a58e016b2353668cc6fca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8f035d1c8e728ce43e4a58e016b2353668cc6fca \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/91df3ddfa1bdcab26ed2f19edc6550d069dea0c3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/91df3ddfa1bdcab26ed2f19edc6550d069dea0c3 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/92e5d94fb17e0ac0cc3d0e9bd417d5bc7cdc289b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/92e5d94fb17e0ac0cc3d0e9bd417d5bc7cdc289b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/936751efca9225b0ed373439c2a044dd472dee20:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/936751efca9225b0ed373439c2a044dd472dee20 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/93f237893ba92c1701f00c18a5ff086e575d69b8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/93f237893ba92c1701f00c18a5ff086e575d69b8 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9446b1c6a2d96850a0d40405670d6d7cfe8ad82a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9446b1c6a2d96850a0d40405670d6d7cfe8ad82a \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/962f57aef9f54290276b0bac3a0f855a06206b22:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/962f57aef9f54290276b0bac3a0f855a06206b22 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/96863a798b0079c7f91d2ea05531378c73263b7b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/96863a798b0079c7f91d2ea05531378c73263b7b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/96ab8760d63f6794b3ea588027e49ed22d79cb3b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/96ab8760d63f6794b3ea588027e49ed22d79cb3b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/97a5468475f392ed17410cb7393d7456b433db65:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/97a5468475f392ed17410cb7393d7456b433db65 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/98de91a6c03bc8f1a676aa40bbdbd74a878ed563:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/98de91a6c03bc8f1a676aa40bbdbd74a878ed563 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9903a9fba4949bc6e9ad8f1baf77d0c312088696:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9903a9fba4949bc6e9ad8f1baf77d0c312088696 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9b5218bd141b742f65a23ee0f8a62356b566d669:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9b5218bd141b742f65a23ee0f8a62356b566d669 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9e1f2172ef98ea1105a6e6b9d4e2bab7227ab964:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9e1f2172ef98ea1105a6e6b9d4e2bab7227ab964 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a1ce0d74742c06b97d4d648d098f9b763fc5f4af:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a1ce0d74742c06b97d4d648d098f9b763fc5f4af \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a1db69aeef0c34d1278c38596ab52704735bf5a9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a1db69aeef0c34d1278c38596ab52704735bf5a9 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a1e1463627d5e294e4d543f708a7d2478673feda:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a1e1463627d5e294e4d543f708a7d2478673feda \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a3540905ee2250890d924bd9eb5bb5b6ec3d9b89:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a3540905ee2250890d924bd9eb5bb5b6ec3d9b89 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a39d76d6a9532805d8199bc487631593e686af98:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a39d76d6a9532805d8199bc487631593e686af98 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a3d23a19c03dda16b212b50152a2f43e82ae2ff0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a3d23a19c03dda16b212b50152a2f43e82ae2ff0 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a3d6b659fafcb378f49cdacfc3d553c3a3e35431:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a3d6b659fafcb378f49cdacfc3d553c3a3e35431 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a726471331349e278fa7c3e9eefb0c7c00d5ac47:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a726471331349e278fa7c3e9eefb0c7c00d5ac47 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a80166937c8a87b62460eafd208abde6c237e415:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a80166937c8a87b62460eafd208abde6c237e415 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a8d7a2b115a3f8e969a224743f0834ab964235f3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a8d7a2b115a3f8e969a224743f0834ab964235f3 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a8e5028df813e56465dbf2e5e8f98b62ee542a39:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a8e5028df813e56465dbf2e5e8f98b62ee542a39 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a9596f7a075ff240d477ab497face839c4a3f71d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a9596f7a075ff240d477ab497face839c4a3f71d \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a9b68147ae08b0dea5cae7c8c83ed8ab93d27005:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a9b68147ae08b0dea5cae7c8c83ed8ab93d27005 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/aaa7825a9075c499ed9f88e45a0960cc29ceb7f4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/aaa7825a9075c499ed9f88e45a0960cc29ceb7f4 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ab465dafb16fffc701e65336e751f2ddaefdb929:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ab465dafb16fffc701e65336e751f2ddaefdb929 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/abc7b6d3339e46098e1cad44d6ea2ffe2dcae195:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/abc7b6d3339e46098e1cad44d6ea2ffe2dcae195 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/abe8279af66b7c384e1013604f6d11cc0a299e3e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/abe8279af66b7c384e1013604f6d11cc0a299e3e \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ac2ff9c9f1fe27b5a2a1bfe96a4768df18394889:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ac2ff9c9f1fe27b5a2a1bfe96a4768df18394889 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ac53b82c4a5014b2c33deff523bd96a8bc329dce:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ac53b82c4a5014b2c33deff523bd96a8bc329dce \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/acbff0b387c7767d15184769d6dfea9e52bac6be:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/acbff0b387c7767d15184769d6dfea9e52bac6be \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ad04ba9485188e064e177511933e34ad1048019b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ad04ba9485188e064e177511933e34ad1048019b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/aeff39e8ceaee0b8abfc363a47ad808718cf1de8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/aeff39e8ceaee0b8abfc363a47ad808718cf1de8 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b4bf55d6b468092e209b8afe058f62e3fb283c8d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b4bf55d6b468092e209b8afe058f62e3fb283c8d \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b8b41be36e9bfd5108e2eeff02e0c9d5a786e77b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b8b41be36e9bfd5108e2eeff02e0c9d5a786e77b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b8d44c60ea34d6b965fd28ee92094b732ca1f5ca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b8d44c60ea34d6b965fd28ee92094b732ca1f5ca \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b9317127fd796384d41f58b9439587fa207231fd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b9317127fd796384d41f58b9439587fa207231fd \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b9729c2164f6dd12560cc9ab70e5e94d210e87f9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b9729c2164f6dd12560cc9ab70e5e94d210e87f9 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/bd49ad8d42d4a6f4c6b10ef4ba210560a33eb616:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/bd49ad8d42d4a6f4c6b10ef4ba210560a33eb616 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/bd7fa2a053391b73e655c417b072023c70f9b933:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/bd7fa2a053391b73e655c417b072023c70f9b933 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/bdd8a2f0571dea96426e120cf0b8361be97a570b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/bdd8a2f0571dea96426e120cf0b8361be97a570b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/be55194240c870913fcc14cebad7de9f27acbe5d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/be55194240c870913fcc14cebad7de9f27acbe5d \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/bf17fe33570ddef7d7432df08b981411e61c41ea:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/bf17fe33570ddef7d7432df08b981411e61c41ea \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/bf26794eef70686ea983a20621ee8826a95144a9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/bf26794eef70686ea983a20621ee8826a95144a9 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c12e92c4db97dd59e801c9a576b8ec4dbb5e4c8c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c12e92c4db97dd59e801c9a576b8ec4dbb5e4c8c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c3cffd2641e8f745427ba3f7085690f982eedb15:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c3cffd2641e8f745427ba3f7085690f982eedb15 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c45fb15a041c34078afe9a688d3b35f9b770e4bb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c45fb15a041c34078afe9a688d3b35f9b770e4bb \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c487ca0f35238991fb19274d4d63b884ba16c2b4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c487ca0f35238991fb19274d4d63b884ba16c2b4 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c5a7aca02e9a6b8d20ee742c87a941b4cac55676:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c5a7aca02e9a6b8d20ee742c87a941b4cac55676 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c5f195c35bca1fd177e6f55760dd49a9e900274b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c5f195c35bca1fd177e6f55760dd49a9e900274b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c66873a698b3399478d48b1c9852921b7c2be7eb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c66873a698b3399478d48b1c9852921b7c2be7eb \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c67614661c3f22c47c71e10393c472fd0e6d8033:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c67614661c3f22c47c71e10393c472fd0e6d8033 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c86d073447e080f74936b8533678e3d75077cf30:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c86d073447e080f74936b8533678e3d75077cf30 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c8db77c5dd2dcd0b70741b6ea758830aea6082d7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c8db77c5dd2dcd0b70741b6ea758830aea6082d7 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ce2bbda3724c71df944f190a251296f4362e9865:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ce2bbda3724c71df944f190a251296f4362e9865 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ce8a07ee3fb322a101086c01869b5492f25e16ae:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ce8a07ee3fb322a101086c01869b5492f25e16ae \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/cfd251983937469227d2716b811741195e00b954:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cfd251983937469227d2716b811741195e00b954 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d1a923833bd97f8be6084fa53d67a6ea6d63856e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d1a923833bd97f8be6084fa53d67a6ea6d63856e \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d2bfbe7d30a4340d7eb8d1d2731e1fba17921145:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d2bfbe7d30a4340d7eb8d1d2731e1fba17921145 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d355df82b8bb6bfa21ab84cb5cad0f0428cf0ef1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d355df82b8bb6bfa21ab84cb5cad0f0428cf0ef1 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d3a871e5a8748322ed5dab96e9b12dd3e188c5a1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d3a871e5a8748322ed5dab96e9b12dd3e188c5a1 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d40856e070f2f46e31ba82bc12e5594518afbc81:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d40856e070f2f46e31ba82bc12e5594518afbc81 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d42b84db7984274a5063f4f22e2f9a12ad14c45c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d42b84db7984274a5063f4f22e2f9a12ad14c45c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d4891926a1ff3df2d0dd277660cd7c52be760ee2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d4891926a1ff3df2d0dd277660cd7c52be760ee2 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d6ffed421b87abeb8aa7e23d32a335d93917d8a0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d6ffed421b87abeb8aa7e23d32a335d93917d8a0 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d739d826bdfa1270ab3f0391a599f10ad6f67298:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d739d826bdfa1270ab3f0391a599f10ad6f67298 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d74ee272a4e81b72d0fbbbe7e3c087c77e60740a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d74ee272a4e81b72d0fbbbe7e3c087c77e60740a \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d83ead377312b67e813e205a8f9f8f7088442f81:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d83ead377312b67e813e205a8f9f8f7088442f81 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d870dc35b284e3c96ce2d097503847b4bb34edfd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d870dc35b284e3c96ce2d097503847b4bb34edfd \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d87c512817ec4d7f90db5cabf2dbafc266a7a428:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d87c512817ec4d7f90db5cabf2dbafc266a7a428 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/da1f2a32e0928046661c40bb9efbc646fc80a383:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/da1f2a32e0928046661c40bb9efbc646fc80a383 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/dab7bb5c9cbfc19e15c1e7801a98923a7e257172:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/dab7bb5c9cbfc19e15c1e7801a98923a7e257172 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/db0cc80bff091ab46fcc0eb20bc73da4511bc02d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/db0cc80bff091ab46fcc0eb20bc73da4511bc02d \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/dc653b27469132dfd5359e469edf0ba39b30504c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/dc653b27469132dfd5359e469edf0ba39b30504c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/dcb85a6ab99dba3cb472e3406d93e997745dd064:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/dcb85a6ab99dba3cb472e3406d93e997745dd064 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/dd1a5272b019c472fd8a349e68f80604583388e9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/dd1a5272b019c472fd8a349e68f80604583388e9 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/dd5e3bdaff7e48ceed0b6d0c270839ba348d4fce:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/dd5e3bdaff7e48ceed0b6d0c270839ba348d4fce \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/dd96a365ff2e130f6600994dce2d899db3493f3c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/dd96a365ff2e130f6600994dce2d899db3493f3c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/df4121f5f13c3e97d8e8a3a6326be9532daacb72:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/df4121f5f13c3e97d8e8a3a6326be9532daacb72 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e01016e17c0e81315e2caf6e99700621d2fbceb1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e01016e17c0e81315e2caf6e99700621d2fbceb1 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e065fef55408ccc763d53e019083c2eb84f94718:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e065fef55408ccc763d53e019083c2eb84f94718 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e0f5c81547a6c205fa0c537ce705ca0081119cc2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e0f5c81547a6c205fa0c537ce705ca0081119cc2 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e1082bc24bb0c6dccd981b50233819b66f37a386:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e1082bc24bb0c6dccd981b50233819b66f37a386 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e3372d7df91994324f3fff26639f111b18db3a6c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e3372d7df91994324f3fff26639f111b18db3a6c \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e3843f5f779aaf0a2fcab7d961734afa0929d847:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e3843f5f779aaf0a2fcab7d961734afa0929d847 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e39d7726a32e8afcef7d7e958cfac75e538da0e2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e39d7726a32e8afcef7d7e958cfac75e538da0e2 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e3cf9a42c65d62ac53264c239b2f503d536f5982:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e3cf9a42c65d62ac53264c239b2f503d536f5982 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e51e6201dbcfc649bb7165eb30ea2e05fa11bb58:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e51e6201dbcfc649bb7165eb30ea2e05fa11bb58 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e5f02f3d5883e7aeb7391050c96d971160334393:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e5f02f3d5883e7aeb7391050c96d971160334393 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e6803ebb154975db715fc7cb096a8a138feeabc6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e6803ebb154975db715fc7cb096a8a138feeabc6 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e75d88f1cc12adba4a1c50867d977186710eed78:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e75d88f1cc12adba4a1c50867d977186710eed78 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e807b0c580f160d681b4e4785dc483107663dd8a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e807b0c580f160d681b4e4785dc483107663dd8a \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e85c341c22bbf7207a33df4803f0e3856669d39e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e85c341c22bbf7207a33df4803f0e3856669d39e \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/eaf756cb1701756ec1b6d42dac48c316cf3bbdaa:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/eaf756cb1701756ec1b6d42dac48c316cf3bbdaa \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ec4278d919ce316a53bcf78284f8bc8c39e3e063:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ec4278d919ce316a53bcf78284f8bc8c39e3e063 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ee23dd3e5f5a366bf56fbbd25d9bba97a53af73b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ee23dd3e5f5a366bf56fbbd25d9bba97a53af73b \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ee36a8653ea1d30c2e5d66a2709fbf58e7257959:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ee36a8653ea1d30c2e5d66a2709fbf58e7257959 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f12485d7ad3656eb2c504f83f6f94322b1908e74:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f12485d7ad3656eb2c504f83f6f94322b1908e74 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f39a6ece8bc2cda3884bf5ee8895fab66ee569a1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f39a6ece8bc2cda3884bf5ee8895fab66ee569a1 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f511861e479d381019572677b9eb4231ef242a56:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f511861e479d381019572677b9eb4231ef242a56 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f5f191edfaa4a725f8ca3680742ade209f5171f5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f5f191edfaa4a725f8ca3680742ade209f5171f5 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f6c4094450523085535226ed8b27539a3fe14ad8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f6c4094450523085535226ed8b27539a3fe14ad8 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f98ec3be0a5f39b05d619ad6e897e8988a31b5db:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f98ec3be0a5f39b05d619ad6e897e8988a31b5db \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f9cda555b4d3848f88da2e9e6f0a482d8cf39162:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f9cda555b4d3848f88da2e9e6f0a482d8cf39162 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fa558c16b52389d7f85279d56e82fc1bf57d76a1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fa558c16b52389d7f85279d56e82fc1bf57d76a1 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fa7bd8a6eb12c3dabcaf198a13ba5c9cc3abc329:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fa7bd8a6eb12c3dabcaf198a13ba5c9cc3abc329 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fb7224e7058053c13d43bb23ae103cbca105a33e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fb7224e7058053c13d43bb23ae103cbca105a33e \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fb885aa970bcfae21d184c86154ec82f2452c54e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fb885aa970bcfae21d184c86154ec82f2452c54e \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fc144df042678250796d0b04c451a8e29636e4d2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fc144df042678250796d0b04c451a8e29636e4d2 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fc55ef3862f20b02b0d2410a4496bbf2780d9b9a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fc55ef3862f20b02b0d2410a4496bbf2780d9b9a \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fcee47dc993120bdedceb091d25b85cee4e0bd9a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fcee47dc993120bdedceb091d25b85cee4e0bd9a \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fd10dfd3d61b319e1645014ab39c828a727c8059:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fd10dfd3d61b319e1645014ab39c828a727c8059 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fe0e1147d411e38b71b031f92d5e2a9ac4e26022:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fe0e1147d411e38b71b031f92d5e2a9ac4e26022 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fe7493b2ad822872a0d9308362d01bde2289303a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fe7493b2ad822872a0d9308362d01bde2289303a \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fe784347611fc7970a4aafbdb2c659b6d062ae40:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fe784347611fc7970a4aafbdb2c659b6d062ae40 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fe7d926368a31b3d4468946a887917c7526acc41:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fe7d926368a31b3d4468946a887917c7526acc41 \
-    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ffb9fa5c550b78e7795dd00ce7c1a4200aac13ed:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ffb9fa5c550b78e7795dd00ce7c1a4200aac13ed \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/01088a1ceb1e2237e3b9e46f528db6412c699bfe:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/01088a1ceb1e2237e3b9e46f528db6412c699bfe \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0393bb5c310d28c3d3c1d5c4a678bea3263a065e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0393bb5c310d28c3d3c1d5c4a678bea3263a065e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/03a8e5bca5490b6dff8818652ca690b8a16f4485:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/03a8e5bca5490b6dff8818652ca690b8a16f4485 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/03d6ab5d8a11f5dd36f54371c3b78cd6008309e2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/03d6ab5d8a11f5dd36f54371c3b78cd6008309e2 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/03d9cfeaddef094ba388a0aa0f0a855919a203e9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/03d9cfeaddef094ba388a0aa0f0a855919a203e9 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/05e979c9a161fddc8a2d23fddbe30364bde3d2a5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/05e979c9a161fddc8a2d23fddbe30364bde3d2a5 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/06898589f90e21d6a7940580370d283b8bffdd76:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/06898589f90e21d6a7940580370d283b8bffdd76 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/07b0c5d108e3bec3a64555bb2482e03aede01377:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/07b0c5d108e3bec3a64555bb2482e03aede01377 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0802f4d35e0da77cc0c84b7a80cfc9d5246ab21f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0802f4d35e0da77cc0c84b7a80cfc9d5246ab21f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/082e7da2b97940d923cb47d8728b2d9408208619:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/082e7da2b97940d923cb47d8728b2d9408208619 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0adc243f786f11c58dc2a8a7af9c50ca0830f27f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0adc243f786f11c58dc2a8a7af9c50ca0830f27f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0aedc763f7c680112be6b194ccf018534ad2caaf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0aedc763f7c680112be6b194ccf018534ad2caaf \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0b87e9afedb9d0d64b1a2a969c4bafae7e301d5e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0b87e9afedb9d0d64b1a2a969c4bafae7e301d5e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0d6be8f5ff30cc6ceacb24c2f4422bb183ca01e4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0d6be8f5ff30cc6ceacb24c2f4422bb183ca01e4 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0d7b8f04c1a39e28ec01583b987751365f5f8ae1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0d7b8f04c1a39e28ec01583b987751365f5f8ae1 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0d952dedb346b17fc0c7a48122081b2d4061dce1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0d952dedb346b17fc0c7a48122081b2d4061dce1 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0df2f65c950057dd018765603e06dddc40f882e4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0df2f65c950057dd018765603e06dddc40f882e4 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/0fd440e14fa6f4543cc1c2787253288afd91dbef:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0fd440e14fa6f4543cc1c2787253288afd91dbef \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/10a1409925aea610981487d7e3349844fde5f951:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/10a1409925aea610981487d7e3349844fde5f951 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/10c2b3d62af7c12eed649b2984b4d41d198d15a6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/10c2b3d62af7c12eed649b2984b4d41d198d15a6 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/117daa35e6b1f69b5ef9576be47eca42eeb2e1ef:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/117daa35e6b1f69b5ef9576be47eca42eeb2e1ef \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/11f23ace91bfa8a7d7da257cdebe08a82977222b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/11f23ace91bfa8a7d7da257cdebe08a82977222b \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1245e8d1f435c078eb8c6a3b1315678f43101175:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1245e8d1f435c078eb8c6a3b1315678f43101175 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1287f8b711b11ec7abb5e18b9ba8ec9287bec50e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1287f8b711b11ec7abb5e18b9ba8ec9287bec50e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/12b4a02f00abfb5b32713c0de640e901e744805f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/12b4a02f00abfb5b32713c0de640e901e744805f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/13ae4c004d977d1490ed0436d58d0dcba873eddd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/13ae4c004d977d1490ed0436d58d0dcba873eddd \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1451c12961f4b7ff8fe5b02046b54e2fc1789342:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1451c12961f4b7ff8fe5b02046b54e2fc1789342 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/14b66a6bc27ed51abdd4b9476480a645375f39a9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/14b66a6bc27ed51abdd4b9476480a645375f39a9 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/166268c52d50c906d08027d90c1d019d092ccd0e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/166268c52d50c906d08027d90c1d019d092ccd0e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/190dd58c9a7d5e43f90c02fca363bbb228417994:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/190dd58c9a7d5e43f90c02fca363bbb228417994 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1920fd6874079831a8046008f4bdf93b60cd30c7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1920fd6874079831a8046008f4bdf93b60cd30c7 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/195f063f4f206a6633902309e0b166afa7a4f44c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/195f063f4f206a6633902309e0b166afa7a4f44c \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1a8afb8adf49994ca1e0fb536ac1f221f06798a4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1a8afb8adf49994ca1e0fb536ac1f221f06798a4 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1bfcea9c018bba382fe626ab2f556f8001c49078:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1bfcea9c018bba382fe626ab2f556f8001c49078 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1c965a48c76c30150953f55fa43cee9e9aa85972:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1c965a48c76c30150953f55fa43cee9e9aa85972 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1cc9cb9b1c3349490694929b3e4fbd22e11b1b8b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1cc9cb9b1c3349490694929b3e4fbd22e11b1b8b \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1ce9c66678c7ccc7db74c9b3c22711c1c1c25403:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1ce9c66678c7ccc7db74c9b3c22711c1c1c25403 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1e96903a0396c336961a264f82a5a25da03677bd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1e96903a0396c336961a264f82a5a25da03677bd \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/1fe62c12fe151474b5d49f81b2a98cf830c9e352:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1fe62c12fe151474b5d49f81b2a98cf830c9e352 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/222d30c9bcc5828aaadd311d711321252c184f70:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/222d30c9bcc5828aaadd311d711321252c184f70 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/223e9e05359554a093c242bebdde0bf2bf5c2204:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/223e9e05359554a093c242bebdde0bf2bf5c2204 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2356d7db322eb6a9c2af8d21c4dcc099b6a23444:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2356d7db322eb6a9c2af8d21c4dcc099b6a23444 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/23bca61ad941866e79ec8a66de9e47a657ccdb25:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/23bca61ad941866e79ec8a66de9e47a657ccdb25 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/244e05502cde41a24f577547ea0dbf33a8ea37eb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/244e05502cde41a24f577547ea0dbf33a8ea37eb \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/247cd59b141f238194cdf40512c7d5b512556bca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/247cd59b141f238194cdf40512c7d5b512556bca \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/26393bec25a4ef7be2cbc90a6d8e5e9838ccbe53:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/26393bec25a4ef7be2cbc90a6d8e5e9838ccbe53 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2643b77ea4b3914955b4936303a72e89503a98c1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2643b77ea4b3914955b4936303a72e89503a98c1 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/27f320e36166d9286ab9714d8c344fc43754ad39:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/27f320e36166d9286ab9714d8c344fc43754ad39 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/28230c93e2fba221726e0151f5ce30e77eb0b9bf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/28230c93e2fba221726e0151f5ce30e77eb0b9bf \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2824a624b81c7fc098a4d7c8f4bf60f7f0d1ca49:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2824a624b81c7fc098a4d7c8f4bf60f7f0d1ca49 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/283dfdddac9fc68adbeca92281b06d7b5cbaa123:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/283dfdddac9fc68adbeca92281b06d7b5cbaa123 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2a4117322b3bbdda54bbee671339378e4d7b16de:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2a4117322b3bbdda54bbee671339378e4d7b16de \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2b6e88b4b92fb2b0e67e16f1e835e6a9caa02391:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2b6e88b4b92fb2b0e67e16f1e835e6a9caa02391 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2c1e777e888f8a5aa9359df0aaaa22bf03bd9b36:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2c1e777e888f8a5aa9359df0aaaa22bf03bd9b36 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2c58fb04aaa20d83dcca5df3e052320ee79eb9a8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2c58fb04aaa20d83dcca5df3e052320ee79eb9a8 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2cc2e4b1f08e37ca102e83848069bcb37229f509:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2cc2e4b1f08e37ca102e83848069bcb37229f509 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2d101c5d7879444d06a7bb17e1af5e190c6c032e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2d101c5d7879444d06a7bb17e1af5e190c6c032e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2d9e088b1a4f2c74475cf77e558817861b2ad146:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2d9e088b1a4f2c74475cf77e558817861b2ad146 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/2eab91c81fc66cfd4ab75e495437f65e38035973:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/2eab91c81fc66cfd4ab75e495437f65e38035973 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3197d7da993f304a5241cf760f2159db9c0f35a1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3197d7da993f304a5241cf760f2159db9c0f35a1 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/31a3ab1639930f1f172141f68b6ffbd0dfe6a084:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/31a3ab1639930f1f172141f68b6ffbd0dfe6a084 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/327bad3daaba77623c5020453ac89cbf6757b369:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/327bad3daaba77623c5020453ac89cbf6757b369 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3801a742291ec52e5b66ce8ad16539a30f4cbb09:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3801a742291ec52e5b66ce8ad16539a30f4cbb09 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/388db0cbf63c10eb11be81a5745e26ce9d6a52e6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/388db0cbf63c10eb11be81a5745e26ce9d6a52e6 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/38c0ea4cfb97ad87b1fd1ab21982ef2d65db8d8d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/38c0ea4cfb97ad87b1fd1ab21982ef2d65db8d8d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/39c60f2459021116df5447b7d4886c7f1e4cd6d2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/39c60f2459021116df5447b7d4886c7f1e4cd6d2 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/39ece3a196665a7f6a03a0091b0ea2d48efb406d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/39ece3a196665a7f6a03a0091b0ea2d48efb406d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3d48de0765b3dd4fceee895b1afc08c2accc8671:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3d48de0765b3dd4fceee895b1afc08c2accc8671 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3dee340acd2c4b687d918f9db65335653bdc5b3d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3dee340acd2c4b687d918f9db65335653bdc5b3d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3e1d62166d4fa7c1f0b7cb29b0f2ed9958a7d007:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3e1d62166d4fa7c1f0b7cb29b0f2ed9958a7d007 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3e4df77520438039a72f95ee0ec3033f5490cccb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3e4df77520438039a72f95ee0ec3033f5490cccb \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3f241380647475515f204e23f5fe2524a43cfcf2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3f241380647475515f204e23f5fe2524a43cfcf2 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/3fc090ff8f66459aac15416af3a5b8f1d707ed52:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/3fc090ff8f66459aac15416af3a5b8f1d707ed52 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/40ca78815b2203ca6787f15e66d75e9633c8fcca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/40ca78815b2203ca6787f15e66d75e9633c8fcca \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/42652d4a7f2087adff4f4a3a5c88ecb8d0172b5f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/42652d4a7f2087adff4f4a3a5c88ecb8d0172b5f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/44973aee01afcde7f40574d33ed7303887c9dd59:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/44973aee01afcde7f40574d33ed7303887c9dd59 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/450586d017981d0fa103e2a9e08a1023389cc230:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/450586d017981d0fa103e2a9e08a1023389cc230 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/455747ba1b42bbb48fa865f73cf3da78dedfe5c5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/455747ba1b42bbb48fa865f73cf3da78dedfe5c5 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/467fe3d9f120b4d1934ede2d383e6aec21fd9ad4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/467fe3d9f120b4d1934ede2d383e6aec21fd9ad4 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/46e828bf702ef724ffad3125e6ed55ad65b17cd4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/46e828bf702ef724ffad3125e6ed55ad65b17cd4 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4716f61bc0be89ac0e2d7d1f0a11a255efde5f74:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4716f61bc0be89ac0e2d7d1f0a11a255efde5f74 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/477c568d664dfbae371bc479340918db3fb37a46:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/477c568d664dfbae371bc479340918db3fb37a46 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4c275c619bee8a90875b3d90437a13db827ead9e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4c275c619bee8a90875b3d90437a13db827ead9e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4c3e5fa30b6f7210f0cc036765f740bb260fc2ad:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4c3e5fa30b6f7210f0cc036765f740bb260fc2ad \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4d438ff803ea90f864a7207594ac428d2ef46174:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4d438ff803ea90f864a7207594ac428d2ef46174 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/4fcf3530512231055079de50a050d203d109d205:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/4fcf3530512231055079de50a050d203d109d205 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/51a18d828383345249e133eef8f1af304d1b8f28:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/51a18d828383345249e133eef8f1af304d1b8f28 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/522163b72d2bc3034bb89586fd91a7c05ad462cf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/522163b72d2bc3034bb89586fd91a7c05ad462cf \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/52d106a6b5b8065b6f98cae477690cb1d4fbb2cf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/52d106a6b5b8065b6f98cae477690cb1d4fbb2cf \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/576029e5c59a627f3e7e16abf1716b2e0785eb2c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/576029e5c59a627f3e7e16abf1716b2e0785eb2c \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5cc0e380bd0f0de25c7a7c3bbf0f633a0a89b15a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5cc0e380bd0f0de25c7a7c3bbf0f633a0a89b15a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5cfd3076cad193a02e3474e72428d22a10d8a991:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5cfd3076cad193a02e3474e72428d22a10d8a991 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/5dc7c16b2e211d64827b567af61e1f5e529b3d18:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/5dc7c16b2e211d64827b567af61e1f5e529b3d18 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/60c61b63177dc2f6b236d94ab9d1af8ecb97c3a8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/60c61b63177dc2f6b236d94ab9d1af8ecb97c3a8 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6179158b0bb7c847e2c7630286c1d17160de15a5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6179158b0bb7c847e2c7630286c1d17160de15a5 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/61d5042455d5a1b33b2f5eb415d2c99abc847cca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/61d5042455d5a1b33b2f5eb415d2c99abc847cca \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/61e01a6a2c7ac62c24e2a8f73001732bc4b71c8a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/61e01a6a2c7ac62c24e2a8f73001732bc4b71c8a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6266637f9ae1255a18564849a1472ff0f5be5eed:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6266637f9ae1255a18564849a1472ff0f5be5eed \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/62844514290d6aaa8edf389e3ff985d2bc9e6214:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/62844514290d6aaa8edf389e3ff985d2bc9e6214 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/628d7d24e0d44ad2b8d4e5c43b7bd66e12bf1575:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/628d7d24e0d44ad2b8d4e5c43b7bd66e12bf1575 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/628f9e7521c9329cd687cb6c444c25829db049a2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/628f9e7521c9329cd687cb6c444c25829db049a2 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/62f21891a7c82a6d28a5c592f320ce52e9c901e7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/62f21891a7c82a6d28a5c592f320ce52e9c901e7 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/656d91fd6738e7492a504be463aead81f967eb1c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/656d91fd6738e7492a504be463aead81f967eb1c \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/67ac826c9bad6d748d0d35b354476d3fc3a86641:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/67ac826c9bad6d748d0d35b354476d3fc3a86641 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/69559872b7f28bac7e21506f8cd5722a07a89de8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/69559872b7f28bac7e21506f8cd5722a07a89de8 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6a517ccdeace2fb36947ef700cf37d2b354fa110:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6a517ccdeace2fb36947ef700cf37d2b354fa110 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6b57a4f6f69eaec2884ac8e6e41c23db54a0192d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6b57a4f6f69eaec2884ac8e6e41c23db54a0192d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6c8e9ae28d184bad14994556f14ed832ec9edabb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6c8e9ae28d184bad14994556f14ed832ec9edabb \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6ec81dc4ca53d8d8d7007b462590234ccaa605ef:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6ec81dc4ca53d8d8d7007b462590234ccaa605ef \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/6f93325df9d100b1207e799282fd5b51b7f939df:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/6f93325df9d100b1207e799282fd5b51b7f939df \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/708207f08ae36c509424c075f7de55743ef464fe:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/708207f08ae36c509424c075f7de55743ef464fe \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/70fd4ecd02becbd35f407dfe6796910ea6269761:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/70fd4ecd02becbd35f407dfe6796910ea6269761 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7333279fc483b154bf5b358a5819653d8966ca30:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7333279fc483b154bf5b358a5819653d8966ca30 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7600d975371a20439be93e438f62105fa3c67ca6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7600d975371a20439be93e438f62105fa3c67ca6 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7683bdf491d604dd2ee321d15eed35eae3605644:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7683bdf491d604dd2ee321d15eed35eae3605644 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/769ebb838de3cae409aeab62510f583844a454c1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/769ebb838de3cae409aeab62510f583844a454c1 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/76e8004f554ced8854877b846c83a4b72ee83842:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/76e8004f554ced8854877b846c83a4b72ee83842 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/77b78a9cee8fcac4ddc37c888bd836562a39cef3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/77b78a9cee8fcac4ddc37c888bd836562a39cef3 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7896890ecd32c4445e36557f8a2e3d63a2045e8d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7896890ecd32c4445e36557f8a2e3d63a2045e8d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/78c9cbb80fe8ec115002984c77587306ee8f2809:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/78c9cbb80fe8ec115002984c77587306ee8f2809 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/790bf52aaad8e78d027d882f7ed32ba1eb1cb2dd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/790bf52aaad8e78d027d882f7ed32ba1eb1cb2dd \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7a1b6a3adf1cc4f4d525c4147114460ff61ca1a8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7a1b6a3adf1cc4f4d525c4147114460ff61ca1a8 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7ae3edae3a224e09716edff144a1d1d07e8efb92:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7ae3edae3a224e09716edff144a1d1d07e8efb92 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7d02e691637b444eab3580275e492cb3c0d17cdf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7d02e691637b444eab3580275e492cb3c0d17cdf \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7da36f70853605e4d7b03712fea1ae5f2979e04d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7da36f70853605e4d7b03712fea1ae5f2979e04d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7eae006172b61bb95c6bcf3906ae799681951301:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7eae006172b61bb95c6bcf3906ae799681951301 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7ee36f4d2dbee6f5b6e55d74165dd562a101484a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7ee36f4d2dbee6f5b6e55d74165dd562a101484a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7ee8717ac0e2ecdf2dc07955c5d7fe4fa8f72a9f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7ee8717ac0e2ecdf2dc07955c5d7fe4fa8f72a9f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/7f4efaa387bb1d5c566481c91443e85625b1c495:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/7f4efaa387bb1d5c566481c91443e85625b1c495 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/80799d92b6b90cdd108e4cb8bf6f0eba2fd7702f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/80799d92b6b90cdd108e4cb8bf6f0eba2fd7702f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/822bc2aa697b011c516ad97bd29093a1c77b28a2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/822bc2aa697b011c516ad97bd29093a1c77b28a2 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/833b6e6b4082f2873a5d301470183df6a4141823:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/833b6e6b4082f2873a5d301470183df6a4141823 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/83a6408640164f6eed804f4fac30caf1ea82f694:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/83a6408640164f6eed804f4fac30caf1ea82f694 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/84a86037308c28470e5fd59d98fad2c74e45f33e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/84a86037308c28470e5fd59d98fad2c74e45f33e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/84dc4cd9c6273367959642f2859092d368b1423f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/84dc4cd9c6273367959642f2859092d368b1423f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/858059e4c75b23afae819df9b5e8b688a8a9333b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/858059e4c75b23afae819df9b5e8b688a8a9333b \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/86672631cbbca39bbf29c6abc63f29aa08b72e4a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/86672631cbbca39bbf29c6abc63f29aa08b72e4a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/869fdcd389bcaed2ba46c52178cf83e20c6b80ff:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/869fdcd389bcaed2ba46c52178cf83e20c6b80ff \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/86ed49270ca601f6e6b2be1f1b5d18e01fbe38ff:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/86ed49270ca601f6e6b2be1f1b5d18e01fbe38ff \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/86ed978571776aabbd4f18a2840f17584bb43eec:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/86ed978571776aabbd4f18a2840f17584bb43eec \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/89bc36356f0e5e2582130f6bf4de7b8d1f65080a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/89bc36356f0e5e2582130f6bf4de7b8d1f65080a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8a9c47f169fa528fa9da4168626ec44c442c16a4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8a9c47f169fa528fa9da4168626ec44c442c16a4 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8bdbc844117159c0582a97488fcb68b814882181:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8bdbc844117159c0582a97488fcb68b814882181 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8cb68e550051f2ef08c6fb62c7780b1510e86c81:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8cb68e550051f2ef08c6fb62c7780b1510e86c81 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8cb925d05a249279280e76ff4230b791094e0b96:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8cb925d05a249279280e76ff4230b791094e0b96 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8e385d31bd36ea3953ffa9121ad7e8191c09a0af:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8e385d31bd36ea3953ffa9121ad7e8191c09a0af \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8e473331ebcfc037eeed7459bb16264874b0d13a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8e473331ebcfc037eeed7459bb16264874b0d13a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/8fb791005a7caa684678a1b7fb1de51403a72ab0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/8fb791005a7caa684678a1b7fb1de51403a72ab0 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/916f3881c17afc52b0d01bfa1c1eef7bfe19ef06:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/916f3881c17afc52b0d01bfa1c1eef7bfe19ef06 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/91e84a9579a3b157674a037a1e01e2db3d4e4ab5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/91e84a9579a3b157674a037a1e01e2db3d4e4ab5 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/95ba761548bd03480daf9d7fad522e9d6117d082:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/95ba761548bd03480daf9d7fad522e9d6117d082 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9624a8c836ad01ed5a54aed56129790777b3d24c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9624a8c836ad01ed5a54aed56129790777b3d24c \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/96884ce12f0654ece89ab641e6233cada9865b31:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/96884ce12f0654ece89ab641e6233cada9865b31 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/970e3cce5b9483fc25e37347e2b4795cd90fd6d4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/970e3cce5b9483fc25e37347e2b4795cd90fd6d4 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/97893373fcb3864130ee2e3fabfb019c1d8c6c66:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/97893373fcb3864130ee2e3fabfb019c1d8c6c66 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/985db1789754ed3623ff99e68fa912596f884157:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/985db1789754ed3623ff99e68fa912596f884157 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9a15e465582dd61810a044be8191be62117d1a4c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9a15e465582dd61810a044be8191be62117d1a4c \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9baf234ae0e5a4ac15711dcd3b5bf673ba4a1f00:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9baf234ae0e5a4ac15711dcd3b5bf673ba4a1f00 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9cfa896b6ed8f81f1726a8ad883e52e51cefbc1f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9cfa896b6ed8f81f1726a8ad883e52e51cefbc1f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9e1d4e9147f391e0fe1e2099cb81fd2ef550c4c3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9e1d4e9147f391e0fe1e2099cb81fd2ef550c4c3 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9e4ec0edf30bf269b799e646d6957db4120d25a9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9e4ec0edf30bf269b799e646d6957db4120d25a9 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9ef4929699c70c6d9465de4efd1103675a6e685f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9ef4929699c70c6d9465de4efd1103675a6e685f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9f3ededc4de88973467e2dcb7f96b287bdefeadf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9f3ededc4de88973467e2dcb7f96b287bdefeadf \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/9f6836bac1eb898b97c7ef4a8b66aa66a30b7779:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9f6836bac1eb898b97c7ef4a8b66aa66a30b7779 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a08f84d280705fe7dababbe5b2ab74c1f05e0692:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a08f84d280705fe7dababbe5b2ab74c1f05e0692 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a0dd21acb6603368a1bc8829cce8b00c946b3d3a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a0dd21acb6603368a1bc8829cce8b00c946b3d3a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a47f99cc4bd95166edad80a0690bda012306ad0f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a47f99cc4bd95166edad80a0690bda012306ad0f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a5f42baab09f980d2954721d6ad7f7cb7887e842:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a5f42baab09f980d2954721d6ad7f7cb7887e842 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a6784e26a97fc328aea3aab4ca577ae48cd6f3e1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a6784e26a97fc328aea3aab4ca577ae48cd6f3e1 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/a96cf1712f002cdfd7cf699b11e4e3eb59e2f6da:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a96cf1712f002cdfd7cf699b11e4e3eb59e2f6da \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/aa4bb18198ca624154851b9859a60910d4797970:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/aa4bb18198ca624154851b9859a60910d4797970 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/aa5ce9cee4b6092035bb5058ea6893f1606afd44:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/aa5ce9cee4b6092035bb5058ea6893f1606afd44 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/aaae99c5888122c31cdf16d48bb61a1f72b47838:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/aaae99c5888122c31cdf16d48bb61a1f72b47838 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/abbe16d84f999baf353a8880ef655042a32926fc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/abbe16d84f999baf353a8880ef655042a32926fc \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/abc2c7b7a80b31a1b9cf34556e769b45a63406eb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/abc2c7b7a80b31a1b9cf34556e769b45a63406eb \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/abe95bb4db692e554e1e87bc13a4cbcc100259ab:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/abe95bb4db692e554e1e87bc13a4cbcc100259ab \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/acfac9675ea16b3522beb40542e15f7c97e61692:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/acfac9675ea16b3522beb40542e15f7c97e61692 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ae004f97f463b7f2d78d18c1d4459e2b0e3e2dde:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ae004f97f463b7f2d78d18c1d4459e2b0e3e2dde \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b154a835e86189c12ef12549a575343b4d2d2650:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b154a835e86189c12ef12549a575343b4d2d2650 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b1f8ab39c23e0d18614f98a7f6603468fbaa7fe6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b1f8ab39c23e0d18614f98a7f6603468fbaa7fe6 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b3d039e94cfacacff62868914a0fd8fc00970195:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b3d039e94cfacacff62868914a0fd8fc00970195 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b3f67a5330aade90b88c2f168c73697c499a9157:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b3f67a5330aade90b88c2f168c73697c499a9157 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b454db5ba248aaf1101a78c9d93345eeff23bb26:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b454db5ba248aaf1101a78c9d93345eeff23bb26 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b520932c50b3ea366929a5ab413e9aa10087210a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b520932c50b3ea366929a5ab413e9aa10087210a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b5f35db90fd506f00557f8841120cdc0a247fa66:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b5f35db90fd506f00557f8841120cdc0a247fa66 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b76e517a0d44dc94f9f9a9e25aa6b895a8858a40:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b76e517a0d44dc94f9f9a9e25aa6b895a8858a40 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b8178e538047c332e4c5619af3ba9776565d173a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b8178e538047c332e4c5619af3ba9776565d173a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b966386973553a25480ce36e48f64ab90bb32623:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b966386973553a25480ce36e48f64ab90bb32623 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/b98ccfd8f23e7e9e09ef0dd3fd0f971010b6c71d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/b98ccfd8f23e7e9e09ef0dd3fd0f971010b6c71d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/bac3328876bbfb5a9308313725f71b59d2894f2d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/bac3328876bbfb5a9308313725f71b59d2894f2d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/bb529bacd24526f8fd410175a6d84cec6de4e114:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/bb529bacd24526f8fd410175a6d84cec6de4e114 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/bb5e35adde7e505a69222cd135d8ae3a427bea9f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/bb5e35adde7e505a69222cd135d8ae3a427bea9f \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/bbc4c15cd835a926e068cdcc26393ca074a3b425:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/bbc4c15cd835a926e068cdcc26393ca074a3b425 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/bf14374b23066b7d32bcd2c6fbb09797eb2862db:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/bf14374b23066b7d32bcd2c6fbb09797eb2862db \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/bf24eb264dab5e4f07144d1009f4b617ae079b67:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/bf24eb264dab5e4f07144d1009f4b617ae079b67 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c259a32b2634ab282019694465f76fa77c1463bf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c259a32b2634ab282019694465f76fa77c1463bf \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c2c9ba31f89bbe9bda58edae17aa6dc9e9424e60:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c2c9ba31f89bbe9bda58edae17aa6dc9e9424e60 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c3306206341d6b6c1e4ee316b7c0c864196564ba:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c3306206341d6b6c1e4ee316b7c0c864196564ba \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c3622a9f29c2f7a3d4d4059ab16761933407a139:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c3622a9f29c2f7a3d4d4059ab16761933407a139 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c363c7a934f317100e8c4c81f1b36065654884d6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c363c7a934f317100e8c4c81f1b36065654884d6 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c3b66faf922dca60e0d8eb3691e7f9541ed0b111:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c3b66faf922dca60e0d8eb3691e7f9541ed0b111 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c4b998174445561c9d20d24bc0c76b0361f700b9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c4b998174445561c9d20d24bc0c76b0361f700b9 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/c5c8fee40ccd66b4f169fafe7547585f1b511fd0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c5c8fee40ccd66b4f169fafe7547585f1b511fd0 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ca5e0f77c517be57966d1e494bd9041be7a7fcb9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ca5e0f77c517be57966d1e494bd9041be7a7fcb9 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/cb48bbbcbd70cf7ecc234ff93bdcdb275ea34b79:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cb48bbbcbd70cf7ecc234ff93bdcdb275ea34b79 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/cb63c26955f524f1e7aa6b714502d82c4bdc7930:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cb63c26955f524f1e7aa6b714502d82c4bdc7930 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/cb7aec97dc94c54ec8dfd842fa6dd1d74fd5171b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cb7aec97dc94c54ec8dfd842fa6dd1d74fd5171b \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/cd461e87b45f7ddd51ab316bcea7df2602e1d522:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cd461e87b45f7ddd51ab316bcea7df2602e1d522 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/cd4d3fb0a04fae65bcf4c9dd732cf8c069c4a40a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cd4d3fb0a04fae65bcf4c9dd732cf8c069c4a40a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/cd8ffcef8dca4b89d4cc24779fc8c4260c7a33dc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cd8ffcef8dca4b89d4cc24779fc8c4260c7a33dc \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/cd91ea526c1d50d51c3aab2e31c52b2af64a6e04:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cd91ea526c1d50d51c3aab2e31c52b2af64a6e04 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/cd9895f8676916ccfa1bf713d46bc4431d95eb21:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cd9895f8676916ccfa1bf713d46bc4431d95eb21 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/cf4ae4ecff53d0dde6227d1b1e6c6fdb1e73c740:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cf4ae4ecff53d0dde6227d1b1e6c6fdb1e73c740 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/cfa019647c819cf90a3ddaa6ca8bc33d244fde9a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cfa019647c819cf90a3ddaa6ca8bc33d244fde9a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/cfa20145aac226f49cb82cb9bb13bfa922067c52:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cfa20145aac226f49cb82cb9bb13bfa922067c52 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d1242af047cbbfb3a8d792ac21f3814546ebdcf7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d1242af047cbbfb3a8d792ac21f3814546ebdcf7 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d1cee5c357e325e3fc48593b397acfe7ff021d57:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d1cee5c357e325e3fc48593b397acfe7ff021d57 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d217ee3d688c37fab18d4e5f8dedb0ea5ab648b0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d217ee3d688c37fab18d4e5f8dedb0ea5ab648b0 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d300f7087a6b0bd30c3b87aa0ad24fea8541b5ce:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d300f7087a6b0bd30c3b87aa0ad24fea8541b5ce \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d36514226404a9178743f955dc647267b55bdee8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d36514226404a9178743f955dc647267b55bdee8 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d4020c610b652646282848a6b48c4b99a0f120c9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d4020c610b652646282848a6b48c4b99a0f120c9 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d6155294b3a10974643bfc8e3a28d51b6a382b87:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d6155294b3a10974643bfc8e3a28d51b6a382b87 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d71a6f9198280af8e4d65882301db082a5f8a85d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d71a6f9198280af8e4d65882301db082a5f8a85d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d86dd88e46280f8c4d788aa4961d33af35d384ec:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d86dd88e46280f8c4d788aa4961d33af35d384ec \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d87d425b0aa700e56d9cf250c3317e8dddb7b12a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d87d425b0aa700e56d9cf250c3317e8dddb7b12a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d880767459e3831179c4767bff30e4e5fd0e336b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d880767459e3831179c4767bff30e4e5fd0e336b \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d8d8c7d1a60d8d3670b7066ecfffe5e5cf531fa1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d8d8c7d1a60d8d3670b7066ecfffe5e5cf531fa1 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d967d3349b41a50e80884dfcae4055291c04bd7b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d967d3349b41a50e80884dfcae4055291c04bd7b \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/d9b3fc7dae8362c7efedd99a98c8d3db48e0ad34:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d9b3fc7dae8362c7efedd99a98c8d3db48e0ad34 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/dab6901d03d3d86861226c8aaf80d5733bc8777b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/dab6901d03d3d86861226c8aaf80d5733bc8777b \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/db82de7fd326eb4817e718bfe15a4cc07e2eb882:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/db82de7fd326eb4817e718bfe15a4cc07e2eb882 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/dc251d35f3e0f7469dece848a3f8110a4327b8ad:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/dc251d35f3e0f7469dece848a3f8110a4327b8ad \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/dc884759cb77a7d4fcc2e8e3ba8eb10d14b5a3d9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/dc884759cb77a7d4fcc2e8e3ba8eb10d14b5a3d9 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/de2f3c5d8c0fa38e3b1c00a6f3924203348ad7ca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/de2f3c5d8c0fa38e3b1c00a6f3924203348ad7ca \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/de6d1e940880e1760bc1c863fef89bc0b665c58d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/de6d1e940880e1760bc1c863fef89bc0b665c58d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e2b10cf1ae4470e824647ac048ea277489b75c54:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e2b10cf1ae4470e824647ac048ea277489b75c54 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e56fbee9f8c6b503cf48a14b2ec7d994c6e45166:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e56fbee9f8c6b503cf48a14b2ec7d994c6e45166 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e5a7ed9c8c8fe3286a9aea0ecca9e55d6f9766b0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e5a7ed9c8c8fe3286a9aea0ecca9e55d6f9766b0 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e79bbd9835f26055acf304524cd774332871de47:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e79bbd9835f26055acf304524cd774332871de47 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e90a5f38897b47a019324da40aa2f9fad4696696:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e90a5f38897b47a019324da40aa2f9fad4696696 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/e9d2cf63d0b4660c843a2842070fd20e62f7a9c3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/e9d2cf63d0b4660c843a2842070fd20e62f7a9c3 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ea28f76647954caf25ddc94a517320bcf89b400d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ea28f76647954caf25ddc94a517320bcf89b400d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ed11fea80d81a9f31336bb5e9d94bb355222964e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ed11fea80d81a9f31336bb5e9d94bb355222964e \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/eea98b9f082f1f41544876acf32cb04439d34e8c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/eea98b9f082f1f41544876acf32cb04439d34e8c \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/ef3d8e9ccf46d2bb5972aeea8d419ab963345f1d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ef3d8e9ccf46d2bb5972aeea8d419ab963345f1d \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f07a8bec244a3d2b96ac37e02d785a2d5e69a700:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f07a8bec244a3d2b96ac37e02d785a2d5e69a700 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f0b1396d76117fca4ae17bacad4d9f89b36e26b2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f0b1396d76117fca4ae17bacad4d9f89b36e26b2 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f107b631a894dce6946c65d684216316f4ff420a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f107b631a894dce6946c65d684216316f4ff420a \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f174536c1232627c01a9fc58ac52b350badeeb2c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f174536c1232627c01a9fc58ac52b350badeeb2c \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f41579e481acffa8bb3b1edd51d6e854beb4b758:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f41579e481acffa8bb3b1edd51d6e854beb4b758 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f540abd6ff5939e060924b048c2d597cfaa20905:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f540abd6ff5939e060924b048c2d597cfaa20905 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f5c24f3c8074de3ba1b263b97349df4f0ecded12:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f5c24f3c8074de3ba1b263b97349df4f0ecded12 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f65cfb2c473dadad8f8637970ad687314d04e04c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f65cfb2c473dadad8f8637970ad687314d04e04c \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f67c8cfb9e250233d3efebad6c6f602efb775848:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f67c8cfb9e250233d3efebad6c6f602efb775848 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f699ec8671c368a37362cd6f2f1b3912577c95df:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f699ec8671c368a37362cd6f2f1b3912577c95df \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f7067dc8b6b7dc2304ce44298065bfbd4fbd20e6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f7067dc8b6b7dc2304ce44298065bfbd4fbd20e6 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f7593dc6a5299d68d6471aa124f75f6c07198fb9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f7593dc6a5299d68d6471aa124f75f6c07198fb9 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f7ffa93375dd24a9c573330f01ed868460663b8c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f7ffa93375dd24a9c573330f01ed868460663b8c \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f8699ee7fd14bfc4626b35cc0e3d4aa673c5b2bd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f8699ee7fd14bfc4626b35cc0e3d4aa673c5b2bd \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f879331bfc9d8b77a156de079dc95b93fd6881ac:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f879331bfc9d8b77a156de079dc95b93fd6881ac \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f898ef3b604ca6673d02b1767920c96df491d5ca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f898ef3b604ca6673d02b1767920c96df491d5ca \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/f998fc72f04cd5a19342313f518c2b423e1ef5fe:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f998fc72f04cd5a19342313f518c2b423e1ef5fe \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fa7f707a3e7a593a21aa6d129dcabd1a74c5be32:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fa7f707a3e7a593a21aa6d129dcabd1a74c5be32 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fb7d2d3ba592ba8d6326ca94c12381849f25c20b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fb7d2d3ba592ba8d6326ca94c12381849f25c20b \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fbe43db6d74974d19035ab811028f51975a62036:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fbe43db6d74974d19035ab811028f51975a62036 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fceedd74b157b953ac16cf827e745be1a0603d67:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fceedd74b157b953ac16cf827e745be1a0603d67 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fcf009d788e9083ee23b52412444de1f733664ed:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fcf009d788e9083ee23b52412444de1f733664ed \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fd2c985214e15eb36e53ecae074fc7d0cb49be50:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fd2c985214e15eb36e53ecae074fc7d0cb49be50 \
+    vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/manifests/fe61a10f269ad6390687b7cb393410aa4ab99c63:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fe61a10f269ad6390687b7cb393410aa4ab99c63 \
     vendor/google_devices/husky/proprietary/vendor/firmware/carrierconfig/release-label:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/release-label \
     vendor/google_devices/husky/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.bin \
     vendor/google_devices/husky/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.wmfw \
@@ -3159,6 +3257,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/mali_csffw-r53p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r53p0.bin \
     vendor/google_devices/husky/proprietary/vendor/firmware/mali_csffw-r54p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p0.bin \
     vendor/google_devices/husky/proprietary/vendor/firmware/mali_csffw-r54p1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p1.bin \
+    vendor/google_devices/husky/proprietary/vendor/firmware/mali_csffw-r54p2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p2.bin \
     vendor/google_devices/husky/proprietary/vendor/firmware/mfc_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mfc_fw.bin \
     vendor/google_devices/husky/proprietary/vendor/firmware/MICRONMT128GBCAV2U310103.img:$(TARGET_COPY_OUT_VENDOR)/firmware/MICRONMT128GBCAV2U310103.img \
     vendor/google_devices/husky/proprietary/vendor/firmware/MICRONMT128GBCAV2U310104.img:$(TARGET_COPY_OUT_VENDOR)/firmware/MICRONMT128GBCAV2U310104.img \
@@ -3262,6 +3361,8 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/husky/proprietary/vendor/firmware/uecapconfig/VZW.binarypb:$(TARGET_COPY_OUT_VENDOR)/firmware/uecapconfig/VZW.binarypb \
     vendor/google_devices/husky/proprietary/vendor/firmware/uecapconfig/WILDCARD.binarypb:$(TARGET_COPY_OUT_VENDOR)/firmware/uecapconfig/WILDCARD.binarypb \
     vendor/google_devices/husky/proprietary/vendor/firmware/uecapconfig/WINDTRE.binarypb:$(TARGET_COPY_OUT_VENDOR)/firmware/uecapconfig/WINDTRE.binarypb \
+    vendor/google_devices/husky/proprietary/vendor/lib64/libaconfig_storage_read_api_cc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaconfig_storage_read_api_cc.so \
+    vendor/google_devices/husky/proprietary/vendor/lib64/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so \
     vendor/google_devices/husky/proprietary/vendor/etc/audio_platform_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_configuration.xml \
     vendor/google_devices/husky/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     vendor/google_devices/husky/proprietary/vendor/etc/database/DbEcc_202.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_202.xml \

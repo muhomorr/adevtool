@@ -1,5 +1,5 @@
 canonical_name: "swisscommvno_ch"
-version: 73000000005
+version: 75000000005
 apns {
   apn {
     name: "Swisscom Services"

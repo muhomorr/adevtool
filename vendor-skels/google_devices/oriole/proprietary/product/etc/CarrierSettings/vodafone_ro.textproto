@@ -1,5 +1,5 @@
 canonical_name: "vodafone_ro"
-version: 73000000018
+version: 75000000019
 apns {
   apn {
     name: "Internet"
@@ -184,10 +184,14 @@ configs {
     bool_value: false
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1747202388
+  seconds: 1765368059
 }

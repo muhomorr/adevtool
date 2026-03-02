@@ -1,5 +1,5 @@
 canonical_name: "lebara_fr"
-version: 73000000002
+version: 75000000002
 apns {
   apn {
     name: "Lebara"

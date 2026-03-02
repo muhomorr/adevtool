@@ -1,5 +1,5 @@
 canonical_name: "tmobile_at"
-version: 73000000647
+version: 75000000649
 apns {
   apn {
     name: "T-Mobile IMS"
@@ -226,7 +226,21 @@ configs {
     int_value: 64800
   }
   config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
+  }
+  config {
     key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "qns.support_wfc_recovery_bool"
     bool_value: false
   }
   config {
@@ -244,5 +258,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276427
+  seconds: 1765368059
 }

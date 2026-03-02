@@ -1,5 +1,5 @@
 canonical_name: "povo5gsa_jp"
-version: 73000000005
+version: 75000000007
 apns {
   apn {
     name: "povo"
@@ -442,6 +442,10 @@ configs {
     }
   }
   config {
+    key: "rilext.pcscf_reselection_support"
+    int_value: 1
+  }
+  config {
     key: "satellite_ignore_data_roaming_setting_bool"
     bool_value: true
   }
@@ -480,5 +484,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1753863643
+  seconds: 1761090349
 }

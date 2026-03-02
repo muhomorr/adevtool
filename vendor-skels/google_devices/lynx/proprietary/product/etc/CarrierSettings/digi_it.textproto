@@ -1,5 +1,5 @@
 canonical_name: "digi_it"
-version: 73000000001
+version: 75000000001
 apns {
   apn {
     name: "Digi"

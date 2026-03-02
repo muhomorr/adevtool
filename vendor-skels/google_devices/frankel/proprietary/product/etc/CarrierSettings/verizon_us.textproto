@@ -1,5 +1,5 @@
 canonical_name: "verizon_us"
-version: 73000000017
+version: 75000000019
 apns {
   apn {
     name: "Verizon"
@@ -280,6 +280,10 @@ configs {
   config {
     key: "carrier_roaming_ntn_emergency_call_to_satellite_handover_type_int"
     int_value: 1
+  }
+  config {
+    key: "carrier_roaming_satellite_t911_to_esos_handover_supported_bool"
+    bool_value: true
   }
   config {
     key: "carrier_setup_app_string"
@@ -670,6 +674,10 @@ configs {
               item: 7
             }
           }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
+          }
         }
       }
       config {
@@ -678,6 +686,10 @@ configs {
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
             int_value: 0
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
           }
         }
       }
@@ -692,6 +704,10 @@ configs {
           }
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
             int_value: 1
           }
         }
@@ -710,6 +726,10 @@ configs {
               item: 2
             }
           }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 1
+          }
         }
       }
       config {
@@ -723,6 +743,10 @@ configs {
           }
           config {
             key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
             int_value: 1
           }
         }
@@ -1473,5 +1497,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1752617339
+  seconds: 1762942431
 }

@@ -1,0 +1,15 @@
+canonical_name: "com4_no"
+version: 75000000001
+apns {
+  apn {
+    name: "Com4"
+    value: "com4"
+    type: DEFAULT
+    type: SUPL
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1762783697
+}

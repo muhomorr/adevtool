@@ -1,5 +1,5 @@
 canonical_name: "tracfonetmo_us"
-version: 73000000012
+version: 75000000013
 apns {
   apn {
     name: "Tracfone"
@@ -31,14 +31,6 @@ apns {
   }
 }
 configs {
-  config {
-    key: "5g_icon_configuration_string"
-    text_value: "connected_mmwave:5G,connected:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
-  }
-  config {
-    key: "5g_icon_display_grace_period_string"
-    text_value: "connected_mmwave,legacy,30;connected,legacy,30;not_restricted_rrc_idle,legacy,30;not_restricted_rrc_con,legacy,30"
-  }
   config {
     key: "bsf.bsf_server_fqdn_string"
     text_value: "bsf.msg.pc.t-mobile.com"
@@ -368,5 +360,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722472184
+  seconds: 1764155449
 }

@@ -1,5 +1,5 @@
 canonical_name: "robi_bd"
-version: 73000000001
+version: 75000000002
 apns {
   apn {
     name: "Internet"
@@ -24,7 +24,11 @@ configs {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
+  config {
+    key: "enhanced_4g_lte_on_by_default_bool"
+    bool_value: false
+  }
 }
 last_updated {
-  seconds: 1732242306
+  seconds: 1763549938
 }

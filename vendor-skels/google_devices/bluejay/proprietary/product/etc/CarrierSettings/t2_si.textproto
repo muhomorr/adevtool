@@ -1,5 +1,5 @@
 canonical_name: "t2_si"
-version: 73000000001
+version: 75000000002
 apns {
   apn {
     name: "T2"
@@ -15,7 +15,7 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -23,10 +23,31 @@ apns {
 }
 configs {
   config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 5
+      item: 14
+    }
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
 }
 last_updated {
-  seconds: 1754475050
+  seconds: 1761862496
 }

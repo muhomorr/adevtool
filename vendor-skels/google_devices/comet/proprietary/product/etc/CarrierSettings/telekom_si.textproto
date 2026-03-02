@@ -1,5 +1,5 @@
 canonical_name: "telekom_si"
-version: 73000000013
+version: 75000000015
 apns {
   apn {
     name: "Mobilni Internet"
@@ -53,12 +53,20 @@ configs {
     bool_value: true
   }
   config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
+  config {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
   config {
     key: "carrier_wfc_ims_available_bool"
     bool_value: true
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "+38641101000"
   }
   config {
     key: "display_hd_plus_icon_bool"
@@ -204,5 +212,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1747816827
+  seconds: 1762942401
 }

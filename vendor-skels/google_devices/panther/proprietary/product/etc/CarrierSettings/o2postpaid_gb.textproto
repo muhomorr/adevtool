@@ -1,5 +1,5 @@
 canonical_name: "o2postpaid_gb"
-version: 73000000022
+version: 75000000022
 apns {
   apn {
     name: "O2 Pay Monthly"

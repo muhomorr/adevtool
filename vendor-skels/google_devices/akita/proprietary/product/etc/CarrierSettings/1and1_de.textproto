@@ -1,5 +1,5 @@
 canonical_name: "1and1_de"
-version: 73000000022
+version: 75000000024
 apns {
   apn {
     name: "1&1 Internet"
@@ -367,5 +367,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1749144169
+  seconds: 1762942384
 }

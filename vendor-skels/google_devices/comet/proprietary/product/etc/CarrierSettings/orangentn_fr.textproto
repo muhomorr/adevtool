@@ -1,5 +1,5 @@
 canonical_name: "orangentn_fr"
-version: 73000000001
+version: 75000000002
 apns {
   apn {
     name: "Orange Fr IMS"
@@ -82,6 +82,10 @@ configs {
   config {
     key: "carrier_roaming_ntn_emergency_call_to_satellite_handover_type_int"
     int_value: 1
+  }
+  config {
+    key: "carrier_roaming_satellite_t911_to_esos_handover_supported_bool"
+    bool_value: true
   }
   config {
     key: "carrier_supported_satellite_services_per_provider_bundle"
@@ -591,5 +595,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1759858368
+  seconds: 1762783742
 }

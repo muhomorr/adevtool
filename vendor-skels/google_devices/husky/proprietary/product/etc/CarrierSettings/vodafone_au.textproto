@@ -1,5 +1,5 @@
 canonical_name: "vodafone_au"
-version: 73000000011
+version: 75000000013
 apns {
   apn {
     name: "Vodafone AU"
@@ -259,5 +259,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709116024
+  seconds: 1762942367
 }

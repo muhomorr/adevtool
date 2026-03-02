@@ -1,5 +1,5 @@
 canonical_name: "vodafone_de"
-version: 73000000017
+version: 75000000018
 apns {
   apn {
     name: "Vodafone DE"
@@ -291,6 +291,10 @@ configs {
     int_value: 2
   }
   config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.xcap_transport_type_int"
     int_value: 0
   }
@@ -328,5 +332,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1755076335
+  seconds: 1765368086
 }
