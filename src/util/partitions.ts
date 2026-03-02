@@ -3,6 +3,7 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import { PartPath } from '../blobs/file-list'
 import { UNPACKED_APEXES_DIR_NAME } from '../frontend/source'
+import { isFile } from './fs'
 
 export enum Partition {
   Root = 'root',
@@ -32,6 +33,7 @@ export interface OverlayConfig {
   basePath: string
   dirOverlays: { [part: string]: string[] }
   fileOverlays: { [part: string]: Set<string> }
+  fileOverlaysByDir: { [part: string]: { [dir: string]: Set<string> } }
 }
 
 export class PathResolver {
@@ -86,6 +88,16 @@ export class PathResolver {
 
   async *listRecursively(part: Partition, relPath: string | null): AsyncGenerator<PartPath> {
     let dirPath = this.resolve(part, relPath)
+    let overlaidFiles = new Set<string>()
+    if (this.overlay !== undefined) {
+      let dirs = this.overlay.fileOverlaysByDir[part]
+      if (dirs !== undefined) {
+        let files = dirs[relPath !== null ? relPath : '']
+        if (files !== undefined) {
+          overlaidFiles = new Set(files)
+        }
+      }
+    }
     for (let entry of await fs.readdir(dirPath, { withFileTypes: true })) {
       let entryRelPath = relPath === null ? entry.name : path.join(relPath, entry.name)
       if (entry.isDirectory()) {
@@ -94,7 +106,15 @@ export class PathResolver {
         }
         yield* this.listRecursively(part, entryRelPath)
       } else {
+        overlaidFiles.delete(entry.name)
         yield new PartPath(part, entryRelPath)
+      }
+    }
+    for (let fileName of overlaidFiles) {
+      let fileRelPath = relPath !== null ? path.join(relPath, fileName) : fileName
+      let filePath = this.resolve(part, fileRelPath)
+      if (await isFile(filePath)) {
+        yield new PartPath(part, fileRelPath)
       }
     }
   }

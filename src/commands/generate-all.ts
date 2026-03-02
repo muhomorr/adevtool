@@ -213,10 +213,31 @@ export default class GenerateFull extends Command {
         let backportBuildId = config.device.backport_build_id
         if (backportBuildId !== undefined) {
           let backportDeviceImages = mapGet(images, getDeviceBuildId(config, backportBuildId))
+          let fileOverlays: { [part: string]: Set<string> } = Object.fromEntries(Object.entries(config.backport_files).map(([k, v]) => [k, new Set(v)]))
+          let fileOverlaysByDir: { [part: string]: { [dir: string]: Set<string> } } = {}
+          for (let [part, filePaths] of Object.entries(fileOverlays)) {
+            let filesByDir: { [dir: string]: Set<string> } = {}
+            for (let filePath of filePaths) {
+              let dirName = path.dirname(filePath)
+              let fileNames = filesByDir[dirName]
+              if (fileNames === undefined) {
+                fileNames = new Set<string>()
+                filesByDir[dirName] = fileNames
+              }
+              let fileName = path.basename(filePath)
+              if (fileNames.has(fileName)) {
+                throw new Error('duplicate backport file: ' + fileName)
+              }
+              fileNames.add(fileName)
+            }
+            fileOverlaysByDir[part] = filesByDir
+          }
+
           pathResolver.overlay = {
             basePath: backportDeviceImages.unpackedFactoryImageDir,
             dirOverlays: config.backport_dirs,
-            fileOverlays: Object.fromEntries(Object.entries(config.backport_files).map(([k, v]) => [k, new Set(v)])),
+            fileOverlays,
+            fileOverlaysByDir,
           }
         }
         // Prepare output directories
