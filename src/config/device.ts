@@ -33,6 +33,7 @@ export interface DeviceConfig {
     build_id: string
     is_beta_build_id: boolean
     backport_build_id: string | undefined
+    is_beta_backport_build_id: boolean
     backport_base_firmware?: boolean
     prev_build_id: string
     has_cellular: boolean
@@ -192,6 +193,7 @@ const DEFAULT_CONFIG_BASE = {
   type: ConfigType.Device,
   device: {
     is_beta_build_id: false,
+    is_beta_backport_build_id: false,
   },
   platform: {
     namespaces: [],
