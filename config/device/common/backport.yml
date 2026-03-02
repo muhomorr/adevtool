@@ -2,11 +2,8 @@ backport_dirs:
   product:
     - etc/CarrierSettings
   vendor:
-    - firmware/brcm
-    - firmware/carrierconfig
-    - firmware/dauntless
-    - firmware/uecapconfig
-    - firmware/google
+    - firmware
+
 backport_files:
   product:
     - etc/default-permissions/default-permissions.xml # for permissions allowlist
@@ -32,43 +29,23 @@ backport_files:
   vendor:
     - apex/com.google.pixel.euicc.update.apex
     - bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl
+    - bin/hw/android.hardware.thermal-service.pixel
     - bin/hw/rild_exynos
     - bin/hw/vendor.google.edgetpu_vendor_service@1.0-service
     - bin/hw/vendor.google.radioext@1.0-service
-    - firmware/1540.app
-    - firmware/1540a.app
-    - firmware/amss20.bin
-    - firmware/aoc.bin
-    - firmware/bcmdhd.cal_4383_a3
-    - firmware/cs40l20.bin
-    - firmware/Data.msc
-    - firmware/fw_bcmdhd.bin
-    - firmware/fw_bcmdhd.bin_4383_a3
-    - firmware/fw_bcmdhd.bin_4390_b1
-    - firmware/fw_bcmdhd.bin_4398_d0
-    - firmware/fw_bcmdhd.map
-    - firmware/fw_bcmdhd.map_4383_a3
-    - firmware/fw_bcmdhd.map_4390_b1
-    - firmware/fw_bcmdhd.map_4398_d0
-    - firmware/g6.app
-    - firmware/g7.app
-    - firmware/g7a.app
-    - firmware/gxp_callisto_fw_core0
-    - firmware/gxp_callisto_fw_core1
-    - firmware/gxp_callisto_fw_core2
-    - firmware/gxp_fw_core0
-    - firmware/gxp_fw_core1
-    - firmware/gxp_fw_core2
-    - firmware/gxp_fw_core3
-    - firmware/kepler.bin
-    - firmware/mali_csffw-r54p0.bin
-    - firmware/ntn_modem/modem.bin
-    - firmware/ntn_modem/version.cfg
-    - firmware/qm35_fw_pkg.bin
-    - firmware/qm35_fw_pkg_prod.bin
-    - firmware/st54l_conf.bin
+    - bin/pvrhwperfd
+    - etc/powervr.ini
+    - lib64/aconfig_gpu_flags_c_lib.so
     - lib64/com.google.input-V2-ndk.so
     - lib64/com.google.pixel.modem.logmasklibrary-V1-ndk.so
+    - lib64/egl/libEGL_powervr.so
+    - lib64/egl/libGLES_mali.so
+    - lib64/egl/libGLESv1_CM_powervr.so
+    - lib64/egl/libGLESv2_powervr.so
+    - lib64/hw/vulkan.powervr.so
+    - lib64/libaconfig_storage_read_api_cc.so
+    - lib64/libc++.so
+    - lib64/libcustomer_gralloc_ddk_api.so
     - lib64/libdarwinn_hal.so
     - lib64/libedgetpu_client.google.so
     - lib64/libedgetpu_tachyon.google.so
@@ -76,7 +53,12 @@ backport_files:
     - lib64/libedgetpu_util.so
     - lib64/libgooglerilmemmonitor.so
     - lib64/libgril_oem-google.so
+    - lib64/libIMGegl.so
     - lib64/libmodem_svc_proto_legacy_soong.so
+    - lib64/libprotobuf-cpp-full-6.33.1.so
+    - lib64/libprotobuf-cpp-lite-6.33.1.so
+    - lib64/libPVROCL.so
+    - lib64/libPVRScopeServices.so
     - lib64/libril-aidl.so
     - lib64/libril_gfeature.so
     - lib64/libril_sitril.so
@@ -86,6 +68,9 @@ backport_files:
     - lib64/libsitril-client.so
     - lib64/libsitril-gps.so
     - lib64/libsitril-ims.so
+    - lib64/libsrv_um.so
+    - lib64/libufwriter.so
+    - lib64/libusc.so
     - lib64/modem_android_property_manager_impl.so
     - lib64/modem_clock_manager_impl.so
     - lib64/modem_log_dumper.so
