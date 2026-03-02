@@ -153,7 +153,16 @@ export async function enumerateFiles(
   let etcExclusions = new Set(['selinux', 'vintf', ...SYSCONFIG_DIR_NAMES])
 
   for (let [partition, allPartFiles] of allPartFilesMap.entries()) {
-    let excludedPartFiles = new Set<string>(excludedFiles !== null ? excludedFiles[partition] ?? [] : [])
+    let excludedPartFiles = new Set<string>(excludedFiles !== null ? (excludedFiles[partition] ?? []) : [])
+
+    if (pathResolver.overlay !== undefined) {
+      let fileOverlays = pathResolver.overlay.fileOverlays[partition]
+      if (fileOverlays !== undefined) {
+        for (let relPath of fileOverlays) {
+          excludedPartFiles.delete(relPath)
+        }
+      }
+    }
 
     if (partition === Partition.Recovery) {
       // prebuilt librecovery_ui_ext includes additional proprietary code
@@ -477,6 +486,14 @@ export async function generateBuildFiles(
         conflictCounters.set(name, conflictNum)
         resolvedName += `__${conflictNum}`
       }
+
+      if (config.device.backport_build_id !== undefined) {
+        if (resolvedName === 'libc++' || resolvedName === 'libaconfig_storage_read_api_cc') {
+          copyFiles.push(blobToFileCopy(entry, dirs.proprietary))
+          continue
+        }
+      }
+
 
       let module = blobToSoongModule(
         config,
