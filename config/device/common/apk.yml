@@ -218,7 +218,7 @@ package_inclusions:
       - isolate_from_gmscore_and_finsky
 
   com.google.android.euicc:
-    max_known_version: 230031
+    max_known_version: 231071
     include_uses_permissions:
       - android.permission.ACCESS_NETWORK_STATE
       - android.permission.CAMERA
@@ -281,7 +281,7 @@ package_inclusions:
       - android.permission.READ_PRIVILEGED_PHONE_STATE
 
   com.google.euiccpixel:
-    max_known_version: 20175
+    max_known_version: 20185
     include_uses_permissions:
       - com.google.android.c2dm.permission.RECEIVE
       - com.google.android.providers.gsf.permission.READ_GSERVICES

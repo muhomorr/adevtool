@@ -892,6 +892,7 @@ filters:
       - vendor/firmware/mali_csffw-r53p0.bin
       - vendor/firmware/mali_csffw-r54p0.bin
       - vendor/firmware/mali_csffw-r54p1.bin
+      - vendor/firmware/mali_csffw-r54p2.bin
       - vendor/firmware/mfc_fw.bin
       - vendor/firmware/MICRONMT128GAXAT2U310104_MICRONMT256GAXAT4U310104.img
       - vendor/firmware/MICRONMT128GBCAV2U310103.img
@@ -948,6 +949,7 @@ filters:
       - vendor/framework/com.google.android.camera.experimental2024.jar
       - vendor/lib/com.google.hardware.pixel.display-V17-ndk.so
       - vendor/lib/vendor.google.whitechapel.audio.extension-V7-ndk.so
+      - vendor/lib64/aconfig_gpu_flags_c_lib.so
       - vendor/lib64/android.hardware.authsecret-impl.nos.so
       - vendor/lib64/android.hardware.oemlock-impl.nos.so
       - vendor/lib64/android.hardware.power.stats-impl.gs-common.so
@@ -1042,6 +1044,7 @@ filters:
       - vendor/lib64/lib_jpg_encoder.so
       - vendor/lib64/lib_reader.so
       - vendor/lib64/lib_vendor_gsc_atoms.so
+      - vendor/lib64/libaconfig_storage_read_api_cc.so
       - vendor/lib64/libacryl.so
       - vendor/lib64/libacryl_hdr_plugin.so
       - vendor/lib64/libadaptedinfo.so
@@ -1058,6 +1061,7 @@ filters:
       - vendor/lib64/libbtnv.so
       - vendor/lib64/libbw_av1dec.so
       - vendor/lib64/libbw_av1enc.so
+      - vendor/lib64/libc++.so
       - vendor/lib64/libc2filterplugin.so
       - vendor/lib64/libcast_auth.so
       - vendor/lib64/libcast_auth_aidl-cpp.so
@@ -1158,6 +1162,8 @@ filters:
       - vendor/lib64/libpixelatoms_defs.so
       - vendor/lib64/libpixelhealth.so
       - vendor/lib64/libpixelstats.so
+      - vendor/lib64/libprotobuf-cpp-full-6.33.1.so
+      - vendor/lib64/libprotobuf-cpp-lite-6.33.1.so
       - vendor/lib64/libqfp-service.so
       - vendor/lib64/libqfpsuez.so
       - vendor/lib64/libqfstrusty_intf.so
