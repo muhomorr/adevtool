@@ -13,6 +13,7 @@ import { log } from '../util/log'
 import { parseLines } from '../util/parse'
 import { EXT_SYS_PARTITIONS, Partition, PathResolver, REGULAR_SYS_PARTITIONS } from '../util/partitions'
 import { spawnAsync, spawnAsyncStdin } from '../util/process'
+import { isStallion } from '../util/stallion'
 import { getRootChildren, processXml, ProcessXmlCmd, stringifyXml } from '../util/xml'
 import { ApkProcessorResult } from './apk-processor'
 
@@ -174,6 +175,9 @@ export async function processSepolicy(
         }
         let customAttrs = customTypeAttrs[type]
         let typeStr = type
+        if (isStallion(deviceConfig) && typeStr === 'remote_prov_prop') {
+          continue
+        }
         if (typeSuffix !== null && type.endsWith(typeSuffix)) {
           typeStr = type.slice(0, -typeSuffix.length)
         }

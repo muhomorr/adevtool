@@ -12,6 +12,7 @@ import { isDirectory, isFile, mkdirAndWriteFile } from '../util/fs'
 import { log } from '../util/log'
 import { Partition, PathResolver, REGULAR_SYS_PARTITIONS } from '../util/partitions'
 import { getRootElementChildrenAsStrings, getXmlProp, getXmlText, processXml, ProcessXmlCmd } from '../util/xml'
+import { isStallion } from '../util/stallion'
 
 export interface VintfPaths {
   compatMatrices: string[]
@@ -43,6 +44,22 @@ export async function processVintf(
     let compatMatrixJob = (async () => {
       if (partition === Partition.System) {
         return
+      }
+      if (partition === Partition.SystemExt && isStallion(deviceConfig)) {
+        let aocxFile = `<compatibility-matrix version="9.0" type="framework">
+    <hal format="aidl">
+        <name>aocx</name>
+        <version>1-2</version>
+        <interface>
+            <name>IAocx</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>
+        `
+        let fileName = 'aocx_framework_compatibility_matrix_system_ext'
+        await mkdirAndWriteFile(dstDirPath, fileName, aocxFile)
+        vintfPaths.compatMatrices.push(path.join(dstDirPath, fileName))
       }
       if (!(await isDirectory(vintfDirPath))) {
         return

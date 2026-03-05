@@ -5,9 +5,11 @@ import { serializeBlueprint } from '../build/soong'
 import { DeviceConfig } from '../config/device'
 import { Filters } from '../config/filters'
 import { getHostBinPath } from '../config/paths'
+import { objGet } from '../util/data'
 import { mkdirAndWriteFile } from '../util/fs'
 import { log } from '../util/log'
 import { spawnAsyncStdin } from '../util/process'
+import { isStallion } from '../util/stallion'
 import { VendorDirectories } from './build'
 
 export async function processOverlays(config: DeviceConfig, dirs: VendorDirectories, stockSrc: string) {
@@ -22,6 +24,13 @@ export async function processOverlays(config: DeviceConfig, dirs: VendorDirector
     unpackedOsImageDir: stockSrc,
     syntheticOverlays: Object.entries(config.synthetic_overlays).map(([moduleName, spec]) => {
       spec.moduleName = moduleName
+      if (isStallion(config) && moduleName === 'SettingsIntelligenceGoogleSyntheticOverlay') {
+        spec.resourcesToInclude['string'] = (objGet(spec.resourcesToInclude, 'string') as string[]).filter(
+          e =>
+            e !== 'charging_optimization_entry_summary_charge_limit' &&
+            e !== 'charging_optimization_footer_message_charge_limit',
+        )
+      }
       return spec
     }),
     pkgExclusionFilters: filtersToJson(config.filters.overlay_files),

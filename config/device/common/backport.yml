@@ -14,7 +14,6 @@ backport_files:
     - framework/google-ril.jar
     - framework/oemrilhook.jar
     - lib64/com.google.edgetpu_app_service-V3-ndk.so
-    - lib64/com.google.edgetpu_app_service-V4-ndk.so
     - lib64/com.google.edgetpu_vendor_service-V2-ndk.so
     - lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
     - lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so

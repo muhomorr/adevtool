@@ -1,6 +1,7 @@
 type: device-list
 
 devices:
+  - stallion.yml
   - tegu.yml
   - comet.yml
   - komodo.yml

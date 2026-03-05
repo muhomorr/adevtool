@@ -561,12 +561,14 @@ package_exclusions:
   - com.google.android.adservices
   - com.google.android.adservices.api
   - com.google.android.apps.accessibility.voiceaccess
+  - com.google.android.apps.bard # Gemini
   - com.google.android.apps.betterbug
   - com.google.android.apps.betterbug.partners
   - com.google.android.apps.camera.tools.propsetter
   - com.google.android.apps.carrier.carrierwifi
   - com.google.android.apps.carrier.log
   - com.google.android.apps.cbrsnetworkmonitor
+  - com.google.android.apps.credentialmanager # Google Password Manager
   - com.google.android.apps.customization.pixel
   - com.google.android.apps.diagnosticstool
   - com.google.android.apps.dreamliner
@@ -589,6 +591,8 @@ package_exclusions:
   - com.google.android.apps.pixel.ensemble
   - com.google.android.apps.pixel.familyspace
   - com.google.android.apps.pixel.nowplaying
+  - com.google.android.apps.pixel.psi # PixelSense / Device Intelligence
+  - com.google.android.apps.pixel.subzero
   - com.google.android.apps.retaildemo.preload
   - com.google.android.apps.scone # Adaptive Connectivity Services, see https://support.google.com/product-documentation/answer/12321563
   - com.google.android.apps.setupwizard.searchselector

@@ -1,5 +1,6 @@
 sysprop_exclusions:
   - apexd.config.compressed_apex = true
+  - com.google.android.setupwizard.complianceDate = 2025-03-01
   - dalvik.vm.allow_profile_code = true # TODO look further into this
   - dalvik.vm.isa.arm.features = default
   - dalvik.vm.isa.arm.variant = cortex-a53
@@ -36,6 +37,7 @@ sysprop_exclusions:
   - pm.dexopt.install-fast = skip
   - pm.dexopt.post-boot = verify
   - repair_mode.init_completed.
+  - ro.appsearch.feature.enable_isolated_storage = true # TODO
   - ro.arm64.memtag.bootctl_supported = 1
   - ro.atrace.core.services = com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent
   - ro.bionic.2nd_arch = arm
@@ -67,8 +69,11 @@ sysprop_exclusions:
   - ro.com.google.ime.kb_pad_port_r
   - ro.com.google.ime.system_lm_dir = /product/usr/share/ime/google/d3_lms
   - ro.com.google.ime.theme_id = 5
+  - ro.config.alarm_alert = Fresh_morning.ogg
   - ro.config.alarm_alert = Fresh_start.ogg
   - ro.config.notification_sound = Eureka.ogg
+  - ro.config.notification_sound = Kernel.ogg
+  - ro.config.ringtone = The_next_adventure.ogg
   - ro.config.ringtone = Your_new_adventure.ogg
   - ro.error.receiver.system.apps = com.google.android.gms
   - ro.hotword.detection_service_required = false
@@ -89,6 +94,7 @@ sysprop_exclusions:
   - ro.product.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gsa,init_boot,ldfw,modem,pbl,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot
   - ro.product.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gsa,init_boot,ldfw,pbl,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot
   - ro.product.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gsa,ldfw,modem,pbl,product,system,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm
+  - ro.product.ab_ota_partitions = abl,bl31,boot,cap,cpm,dbc,dbl,dram_init_0,dram_init_1,dram_init_2,dram_init_3,dram_init_4,dram_init_5,dram_init_6,dram_init_7,dram_init_8,dram_init_9,dram_phy,dtbo,gc,gdmc,gsa_bl1,gsa_fw,init_boot,modem,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot
   - ro.product.build.16k_page.enabled = true
   - ro.product.build.date
   - ro.product.build.date.utc
@@ -128,6 +134,7 @@ sysprop_exclusions:
   - ro.vendor.build.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gsa,init_boot,ldfw,modem,pbl,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot
   - ro.vendor.build.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gsa,init_boot,ldfw,pbl,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot
   - ro.vendor.build.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gsa,ldfw,modem,pbl,product,system,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm
+  - ro.vendor.build.ab_ota_partitions = abl,bl31,boot,cap,cpm,dbc,dbl,dram_init_0,dram_init_1,dram_init_2,dram_init_3,dram_init_4,dram_init_5,dram_init_6,dram_init_7,dram_init_8,dram_init_9,dram_phy,dtbo,gc,gdmc,gsa_bl1,gsa_fw,init_boot,modem,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot
   - ro.vendor.build.date
   - ro.vendor.build.date.utc
   - ro.vendor.build.fingerprint
@@ -145,21 +152,30 @@ sysprop_exclusions:
   - setupwizard.feature.baseline_setupwizard_enabled = true
   - setupwizard.feature.day_night_mode_enabled = true
   - setupwizard.feature.default_locale_enhancement_enabled = true
+  - setupwizard.feature.device_info_icon_enabled = true
   - setupwizard.feature.enable_force_two_pane = true
   - setupwizard.feature.enable_gil =
+  - setupwizard.feature.enable_gil_logging = true
   - setupwizard.feature.enable_minors_setup_flow = true
+  - setupwizard.feature.enable_minors_setup_flow = true
+  - setupwizard.feature.enable_parental_notice_activity = true
   - setupwizard.feature.enable_parental_notice_activity = true
   - setupwizard.feature.enable_parental_setup = true
   - setupwizard.feature.enable_quick_start_flow = true
   - setupwizard.feature.enable_restore_anytime = true
   - setupwizard.feature.enable_tween_setup_flow = true
   - setupwizard.feature.enable_wifi_tracker = true
+  - setupwizard.feature.enhanced_setup_design_metrics = true
+  - setupwizard.feature.is_suw_onboarding_contract_enabled = true
+  - setupwizard.feature.joined_up_loading = true
   - setupwizard.feature.lifecycle_refactoring = true
+  - setupwizard.feature.locale_agnostic_enabled = true
   - setupwizard.feature.locale_agnostic_enabled = true
   - setupwizard.feature.notification_refactoring = true
   - setupwizard.feature.portal_notification = true
   - setupwizard.feature.provisioning_profile_mode
   - setupwizard.feature.provisioning_profile_mode = true
+  - setupwizard.feature.quick_start_betocq_tests_passed = true
   - setupwizard.feature.show_digital_warranty = true
   - setupwizard.feature.show_pai_screen_in_main_flow.carrier1839 = false
   - setupwizard.feature.show_pixel_tos = true

@@ -121,6 +121,8 @@ filters:
       - android:array/config_trustedAccessibilityServices = com.google.android.apps.accessibility.voiceaccess/com.google.android.apps.accessibility.voiceaccess.JustSpeakService;com.google.android.accessibility.switchaccess/com.android.switchaccess.SwitchAccessService;com.android.systemui.accessibility.accessibilitymenu/com.android.systemui.accessibility.accessibilitymenu.AccessibilityMenuService;com.google.android.marvin.talkback/com.google.android.accessibility.selecttospeak.SelectToSpeakService
       - android:array/config_verizon_satellite_enabled_tagids|*
       - android:array/default_wallpaper_component_per_device_color|*
+      - android:array/theming_defaults = BLK|SPRITZ|#404945;WHT|TONAL_SPOT|#D9E3DC;BUE|EXPRESSIVE|#81A0F4;DBU|VIBRANT|#1D428A;RED|VIBRANT|#FF5661;*|TONAL_SPOT|home_wallpaper
+      - android:array/theming_defaults = WHT|SPRITZ|#CFC6B4;BLK|SPRITZ|#404945;GRY|SPRITZ|#9A9EAD;GRN|TONAL_SPOT|#B6CF90;PPL|EXPRESSIVE|#BAC3FF;YEL|EXPRESSIVE|#DDEB78;BUE|VIBRANT|#6F9BFF;RED|VIBRANT|#FF6F7F;*|TONAL_SPOT|home_wallpaper
       - android:array/vendor_cross_profile_apps = com.google.android.googlequicksearchbox;com.google.android.inputmethod.latin;com.google.android.projection.gearhead;com.google.android.inputmethod.latin.dev;com.google.android.inputmethod.latin.canary
       - android:array/vendor_disallowed_apps_managed_device|*
       - android:array/vendor_disallowed_apps_managed_profile|*
@@ -145,6 +147,7 @@ filters:
       - android:bool/config_gnssLocationOverlayUnstableFallback = true # TODO investigate
       - android:bool/config_honor_data_retry_timer_for_emergency_network = true
       - android:bool/config_pinnerCameraApp = true
+      - android:bool/config_pinnerHomeApp = true
       - android:bool/config_profcollectReportUploaderEnabled = true
       - android:bool/config_repairModeSupported = true
       - android:bool/config_safe_media_volume_enabled|mcc310 = true
@@ -360,6 +363,7 @@ filters:
       - android:string/config_systemSupervision = com.google.android.gms.supervision
       - android:string/config_systemTextIntelligence = com.google.android.as
       - android:string/config_systemUiIntelligence = com.google.android.as
+      - android:string/config_systemVendorIntelligence = com.google.android.apps.pixel.psi
       - android:string/config_systemVisualIntelligence = com.google.android.as
       - android:string/config_systemWellbeing = com.google.android.apps.wellbeing
       - android:string/config_wallpaperCropperPackage = com.google.android.apps.wallpaper
@@ -466,6 +470,7 @@ filters:
       - com.android.networkstack.tethering/TetheringConfig:string/config_mobile_hotspot_provision_response|mcc313-mnc790 = com.google.android.carrierentitlement.SILENT_ENTITLEMENT_CHECK_RESULT
       - com.android.networkstack.tethering/TetheringConfig:string/config_mobile_hotspot_provision_response|mcc440-mnc20 = com.google.android.carrierentitlement.SILENT_ENTITLEMENT_CHECK_RESULT
       - com.android.networkstack/NetworkStackConfig:bool/config_dhcp_client_hostname = true
+      - com.android.nfc/NfcCustomization:array/tag_intent_blocked_app_list = com.google.android.tag
       - com.android.nfc/NfcCustomization:bool/enable_nfc_url_open_dialog|mcc204-mnc4 = true
       - com.android.nfc/NfcCustomization:bool/enable_nfc_url_open_dialog|mcc310-mnc4 = true
       - com.android.nfc/NfcCustomization:bool/enable_nfc_url_open_dialog|mcc311-mnc480 = true

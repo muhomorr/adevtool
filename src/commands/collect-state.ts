@@ -165,7 +165,7 @@ export default class CollectState extends Command {
 
           if (anyUnknown) {
             statusLine.set(config.device.name + ': waiting for replacement_module_exclusions resolution')
-            await pause(`replacement_modules.yml is neeed for ${config.device.name}`)
+            await pause(`replacement_modules.yml update is needed for ${config.device.name}`)
             continue
           }
 

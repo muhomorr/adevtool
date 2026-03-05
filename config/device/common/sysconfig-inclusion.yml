@@ -20,7 +20,9 @@ sysconfig_inclusions:
   - <feature name="android.software.vulkan.deqp.level" version="132711169"/>
   - <feature name="com.google.android.apps.dialer.SUPPORTED"/>
   - <feature name="com.google.android.feature.AER_OPTIMIZED"/>
+  - <feature name="com.google.android.feature.CONTEXTUAL_SEARCH_LIVE_TRANSLATE"/>
   - <feature name="com.google.android.feature.FIR.PROXIMITY"/>
+  - <feature name="com.google.android.feature.GEMINI_EXPERIENCE"/>
   - <feature name="com.google.android.feature.GOOGLE_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_2017_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_2018_EXPERIENCE"/>
@@ -36,11 +38,12 @@ sysconfig_inclusions:
   - <feature name="com.google.android.feature.PIXEL_2023_MIDYEAR_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_2024_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_2024_MIDYEAR_EXPERIENCE"/>
+  - <feature name="com.google.android.feature.PIXEL_2025_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_2025_MIDYEAR_EXPERIENCE"/>
+  - <feature name="com.google.android.feature.PIXEL_2026_MIDYEAR_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_TABLET_2023_EXPERIENCE"/>
   - <feature name="com.google.android.feature.XR_PROJECTED"/>
-  - <feature name="com.google.android.feature.CONTEXTUAL_SEARCH_LIVE_TRANSLATE"/>
   - <feature name="com.google.pixel.camera.concurrent_foldable_dual_front"/>
   - <feature name="vendor.android.hardware.camera.preview-dis.back"/>
   - <feature name="vendor.android.hardware.camera.preview-dis.front"/>
@@ -51,9 +54,11 @@ sysconfig_inclusions:
   - <library name="com.google.android.camera.experimental2023" file="/vendor/framework/com.google.android.camera.experimental2023.jar"/>
   - <library name="com.google.android.camera.experimental2024" file="/vendor/framework/com.google.android.camera.experimental2024.jar"/>
   - <library name="com.google.android.camera.experimental2024_system" file="/system_ext/framework/com.google.android.camera.experimental2024_system.jar"/>
+  - <library name="com.google.android.camera.experimental2025" file="/vendor/framework/com.google.android.camera.experimental2025.jar"/>
   - <library name="com.google.android.camera.extensions" file="/system_ext/framework/com.google.android.camera.extensions.jar"/>
   - <library name="com.google.android.camerax.extensions" file="/system_ext/framework/com.google.android.camerax.extensions.jar"/>
   - <library name="com.google.android.dialer.support" file="/product/framework/com.google.android.dialer.support.jar"/>
+  - <library name="com.google.android.modem.pms.lib" file="/system_ext/framework/com.google.android.modem.pms.lib.jar"/>
   - <library name="com.google.input.gia.giaservicemanager" file="/system_ext/framework/com.google.input.gia.giaservicemanager.jar"/>
   - <library name="com.google.pixel.camera.connectivity" file="/system_ext/framework/com.google.pixel.camera.connectivity.jar"/>
   - <library name="com.google.pixel.camera.connectivity.impl" file="/system_ext/framework/com.google.pixel.camera.connectivity.jar"/>
@@ -80,3 +85,10 @@ sysconfig_inclusions:
   - <unavailable-feature name="android.hardware.type.watch"/>
   - <unavailable-feature name="android.software.leanback"/>
   - <unavailable-feature name="android.software.leanback_only"/>
+  - |-
+    <privapp-permissions package="com.google.android.modem.pms">
+      <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+      <permission name="android.permission.READ_PHONE_STATE"/>
+      <permission name="android.permission.ACCESS_WIFI_STATE"/>
+      <permission name="android.permission.CHANGE_WIFI_STATE"/>
+    </privapp-permissions>

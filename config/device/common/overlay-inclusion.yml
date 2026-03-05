@@ -28,8 +28,11 @@ filters:
       - "com.android.settings:string/help_url_privacy_dashboard =\ "
       - android:array/config_ambientBrighteningThresholds|*
       - android:array/config_ambientDarkeningThresholds|*
+      - android:array/config_ambientThresholdLevels = 1;2;3;4;5;6;7;8;9;10;11;13;15;17;19;20;22;25;27;30;32;35;37;40;50;60;70;80;90;100;200;300;400;500;600;700;800;900;1000;2000;3000;4000
       - android:array/config_ambientThresholdLevels = 2;3;4;5;6;7;8;9;10;20;30;40;50;60;70;80;90;100;200;300;400;500;1000;2000;3000;4000
       - android:array/config_ambientThresholdsOfPeakRefreshRate|*
+      - android:array/config_angleAllowList = com.dreamgames.royalmatch;com.dts.freefiremax;com.dxx.firenow;com.gramgames.mergedragons;com.ludo.king;com.mojang.minecraftpe;com.my.defense;com.nintendo.zaka;com.os.airforce;com.playrix.fishdomdd.gplay;io.teslatech.callbreak;jp.konami.prospia;net.peakgames.toonblast
+      - android:array/config_angleAllowList = com.dreamgames.royalmatch;com.dts.freefiremax;com.dxx.firenow;com.gramgames.mergedragons;com.ludo.king;com.mojang.minecraftpe;com.my.defense;com.nintendo.zaka;com.os.airforce;com.playrix.fishdomdd.gplay;io.teslatech.callbreak;jp.konami.prospia;net.peakgames.toonblast;com.yottagames.gameofmafia;com.Sunborn.SnqxExilium.Glo;com.haoplay.game.and.exilium;com.rockstargames.gtasa;com.h73.jhqyna;com.sega.CrazyTaxiplayhaven;en.haoplay.and.rm
       - android:array/config_angleAllowList = com.dreamgames.royalmatch;com.dts.freefiremax;com.dxx.firenow;com.gramgames.mergedragons;com.ludo.king;com.mojang.minecraftpe;com.my.defense;com.nintendo.zaka;com.os.airforce;com.playrix.fishdomdd.gplay;io.teslatech.callbreak;jp.konami.prospia;net.peakgames.toonblast;com.yottagames.gameofmafia;com.Sunborn.SnqxExilium.Glo;com.haoplay.game.and.exilium;com.rockstargames.gtasa;com.h73.jhqyna;com.sega.CrazyTaxiplayhaven;en.haoplay.and.rm;com.netease.g108na
       - android:array/config_autoBrightnessDisplayValuesNitsIdle|*
       - android:array/config_autoBrightnessDisplayValuesNits|*
@@ -37,6 +40,7 @@ filters:
       - android:array/config_autoBrightnessLevels|*
       - android:array/config_availableColorModes = 0;3
       - android:array/config_availableColorModes|*
+      - android:array/config_availableEMValueOptions = 0;1
       - android:array/config_brightnessThresholdsOfPeakRefreshRate|*
       - android:array/config_cameraPrivacyLightAlsLuxThresholds|*
       - android:array/config_cameraPrivacyLightColors|*
@@ -70,6 +74,7 @@ filters:
       - android:array/config_displayWhiteBalanceStrongDisplayColorTemperatures|*
       - android:array/config_dockExtconStateMapping = 4,USB=1;3
       - android:array/config_dozeTapSensorPostureMapping = ;com.google.sensor.single_touch;com.google.sensor.touch_gesture;com.google.sensor.touch_gesture
+      - android:array/config_externalVibrationIntensityScaleFactors = 0.35;0.55;1.0
       - android:array/config_foldedDeviceStates = 0
       - android:array/config_forceInvertPackageBlocklist = com.amazon.mShop.android.shopping;com.google.android.apps.maps;fr.vinted;org.telegram.messenger
       - android:array/config_forceSlowJpegModeList = com.facebook.orca;com.skype.raider;com.tencent.mm
@@ -141,6 +146,7 @@ filters:
       - android:bool/config_buttonTextAllCaps = false
       - android:bool/config_canInternalDisplayHostDesktops = true
       - android:bool/config_cbrs_supported = true
+      - android:bool/config_cv_available = true
       - android:bool/config_decoupleStatusBarAndDisplayCutoutFromScreenSize = true
       - android:bool/config_deskDockEnablesAccelerometer = false
       - android:bool/config_device_volte_available = true
@@ -154,6 +160,7 @@ filters:
       - android:bool/config_dozeAlwaysOnEnabled = false
       - android:bool/config_dozePickupGestureEnabled = false
       - android:bool/config_dozePulsePickup = true
+      - android:bool/config_dozeSupportsAodWallpaper = true
       - android:bool/config_dreamsActivatedOnDockByDefault = false
       - android:bool/config_dreamsActivatedOnDockByDefault = true
       - android:bool/config_dreamsActivatedOnPosturedByDefault = false
@@ -174,6 +181,8 @@ filters:
       - android:bool/config_enableTimeoutToDockUserWhenDocked = true
       - android:bool/config_enableUdcSysfsUsbStateUpdate = true
       - android:bool/config_enterDesktopByDefaultOnFreeformDisplay = true
+      - android:bool/config_enterDesktopByDefaultOnFreeformDisplay = true
+      - android:bool/config_evenDimmerEnabled = true
       - android:bool/config_faceAuthDismissesKeyguard = false
       - android:bool/config_faceAuthDismissesKeyguard = true
       - android:bool/config_faceAuthDismissesKeyguard|*
@@ -234,7 +243,9 @@ filters:
       - android:bool/config_ringtoneVibrationSettingsSupported = true
       - android:bool/config_safetyProtectionEnabled = true
       - android:bool/config_screen_off_udfps_default_on = false
+      - android:bool/config_screen_off_udfps_default_on = true
       - android:bool/config_screen_off_udfps_enabled = false
+      - android:bool/config_screen_off_udfps_enabled = true
       - android:bool/config_screen_off_udfps_enabled = true
       - android:bool/config_setColorTransformAccelerated = true
       - android:bool/config_settingsHelpLinksEnabled = true
@@ -268,6 +279,7 @@ filters:
       - android:bool/config_use_tiered_cached_adj = false
       - android:bool/config_useCurrentRotationOnRotationLockChange|*
       - android:bool/config_useDevInputEventForAudioJack = true
+      - android:bool/config_useRoundIcon = true
       - android:bool/config_variableRefreshRateTypingSupported = false
       - android:bool/config_voice_capable = false
       - android:bool/config_volume_down_to_enter_silent = true
@@ -325,6 +337,7 @@ filters:
       - android:dimen/status_bar_height_default|*
       - android:dimen/status_bar_height_landscape|*
       - android:dimen/status_bar_height_portrait|*
+      - android:dimen/taskbar_stashed_size = 36.0dp
       - android:drawable/ic_doc_apk|*
       - android:drawable/ic_doc_audio|*
       - android:drawable/ic_doc_certificate|*
@@ -373,17 +386,23 @@ filters:
       - android:integer/config_deviceStateConcurrentRearDisplay|*
       - android:integer/config_deviceStateRearDisplay|*
       - android:integer/config_displayWhiteBalanceColorTemperatureDefault|*
+      - android:integer/config_displayWhiteBalanceColorTemperatureFilterHorizon = 1000
       - android:integer/config_displayWhiteBalanceColorTemperatureMax|*
       - android:integer/config_displayWhiteBalanceColorTemperatureMin|*
+      - android:integer/config_displayWhiteBalanceColorTemperatureSensorRate = 100
       - android:integer/config_displayWhiteBalanceDecreaseDebounce|*
       - android:integer/config_displayWhiteBalanceDisplayNominalWhiteCct|*
       - android:integer/config_displayWhiteBalanceIncreaseDebounce|*
+      - android:integer/config_displayWhiteBalanceTransitionTimeDecrease = 8000
+      - android:integer/config_displayWhiteBalanceTransitionTimeIncrease = 3000
       - android:integer/config_displayWhiteBalanceTransitionTime|*
       - android:integer/config_dreamsBatteryLevelDrainCutoff = 2
       - android:integer/config_esim_bootstrap_data_limit_bytes = 235929600
       - android:integer/config_externalDisplayPeakHeight = 1080
+      - android:integer/config_externalDisplayPeakHeight = 2160
       - android:integer/config_externalDisplayPeakRefreshRate = 61
       - android:integer/config_externalDisplayPeakWidth = 1920
+      - android:integer/config_externalDisplayPeakWidth = 3840
       - android:integer/config_fingerprintMaxTemplatesPerUser = 4
       - android:integer/config_fixedRefreshRateInHighZone = 60
       - android:integer/config_globalActionsKeyTimeout|*
@@ -408,6 +427,7 @@ filters:
       - android:integer/config_networkPolicyDefaultWarning|mcc311-mnc490 = 51200
       - android:integer/config_networkPolicyDefaultWarning|mcc311-mnc870 = 51200
       - android:integer/config_networkPolicyDefaultWarning|mcc312-mnc530 = 51200
+      - android:integer/config_nightDisplayColorTemperatureDefault = 3339
       - android:integer/config_nightDisplayColorTemperatureDefault = 4000
       - android:integer/config_num_physical_slots = 2
       - android:integer/config_num_physical_slots|*
@@ -537,7 +557,9 @@ filters:
       - android:xml/power_profile|*
       - com.android.cellbroadcastreceiver/CellBroadcastCustomization:bool/show_notification_if_connected_to_companion_devices = true
       - com.android.companiondevicemanager:string/device_type|*
+      - com.android.connectivity.resources/ServiceConnectivityResourcesConfig:bool/config_thread_country_code_enabled = false
       - com.android.connectivity.resources/ServiceConnectivityResourcesConfig:bool/config_thread_default_enabled = false
+      - com.android.connectivity.resources/ServiceConnectivityResourcesConfig:bool/config_thread_default_enabled = true
       - com.android.connectivity.resources/ServiceConnectivityResourcesConfig:integer/config_activelyPreferBadWifi|*
       - com.android.connectivity.resources/ServiceConnectivityResourcesConfig:integer/config_networkAvoidBadWifi|*
       - com.android.connectivity.resources/ServiceConnectivityResourcesConfig:integer/config_networkWakeupPacketMark = 0x80000000
@@ -648,6 +670,8 @@ filters:
       - com.android.pixeldisplayservice:array/config_AmbientSensorArray|*
       - com.android.pixeldisplayservice:array/config_compensation_brightness_conditions|*
       - com.android.pixeldisplayservice:array/config_compensation_temperature_conditions_0|*
+      - com.android.pixeldisplayservice:array/config_compensation_temperature_conditions_1 = 4.0;6.0
+      - com.android.pixeldisplayservice:array/config_compensation_temperature_conditions_2 = 4.0
       - com.android.pixeldisplayservice:array/config_compensation_temperature_conditions_list|*
       - com.android.pixeldisplayservice:array/config_demura_compensation_images|*
       - com.android.pixeldisplayservice:array/config_demura_compensation_thresholds|*
@@ -679,6 +703,7 @@ filters:
       - com.android.pixeldisplayservice:array/config_za_secondary_display_condition2_opr_thresholds_list|*
       - com.android.pixeldisplayservice:array/config_za_secondary_display_opr_thresholds_list|*
       - com.android.pixeldisplayservice:array/config_za_shadow_comp_not_support_panels|*
+      - com.android.pixeldisplayservice:bool/config_compensation_animation_enabled = false
       - com.android.pixeldisplayservice:bool/config_is_display_mode_manager_supported = true
       - com.android.pixeldisplayservice:dimen/config_compensation_filter_intercept|*
       - com.android.pixeldisplayservice:dimen/config_display_mode_brightness_vote_threshold|*
@@ -709,6 +734,7 @@ filters:
       - com.android.settings:array/config_carrier_use_rac|* # rac is "reusable activation code"
       - com.android.settings:array/config_psim_conversion_menu_enabled_carrier = 1;3;16;576;1404;2020;2021;2122
       - com.android.settings:array/config_settableAutoRotationDeviceStatesDescriptions|*
+      - com.android.settings:array/config_sfps_enroll_stage_thresholds = 0;0.05;0.47;0.58
       - com.android.settings:array/config_userAspectRatioOverrideEntries|*
       - com.android.settings:array/config_userAspectRatioOverrideValues|*
       - com.android.settings:array/enabled_networks_except_gsm_values = 10;0
@@ -716,6 +742,9 @@ filters:
       - com.android.settings:array/entryvalues_font_size|*
       - com.android.settings:array/face_enroll_primary_buckets = 2;7;12;17
       - com.android.settings:array/fingerprint_acquired_vendor|*
+      - com.android.settings:array/sp_config_001_first_party_hals|*
+      - com.android.settings:array/sp_config_001_ui_model_names|*
+      - com.android.settings:array/udfps_enroll_enrolling = .error:@sud_system_error_light;.primary:@sud_system_primary_light;.inverseOnSurface:@sud_system_on_surface_inverse_light;.outlineVariant:@sud_system_outline_variant_light;.onSecondary:@sud_system_on_secondary_dark
       - com.android.settings:array/when_to_start_hubmode_entries|*
       - com.android.settings:array/when_to_start_hubmode_values|*
       - com.android.settings:array/when_to_start_screensaver_entries_no_battery|*
@@ -818,6 +847,7 @@ filters:
       - com.android.settings:raw/fingerprint_edu_lottie_portrait|*
       - com.android.settings:raw/fingerprint_edu_lottie|*
       - com.android.settings:raw/fingerprint_location_animation|*
+      - com.android.settings:raw/fingerprint_sp_apply_2024 = 06aa1321a5d862f14c1fa75b5f9b26f78039be91a500f323368c781f6ffd372c
       - com.android.settings:raw/fingerprint_sp_expressive = 1a0852e69cdaf13f7e21285209adda2a434c340ad44bfba5afbb1ea64b6ab97d
       - com.android.settings:raw/flip_camera_for_selfie_lottie|*
       - com.android.settings:raw/lottie_adaptive_brightness|*
@@ -837,6 +867,7 @@ filters:
       - com.android.settings:raw/sfps_enroll_finish_rest_to_unlock|*
       - com.android.settings:raw/sfps_lift_then_touch_lottie|*
       - com.android.settings:raw/sfps_reposition_finger_right_lottie|*
+      - com.android.settings:raw/udfps_edu_lottie|*
       - com.android.settings:raw/user_aspect_ratio_education|*
       - com.android.settings:raw/warranty_mapping|*
       - com.android.settings:string/battery_missing_link_message|*
@@ -864,14 +895,16 @@ filters:
       - com.android.settings:string/data_connection_5g_plus|*
       - com.android.settings:string/display_white_balance_summary|*
       - com.android.settings:string/display_white_balance_title|* # TODO investigate
+      - com.android.settings:string/doze_always_on_wallpaper_description|*
+      - com.android.settings:string/doze_always_on_wallpaper_title|*
       - com.android.settings:string/dream_no_screen_saver_caption|*
       - com.android.settings:string/dream_no_screen_saver_description|*
       - com.android.settings:string/dream_no_screen_saver_preview_caption|*
       - com.android.settings:string/dream_secondary_button_title|*
       - com.android.settings:string/edge_to_edge_navigation_summary|*
-      - com.android.settings:string/enable_glanceable_hub_toggle_summary|*
       - com.android.settings:string/emission_frequency_summary|*
       - com.android.settings:string/emission_frequency_title|*
+      - com.android.settings:string/enable_glanceable_hub_toggle_summary|*
       - com.android.settings:string/fast_pair_device_not_found_other_device_description|*
       - com.android.settings:string/fast_pair_device_not_found_tws_headphone_description|*
       - com.android.settings:string/fingerprint_acquired_imager_dirty_udfps|*
@@ -883,6 +916,7 @@ filters:
       - com.android.settings:string/fingerprint_unlock_skip_fingerprint|*
       - com.android.settings:string/fingerprint_unlock_title|*
       - com.android.settings:string/fingerprint_v2_delete_message|*
+      - com.android.settings:string/frr_notification_reset_fingerprint_description|*
       - com.android.settings:string/frr_notification_reset_fingerprint_description|*
       - com.android.settings:string/help_uri_5g_dsds = intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=pixel_5G_and_DSDS;end
       - com.android.settings:string/help_uri_about = intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_about;end
@@ -1075,6 +1109,7 @@ filters:
       - com.android.systemui/SystemUI:string/qs_remove_labels|*
       - com.android.systemui:array/config_doze_brightness_sensor_to_brightness|*
       - com.android.systemui:array/config_doze_brightness_sensor_to_scrim_opacity|*
+      - com.android.systemui:array/config_doze_brightness_sensor_to_wallpaper_scrim_opacity = -1;51;0;0;0
       - com.android.systemui:array/config_inner_face_auth_props|*
       - com.android.systemui:array/config_nfc_conflict_with_usb_audio_productid = 0x5034
       - com.android.systemui:array/config_nfc_conflict_with_usb_audio_vendorid = 0x18d1
@@ -1099,6 +1134,7 @@ filters:
       - com.android.systemui:bool/config_hspa_data_distinguishable|mcc440-mnc20 = false
       - com.android.systemui:bool/config_letterboxIsReachabilityEducationEnabled = true
       - com.android.systemui:bool/config_letterboxIsRestartDialogEnabled = true
+      - com.android.systemui:bool/config_minmode_enabled = true
       - com.android.systemui:bool/config_nfc_conflict_with_usb_audio = true
       - com.android.systemui:bool/config_nfc_conflict_with_wlc = true
       - com.android.systemui:bool/config_notificationToContents = true
@@ -1106,6 +1142,7 @@ filters:
       - com.android.systemui:bool/config_restToUnlockSupported = true
       - com.android.systemui:bool/config_screen_protector_notification_enabled = true
       - com.android.systemui:bool/config_screen_protector_notification_v2 = true
+      - com.android.systemui:bool/config_screen_protector_notification_v2_1 = true
       - com.android.systemui:bool/config_show_low_light_clock_when_docked = true
       - com.android.systemui:bool/config_show_wifi_tethering = false
       - com.android.systemui:bool/config_showMin3G|*
@@ -1204,6 +1241,7 @@ filters:
       - com.android.systemui:dimen/system_icons_super_container_avatarless_margin_end|*
       - com.android.systemui:dimen/udfps_burn_in_offset_x|*
       - com.android.systemui:dimen/udfps_burn_in_offset_y|*
+      - com.android.systemui:dimen/volume_panel_corner_radius = 52.0dp
       - com.android.systemui:dimen/weather_clock_smartspace_scale|*
       - com.android.systemui:dimen/weather_clock_smartspace_translateX|*
       - com.android.systemui:dimen/weather_clock_smartspace_translateY|*
@@ -1285,6 +1323,7 @@ filters:
       - com.android.systemui:string/thermal_shutdown_dialog_help_url = https://support.google.com/pixelphone?p=overheat_shutdown
       - com.android.systemui:string/unsaved_status_description|*
       - com.android.systemui:style/AuthNonBioCredentialPatternContainerStyle|*
+      - com.android.telephony.imsmedia:bool/power_hint_enabled = true
       - com.android.traceur:array/entryvalues_font_size|*
       - com.android.traceur:fraction/display_density_max_scale|*
       - com.android.traceur:string/settingslib_learn_more_text|*
@@ -1295,6 +1334,8 @@ filters:
       - com.android.uwb.resources/UwbCustomization:bool/enable_primer_aoa = true
       - com.android.uwb.resources/UwbCustomization:bool/enable_primer_est_elevation = false
       - com.android.uwb.resources/UwbCustomization:bool/enable_primer_est_elevation = true
+      - com.android.uwb.resources/UwbCustomization:bool/enable_random_hopmodekey = true
+      - com.android.uwb.resources/UwbCustomization:bool/is_antenna_mode_config_supported = true
       - com.android.uwb.resources/UwbCustomization:bool/is_multicast_list_update_ntf_v2_supported = true
       - com.android.uwb.resources/UwbCustomization:bool/is_multicast_list_update_rsp_v2_supported = true
       - com.android.uwb.resources/UwbCustomization:bool/persistent_cache_use_for_country_code_enabled = true
@@ -1304,6 +1345,7 @@ filters:
       - com.android.virtualization.terminal:bool/gfxstream_supported = true # TODO look into why this is not enabled for all Pixels
       - com.android.wallpaper:dimen/keyguard_large_clock_top_margin|*
       - com.google.android.grilservice/GrilRadioCustomizable:bool/cap_sensor_support = true
+      - com.google.android.grilservice/GrilRadioCustomizable:bool/ignore_twoshay_protective_case_enabled = true
       - com.google.android.pixelsystemservice/AdaptiveHapticsConfig:string/high_intensity|*
       - com.google.android.pixelsystemservice/AdaptiveHapticsConfig:string/low_intensity|*
       - com.google.android.pixelsystemservice/AdaptiveHapticsConfig:string/medium_intensity|*
