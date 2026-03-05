@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">sạc, giới hạn, tối ưu hoá quá trình sạc, giới hạn sạc</string>
+    <string name="charging_optimization_summary_off">Đang tắt</string>
+    <string name="charging_optimization_title">Tối ưu hoá sạc pin</string>
+</resources>

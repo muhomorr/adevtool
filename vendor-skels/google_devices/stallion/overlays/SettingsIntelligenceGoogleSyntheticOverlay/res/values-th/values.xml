@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">การชาร์จ, ขีดจำกัด, การเพิ่มประสิทธิภาพการชาร์จ, ขีดจำกัดการชาร์จ</string>
+    <string name="charging_optimization_summary_off">ปิด</string>
+    <string name="charging_optimization_title">การเพิ่มประสิทธิภาพการชาร์จ</string>
+</resources>

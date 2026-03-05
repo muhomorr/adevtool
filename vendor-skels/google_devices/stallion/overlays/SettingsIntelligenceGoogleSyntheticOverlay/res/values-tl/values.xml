@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">pag-charge, limitasyon, pag-optimize ng pag-charge, limitasyon sa pag-charge</string>
+    <string name="charging_optimization_summary_off">Naka-off</string>
+    <string name="charging_optimization_title">Pag-optimize ng pag-charge</string>
+</resources>

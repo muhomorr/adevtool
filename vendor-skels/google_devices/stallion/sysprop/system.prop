@@ -1,0 +1,4 @@
+persist.settings.large_screen_opt_for_dp.enabled=true
+ro.build.product=stallion
+ro.camerax.extensions.enabled=true
+ro.launcher.blur.appLaunch=0

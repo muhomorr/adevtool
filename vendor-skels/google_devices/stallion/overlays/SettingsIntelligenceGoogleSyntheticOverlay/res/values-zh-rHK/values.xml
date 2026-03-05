@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">充電, 上限, 功能, 充電上限</string>
+    <string name="charging_optimization_summary_off">關閉</string>
+    <string name="charging_optimization_title">充電優化功能</string>
+</resources>

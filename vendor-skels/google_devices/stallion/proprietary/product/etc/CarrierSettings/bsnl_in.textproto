@@ -1,0 +1,176 @@
+canonical_name: "bsnl_in"
+version: 75000000005
+apns {
+  apn {
+    name: "bsnlmms"
+    value: "bsnlmms"
+    type: MMS
+    mmsc: "http://bsnlmmsc.in:8514"
+    mmsc_proxy: "10.210.10.11"
+    mmsc_proxy_port: "8080"
+    protocol: IPV4V6
+  }
+  apn {
+    name: "bsnlnet"
+    value: "bsnlnet"
+    type: DEFAULT
+    type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "bsnllive"
+    value: "bsnllive"
+    type: DEFAULT
+    type: SUPL
+    proxy: "10.220.67.131"
+    port: "8080"
+    protocol: IPV4V6
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "additional_settings_caller_id_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "allow_hold_call_during_emergency_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "108"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "110"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+          item: 108
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+          item: 110
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 100
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 105
+        }
+      }
+    }
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "40434"
+      item: "40451"
+      item: "40459"
+      item: "40462"
+      item: "40453"
+      item: "40455"
+      item: "40454"
+      item: "40474"
+      item: "40438"
+      item: "40475"
+      item: "40481"
+      item: "40477"
+      item: "40476"
+      item: "40473"
+      item: "40464"
+      item: "40472"
+      item: "40480"
+      item: "40471"
+      item: "40458"
+      item: "40457"
+      item: "40466"
+      item: "40439"
+      item: "40465"
+    }
+  }
+  config {
+    key: "prevent_clir_activation_and_deactivation_code_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1762942445
+}

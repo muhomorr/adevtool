@@ -1,0 +1,1 @@
+runtime_resource_overlay { name: "PixelNfcOverlayStallion", product_specific: true, }

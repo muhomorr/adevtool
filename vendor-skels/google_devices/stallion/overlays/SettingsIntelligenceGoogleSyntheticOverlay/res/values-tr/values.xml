@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">şarj etme, sınır, şarj optimizasyonu, şarj sınırı</string>
+    <string name="charging_optimization_summary_off">Kapalı</string>
+    <string name="charging_optimization_title">Şarj optimizasyonu</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">충전, 한도, 충전 최적화, 충전 한도</string>
+    <string name="charging_optimization_summary_off">사용 안 함</string>
+    <string name="charging_optimization_title">충전 최적화</string>
+</resources>

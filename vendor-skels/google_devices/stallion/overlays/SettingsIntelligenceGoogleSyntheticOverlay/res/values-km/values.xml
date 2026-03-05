@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">ការសាកថ្ម, ដែនកំណត់, ការបង្កើនប្រសិទ្ធភាពការសាកថ្ម, ដែនកំណត់ការសាកថ្ម</string>
+    <string name="charging_optimization_summary_off">បិទ</string>
+    <string name="charging_optimization_title">ការបង្កើនប្រសិទ្ធភាពការសាកថ្ម</string>
+</resources>

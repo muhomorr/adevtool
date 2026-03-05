@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">kuchaji, kikomo, kuboresha hali ya kuchaji, kikomo cha chaji</string>
+    <string name="charging_optimization_summary_off">Kimezimwa</string>
+    <string name="charging_optimization_title">Kuboresha hali ya kuchaji</string>
+</resources>

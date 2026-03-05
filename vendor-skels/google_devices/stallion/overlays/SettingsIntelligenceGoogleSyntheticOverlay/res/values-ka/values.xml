@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">დატენვა, ლიმიტი, დატენვის ოპტიმიზაცია, დატენვის ლიმიტი</string>
+    <string name="charging_optimization_summary_off">გამორთულია</string>
+    <string name="charging_optimization_title">დატენის ოპტიმიზაცია</string>
+</resources>

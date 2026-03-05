@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">càrrega, límit, optimització de la càrrega, límit de càrrega</string>
+    <string name="charging_optimization_summary_off">Desactivat</string>
+    <string name="charging_optimization_title">Optimització de la càrrega</string>
+</resources>

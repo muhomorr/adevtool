@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">заряджання, ліміт, оптимізація заряджання, ліміт заряду</string>
+    <string name="charging_optimization_summary_off">Вимкнено</string>
+    <string name="charging_optimization_title">Оптимізація заряджання</string>
+</resources>

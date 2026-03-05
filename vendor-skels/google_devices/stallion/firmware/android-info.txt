@@ -1,0 +1,5 @@
+require board=stallion
+
+require version-bootloader=stallion-16.4-14791556
+require version-baseband=g5400i-251201-260127-B-14784805
+require partition-exists=vendor_kernel_boot

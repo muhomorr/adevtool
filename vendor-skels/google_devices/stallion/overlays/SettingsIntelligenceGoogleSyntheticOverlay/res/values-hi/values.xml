@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">बैटरी चार्ज हो रही है, सीमा, चार्जिंग ऑप्टिमाइज़ेशन, चार्ज करने की तय सीमा</string>
+    <string name="charging_optimization_summary_off">बंद है</string>
+    <string name="charging_optimization_title">चार्जिंग ऑप्टिमाइज़ेशन</string>
+</resources>

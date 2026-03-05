@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">चार्जिंग, मर्यादा, चार्जिंग ऑप्टिमायझेशन, चार्जिंगची मर्यादा</string>
+    <string name="charging_optimization_summary_off">बंद आहे</string>
+    <string name="charging_optimization_title">चार्जिंग ऑप्टिमायझेशन</string>
+</resources>

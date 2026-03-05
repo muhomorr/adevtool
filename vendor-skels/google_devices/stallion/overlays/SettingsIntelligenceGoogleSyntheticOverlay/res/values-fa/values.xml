@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">شارژ، سطح، بهینه‌سازی شارژ، میزان شارژ</string>
+    <string name="charging_optimization_summary_off">خاموش</string>
+    <string name="charging_optimization_title">بهینه‌سازی شارژ</string>
+</resources>

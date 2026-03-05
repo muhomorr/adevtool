@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">ආරෝපණය, සීමාව, ආරෝපණ ප්‍රශස්තකරණය, ආරෝපණ සීමාව</string>
+    <string name="charging_optimization_summary_off">ක්‍රියාවිරහිතයි</string>
+    <string name="charging_optimization_title">ආරෝපණ ප්‍රශස්තකරණය</string>
+</resources>

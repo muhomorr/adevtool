@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">চার্জিং, সীমা, চার্জিং অপ্টিমাইজেশন, চার্জের সীমা</string>
+    <string name="charging_optimization_summary_off">বন্ধ আছে</string>
+    <string name="charging_optimization_title">চার্জিং অপ্টিমাইজেশন</string>
+</resources>

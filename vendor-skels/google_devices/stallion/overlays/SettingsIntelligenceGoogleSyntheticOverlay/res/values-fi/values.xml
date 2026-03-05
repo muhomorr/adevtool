@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">lataus, raja, latauksen optimointi, latausraja</string>
+    <string name="charging_optimization_summary_off">Pois päältä</string>
+    <string name="charging_optimization_title">Latauksen optimointi</string>
+</resources>

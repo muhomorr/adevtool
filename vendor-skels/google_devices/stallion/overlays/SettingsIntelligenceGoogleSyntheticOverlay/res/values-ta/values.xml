@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">சார்ஜிங், வரம்பு, சார்ஜிங் மேம்படுத்துதல், சார்ஜிங் வரம்பு</string>
+    <string name="charging_optimization_summary_off">ஆஃப்</string>
+    <string name="charging_optimization_title">சார்ஜிங் மேம்படுத்துதல்</string>
+</resources>

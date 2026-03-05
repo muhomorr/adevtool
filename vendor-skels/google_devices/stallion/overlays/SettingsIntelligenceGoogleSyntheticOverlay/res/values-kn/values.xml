@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">ಚಾರ್ಜಿಂಗ್, ಮಿತಿ, ಚಾರ್ಜಿಂಗ್ ಆಪ್ಟಿಮೈಸೇಷನ್‌, ಚಾರ್ಜ್ ಮಿತಿ</string>
+    <string name="charging_optimization_summary_off">ಆಫ್ ಆಗಿದೆ</string>
+    <string name="charging_optimization_title">ಚಾರ್ಜಿಂಗ್ ಆಪ್ಟಿಮೈಸೇಷನ್‌</string>
+</resources>

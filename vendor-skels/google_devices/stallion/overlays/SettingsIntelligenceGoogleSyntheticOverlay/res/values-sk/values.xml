@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">nabíjanie, limit, optimalizácia nabíjania, limit nabíjania</string>
+    <string name="charging_optimization_summary_off">Vypnutá</string>
+    <string name="charging_optimization_title">Optimalizácia nabíjania</string>
+</resources>

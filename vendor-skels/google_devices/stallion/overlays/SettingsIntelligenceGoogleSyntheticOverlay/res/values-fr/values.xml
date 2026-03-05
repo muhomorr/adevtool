@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">recharge, limite, optimisation de la recharge, limite de recharge</string>
+    <string name="charging_optimization_summary_off">Désactivée</string>
+    <string name="charging_optimization_title">Optimisation de la recharge</string>
+</resources>

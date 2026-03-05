@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">кубаттоо, чек, кубаттоону оптималдаштыруу, кубаттоо чеги</string>
+    <string name="charging_optimization_summary_off">Өчүк</string>
+    <string name="charging_optimization_title">Кубаттоону оптималдаштыруу</string>
+</resources>

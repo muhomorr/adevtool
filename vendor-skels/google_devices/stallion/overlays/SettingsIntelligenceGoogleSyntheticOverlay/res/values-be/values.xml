@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">зарадка, абмежаванне, аптымізацыя зарадкі, абмежаванне зарадкі</string>
+    <string name="charging_optimization_summary_off">Выключана</string>
+    <string name="charging_optimization_title">Аптымізацыя зарадкі</string>
+</resources>

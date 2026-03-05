@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">အားသွင်းခြင်း၊ ကန့်သတ်ချက်၊ အားသွင်းမှု ပိုကောင်းအောင်လုပ်ခြင်း၊ အားသွင်းခြင်း ကန့်သတ်ချက်</string>
+    <string name="charging_optimization_summary_off">ပိတ်</string>
+    <string name="charging_optimization_title">အားသွင်းမှု ပိုကောင်းအောင်လုပ်ခြင်း</string>
+</resources>

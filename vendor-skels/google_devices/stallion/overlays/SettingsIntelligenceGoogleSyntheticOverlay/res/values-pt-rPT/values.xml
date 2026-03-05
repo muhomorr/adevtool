@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">carregamento, limite, otimização do carregamento, limite de carregamento</string>
+    <string name="charging_optimization_summary_off">Desativada</string>
+    <string name="charging_optimization_title">Otimização do carregamento</string>
+</resources>

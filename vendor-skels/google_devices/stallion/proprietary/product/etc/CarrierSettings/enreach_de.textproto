@@ -1,0 +1,26 @@
+canonical_name: "enreach_de"
+version: 75000000001
+apns {
+  apn {
+    name: "Enreach DE"
+    value: "internet.mvno.mobi"
+    type: DEFAULT
+    type: SUPL
+    type: DUN
+    authtype: 1
+  }
+}
+configs {
+  config {
+    key: "prefer_2g_bool"
+    bool_value: true
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+}
+last_updated {
+  seconds: 1762783767
+}

@@ -1,0 +1,2 @@
+export BUILD_ID_stallion="BD6A.251031.001.A4"
+unset PLATFORM_SECURITY_PATCH_stallion

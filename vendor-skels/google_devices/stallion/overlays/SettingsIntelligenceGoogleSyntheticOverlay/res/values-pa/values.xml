@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ, ਸੀਮਾ, ਚਾਰਜਿੰਗ ਔਪਟੀਮਾਈਜ਼ੇਸ਼ਨ, ਚਾਰਜ ਕਰਨ ਦੀ ਤੈਅ ਸੀਮਾ</string>
+    <string name="charging_optimization_summary_off">ਬੰਦ ਹੈ</string>
+    <string name="charging_optimization_title">ਚਾਰਜਿੰਗ ਔਪਟੀਮਾਈਜ਼ੇਸ਼ਨ</string>
+</resources>

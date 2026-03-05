@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">зареждане, ограничение, оптимизиране на зареждането, ограничение за зареждане</string>
+    <string name="charging_optimization_summary_off">Изкл.</string>
+    <string name="charging_optimization_title">Оптимизиране на зареждането</string>
+</resources>
