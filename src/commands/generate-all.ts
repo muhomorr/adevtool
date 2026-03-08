@@ -57,7 +57,7 @@ import { processSepolicy } from '../processor/sepolicy'
 import { processSysconfig } from '../processor/sysconfig'
 import { processVintf } from '../processor/vintf'
 import { gitDiff } from '../util/cli'
-import { mapGet } from '../util/data'
+import { assertDefined, mapGet } from '../util/data'
 import {
   DIR_SPEC_PLACEHOLDER,
   FileTreeComparison,
@@ -215,7 +215,9 @@ export default class GenerateFull extends Command {
         let backportBuildId = config.device.backport_build_id
         if (backportBuildId !== undefined) {
           let backportDeviceImages = mapGet(images, getDeviceBuildId(config, backportBuildId))
-          let fileOverlays: { [part: string]: Set<string> } = Object.fromEntries(Object.entries(config.backport_files).map(([k, v]) => [k, new Set(v)]))
+          let fileOverlays: { [part: string]: Set<string> } = Object.fromEntries(
+            Object.entries(config.backport_files).map(([k, v]) => [k, new Set(v)]),
+          )
           let fileOverlaysByDir: { [part: string]: { [dir: string]: Set<string> } } = {}
           for (let [part, filePaths] of Object.entries(fileOverlays)) {
             let filesByDir: { [dir: string]: Set<string> } = {}
@@ -235,11 +237,26 @@ export default class GenerateFull extends Command {
             fileOverlaysByDir[part] = filesByDir
           }
 
+          let secondaryBackportBuildId = config.device.secondary_backport_build_id
+          let secondaryFileOverlays: { [part: string]: Set<string> } | undefined = undefined
+          let secondaryBasePath: string | undefined = undefined
+          if (secondaryBackportBuildId !== undefined) {
+            secondaryBasePath = mapGet(
+              images,
+              getDeviceBuildId(config, secondaryBackportBuildId),
+            ).unpackedFactoryImageDir
+            secondaryFileOverlays = Object.fromEntries(
+              Object.entries(assertDefined(config.secondary_backport_files)).map(([k, v]) => [k, new Set(v)]),
+            )
+          }
+
           pathResolver.overlay = {
             basePath: backportDeviceImages.unpackedFactoryImageDir,
+            secondaryBasePath,
             dirOverlays: config.backport_dirs,
             fileOverlays,
             fileOverlaysByDir,
+            secondaryFileOverlays,
           }
         }
         // Prepare output directories

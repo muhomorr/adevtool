@@ -33,6 +33,7 @@ export interface DeviceConfig {
     build_id: string
     is_beta_build_id: boolean
     backport_build_id: string | undefined
+    secondary_backport_build_id: string | undefined
     is_beta_backport_build_id: boolean
     backport_base_firmware?: boolean
     prev_build_id: string
@@ -92,6 +93,8 @@ export interface DeviceConfig {
 
   backport_dirs: { [part: string]: string[] }
   backport_files: { [part: string]: string[] }
+  // Files to backport from secondary_backport_build_id. Must be a subset of backport_files
+  secondary_backport_files?: { [part: string]: string[] }
 
   apk_map: { [apk_path: string]: ApkMapping }
   apex_map: { [apex_path: string]: ApexMapping }

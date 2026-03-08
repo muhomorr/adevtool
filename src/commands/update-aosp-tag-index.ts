@@ -8,7 +8,7 @@ import { showGitDiff } from '../util/cli'
 import { readFile } from '../util/fs'
 import { GitLsRemote } from '../util/git'
 
-type BuildIdToTag = Map<string, string>
+export type BuildIdToTag = Map<string, string>
 
 export async function loadBuildIdToTagMap(): Promise<BuildIdToTag | null> {
   try {

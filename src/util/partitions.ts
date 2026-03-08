@@ -4,6 +4,7 @@ import path from 'path'
 import { PartPath } from '../blobs/file-list'
 import { UNPACKED_APEXES_DIR_NAME } from '../frontend/source'
 import { isFile } from './fs'
+import { assertDefined } from './data'
 
 export enum Partition {
   Root = 'root',
@@ -31,8 +32,11 @@ export enum Partition {
 
 export interface OverlayConfig {
   basePath: string
+  secondaryBasePath?: string
   dirOverlays: { [part: string]: string[] }
   fileOverlays: { [part: string]: Set<string> }
+  // secondaryFileOverlays must be a subset of fileOverlays
+  secondaryFileOverlays?: { [part: string]: Set<string> }
   fileOverlaysByDir: { [part: string]: { [dir: string]: Set<string> } }
 }
 
@@ -77,6 +81,9 @@ export class PathResolver {
           }
         }
         if (shouldOverlay) {
+          if (overlay.secondaryFileOverlays?.[part]?.has(relPath) === true) {
+            return path.join(assertDefined(overlay.secondaryBasePath), partPath, relPath)
+          }
           return path.join(overlay.basePath, partPath, relPath)
         }
       }

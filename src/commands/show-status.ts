@@ -6,7 +6,7 @@ import { BuildIndex, ImageType, loadBuildIndex } from '../images/build-index'
 import { DeviceImage } from '../images/device-image'
 import { updateMultiMap } from '../util/data'
 import { log } from '../util/log'
-import { loadBuildIdToTagMap } from './update-aosp-tag-index'
+import { BuildIdToTag, loadBuildIdToTagMap } from './update-aosp-tag-index'
 
 export default class ShowStatus extends Command {
   static flags = {
@@ -19,11 +19,13 @@ export default class ShowStatus extends Command {
 
     let buildIdMap = new Map<string, DeviceConfig[]>()
     let backportBuildIdMap = new Map<string, DeviceConfig[]>()
+    let secondaryBackportBuildIdMap = new Map<string, DeviceConfig[]>()
     // platform security patch levels
     let psplMap = new Map<string, DeviceConfig[]>()
     let buildIndex = await loadBuildIndex()
     let mainImageStatus = new ImageStatus(buildIndex)
     let backportImageStatus = new ImageStatus(buildIndex)
+    let secondaryBackportImageStatus = new ImageStatus(buildIndex)
 
     for (let config of configs) {
       updateMultiMap(buildIdMap, config.device.build_id, config)
@@ -33,20 +35,32 @@ export default class ShowStatus extends Command {
         updateMultiMap(backportBuildIdMap, backportBuildId, config)
         await backportImageStatus.update(config, backportBuildId)
       }
+      let secondaryBackportBuildId = config.device.secondary_backport_build_id
+      if (secondaryBackportBuildId !== undefined) {
+        updateMultiMap(secondaryBackportBuildIdMap, backportBuildId, config)
+        await secondaryBackportImageStatus.update(config, secondaryBackportBuildId)
+      }
       updateMultiMap(psplMap, config.device.platform_security_patch_level_override, config)
     }
 
     let buildIdToTag = await loadBuildIdToTagMap()
 
-    this.log(chalk.bold('Tag | Build ID:'))
+    this.log(chalk.bold('Main stock image:'))
     for (let [buildId, configs] of buildIdMap.entries()) {
-      this.log(`${buildIdToTag?.get(buildId) ?? '[no tag]'} | ${buildId}: ` + getDeviceNames(configs))
+      this.log(`${expandBuildId(buildIdToTag, buildId)}: ` + getDeviceNames(configs))
     }
 
     if (backportBuildIdMap.size > 0) {
       this.log(chalk.bold('\nBackports:'))
       for (let [buildId, configs] of backportBuildIdMap.entries()) {
-        this.log(`${buildIdToTag?.get(buildId) ?? '[no tag]'} | ${buildId}: ` + getDeviceNames(configs))
+        this.log(`${expandBuildId(buildIdToTag, buildId)}: ` + getDeviceNames(configs))
+      }
+
+      if (secondaryBackportBuildIdMap.size > 0) {
+        this.log(chalk.bold('\nSecondary backports:'))
+        for (let [buildId, configs] of secondaryBackportBuildIdMap.entries()) {
+          this.log(`${expandBuildId(buildIdToTag, buildId)}: ` + getDeviceNames(configs))
+        }
       }
     }
 
@@ -65,10 +79,23 @@ export default class ShowStatus extends Command {
       backportImageStatus.log()
     }
 
+    if (secondaryBackportBuildIdMap.size > 0) {
+      this.log(chalk.bold('\nSecondary backport stock image:'))
+      secondaryBackportImageStatus.log()
+    }
+
     if (mainImageStatus.unknownImages.size + backportImageStatus.unknownImages.size !== 0) {
       process.exit(1)
     }
   }
+}
+
+function expandBuildId(buildIdToTag: BuildIdToTag | null, buildId: string) {
+  let tag = buildIdToTag?.get(buildId)
+  if (tag == undefined) {
+    return buildId
+  }
+  return tag + ' | ' + buildId
 }
 
 class ImageStatus {

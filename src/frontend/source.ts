@@ -47,6 +47,10 @@ export async function prepareDeviceImages(
         if (backportBuildId !== undefined) {
           buildIds.push(backportBuildId)
         }
+        let secondaryBackportBuildId = deviceConfig.device.secondary_backport_build_id
+        if (secondaryBackportBuildId !== undefined) {
+          buildIds.push(secondaryBackportBuildId)
+        }
       }
 
       for (let buildIdSpec of buildIds) {
