@@ -84,3 +84,9 @@ backport_files:
     - lib64/vendor.samsung_slsi.telephony.hardware.radioExternal-V1-ndk.so
     - lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
     - lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so
+
+secondary_backport_files:
+  vendor:
+    - lib64/egl/libEGL_powervr.so
+    - lib64/egl/libGLESv1_CM_powervr.so
+    - lib64/egl/libGLESv2_powervr.so

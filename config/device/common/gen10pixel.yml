@@ -3,6 +3,7 @@ includes:
 
 device:
   platform: laguna
+  secondary_backport_build_id: CP21.260206.011
 
 package_exclusions:
   - com.google.android.apps.bard # Gemini
