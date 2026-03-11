@@ -6,6 +6,7 @@ import path from 'path'
 import assert from 'assert'
 import { createWriteStream, promises as fs } from 'fs'
 import { parseInt } from 'lodash'
+import { SmartBuffer } from 'smart-buffer'
 import { promises as stream } from 'stream'
 import { DeviceConfig } from '../config/device'
 import { CARRIER_SETTINGS_DIR, getHostBinPath, OS_CHECKOUT_DIR } from '../config/paths'
@@ -133,33 +134,79 @@ export async function downloadAllConfigs(config: Map<string, string>, outDir: st
 }
 
 export async function decodeCarrierConfigs(cfgPath: string, outDir: string) {
-  let promises: Promise<void>[] = []
+  let aprotocProcesses: Promise<void>[] = []
   if (await exists(cfgPath)) {
     await fs.mkdir(outDir, { recursive: true })
-    for await (let file of listFilesRecursive(cfgPath)) {
-      if (path.extname(file) !== '.pb') {
+    let aprotocCmd = SmartBuffer.fromSize(10_000, 'utf-8')
+    let numMessages = 0
+    aprotocCmd.writeUInt32LE(0)
+    for await (let filePath of listFilesRecursive(cfgPath)) {
+      if (path.extname(filePath) !== '.pb') {
         continue
       }
-      const filename = path.parse(file).name
-      const args: string[] = ['--proto_path', PROTO_PATH, '--decode']
-      switch (filename) {
+      assert(filePath.endsWith('.pb'), filePath)
+      let baseName = path.basename(filePath, '.pb')
+      let outPath = path.join(outDir, baseName + '.textproto')
+
+      switch (baseName) {
         case 'others':
-          args.push('com.google.carrier.MultiCarrierSettings')
-          args.push(`${PROTO_PATH}/carrier_settings.proto`)
+          aprotocProcesses.push(
+            decodeConfig(
+              [
+                '--proto_path',
+                PROTO_PATH,
+                '--decode',
+                'com.google.carrier.MultiCarrierSettings',
+                path.join(PROTO_PATH, 'carrier_settings.proto'),
+              ],
+              filePath,
+              outPath,
+            ),
+          )
           break
         case 'carrier_list':
-          args.push('com.google.carrier.CarrierList')
-          args.push(`${PROTO_PATH}/carrier_list.proto`)
+          aprotocProcesses.push(
+            decodeConfig(
+              [
+                '--proto_path',
+                PROTO_PATH,
+                '--decode',
+                'com.google.carrier.CarrierList',
+                path.join(PROTO_PATH, 'carrier_list.proto'),
+              ],
+              filePath,
+              outPath,
+            ),
+          )
           break
         default:
-          args.push('com.google.carrier.CarrierSettings')
-          args.push(`${PROTO_PATH}/carrier_settings.proto`)
+          numMessages += 1
+          aprotocCmd.writeUInt32LE(filePath.length)
+          aprotocCmd.writeString(filePath)
+          aprotocCmd.writeUInt32LE(outPath.length)
+          aprotocCmd.writeString(outPath)
           break
       }
-      promises.push(decodeConfig(args, file, path.join(outDir, `${filename}.textproto`)))
+      assert(numMessages > 0)
+      aprotocCmd.writeUInt32LE(numMessages, 0)
     }
+
+    // decoding hundreds of protobufs one by one is very slow, even when it's parallelized
+    let out = await spawnAsync2({
+      command: await getHostBinPath('aprotoc'),
+      args: [
+        '--proto_path',
+        PROTO_PATH,
+        '--bulk',
+        '--decode',
+        'com.google.carrier.CarrierSettings',
+        path.join(PROTO_PATH, 'carrier_settings.proto'),
+      ],
+      stdinData: aprotocCmd.toBuffer(),
+    })
+    assert(out.length === 0, out.toString())
   }
-  await Promise.all(promises)
+  await Promise.all(aprotocProcesses)
 }
 
 async function decodeConfig(args: ReadonlyArray<string>, inputFile: string, outputFile: string) {
