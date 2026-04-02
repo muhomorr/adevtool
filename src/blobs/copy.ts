@@ -71,7 +71,8 @@ export async function copyBlobs(
 }
 
 async function patchModemCarrierConfig(dbPath: string) {
-  await fs.chmod(dbPath, 0o644)
+  let origMode = (await fs.stat(dbPath)).mode
+  await fs.chmod(dbPath, 0o600)
   for (let override of CARRIER_DB_OVERRIDES) {
     const result = await spawnAsync('sqlite3', [
       dbPath,
@@ -90,6 +91,7 @@ async function patchModemCarrierConfig(dbPath: string) {
         `'${override.spn}', '${override.gid1}', '${override.gid2}');`,
     ])
   }
+  await fs.chmod(dbPath, origMode)
 }
 
 async function maybePatch(entry: BlobEntry, srcPath: string, device: string) {
