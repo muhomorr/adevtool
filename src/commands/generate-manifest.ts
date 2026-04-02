@@ -5,8 +5,10 @@ import path from 'path'
 import xml2js from 'xml2js'
 import YAML from 'yaml'
 import { OS_CHECKOUT_DIR } from '../config/paths'
+import { assertDefined, assertNonNull } from '../util/data'
 import { readFile } from '../util/fs'
-import { spawnAsync } from '../util/process'
+import { log } from '../util/log'
+import { spawnAsync, spawnAsyncNoOut } from '../util/process'
 
 export interface Remote {
   name: string
@@ -39,9 +41,10 @@ interface XmlElement {
 export class GenerateManifest extends Command {
   static flags = {
     config: Flags.file({ default: path.join(OS_CHECKOUT_DIR, '.repo/manifests/config.yml') }),
-    // TODO
-    // addFork: Flags.string({ multiple: true }),
-    // delFork: Flags.string({ multiple: true }),
+    addFork: Flags.string({ multiple: true }),
+    delFork: Flags.string({ multiple: true }),
+    // must be set when addFork/delFork are used
+    forkRemote: Flags.string(),
     out: Flags.file({ default: path.join(OS_CHECKOUT_DIR, '.repo/manifests/default.xml') }),
     skipScriptUpdate: Flags.boolean({ description: "don't rewrite script/common.sh" }),
   }
@@ -49,7 +52,7 @@ export class GenerateManifest extends Command {
   async run() {
     let { flags } = await this.parse(GenerateManifest)
 
-    let config = YAML.parse(await readFile(flags.config)) as ManifestConfig
+    let config = await parseConfig(flags.config)
 
     let tmpDir = await fs.mkdtemp('aosp-manifest')
     let manifestStr: string
@@ -70,85 +73,159 @@ export class GenerateManifest extends Command {
       await fs.rm(tmpDir, { recursive: true })
     }
 
-    let manifest = await xml2js.parseStringPromise(manifestStr)
-    {
-      let remotes = manifest.manifest.remote as XmlElement[]
-      assert(remotes.length === 1)
-      let aospRemote = remotes[0]
-      assert(aospRemote.$.name === 'aosp')
-      assert(aospRemote.$.fetch === '..')
-      aospRemote.$.fetch = 'https://android.googlesource.com'
-      manifest.manifest.remote = [
-        ...config.additional_remotes.map(remote => {
-          return { $: { ...remote, revision: config.revision } }
-        }),
-        aospRemote,
-      ]
-    }
-
-    let projects = manifest.manifest.project as XmlElement[]
-    {
-      let removedAospRepos = new Set(config.removed_aosp_repos)
-      projects = projects.filter(p => !removedAospRepos.has(p.$.path))
-    }
     let cloneDepth1AospRepos = new Set(config.clone_depth_1_aosp_repos)
-    let forkedAospRepos = makeAospForkMap(config)
-    let forks: string[] = []
-    for (let proj of projects) {
-      let path = proj.$.path
-      if (cloneDepth1AospRepos.has(path)) {
-        proj.$['clone-depth'] = '1'
+
+    let delForks = flags.delFork ?? []
+    let addForks = flags.addFork ?? []
+
+    for (;;) {
+      let manifest = await xml2js.parseStringPromise(manifestStr)
+      {
+        let remotes = manifest.manifest.remote as XmlElement[]
+        assert(remotes.length === 1)
+        let aospRemote = remotes[0]
+        assert(aospRemote.$.name === 'aosp')
+        assert(aospRemote.$.fetch === '..')
+        aospRemote.$.fetch = 'https://android.googlesource.com'
+        manifest.manifest.remote = [
+          ...config.additional_remotes.map(remote => {
+            return { $: { ...remote, revision: config.revision } }
+          }),
+          aospRemote,
+        ]
       }
-      let forkRemoteName = forkedAospRepos.get(path)
-      if (forkRemoteName !== undefined) {
+
+      let projects = manifest.manifest.project as XmlElement[]
+      {
+        let removedAospRepos = new Set(config.removed_aosp_repos)
+        projects = projects.filter(p => !removedAospRepos.has(p.$.name))
+      }
+      for (let proj of config.additional_projects) {
+        let path = proj.path
+        let name = proj.name
+        let groups: string | undefined = proj.groups
+        let remote = proj.remote !== undefined ? proj.remote : config.additional_remotes[0].name
+        let obj = {
+          $: {
+            path,
+            name,
+            ...(groups !== undefined && { groups }),
+            remote,
+            ...(proj.clone_depth !== undefined && { 'clone-depth': proj.clone_depth }),
+          },
+        }
+        projects.push(obj)
+      }
+
+      let collator = new Intl.Collator()
+      projects.sort((a, b) => {
+        return collator.compare(a.$.path, b.$.path)
+      })
+
+      let addingFork: string | null = null
+      let deletingFork: string | null = null
+      if (delForks.length > 0) {
+        deletingFork = assertDefined(delForks.shift())
+      } else if (addForks.length > 0) {
+        addingFork = assertDefined(addForks.shift())
+      }
+
+      if (addingFork !== null || deletingFork !== null) {
+        let remoteName = assertDefined(flags.forkRemote)
+        let forkedRepos = new Set(assertDefined(config.forked_aosp_repos[remoteName]))
+
+        let allRepos = new Set<string>()
+        for (let proj of projects) {
+          allRepos.add(proj.$.name)
+        }
+
+        if (addingFork !== null) {
+          if (!allRepos.has(addingFork)) {
+            log('skipping unknown repo ' + addingFork)
+            continue
+          }
+          if (forkedRepos.has(addingFork)) {
+            log(addingFork + ' is already forked')
+            addingFork = null
+          } else {
+            forkedRepos.add(addingFork)
+          }
+        } else {
+          deletingFork = assertNonNull(deletingFork)
+          if (forkedRepos.has(deletingFork)) {
+            forkedRepos.delete(deletingFork)
+          } else {
+            log(deletingFork + ' is not currently forked')
+            deletingFork = null
+          }
+        }
+        let collator = new Intl.Collator(undefined, { caseFirst: 'false' })
+        config.forked_aosp_repos[remoteName] = Array.from(forkedRepos).sort((a, b) => collator.compare(a, b))
+
+        await fs.writeFile(flags.config, YAML.stringify(config))
+
+        config = await parseConfig(flags.config)
+      }
+
+      let forkedAospRepos = makeAospForkMap(config)
+      let forks: string[] = []
+      for (let proj of projects) {
         let name = proj.$.name
-        let forkName = name.replaceAll('/', '_')
-        proj.$.name = forkName
-        forks.push(forkName)
-        proj.$.remote = forkRemoteName
-        proj.$['aosp-name'] = name
+        if (cloneDepth1AospRepos.has(name)) {
+          proj.$['clone-depth'] = '1'
+        }
+        let forkRemoteName = forkedAospRepos.get(name)
+        if (forkRemoteName !== undefined) {
+          let forkName = makeForkName(name)
+          proj.$.name = forkName
+          forks.push(forkName)
+          proj.$.remote = forkRemoteName
+          proj.$['aosp-name'] = name
+        }
       }
-    }
 
-    for (let proj of config.additional_projects) {
-      let path = proj.path
-      let name = proj.name
-      let groups: string | undefined = proj.groups
-      let remote = proj.remote !== undefined ? proj.remote : config.additional_remotes[0].name
-      let obj = {
-        $: {
-          path,
-          name,
-          ...(groups !== undefined && { groups }),
-          remote,
-          ...(proj.clone_depth !== undefined && { 'clone-depth': proj.clone_depth }),
+      manifest.manifest.project = projects
+
+      if (!flags.skipScriptUpdate) {
+        await updateScript(config, forks)
+
+        if (addingFork !== null || deletingFork !== null) {
+          let gitRepoDir = path.join(OS_CHECKOUT_DIR, SCRIPT_REPO_PATH)
+          await spawnAsyncNoOut('git', ['-C', gitRepoDir, 'add', COMMON_SH_NAME])
+          let commitMsg = `${addingFork !== null ? 'add' : 'delete'} ${makeForkName(addingFork ? addingFork : assertNonNull(deletingFork))}`
+          log(gitRepoDir)
+          log(await spawnAsync('git', ['-C', gitRepoDir, 'commit', '-m', commitMsg]))
+        }
+      }
+
+      let xmlStr = new xml2js.Builder({
+        xmldec: {
+          version: '1.0',
+          encoding: 'UTF-8',
         },
+      }).buildObject(manifest)
+      await fs.writeFile(flags.out, xmlStr)
+
+      if (addingFork !== null || deletingFork !== null) {
+        let gitRepoDir = path.dirname(flags.config)
+        await spawnAsyncNoOut('git', ['-C', gitRepoDir, 'add', path.basename(flags.config), 'default.xml'])
+        let commitMsg = `${addingFork !== null ? 'use fork of' : 'stop using fork of'} ${addingFork ? addingFork : assertNonNull(deletingFork)}`
+        log(gitRepoDir)
+        log(await spawnAsync('git', ['-C', gitRepoDir, 'commit', '-m', commitMsg]))
       }
-      projects.push(obj)
+
+      if (addForks.length === 0 && delForks.length === 0) {
+        break
+      }
     }
-
-    let collator = new Intl.Collator()
-    projects.sort((a, b) => {
-      return collator.compare(a.$.path, b.$.path)
-    })
-    manifest.manifest.project = projects
-
-    if (!flags.skipScriptUpdate) {
-      await updateScript(config, forks)
-    }
-
-    let xmlStr = new xml2js.Builder({
-      xmldec: {
-        version: '1.0',
-        encoding: 'UTF-8',
-      },
-    }).buildObject(manifest)
-    await fs.writeFile(flags.out, xmlStr)
   }
 }
 
+const SCRIPT_REPO_PATH = 'script'
+const COMMON_SH_NAME = 'common.sh'
+
 async function updateScript(config: ManifestConfig, forks: string[]) {
-  let dstFilePath = path.join(OS_CHECKOUT_DIR, 'script/common.sh')
+  let dstFilePath = path.join(OS_CHECKOUT_DIR, SCRIPT_REPO_PATH, COMMON_SH_NAME)
   let dstFile = await readFile(dstFilePath)
   let forksStartMarker = 'readonly aosp_forks=(\n'
   let forksStart = dstFile.indexOf(forksStartMarker)
@@ -191,4 +268,12 @@ export function makeAospForkMap(config: ManifestConfig) {
     }
   }
   return res
+}
+
+function makeForkName(name: string) {
+  return name.replaceAll('/', '_')
+}
+
+async function parseConfig(filePath: string) {
+  return YAML.parse(await readFile(filePath)) as ManifestConfig
 }
