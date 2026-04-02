@@ -61,7 +61,7 @@ export async function copyBlobs(
     if (patched !== undefined) {
       await fs.writeFile(outPath, patched)
     } else {
-      await fs.copyFile(srcPath, outPath)
+      await fs.copyFile(srcPath, outPath, fs.constants.COPYFILE_FICLONE)
     }
 
     if (entry.partPath.partition === Partition.Vendor && entry.partPath.relPath === 'firmware/carrierconfig/cfg.db') {
