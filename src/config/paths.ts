@@ -83,6 +83,7 @@ export async function getHostBinPath(programName: string) {
       'fsck.erofs',
       'lz4',
       'ota_extractor',
+      'sqlite3',
       'toybox',
     ]
     if (!knownPrograms.includes(programName)) {

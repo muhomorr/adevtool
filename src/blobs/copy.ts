@@ -2,6 +2,7 @@ import { promises as fs } from 'fs'
 
 import assert from 'assert'
 import path from 'path'
+import { getHostBinPath } from '../config/paths'
 import { readFile } from '../util/fs'
 import { Partition, PathResolver } from '../util/partitions'
 import { spawnAsync, spawnAsyncNoOut } from '../util/process'
@@ -73,6 +74,7 @@ export async function copyBlobs(
 async function patchModemCarrierConfig(dbPath: string) {
   let origMode = (await fs.stat(dbPath)).mode
   await fs.chmod(dbPath, 0o600)
+  let sqlite3 = await getHostBinPath('sqlite3')
   for (let override of CARRIER_DB_OVERRIDES) {
     const result = await spawnAsync('sqlite3', [
       dbPath,
@@ -84,7 +86,7 @@ async function patchModemCarrierConfig(dbPath: string) {
           `the carrier_info override is no longer needed and should be removed`,
       )
     }
-    await spawnAsyncNoOut('sqlite3', [
+    await spawnAsyncNoOut(sqlite3, [
       dbPath,
       `INSERT INTO carrier_info (carrier_id, mccmnc, imsi_prefix_xpattern, spn, gid1, gid2) ` +
         `VALUES (${override.carrier_id}, '${override.mccmnc}', '${override.imsi_prefix_xpattern}', ` +
