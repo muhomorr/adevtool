@@ -3,10 +3,10 @@ import { promises as fs } from 'fs'
 import assert from 'assert'
 import path from 'path'
 import { readFile } from '../util/fs'
-import { spawnAsync, spawnAsyncNoOut } from '../util/process'
 import { Partition, PathResolver } from '../util/partitions'
-import { BlobEntry } from './entry'
+import { spawnAsync, spawnAsyncNoOut } from '../util/process'
 import { CARRIER_DB_OVERRIDES } from './carrier-db-overrides'
+import { BlobEntry } from './entry'
 
 export async function copyBlobs(
   entries: Iterable<BlobEntry>,
@@ -63,10 +63,7 @@ export async function copyBlobs(
       await fs.copyFile(srcPath, outPath)
     }
 
-    if (
-      entry.partPath.partition === Partition.Vendor &&
-      entry.partPath.relPath === 'firmware/carrierconfig/cfg.db'
-    ) {
+    if (entry.partPath.partition === Partition.Vendor && entry.partPath.relPath === 'firmware/carrierconfig/cfg.db') {
       await patchModemCarrierConfig(outPath)
     }
   })
@@ -111,7 +108,6 @@ async function maybePatch(entry: BlobEntry, srcPath: string, device: string) {
           if (device === 'rango') {
             return patchThermalCfg(await readFile(srcPath))
           }
-
       }
       if (relPath.startsWith('etc/fstab')) {
         return patchFstab(await readFile(srcPath))
@@ -236,21 +232,20 @@ function patchGpsCfg(orig: string) {
 }
 
 function patchThermalCfg(orig: string) {
-  let dropCoeff = false;
+  let dropCoeff = false
 
-  return replaceLines(orig, (line) => {
+  return replaceLines(orig, line => {
     if (line.includes('"S9M_VDD_TPU_M"')) {
-      dropCoeff = true;
-      return line.replace(/"S9M_VDD_TPU_M",?\s*/, "").replace(/,\s*]/, "]");
+      dropCoeff = true
+      return line.replace(/"S9M_VDD_TPU_M",?\s*/, '').replace(/,\s*]/, ']')
     }
     if (dropCoeff && line.includes('"Coefficient"')) {
-      dropCoeff = false;
-      return line.replace(/,?\s*[\d.]+(?=\s*])/, "");
+      dropCoeff = false
+      return line.replace(/,?\s*[\d.]+(?=\s*])/, '')
     }
-    return line;
-  });
+    return line
+  })
 }
-
 
 function replaceLines(multiLine: string, callbackFn: (value: string) => string) {
   return multiLine
