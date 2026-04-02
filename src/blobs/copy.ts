@@ -76,14 +76,14 @@ async function patchModemCarrierConfig(dbPath: string) {
   await fs.chmod(dbPath, 0o600)
   let sqlite3 = await getHostBinPath('sqlite3')
   for (let override of CARRIER_DB_OVERRIDES) {
-    const result = await spawnAsync('sqlite3', [
+    let numRows = await spawnAsync(sqlite3, [
       dbPath,
       `SELECT COUNT(*) FROM carrier_info WHERE mccmnc = '${override.mccmnc}';`,
     ])
-    if (parseInt(result.trim(), 10) > 0) {
+    if (numRows !== '0\n') {
       throw new Error(
-        `cfg.db already contains mccmnc ${override.mccmnc} (${override.name}) — ` +
-          `the carrier_info override is no longer needed and should be removed`,
+        `cfg.db already contains mccmnc ${override.mccmnc} (${override.name}) - ` +
+          `the carrier_info override is no longer needed and should be removed; sqlite query output: ${numRows}`,
       )
     }
     await spawnAsyncNoOut(sqlite3, [
