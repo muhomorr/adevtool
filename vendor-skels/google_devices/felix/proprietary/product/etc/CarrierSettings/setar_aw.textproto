@@ -1,12 +1,11 @@
 canonical_name: "setar_aw"
-version: 75000000001
+version: 75000000002
 apns {
   apn {
     name: "SETAR Internet"
     value: "internet.setar.aw"
     type: DEFAULT
     type: SUPL
-    bearer_bitmask: "14|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
   }
@@ -42,5 +41,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1754475063
+  seconds: 1770826076
 }

@@ -1,12 +1,11 @@
 canonical_name: "mtn_zm"
-version: 75000000001
+version: 75000000002
 apns {
   apn {
     name: "MTN"
     value: "default"
     type: DEFAULT
     type: SUPL
-    bearer_bitmask: "14|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
   }
@@ -27,5 +26,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1764766990
+  seconds: 1770826125
 }
