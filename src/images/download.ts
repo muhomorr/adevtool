@@ -36,7 +36,7 @@ export async function downloadDeviceImage(image: DeviceImage, statusLine: Status
   await downloadImage(image, IMAGE_DOWNLOAD_DIR, statusLine)
 }
 
-const downloadConcurrency = parseInt(process.env['ADEVTOOL_DOWNLOAD_CONCURRENCY'] ?? '5')
+const downloadConcurrency = parseInt(process.env['ADEVTOOL_DOWNLOAD_CONCURRENCY'] ?? '20')
 const downloadSemaphore = new Semaphore(downloadConcurrency)
 
 async function downloadImage(image: DeviceImage, outDir: string, statusLine: StatusLine) {
