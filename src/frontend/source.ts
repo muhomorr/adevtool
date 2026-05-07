@@ -10,7 +10,7 @@ import { log, StatusLine } from '../util/log'
 
 import { Semaphore } from 'async-mutex'
 import * as zlib from 'node:zlib'
-import { ADEVTOOL_DIR, getHostBinPath, IMAGE_DOWNLOAD_DIR, OS_CHECKOUT_DIR } from '../config/paths'
+import { ADEVTOOL_DIR, getHostBinPath, OS_CHECKOUT_DIR, UNPACKED_IMAGES_DIR } from '../config/paths'
 import { BuildIndex, ImageType } from '../images/build-index'
 import { DeviceImage } from '../images/device-image'
 import { downloadDeviceImage } from '../images/download'
@@ -90,8 +90,7 @@ export async function prepareDeviceImages(
         await downloadDeviceImage(imageToUnpack, statusLine)
       }
 
-      let dirName = getUnpackedImageDirName(imageToUnpack)
-      let dir = path.join(IMAGE_DOWNLOAD_DIR, 'unpacked', dirName)
+      let dir = getUnpackedImageDirPath(imageToUnpack)
       images.unpackedFactoryImageDir = dir
 
       if (await isDirectory(path.join(dir, BASE_FIRMWARE_DIR))) {
@@ -122,11 +121,11 @@ async function deleteNonTempUnpackedImagesDir(destDir: string) {
 
 export async function deleteUnpackedDeviceImages(imagesMap: Map<DeviceBuildId, DeviceImages>) {
   for (const images of imagesMap.values()) {
-    const dir = images.unpackedFactoryImageDir;
+    const dir = images.unpackedFactoryImageDir
     if (!dir) {
-      continue;
+      continue
     }
-    await deleteNonTempUnpackedImagesDir(dir);
+    await deleteNonTempUnpackedImagesDir(dir)
   }
 }
 
@@ -134,7 +133,7 @@ const unpackConcurrency = parseInt(process.env['ADEVTOOL_UNPACK_CONCURRENCY'] ??
 const unpackSemaphore = new Semaphore(unpackConcurrency)
 
 async function unpackImage(imageToUnpack: DeviceImage, destDir: string) {
-  await deleteNonTempUnpackedImagesDir(destDir);
+  await deleteNonTempUnpackedImagesDir(destDir)
 
   let destTmpDir = destDir + '-tmp'
 
@@ -160,8 +159,12 @@ async function unpackImage(imageToUnpack: DeviceImage, destDir: string) {
   log('unpacked ' + getUnpackedImageDirName(imageToUnpack))
 }
 
-function getUnpackedImageDirName(image: DeviceImage) {
+export function getUnpackedImageDirName(image: DeviceImage) {
   return image.deviceConfig.device.name + '-' + image.buildId
+}
+
+function getUnpackedImageDirPath(image: DeviceImage) {
+  return path.join(UNPACKED_IMAGES_DIR, getUnpackedImageDirName(image))
 }
 
 export const BASE_FIRMWARE_DIR = 'base-firmware'
