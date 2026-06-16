@@ -4,7 +4,7 @@ BoardConfig.mk: c7f31abae688b9012ab9fcc2d921a0d58d2335efb5423e954ccd183eee787f4b
 README.md: 5cce87d8d59febf91b57a4130372065a42ef7178cb3f4bf4214bf0807c4acbb8
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
-apk-parser-config/apk-parser-config.pb: 21fcf2a88456cbe1ace15219cdfa994d6c5d08ef9e945d03b929ea14542eccbe
+apk-parser-config/apk-parser-config.pb: 49f2e32b8db656d3b992a3b0ee9c6c67f3d16c974b5bcc36fcfe9ce4a1c2120e
 cmds-for-envsetup.sh: 95f6e8a5eb453ac730e1603bfeb0ef55f98e24d55113c60a99cadc2f0964f7a5
 firmware: dir
 firmware/abl.img: 35b13664e140361ab96000473b2643eac4274471b29ed076cf38e7d259c68afe

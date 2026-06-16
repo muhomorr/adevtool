@@ -4,7 +4,7 @@ BoardConfig.mk: 6f37e75b4078859890dc79c5a1522d18be5cea811d35e6d962d79722bcba4abe
 README.md: fe4b06af3237c7bd41dfd0591ef37b487b46837830aba990607367cf40dd2727
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
-apk-parser-config/apk-parser-config.pb: 6f314abdb5a67187614d28bc9d734b8ee20620662008130fe55d8ed961ecab91
+apk-parser-config/apk-parser-config.pb: 3e97702081665808e4ebcdc3e7e37b0709c08972dc0cf3814f99f21b6d35a07b
 caiman.mk: 7a4c61183dc37c629398f05f2f5b9c1c5628d599dd44a1693dc89728f8a91dbd
 cmds-for-envsetup.sh: f136318266e262b460e4bec6b73e59e2bd8370c38d488358a52a3a15e64d7486
 firmware: dir

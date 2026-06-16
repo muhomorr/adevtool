@@ -5,7 +5,7 @@ README.md: f5c022e343e9c6633d7c7564fb0f5a82f25e9ab3641ff9313decb0e1a4cd03d1
 akita.mk: 401638da27315bcf73a5fad68efb229fc95f43cc2095039f0ee8c3a117fd0a07
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
-apk-parser-config/apk-parser-config.pb: c20906d2695c8a536b66afd2c894634b342ea501d02334cb370dd78eeef71f17
+apk-parser-config/apk-parser-config.pb: 85dbae36e0ae3839407dbcd9ca72da2e01efb5121ef7b7d61d889ce31933e919
 cmds-for-envsetup.sh: 4bb27b9aae6338b9067061056ebae34eca072818e32b410f8c77ecf62808cf13
 firmware: dir
 firmware/abl.img: e15a427547c5a609036c81b1e2a947f7fbc016ffa42114a26a9b8222b4de5b85

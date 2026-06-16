@@ -148,7 +148,7 @@ package_inclusions:
     include_uses_permissions:
       - com.google.android.pixelnfc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
     flags:
-      - include_as_untrusted_app
+      - FLAG_INCLUDE_AS_UNTRUSTED_APP
 
   com.samsung.slsi.telephony.oemril:
     max_known_version: 2
@@ -221,7 +221,7 @@ package_inclusions:
       #
       # Also, Play Store would be unable to update Pixel Camera Services if it was allowed to see
       # it due to the fs-verity requirements for system package updates.
-      - isolate_from_gmscore_and_finsky
+      - FLAG_ISOLATE_FROM_GMSCORE_AND_FINSKY
 
   com.google.android.euicc:
     max_known_version: 235496
@@ -265,7 +265,7 @@ package_inclusions:
     flags:
       # EuiccGoogle is a privileged app, block it from interacting with unprivileged
       # parts of sandboxed Google Play
-      - isolate_from_gmscore_and_finsky
+      - FLAG_ISOLATE_FROM_GMSCORE_AND_FINSKY
 
   com.google.android.euiccoverlay:
     max_known_version: auto
@@ -317,7 +317,7 @@ package_inclusions:
     flags:
       # EuiccSupportPixel is a privileged package, block it from interacting with unprivileged
       # parts of GMS
-      - isolate_from_user_apps
+      - FLAG_ISOLATE_FROM_USER_APPS
 
   com.google.euiccpixel.permissions:
     max_known_version: 1
