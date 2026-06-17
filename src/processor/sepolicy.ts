@@ -106,9 +106,15 @@ export async function processSepolicy(
               let prefix = 'name='
               if (part.startsWith(prefix)) {
                 let token = part.substring(prefix.length)
+                if (token.startsWith('.')) {
+                  return FilterResult.UNKNOWN_ENTRY
+                }
                 let processSeparator = token.indexOf(':')
+                if (processSeparator == 0) {
+                  return FilterResult.UNKNOWN_ENTRY
+                }
                 let name = processSeparator > 0 ? token.substring(0, processSeparator) : token
-                if (name.startsWith('.')) {
+                if (name.includes('*')) {
                   return FilterResult.UNKNOWN_ENTRY
                 }
                 if (excludedPackages.has(name) || !apkProcResult.allPackageNames.has(name)) {
