@@ -148,6 +148,7 @@ filters:
       - android:bool/config_assistLongPressHomeEnabledDefault
       - android:bool/config_assistTouchGestureEnabledDefault
       - android:bool/config_bugReportHandlerEnabled = true
+      - android:bool/config_cv_available = true # enables the Comfort View feature which is not part of AOSP
       - android:bool/config_defaultRingtonePickerEnabled = false
       - android:bool/config_enableFusedLocationOverlay = true
       - android:bool/config_enableGeocoderOverlay = true
