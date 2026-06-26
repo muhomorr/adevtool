@@ -9,7 +9,6 @@ filters:
       - com.android.safetyregulatoryinfo:raw/image
       - com.android.settings:drawable/regulatory_info_
       - com.android.settings:raw/G953-
-      - com.android.wifi.resources/WifiCustomization
     match:
       - "android:string/config_dozeComponent =\ "
       - "com.android.settings:string/help_uri_alarms_and_reminders =\ "
@@ -1566,6 +1565,71 @@ filters:
       - com.android.uwb.resources/UwbCustomization:string/pose_source_type = NONE
       - com.android.virtualization.terminal/TerminalConfig:bool/gfxstream_supported = true # TODO look into why this is not enabled for all Pixels
       - com.android.wallpaper:dimen/keyguard_large_clock_top_margin|*
+      - com.android.wifi.resources/WifiCustomization:array/config_wifi_fatal_firmware_alert_error_code_list = 1;2;3;8
+      - com.android.wifi.resources/WifiCustomization:array/config_wifi_fatal_firmware_alert_error_code_list = 1;256;257;258;259;260;261;262;263;264;512;513;514
+      - com.android.wifi.resources/WifiCustomization:array/config_wifiRssiLevelThresholds = -99;-88;-77;-66
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi11axSupportOverride = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi5ghzSupport = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi6ghzSupport = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_ap_mac_randomization_supported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_background_scan_support = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_connected_mac_randomization_supported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_diagnostics_bugreport_enabled = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_fast_bss_transition_enabled = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_link_probing_supported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_p2p_mac_randomization_supported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_revert_country_code_on_cellular_loss = false
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_softap_acs_supported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_softap_ieee80211ac_supported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_softap_sae_supported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_subsystem_restart_bugreport_enabled = false
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifi_turn_off_during_emergency_call = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiAdjustPollRssiIntervalEnabled = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiAllowNonPersistentMacRandomizationOnOpenSsids = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiBridgedSoftApSupported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiChannelUtilizationOverrideEnabled = false
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiCoexForGpsL1 = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiDefaultCoexAlgorithmEnabled = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiDisableFirmwareRoamingInIdleMode = false
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiDisableFirmwareRoamingInIdleMode = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiDriverSupportedNl80211RegChangedEvent = false
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiDriverSupportedNl80211RegChangedEvent = false
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiDriverSupportedNl80211RegChangedEvent = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiDtimMultiplierConfigEnabled = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiEnablePartialInitialScan = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiEnableStaDfsChannelForPeerNetwork = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiEnableStaIndoorChannelForPeerNetwork = false
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiFrameworkSoftApDisableBridgedModeShutdownIdleInstanceWhenCharging = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiLinkLayerAllRadiosStatsAggregationEnabled = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiMainlineSupplicantEnabled = false
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiMainlineSupplicantEnabled = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiMinConfirmationDurationSendNetworkScoreEnabled = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiMultiStaLocalOnlyConcurrencyEnabled = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiMultiStaNetworkSwitchingMakeBeforeBreakEnabled = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiMultiStaNetworkSwitchingMakeBeforeBreakEnabled = false
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiSaeH2eSupported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiSaeUpgradeEnabled = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiSaeUpgradeOffloadEnabled = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiSoftap6ghzSupported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiSoftapIeee80211axSupported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiStaWithBridgedSoftApConcurrencySupported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiTwtSupported = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiUpdateCountryCodeFromScanResultGeneric = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiUpdateCountryCodeFromScanResultSetupWizard = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiUseHalApiToDisableFwRoaming = true
+      - com.android.wifi.resources/WifiCustomization:bool/config_wifiWaitForDestroyedListeners = true
+      - com.android.wifi.resources/WifiCustomization:integer/config_wifi_framework_recovery_timeout_delay = 3000
+      - com.android.wifi.resources/WifiCustomization:integer/config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz = -83
+      - com.android.wifi.resources/WifiCustomization:integer/config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz = -80
+      - com.android.wifi.resources/WifiCustomization:integer/config_wifi_framework_wifi_score_entry_rssi_threshold_24GHz = -80
+      - com.android.wifi.resources/WifiCustomization:integer/config_wifi_framework_wifi_score_entry_rssi_threshold_5GHz = -77
+      - com.android.wifi.resources/WifiCustomization:integer/config_wifiCoexGpsL1ThresholdKhz = 10000
+      - com.android.wifi.resources/WifiCustomization:integer/config_wifiHardwareSoftapMaxClientCount = 32
+      - com.android.wifi.resources/WifiCustomization:integer/config_wifiInitialPartialScanMaxNewChannelsPerNetwork = 3
+      - com.android.wifi.resources/WifiCustomization:integer/config_wifiMaxNativeFailureSelfRecoveryPerHour = 10
+      - com.android.wifi.resources/WifiCustomization:integer/config_wifiVerboseLoggingAlwaysOnLevel = 1
+      - com.android.wifi.resources/WifiCustomization:string/config_wifi_tcp_buffers = 524288,2097152,8388608,262144,524288,4194304
+      - com.android.wifi.resources/WifiCustomization:string/wifi_tether_configure_ssid_default = Pixel
       - com.google.android.grilservice/GrilRadioCustomizable:bool/cap_sensor_support = true
       - com.google.android.grilservice/GrilRadioCustomizable:bool/ignore_twoshay_protective_case_enabled = true
       - com.google.android.pixelsystemservice/AdaptiveHapticsConfig:string/high_intensity|*
