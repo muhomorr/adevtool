@@ -294,7 +294,7 @@ package_inclusions:
       - android.permission.UPDATE_DEVICE_STATS
 
   com.google.euiccpixel:
-    max_known_version: 20205
+    max_known_version: 20225
     include_uses_permissions:
       - com.google.android.c2dm.permission.RECEIVE
       - com.google.android.providers.gsf.permission.READ_GSERVICES
