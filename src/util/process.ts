@@ -40,13 +40,14 @@ export interface SpawnCmd {
   stdinData?: Buffer
   stdinFileSource?: string
   stdoutFileSink?: string
+  spawnOpts?: SpawnOptions
   handleStdoutBuffer?: (buf: Buffer) => void
   allowedExitCodes?: number[]
 }
 
 // Returns stdout. If there's stderr output, all lines of it should pass the isStderrLineAllowed check
 export async function spawnAsync2(cmd: SpawnCmd) {
-  let spawnOpts = {} as SpawnOptions
+  let spawnOpts = cmd.spawnOpts ?? {} as SpawnOptions
   let fileHandles: FileHandle[] = []
   if (cmd.stdinFileSource !== undefined) {
     let fh = await fs.open(cmd.stdinFileSource, 'r')

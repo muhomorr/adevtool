@@ -1,5 +1,5 @@
 import assert from 'assert'
-import { spawnAsync } from './process'
+import { spawnAsync, spawnAsyncNoOut } from './process'
 
 export class GitLsRemote {
   tags = new Map<string, string>()
@@ -48,6 +48,10 @@ export class GitLsRemote {
 
 export async function spawnGit(repoPath: string, args: string[], isStderrLineAllowed?: (s: string) => boolean) {
   return await spawnAsync('git', ['-C', repoPath, ...args], isStderrLineAllowed)
+}
+
+export async function spawnGitNoOut(repoPath: string, args: string[], isStderrLineAllowed?: (s: string) => boolean) {
+  return await spawnAsyncNoOut('git', ['-C', repoPath, ...args], isStderrLineAllowed)
 }
 
 function getKeysForCommit(map: Map<string, string>, value: string) {

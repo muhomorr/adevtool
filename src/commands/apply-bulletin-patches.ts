@@ -1,44 +1,50 @@
-import { confirm } from '@inquirer/prompts'
 import { Command, Flags } from '@oclif/core'
 import assert from 'assert'
 import chalk from 'chalk'
 import { promises as fs } from 'fs'
 import { spawnSync } from 'node:child_process'
+import { tmpdir } from 'node:os'
 import path from 'path'
-import { unzip } from 'unzipit'
 import util from 'util'
 import xml2js from 'xml2js'
 import YAML from 'yaml'
 import { OS_CHECKOUT_DIR } from '../config/paths'
-import { assertDefined, filterAsync, mapGet, updateMultiMap, updateMultiSet } from '../util/data'
+import { assertDefined, mapGet, updateMultiMap, updateMultiSet } from '../util/data'
 import { isDirectory, isFile, listFilesRecursive, readFile } from '../util/fs'
-import { spawnGit } from '../util/git'
-import { spawnAsyncStdin } from '../util/process'
-import { makeAospForkMap, ManifestConfig } from './generate-manifest'
+import { spawnGit, spawnGitNoOut } from '../util/git'
+import { log } from '../util/log'
+import { spawnAsync2, spawnAsyncNoOut, spawnAsyncStdin } from '../util/process'
+import { ManifestConfig } from './generate-manifest'
 
 export class ApplyBulletinPatches extends Command {
   static flags = {
-    bulletinDir: Flags.file({ char: 'f', required: true, multiple: true }),
+    bulletinSource: Flags.file({ char: 'f', required: true, multiple: true }),
     osManifestConfig: Flags.file({ default: path.join(OS_CHECKOUT_DIR, '.repo/manifests/config.yml') }),
     osManifestFile: Flags.file({ default: path.join(OS_CHECKOUT_DIR, '.repo/manifests/default.xml') }),
+    keepTempDir: Flags.boolean(),
+    commitTitle: Flags.string(),
     outDir: Flags.file({ required: true }),
-    additionalPatchesDir: Flags.file(),
-    skippedPatchesDir: Flags.file(),
   }
 
   async run() {
     let { flags } = await this.parse(ApplyBulletinPatches)
-
-    let additionalPatchesDir = flags.additionalPatchesDir ?? path.join(path.dirname(flags.outDir), 'additional-patches')
-    let skippedPatchesDir = flags.skippedPatchesDir ?? path.join(path.dirname(flags.outDir), 'patches-to-skip')
+    {
+      let outStatus = await spawnGit(flags.outDir, ['status', '--short'])
+      if (outStatus !== '') {
+        log(`${flags.outDir} is not clean:\n` + outStatus)
+        return
+      }
+    }
+    let additionalPatchesDir = path.join(flags.outDir, 'additional-patches')
+    let skippedPatchesDir = path.join(flags.outDir, 'patches-to-skip')
 
     let [additionalPatchesInfo, skippedPatchesInfo] = await Promise.all([
       readPatchesDir(additionalPatchesDir),
       readPatchesDir(skippedPatchesDir),
     ])
 
-    console.log('Additional patches: ' + util.inspect(additionalPatchesInfo, false, Infinity))
-    console.log('Patches to skip: ' + util.inspect(skippedPatchesInfo, false, Infinity))
+    log('Additional patches: ' + util.inspect(additionalPatchesInfo, false, Infinity))
+    log('Patches to skip: ' + util.inspect(skippedPatchesInfo, false, Infinity))
 
     let projectNamePathMap = new Map<string, string>()
     // reverse mapping
@@ -65,20 +71,161 @@ export class ApplyBulletinPatches extends Command {
 
     let fullRepoPatchesMap = new Map<string, Patch[]>()
 
+    let bulletinDirs: BulletinDir[] = []
+
+    let tmpDir = await fs.mkdtemp(path.join(tmpdir(), 'bulletin-patches-'))
+
     // collect patches and CVE info from all provided bulletin dirs
-    for (let bulletinDir of flags.bulletinDir) {
-      let patchIndexFileName = assertDefined(
-        (await fs.readdir(bulletinDir)).find(s => s.endsWith('-patches-index.json')),
-      )
-      let patchIndexFilePath = path.join(bulletinDir, patchIndexFileName)
-      let patchesIndex = JSON.parse(await readFile(patchIndexFilePath)) as SecurityBulletinPatchesIndex
+    for (let bulletinSrc of flags.bulletinSource) {
+      log(`===========================\nchecking ${bulletinSrc}`)
+
+      let srcStat = await fs.stat(bulletinSrc)
+      if (!srcStat.isFile()) {
+        throw new Error('unknown source ' + util.inspect(srcStat))
+      }
+
+      let partSuffix = '.part1'
+      if (bulletinSrc.endsWith(partSuffix)) {
+        let partsDir = path.dirname(bulletinSrc)
+        let dirEntries = await fs.readdir(partsDir, { withFileTypes: true })
+        let srcFileName = path.basename(bulletinSrc)
+        let base = srcFileName.slice(0, -1)
+        let parts = dirEntries.filter(de => de.isFile() && de.name.startsWith(base)).map(de => de.name)
+        parts.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+        let out = path.join(tmpDir, srcFileName.slice(0, -partSuffix.length))
+        log('combining ' + parts + ' into ' + out)
+        for (let part of parts) {
+          await fs.appendFile(out, await fs.readFile(path.join(partsDir, part)))
+        }
+        bulletinSrc = out
+      }
+
+      let unpackedSrc = path.join(tmpDir, path.basename(bulletinSrc) + '-dir')
+      await fs.mkdir(unpackedSrc)
+
+      let type: BulletinType
+
+      if (bulletinSrc.endsWith('.zip')) {
+        type = BulletinType.FinalSigned
+        let res = await spawnAsync2({
+          command: '/bin/unzip',
+          args: ['-q', bulletinSrc],
+          spawnOpts: { cwd: unpackedSrc },
+        })
+        assert(res.length === 0)
+      } else if (bulletinSrc.includes('.tar.')) {
+        type = BulletinType.Beta
+        // use OS variants of tar and xzcat since AOSP prebuilts are much slower as of Android 17
+        let res = await spawnAsync2({
+          command: '/bin/tar',
+          args: ['--extract', '--use-compress-program=/bin/xzcat', `--file=${bulletinSrc}`],
+          spawnOpts: { cwd: unpackedSrc, stdio: 'inherit' },
+        })
+        assert(res.length === 0)
+      } else {
+        throw new Error('unknown source ' + bulletinSrc)
+      }
+
+      if (type === BulletinType.Beta) {
+        let psbDir = path.join(unpackedSrc, 'Partner Security Bulletin')
+        assert(await isDirectory(psbDir), psbDir)
+        let bpbDir = path.join(psbDir, 'Beta Partner Bulletins')
+        assert(await isDirectory(bpbDir), bpbDir)
+
+        for (let year of (await fs.readdir(bpbDir)).sort()) {
+          let yearDir = path.join(bpbDir, year)
+          for (let yearMonth of (await fs.readdir(yearDir)).sort()) {
+            let versionsDir = path.join(yearDir, yearMonth, 'ANDROID')
+            assert(await isDirectory(versionsDir), versionsDir)
+            let versions = (await fs.readdir(versionsDir)).sort((a, b) =>
+              a.localeCompare(b, undefined, { numeric: true }),
+            )
+            assert(versions.length > 0, versionsDir)
+            for (let version of versions) {
+              if (version.match('^v[0-9]+$') === null) {
+                throw new Error('invalid versions dir ' + versionsDir + ' ; ' + versions)
+              }
+            }
+            let latestVersionDir = path.join(versionsDir, versions[versions.length - 1])
+
+            let patchesIndexSuffix = '-patches-index.json'
+            let indices = (await fs.readdir(latestVersionDir))
+              .filter(e => e.endsWith(patchesIndexSuffix))
+              .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+            assert(indices.length > 0, latestVersionDir)
+            log('found ' + indices[indices.length - 1])
+
+            let indexName = indices[indices.length - 1]
+            let baseName = indexName.slice(0, -patchesIndexSuffix.length)
+            let bulletinJsonPath = path.join(latestVersionDir, baseName + '.json')
+            assert(await isFile(bulletinJsonPath), bulletinJsonPath)
+            let subVersionIndex = baseName.lastIndexOf('_v')
+            let subVersion = ''
+            if (subVersionIndex > 0) {
+              subVersion = baseName.substring(subVersionIndex)
+            }
+            let patchesDirPath = path.join(latestVersionDir, 'patches' + subVersion)
+            assert(await isDirectory(patchesDirPath), patchesDirPath)
+
+            let patchIndexJsonPath = path.join(latestVersionDir, indexName)
+            assert(await isFile(patchIndexJsonPath), patchIndexJsonPath)
+
+            bulletinDirs.push({
+              type: BulletinType.Beta,
+              baseDir: latestVersionDir,
+              yearMonth,
+              bulletinJsonPath,
+              patchIndexJsonPath,
+              patchesDirPath,
+            })
+          }
+        }
+      } else if (type === BulletinType.FinalSigned) {
+        let dirs = await fs.readdir(unpackedSrc)
+        assert(dirs.length === 1)
+        let yearMonth = dirs[0]
+        let basePath = path.join(unpackedSrc, yearMonth)
+        let bulletinJsonPath = path.join(basePath, yearMonth + '-android-bulletin-partner-preview.json')
+        assert(await isFile(bulletinJsonPath), bulletinJsonPath)
+        let patchIndexJsonPath = path.join(basePath, yearMonth + '-android-bulletin-partner-preview-patches-index.json')
+        assert(await isFile(patchIndexJsonPath), patchIndexJsonPath)
+        let patchesZip = path.join(basePath, yearMonth + '-android-bulletin-partner-preview-patches.zip')
+        assert(await isFile(patchIndexJsonPath), patchesZip)
+        let res = await spawnAsync2({
+          command: '/bin/unzip',
+          args: ['-q', patchesZip],
+          spawnOpts: { cwd: basePath },
+        })
+        assert(res.length === 0)
+        let patchesDirPath = path.join(
+          basePath,
+          yearMonth + '-android-bulletin-partner-preview-patches/patches',
+          manifestConfig.aosp_revision,
+        )
+        assert(await isDirectory(patchesDirPath), patchesDirPath)
+        bulletinDirs.push({
+          type: BulletinType.FinalSigned,
+          baseDir: basePath,
+          yearMonth,
+          bulletinJsonPath,
+          patchIndexJsonPath,
+          patchesDirPath,
+        })
+      }
+    }
+
+    // collect patches and CVE info from all provided bulletin sources
+    for (let bulletinDir of bulletinDirs) {
+      log(`===========================\nprocessing ${bulletinDir.yearMonth}: '${bulletinDir.baseDir}'`)
+
+      let patchesIndex = JSON.parse(await readFile(bulletinDir.patchIndexJsonPath)) as SecurityBulletinPatchesIndex
       if (patchesIndex.patches === undefined) {
-        console.log('no patches in ' + bulletinDir + ' for any Android version')
+        log('no patches for any Android version')
         continue
       }
       let patches = patchesIndex.patches[baseAospTag]
       if (patches === undefined) {
-        console.log('no patches in ' + bulletinDir + ' for ' + baseAospTag)
+        log('no patches for ' + baseAospTag)
         continue
       }
       let repoShasMap = new Map<string, string[]>()
@@ -91,8 +238,7 @@ export class ApplyBulletinPatches extends Command {
         repoShasMap.set(repo, repoPatches.shas)
       }
 
-      let bulletinFileName = patchIndexFileName.slice(0, -'-patches-index.json'.length) + '.json'
-      let bulletin = JSON.parse(await readFile(path.join(bulletinDir, bulletinFileName))) as BulletinInfo
+      let bulletin = JSON.parse(await readFile(bulletinDir.bulletinJsonPath)) as BulletinInfo
 
       let cveInfoMap = new Map<string, Set<string>>() // patch SHA -> patch CVE infos
 
@@ -107,8 +253,11 @@ export class ApplyBulletinPatches extends Command {
         }
         let branches = versionData.branches
         assert(branches.length === 1)
-        let severity = versionData.severity ?? 'Unknown'
-        let cveInfo = [cve, CVE_INFO_SEVERITY_PREFIX + severity].join(CVE_INFO_ITEM_SEPARATOR)
+        let severity = assertDefined(versionData.severity, cve)
+        let type = assertDefined(versionData.type, cve)
+        let cveInfo = [cve, CVE_INFO_SEVERITY_PREFIX + severity, CVE_INFO_TYPE_PREFIX + type].join(
+          CVE_INFO_ITEM_SEPARATOR,
+        )
         for (let data of branches[0].projects) {
           let repo = assertDefined(data.repo)
           let presentShas = assertDefined(repoShasSetMap.get(repo))
@@ -119,16 +268,17 @@ export class ApplyBulletinPatches extends Command {
         }
       }
 
-      let bulletinZipFileName = patchIndexFileName.slice(0, -'-index.json'.length) + '.zip'
-      let bulletinZipFilePath = path.join(bulletinDir, bulletinZipFileName)
-      let zipPatchMap: Map<string, string> | null = null // commit hash -> patch contents
-      if (await isFile(bulletinZipFilePath)) {
-        zipPatchMap = await readPatchesFromBulletinZip(bulletinZipFilePath, baseAospTag)
+      let shaPatchMap: Map<string, string> | null = null // commit hash -> patch path
+      if (bulletinDir.type === BulletinType.FinalSigned) {
+        shaPatchMap = await readPatchesFromFinalBulletinDir(bulletinDir)
       }
-      let patchesDir = path.join(bulletinDir, 'patches')
 
       for (let [repo, shas] of repoShasMap.entries()) {
-        let repoPath = mapGet(projectNamePathMap, repo)
+        let repoPath = projectNamePathMap.get(repo)
+        if (repoPath === undefined) {
+          log('WARNING: skipping missing repo ' + repo)
+          continue
+        }
         let skippedPatchesArr = await Promise.all(
           (skippedPatchesInfo.patchMap.get(repoPath) ?? []).map(async patchPath => readFile(patchPath)),
         )
@@ -136,14 +286,17 @@ export class ApplyBulletinPatches extends Command {
         assert(skippedPatches.size === skippedPatchesArr.length)
         let repoPatches: Patch[] = []
         for (let sha of shas) {
-          let patch: string
-          let filePath: string | undefined = undefined
-          if (zipPatchMap !== null) {
-            patch = mapGet(zipPatchMap, sha)
-          } else {
-            filePath = path.join(patchesDir, sha + '.patch')
-            patch = await readFile(filePath)
+          let filePath: string
+          switch (bulletinDir.type) {
+            case BulletinType.Beta:
+              filePath = path.join(bulletinDir.patchesDirPath, sha + '.patch')
+              break
+            case BulletinType.FinalSigned:
+              assert(shaPatchMap !== null)
+              filePath = mapGet(shaPatchMap, sha)
+              break
           }
+          let patch: string = await readFile(filePath)
           if (skippedPatches.has(patch)) {
             continue
           }
@@ -170,6 +323,9 @@ export class ApplyBulletinPatches extends Command {
             isAdditional: false,
           })
         }
+        if (repoPatches.length === 0) {
+          continue
+        }
 
         let fullRepoPatches = fullRepoPatchesMap.get(repo)
         if (fullRepoPatches === undefined) {
@@ -179,6 +335,8 @@ export class ApplyBulletinPatches extends Command {
         fullRepoPatches.push(...repoPatches)
       }
     }
+
+    log('===========================')
 
     for (let [repoPath, patchPaths] of additionalPatchesInfo.patchMap) {
       let repo = mapGet(repoPathProjectNameMap, repoPath)
@@ -199,49 +357,18 @@ export class ApplyBulletinPatches extends Command {
       fullRepoPatches.push(...patches)
     }
 
-    let forkedAospRepos = makeAospForkMap(manifestConfig)
-
-    let revision = manifestConfig.revision
-    let prefix = 'refs/heads/'
-    if (revision.startsWith(prefix)) {
-      revision = revision.substring(prefix.length)
-    }
     let patchedRepos: PatchedRepo[] = []
-    let manualResolutionRequiredRepos: [string, Patch[]][] = []
+    let repoNames = Array.from(fullRepoPatchesMap.keys()).sort()
 
-    for (let [repoName, patches] of fullRepoPatchesMap) {
-      if (patches.length === 0) {
-        continue
-      }
+    for (let repoName of repoNames) {
+      let patches = mapGet(fullRepoPatchesMap, repoName)
+      assert(patches.length > 0)
       let repoPath = mapGet(projectNamePathMap, repoName)
-      console.log(chalk.bold(repoPath))
-      try {
-        await spawnGit(repoPath, ['remote', 'get-url', 'aosp'])
-      } catch (e) {
-        try {
-          await spawnGit(repoPath, ['remote', 'remove', 'aosp'])
-        } catch (_) {
-          /* empty */
-        }
-        await spawnGit(repoPath, ['remote', 'add', 'aosp', 'https://android.googlesource.com/' + repoName])
-      }
+      log(chalk.bold(repoPath))
 
-      let baseAospRef = baseAospTag
-      await spawnGit(repoPath, ['fetch', '--quiet', 'aosp', 'tag', baseAospRef])
-
-      /*
-        let baseAndroidVersionShort = baseAndroidVersion.substring(0, baseAndroidVersion.indexOf('.'))
-        assert(baseAndroidVersionShort.length === 2)
-        let altBaseAospRef = `android${baseAndroidVersionShort}-security-release`
-        try {
-          await spawnGit(repoPath, ['fetch', '--quiet', 'aosp', altBaseAospRef])
-          baseAospRef = 'aosp/' + altBaseAospRef
-        } catch (e) {
-          await spawnGit(repoPath, ['fetch', '--quiet', 'aosp', 'tag', baseAospRef])
-        }
-      */
-
-      await spawnGit(repoPath, ['checkout', '--quiet', 'FETCH_HEAD'])
+      let baseRevision = await spawnGit(repoPath, ['rev-parse', 'HEAD'])
+      assert(baseRevision.endsWith('\n'))
+      baseRevision = baseRevision.slice(0, -1)
 
       let additionalPatches: Patch[] = []
       for (let patchObj of patches) {
@@ -259,112 +386,63 @@ export class ApplyBulletinPatches extends Command {
         let subject = patch.substring(subjectStart, headerEnd).replaceAll('\n', '')
 
         let amOut
-        for (;;) {
-          try {
-            amOut = await spawnAsyncStdin(
-              'git',
-              ['-C', repoPath, 'am', '--whitespace=nowarn'],
-              Buffer.from(patch),
-              line => line === 'warning: reading patches from stdin/tty...',
-            )
-            break
-          } catch (e) {
-            console.log(`Unable to apply "${subject}": ${e}`)
-            await spawnGit(repoPath, ['am', '--abort'])
-            await confirm({ message: 'Try again?' })
-          }
+        try {
+          amOut = await spawnAsyncStdin(
+            'git',
+            ['-C', repoPath, 'am', '--3way', '--whitespace=nowarn'],
+            Buffer.from(patch),
+            line => line === 'warning: reading patches from stdin/tty...',
+          )
+        } catch (e) {
+          log(`\nUnable to apply "${subject}" (path: '${patchObj.srcFilePath}'): ${e}`)
+          await spawnGit(repoPath, ['am', '--abort'])
+          patchedRepos.push({ path: repoPath, baseRevision })
+          await Promise.all(patchedRepos.map(async e => spawnGit(e.path, ['checkout', '--quiet', e.baseRevision])))
+          log('Discarded applied patches')
+          return
         }
         assert(amOut.endsWith('\n'))
-        console.log(amOut.slice(0, -1))
+        log(amOut.slice(0, -1))
       }
 
-      let forkRemoteName = forkedAospRepos.get(repoPath)
-      if (forkRemoteName === undefined) {
-        await applyAdditionalPatches(repoPath, additionalPatches)
+      await applyAdditionalPatches(repoPath, additionalPatches)
 
-        if (spawnSync('git', ['-C', repoPath, 'diff', '--exit-code', 'HEAD', baseAospRef]).status !== 0) {
-          patchedRepos.push({ path: repoPath, baseRevision: baseAospRef })
-          console.log('Skipping rebasing ' + repoPath + " since it's not a fork")
-        } else {
-          console.log(`${repoPath}: ${baseAospRef} is same as HEAD`)
-        }
+      if (spawnSync('git', ['-C', repoPath, 'diff', '--exit-code', 'HEAD', baseAospTag]).status !== 0) {
+        patchedRepos.push({ path: repoPath, baseRevision })
       } else {
-        let baseRevision = forkRemoteName + '/' + revision
-        await spawnGit(repoPath, ['fetch', '--quiet', forkRemoteName, revision])
-
-        try {
-          console.log('Rebasing ' + repoPath)
-          await spawnGit(
-            repoPath,
-            ['rebase', '--quiet', '--onto', baseRevision, manifestConfig.aosp_revision],
-            line => {
-              if (line.endsWith(' -- patch contents already upstream')) {
-                console.log(line)
-                return true
-              }
-              return false
-            },
-          )
-          await applyAdditionalPatches(repoPath, additionalPatches)
-
-          if (spawnSync('git', ['-C', repoPath, 'diff', '--exit-code', 'HEAD', baseRevision]).status !== 0) {
-            patchedRepos.push({ path: repoPath, baseRevision })
-          } else {
-            console.log(`${baseRevision} is same as HEAD`)
-          }
-        } catch (e) {
-          manualResolutionRequiredRepos.push([repoPath, additionalPatches])
-          console.log(e)
-        }
-      }
-    }
-    if (manualResolutionRequiredRepos.length > 0) {
-      let orig = manualResolutionRequiredRepos
-      for (;;) {
-        console.log(
-          '\nThe following repos have rebase conflicts:\n' +
-            manualResolutionRequiredRepos.map(([repo]) => repo).join('\n') +
-            '\nComplete the rebase manually before proceeding.',
-        )
-        let proceed = await confirm({ message: 'Proceed?' })
-        manualResolutionRequiredRepos = await filterAsync(
-          manualResolutionRequiredRepos,
-          async ([repoPath, additionalPatches]) => {
-            let clean = (await spawnGit(repoPath, ['status'])).includes('nothing to commit, working tree clean')
-            if (clean) {
-              await applyAdditionalPatches(repoPath, additionalPatches)
-            }
-            return !clean
-          },
-        )
-        if (manualResolutionRequiredRepos.length === 0) {
-          if (proceed) {
-            break
-          } else {
-            for (;;) {
-              console.log('Rebase is completed')
-              if (await confirm({ message: 'Proceed?' })) {
-                break
-              }
-            }
-            break
-          }
-        }
-      }
-      for (let [repoPath] of orig) {
-        // TODO store baseRevision above and retrieve it here
-        if (spawnSync('git', ['-C', repoPath, 'diff', '--exit-code', 'HEAD', baseRevision]).status !== 0) {
-          patchedRepos.push({ path: repoPath, baseRevision })
-        } else {
-          console.log(`${repoPath}: ${baseRevision} is same as HEAD`)
-        }
+        log(`${repoPath}: ${baseAospTag} is same as HEAD`)
       }
     }
 
-    console.log()
+    {
+      let origPatchesDir = path.join(flags.outDir, 'original-patches')
+      await fs.rm(origPatchesDir, { recursive: true, force: true })
+      await fs.mkdir(origPatchesDir, { recursive: true })
+      let copies: Promise<void>[] = []
+      for (let dir of bulletinDirs) {
+        let dstDir = path.join(origPatchesDir, dir.yearMonth)
+        await fs.mkdir(dstDir)
+        let files = [dir.bulletinJsonPath, dir.patchIndexJsonPath]
+        let baseBulletinPath = dir.bulletinJsonPath.slice(0, -'json'.length)
+        files.push(baseBulletinPath + 'csv')
+        files.push(baseBulletinPath + 'html')
+        for (let file of files) {
+          copies.push(fs.copyFile(file, path.join(dstDir, path.basename(file))))
+        }
+        copies.push(spawnAsyncNoOut('cp', ['-r', dir.patchesDirPath, dstDir]))
+      }
+      await Promise.all(copies)
+    }
 
-    await fs.mkdir(flags.outDir, { recursive: true })
-    let outDir = await fs.realpath(flags.outDir)
+    if (!flags.keepTempDir) {
+      await fs.rm(tmpDir, { recursive: true })
+    }
+
+    log('')
+
+    let processedPatchesDir = path.join(flags.outDir, 'processed-patches')
+    await fs.rm(processedPatchesDir, { recursive: true, force: true })
+    await fs.mkdir(processedPatchesDir, { recursive: true })
 
     await Promise.all(
       patchedRepos.map(async e =>
@@ -374,7 +452,7 @@ export class ApplyBulletinPatches extends Command {
           '--zero-commit',
           '--no-signature',
           '--output-directory',
-          path.join(outDir, e.path),
+          path.join(processedPatchesDir, e.path),
           e.baseRevision,
         ]),
       ),
@@ -385,7 +463,7 @@ export class ApplyBulletinPatches extends Command {
     {
       let cveInfoMap = new Map<string, Set<string>>() // severity -> CVEs
 
-      let patchPaths = await Array.fromAsync(listFilesRecursive(outDir))
+      let patchPaths = await Array.fromAsync(listFilesRecursive(processedPatchesDir))
       await Promise.all(
         patchPaths.map(async patchPath => {
           assert(patchPath.endsWith('.patch'))
@@ -401,7 +479,7 @@ export class ApplyBulletinPatches extends Command {
             assert(cveInfoEnd > cveInfoStart)
             let cveInfoStr = patch.substring(cveInfoStart, cveInfoEnd)
             let cveInfo = cveInfoStr.split(CVE_INFO_ITEM_SEPARATOR)
-            assert(cveInfo.length === 2)
+            assert(cveInfo.length >= 2)
             let [cve, severityStr] = cveInfo
             assert(severityStr.startsWith(CVE_INFO_SEVERITY_PREFIX))
             let severity = severityStr.substring(CVE_INFO_SEVERITY_PREFIX.length)
@@ -418,7 +496,18 @@ export class ApplyBulletinPatches extends Command {
           })
           .toSorted()
           .join('\n\n') + '\n'
-      await fs.writeFile(path.join(outDir, 'cve-info.txt'), cveInfoStr)
+      await fs.writeFile(path.join(processedPatchesDir, 'cve-info.txt'), cveInfoStr)
+      let cveInfoHtml =
+        Array.from(cveInfoMap.entries())
+          .map(([severity, cves]) => {
+            if (severity === 'Unknown') {
+              severity = 'Unclassified'
+            }
+            return '                        <li>' + severity + ': ' + Array.from(cves).toSorted().join(', ') + '</li>'
+          })
+          .toSorted()
+          .join('\n') + '\n'
+      await fs.writeFile(path.join(processedPatchesDir, 'cve-info-html-fragment.txt'), cveInfoHtml)
     }
 
     let applyScript = [
@@ -445,21 +534,29 @@ export class ApplyBulletinPatches extends Command {
       '',
     ].join('\n')
 
-    await fs.writeFile(path.join(outDir, 'apply.sh'), applyScript, { mode: 0o700 })
+    await fs.writeFile(path.join(processedPatchesDir, 'apply.sh'), applyScript, { mode: 0o700 })
 
-    console.log('Written patches and apply.sh script to ' + outDir)
+    let outStatus = await spawnGit(flags.outDir, ['status', '--short'])
+    if (outStatus === '') {
+      log(`${flags.outDir} is unchanged`)
+    } else {
+      let commitMessage = flags.commitTitle
+      if (commitMessage === undefined) {
+        let fileName = path.basename(flags.bulletinSource[flags.bulletinSource.length - 1])
+        commitMessage = fileName.substring(0, fileName.indexOf('.'))
+      }
+      await spawnGitNoOut(flags.outDir, ['add', flags.outDir])
+      let commitOut = await spawnGit(flags.outDir, ['commit', '--message', commitMessage])
+      log(commitOut)
+    }
   }
 }
 
-async function readPatchesFromBulletinZip(zipPath: string, baseAospTag: string) {
-  let zipInfo = await unzip(await fs.readFile(zipPath))
-  let patchPrefix = path.basename(zipPath, '.zip') + '/patches/' + baseAospTag + '/'
+async function readPatchesFromFinalBulletinDir(dir: BulletinDir) {
+  assert(dir.type === BulletinType.FinalSigned)
   let res = new Map<string, string>()
-  for (let [name, zipEntry] of Object.entries(zipInfo.entries)) {
-    if (!name.startsWith(patchPrefix)) {
-      continue
-    }
-    let contents = await zipEntry.text()
+  for await (let patchPath of listFilesRecursive(dir.patchesDirPath)) {
+    let contents = await readFile(patchPath)
     let lineEnd = contents.indexOf('\n')
     assert(lineEnd > 0, contents)
     let firstLine = contents.slice(0, lineEnd)
@@ -470,7 +567,7 @@ async function readPatchesFromBulletinZip(zipPath: string, baseAospTag: string) 
     assert(firstLine.endsWith(suffix))
     let commitHash = firstLine.slice(prefix.length, firstLine.length - suffix.length)
     assert(commitHash.length === 40)
-    res.set(commitHash, contents)
+    res.set(commitHash, patchPath)
   }
   return res
 }
@@ -479,22 +576,23 @@ async function applyAdditionalPatches(repoPath: string, patches: Patch[]) {
   for (let patchObj of patches) {
     let amOut = await spawnAsyncStdin(
       'git',
-      ['-C', repoPath, 'am', '--whitespace=nowarn'],
+      ['-C', repoPath, 'am', '--3way', '--whitespace=nowarn'],
       Buffer.from(patchObj.patchContents),
       line => line === 'warning: reading patches from stdin/tty...',
     )
     assert(amOut.endsWith('\n'))
-    console.log('Additional patch: ' + amOut.slice(0, -1))
+    log('Additional patch: ' + amOut.slice(0, -1))
   }
 }
 
 const CVE_INFO_HEADER = '\nCVE-Info: '
 const CVE_INFO_ITEM_SEPARATOR = ' | '
 const CVE_INFO_SEVERITY_PREFIX = 'Severity: '
+const CVE_INFO_TYPE_PREFIX = 'Type: '
 
 interface Patch {
   patchContents: string // won't be same as contents of srcFilePath in most cases due to editing
-  srcFilePath?: string
+  srcFilePath: string
   isAdditional: boolean
 }
 
@@ -516,6 +614,20 @@ async function readPatchesDir(dirPath: string) {
     updateMultiMap(patchMap, path.dirname(path.relative(dirPath, filePath)), filePath)
   }
   return { patchMap } as PatchesDir
+}
+
+enum BulletinType {
+  Beta,
+  FinalSigned,
+}
+
+interface BulletinDir {
+  type: BulletinType
+  yearMonth: string
+  baseDir: string
+  bulletinJsonPath: string
+  patchIndexJsonPath: string
+  patchesDirPath: string // directory if BulletinType is Beta, zip if BulletinType is FinalSigned
 }
 
 interface XmlElement {
