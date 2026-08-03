@@ -2,7 +2,6 @@ import { Command, Flags } from '@oclif/core'
 import assert from 'assert'
 import chalk from 'chalk'
 import { promises as fs } from 'fs'
-import { spawnSync } from 'node:child_process'
 import { tmpdir } from 'node:os'
 import path from 'path'
 import util from 'util'
@@ -429,10 +428,10 @@ export class ApplyBulletinPatches extends Command {
 
       await applyAdditionalPatches(repoPath, additionalPatches)
 
-      if (spawnSync('git', ['-C', repoPath, 'diff', '--exit-code', 'HEAD', baseAospTag]).status !== 0) {
+      if ((await spawnGit(repoPath, ['rev-parse', 'HEAD'])) !== baseRevision + '\n') {
         patchedRepos.push({ path: repoPath, baseRevision })
       } else {
-        log(`${repoPath}: ${baseAospTag} is same as HEAD`)
+        log(`${repoPath} is unchanged`)
       }
     }
 
