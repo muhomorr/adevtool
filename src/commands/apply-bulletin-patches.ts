@@ -75,6 +75,8 @@ export class ApplyBulletinPatches extends Command {
 
     let tmpDir = await fs.mkdtemp(path.join(tmpdir(), 'bulletin-patches-'))
 
+    let finalYearMonths = new Set<string>()
+
     // collect patches and CVE info from all provided bulletin dirs
     for (let bulletinSrc of flags.bulletinSource) {
       log(`===========================\nchecking ${bulletinSrc}`)
@@ -135,6 +137,10 @@ export class ApplyBulletinPatches extends Command {
         for (let year of (await fs.readdir(bpbDir)).sort()) {
           let yearDir = path.join(bpbDir, year)
           for (let yearMonth of (await fs.readdir(yearDir)).sort()) {
+            if (finalYearMonths.has(yearMonth)) {
+              log('skipping finalized ' + yearMonth + ' from preview bulletin ' + unpackedSrc)
+              continue
+            }
             let versionsDir = path.join(yearDir, yearMonth, 'ANDROID')
             assert(await isDirectory(versionsDir), versionsDir)
             let versions = (await fs.readdir(versionsDir)).sort((a, b) =>
@@ -184,6 +190,8 @@ export class ApplyBulletinPatches extends Command {
         let dirs = await fs.readdir(unpackedSrc)
         assert(dirs.length === 1)
         let yearMonth = dirs[0]
+        assert(!finalYearMonths.has(yearMonth), unpackedSrc)
+        finalYearMonths.add(yearMonth)
         let basePath = path.join(unpackedSrc, yearMonth)
         let patchIndices = (await fs.readdir(basePath)).filter(e => e.endsWith('-patches-index.json'))
         assert(patchIndices.length === 1, util.inspect(patchIndices))
