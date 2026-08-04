@@ -3,8 +3,8 @@
 
 include vendor/google_devices/caiman/adevtool-version-check.mk
 
-ifneq ($(BUILD_ID),CP2A.260705.006)
-  $(error BUILD_ID: expected CP2A.260705.006, got $(BUILD_ID))
+ifneq ($(BUILD_ID),CP2A.260805.005)
+  $(error BUILD_ID: expected CP2A.260805.005, got $(BUILD_ID))
 endif
 
 $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/caiman/device.mk)

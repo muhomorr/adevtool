@@ -1,2 +1,2 @@
-export BUILD_ID_rango="CP2A.260705.006"
+export BUILD_ID_rango="CP2A.260805.005"
 unset PLATFORM_SECURITY_PATCH_rango
