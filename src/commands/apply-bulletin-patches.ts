@@ -416,17 +416,17 @@ export class ApplyBulletinPatches extends Command {
           )
         } catch (e) {
           log(`\nUnable to apply "${subject}" (path: '${patchObj.srcFilePath}'): ${e}`)
-          await spawnGit(repoPath, ['am', '--abort'])
-          patchedRepos.push({ path: repoPath, baseRevision })
-          await Promise.all(patchedRepos.map(async e => spawnGit(e.path, ['checkout', '--quiet', e.baseRevision])))
-          log('Discarded applied patches')
-          return
+          await onPatchApplicationFailure(patchedRepos, repoPath, baseRevision, e)
         }
         assert(amOut.endsWith('\n'))
         log(amOut.slice(0, -1))
       }
 
-      await applyAdditionalPatches(repoPath, additionalPatches)
+      try {
+        await applyAdditionalPatches(repoPath, additionalPatches)
+      } catch (e) {
+        await onPatchApplicationFailure(patchedRepos, repoPath, baseRevision, e)
+      }
 
       if ((await spawnGit(repoPath, ['rev-parse', 'HEAD'])) !== baseRevision + '\n') {
         patchedRepos.push({ path: repoPath, baseRevision })
@@ -595,15 +595,33 @@ async function readPatchesFromFinalBulletinDir(dir: BulletinDir) {
 
 async function applyAdditionalPatches(repoPath: string, patches: Patch[]) {
   for (let patchObj of patches) {
-    let amOut = await spawnAsyncStdin(
-      'git',
-      ['-C', repoPath, 'am', '--3way', '--whitespace=nowarn'],
-      Buffer.from(patchObj.patchContents),
-      line => line === 'warning: reading patches from stdin/tty...',
-    )
-    assert(amOut.endsWith('\n'))
-    log('Additional patch: ' + amOut.slice(0, -1))
+    try {
+      let amOut = await spawnAsyncStdin(
+        'git',
+        ['-C', repoPath, 'am', '--3way', '--whitespace=nowarn'],
+        Buffer.from(patchObj.patchContents),
+        line => line === 'warning: reading patches from stdin/tty...',
+      )
+      assert(amOut.endsWith('\n'))
+      log('Additional patch: ' + amOut.slice(0, -1))
+    } catch (e) {
+      log(`Unable to apply additional patch: '${patchObj.srcFilePath}'`)
+      throw e
+    }
   }
+}
+
+async function onPatchApplicationFailure(
+  patchedRepos: PatchedRepo[],
+  repoPath: string,
+  baseRevision: string,
+  error: unknown,
+) {
+  await spawnGit(repoPath, ['am', '--abort'])
+  patchedRepos.push({ path: repoPath, baseRevision })
+  await Promise.all(patchedRepos.map(async e => spawnGit(e.path, ['checkout', '--quiet', e.baseRevision])))
+  log('Discarded applied patches')
+  throw error
 }
 
 const CVE_INFO_HEADER = '\nCVE-Info: '
