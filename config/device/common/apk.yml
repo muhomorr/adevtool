@@ -195,20 +195,22 @@ package_inclusions:
       - com.google.android.providers.gsf.permission.READ_GSERVICES
     pregrantable_permissions:
       - android.permission.CAMERA
-      - android.permission.CAPTURE_AUDIO_OUTPUT
       - android.permission.POST_NOTIFICATIONS
     remove_permissions:
       # Pixel Camera Services currently doesn't use any of these permissions.
-      # [1] states that PCS (Pixel Camera Servicss) is planned "to be able act as a media
+      # [1] states that PCS (Pixel Camera Services) is planned "to be able act as a media
       # app and use Exoplayer for playing recorded video files". This functionality is
       # not implemented in the current release as of January 2024.
       # [1] https://android.googlesource.com/device/google/gs-common/+/46d6a8821196ab313a5f28c009ce9b2548ea2569
       - android.permission.BLUETOOTH_CONNECT
       - android.permission.BLUETOOTH_SCAN
+      - android.permission.CAPTURE_AUDIO_OUTPUT
       - android.permission.CHANGE_NETWORK_STATE
       - android.permission.CHANGE_WIFI_STATE
       - android.permission.INTERNET
       - android.permission.INTERACT_ACROSS_USERS
+      # needed for the Connected Cameras feature that is currently unsupported on GrapheneOS:
+      # https://support.google.com/pixelphone/answer/15985851?hl=en
       - android.permission.MANAGE_USB
       - android.permission.MODIFY_AUDIO_ROUTING
       - android.permission.MODIFY_AUDIO_SETTINGS
@@ -316,7 +318,7 @@ package_inclusions:
       - android.permission.INTERNET
     flags:
       # EuiccSupportPixel is a privileged package, block it from interacting with unprivileged
-      # parts of GMS
+      # parts of GMS and other user-installed packages
       - FLAG_ISOLATE_FROM_USER_APPS
 
   com.google.euiccpixel.permissions:
