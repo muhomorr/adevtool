@@ -4,7 +4,7 @@ BoardConfig.mk: 9201e3b9f6875f40d5f6a945b4919f33fdca687b773a88e15ae8a4753682f89c
 README.md: b90194d0c8cb88f06c70ddd46cfa92a28b11ee252f7d70808e7f07142b17bdc8
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
-apk-parser-config/apk-parser-config.pb: 224f37b222813804015d6994bf4c4f9121abb497856c3f86b515cdb066249687
+apk-parser-config/apk-parser-config.pb: 9a547af0c95bbbf3a491ae0123d2c4a26ebdab9fb3a4eb06d50c501889bc3131
 cheetah.mk: b17f356e3823e4a81a27390c46ac6feb63bb6626608457b7c20d44c9b27b0580
 cmds-for-envsetup.sh: cd3c16f95f2e6f8cc46640003d70d92c7e27d6ac050cd8844f90b0838fae1386
 firmware: dir

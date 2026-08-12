@@ -4,7 +4,7 @@ BoardConfig.mk: 64718bdfe9472c202c71cd4b4060f87bdcecf1a1839e4e03b914e08f137254b2
 README.md: 67464562708c327ac7d860acd961ddfe241520ee5fced97b1ffc50438281ba8f
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
-apk-parser-config/apk-parser-config.pb: 758b447158448ebcd618e19a43c4cce42660bf2001730fdca6359256b545596e
+apk-parser-config/apk-parser-config.pb: 29b2b7c282667953a9ec32ad2be1e5f5b1cb998548e1155df8132431c155eebf
 blazer.mk: b27bca40ca2025f84d300a2a87d82c7bee377d5f5cb4afd6a3b91205048e604e
 cmds-for-envsetup.sh: b3ff6e8518a18dde09dd3ae83c159af6566ea1e32609d529f0154aee99a2b736
 firmware: dir

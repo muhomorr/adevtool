@@ -4,7 +4,7 @@ BoardConfig.mk: c76a48a9267759832eaa341a9ef7a6a9297abd77b786232010215d1e5947787c
 README.md: 9c045d848e3aa28e714219e741891c1d5a5e2fc314c4b90a4a292472e2dc4aed
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
-apk-parser-config/apk-parser-config.pb: ee0e9d06ae94da84dfef255fcce87cb2ec7f8171c4894868fdcd824fca8504dc
+apk-parser-config/apk-parser-config.pb: 271ac852e3142e828cb8fc043019d69f113ec3d7dd333683329cd0843f5a2775
 cmds-for-envsetup.sh: e6818e7c68add2b850407132efa2ee05270ea5b01e5d9d235f64152b699db2aa
 comet.mk: 9a8779b62fcb5e9611eb2fdfbdfc783398b9ded7cdf80228f3b5e8f0d46fcaf0
 firmware: dir
