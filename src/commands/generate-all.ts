@@ -20,6 +20,7 @@ import {
 import { copyBlobs } from '../blobs/copy'
 import { BlobEntry } from '../blobs/entry'
 import { PseudoPath } from '../blobs/file-list'
+import { copyKernel } from '../blobs/kernel'
 import { processOverlays } from '../blobs/overlays2'
 import { BuildSystemPackages } from '../build/make'
 import {
@@ -81,6 +82,8 @@ async function doDevice(
   customSrc: string,
   verbose: boolean,
 ) {
+  let kernelCopy = copyKernel(pathResolver, dirs)
+
   // customSrc can point to a (directory containing) system state JSON
   let customState = await loadCustomState(config, customSrc)
 
@@ -161,7 +164,7 @@ async function doDevice(
     customState,
   )
 
-  await Promise.all([writeEnvsetupCommands(config, dirs), writeReadme(config, dirs, await propResults)])
+  await Promise.all([writeEnvsetupCommands(config, dirs), writeReadme(config, dirs, propResults), kernelCopy])
 
   return { sdkVersion } as DeviceInfo
 }
@@ -420,7 +423,7 @@ async function copyVendorSkel(skelDir: string, dirs: VendorDirectories) {
     preserveTimestamps: false,
     recursive: true,
     async filter(source: string): Promise<boolean> {
-      if (source.endsWith('.img')) {
+      if (source.endsWith('.img') || source.endsWith('.ko') || source.endsWith('.dtb') || source.endsWith('.lz4')) {
         return false
       }
 

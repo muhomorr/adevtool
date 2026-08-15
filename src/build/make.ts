@@ -4,6 +4,7 @@ import path, { basename, dirname } from 'path'
 import { getVersionCheckFilePath, VendorDirectories } from '../blobs/build'
 import { BlobEntry } from '../blobs/entry'
 import { PartPath } from '../blobs/file-list'
+import { KERNEL_DIR_RELATIVE_PATH } from '../blobs/kernel'
 import { DeviceConfig } from '../config/device'
 import { RELATIVE_ADEVTOOL_PATH } from '../config/paths'
 import { SystemState } from '../config/system-state'
@@ -363,6 +364,11 @@ PRODUCT_MANUFACTURER := ${mapGet(productProps, 'ro.product.product.manufacturer'
     addBlock(blocks, propFiles)
     await Promise.all(writes)
   }
+
+  blocks.push(`USE_STOCK_KERNEL ?= false
+ifeq ($(USE_STOCK_KERNEL),true)
+  TARGET_KERNEL_DIR := ${path.join(dirs.out, KERNEL_DIR_RELATIVE_PATH)}
+endif`)
 
   for (let group of packages) {
     addContBlock(blocks, '# ' + group.type + '\nPRODUCT_PACKAGES', group.names)
