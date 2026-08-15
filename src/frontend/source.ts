@@ -74,7 +74,7 @@ export async function prepareDeviceImages(
   let jobs = Array.from(imagesMap.values()).map(images =>
     (async () => {
       let imageToUnpack: DeviceImage | null = null
-      if (images.factoryImage !== undefined && !images.factoryImage.isGrapheneOsImage()) {
+      if (images.factoryImage !== undefined) {
         imageToUnpack = images.factoryImage
       } else if (images.otaImage !== undefined) {
         imageToUnpack = images.otaImage
@@ -93,7 +93,7 @@ export async function prepareDeviceImages(
       let dir = getUnpackedImageDirPath(imageToUnpack)
       images.unpackedFactoryImageDir = dir
 
-      if (await isDirectory(path.join(dir, BASE_FIRMWARE_DIR))) {
+      if (await isFile(path.join(dir, 'dtbo.img'))) {
         return
       }
 
@@ -197,27 +197,28 @@ async function unpackFactoryImage(factoryImagePath: string, image: DeviceImage, 
     for await (let entryP of outerZip) {
       let entry: yauzl.Entry = entryP
       let entryName = entry.filename
+      let basename = path.basename(entryName)
 
       if (entryName.endsWith('.img')) {
+        if (image.isGrapheneOS && !basename.startsWith('bootloader-') && !basename.startsWith('radio-')) {
+          let dstFilePath = path.join(out, basename)
+          jobs.push(
+            pipeline(await outerZip.openReadStream(entry), (await fs.open(dstFilePath, 'w')).createWriteStream()),
+          )
+          continue
+        }
         jobs.push(
           (async () => {
-            let dstFilePath = path.join(baseFwDir, path.basename(entryName))
+            let dstFilePath = path.join(baseFwDir, basename)
             await pipeline(await outerZip.openReadStream(entry), (await fs.open(dstFilePath, 'w')).createWriteStream())
           })(),
         )
         continue
       }
 
-      let isInnerZip = false
-
-      let deviceName = image.deviceConfig.device.name
-      if (image.isGrapheneOS) {
-        isInnerZip = entryName.includes(`/image-${deviceName}-`) && entryName.endsWith('.zip')
-      } else {
-        isInnerZip =
-          entryName.includes(`-${image.buildId.toLowerCase()}/image-${deviceName}`) &&
-          entryName.endsWith(`-${image.buildId.toLowerCase()}.zip`)
-      }
+      let isInnerZip =
+        entryName.includes(`-${image.buildId.toLowerCase()}/image-${image.deviceConfig.device.name}`) &&
+        entryName.endsWith(`-${image.buildId.toLowerCase()}.zip`)
 
       if (!isInnerZip) {
         continue
@@ -247,6 +248,66 @@ async function unpackFactoryImage(factoryImagePath: string, image: DeviceImage, 
   } finally {
     await fd.close()
   }
+
+  if (image.isGrapheneOS) {
+    await unpackGrapheneOSOptimizedFactoryImage(out)
+  }
+}
+
+async function unpackGrapheneOSOptimizedFactoryImage(baseDir: string) {
+  let splitSuperImages = (await fs.readdir(baseDir, { withFileTypes: true }))
+    .filter(e => e.name.startsWith('super_') && e.isFile())
+    .map(e => path.join(baseDir, e.name))
+  let superImgPath = path.join(baseDir, 'super.img')
+  {
+    assert(!(await exists(superImgPath)), superImgPath)
+    await spawnAsyncNoOut(await getHostBinPath('simg2img'), [...splitSuperImages, superImgPath])
+    await Promise.all(splitSuperImages.map(async e => fs.rm(e)))
+  }
+  let lpunpackOutDir = path.join(baseDir, 'super.img-split')
+  {
+    let lpunpackStdout = await spawnAsync(await getHostBinPath('lpunpack'), [superImgPath, lpunpackOutDir])
+    for (let line of lpunpackStdout.split('\n')) {
+      assert(
+        line.startsWith('Attempting to extract partition ') ||
+          line === '  Dealing with extent 0 from target source 0...' ||
+          line === '',
+        lpunpackStdout,
+      )
+    }
+    await fs.rm(superImgPath)
+  }
+  for (let de of await fs.readdir(lpunpackOutDir, { withFileTypes: true })) {
+    assert(de.isFile(), de.name)
+    let filePath = path.join(lpunpackOutDir, de.name)
+    if (de.name.endsWith('_b.img')) {
+      assert((await fs.stat(filePath)).size === 0)
+      await fs.rm(filePath)
+      continue
+    }
+    let suffix = '_a.img'
+    assert(de.name.endsWith(suffix), de.name)
+    let dstPath = path.join(baseDir, de.name.slice(0, -suffix.length) + '.img')
+    assert(!(await exists(dstPath)), dstPath)
+    await fs.rename(filePath, dstPath)
+  }
+  await fs.rmdir(lpunpackOutDir)
+
+  let jobs: Promise<void>[] = []
+  for (let de of await fs.readdir(baseDir, { withFileTypes: true })) {
+    if (de.isDirectory()) {
+      continue
+    }
+    assert(de.isFile() && de.name.endsWith('.img'), de.name)
+    let job = async () => {
+      let filePath = path.join(baseDir, de.name)
+      if (await unpackFsImage(filePath, baseDir)) {
+        await fs.rm(filePath)
+      }
+    }
+    jobs.push(job())
+  }
+  await Promise.all(jobs)
 }
 
 async function unpackOtaImage(image: DeviceImage, out: string) {
@@ -413,6 +474,10 @@ async function unpackBootImage(fsImagePath: string, destinationDir: string) {
 
 async function unpackFsImageZipEntry(entry: yauzl.Entry, unpackedTmpRoot: string) {
   let fsImageName = entry.filename
+  if (fsImageName === 'userdata_exp.ai.img') {
+    // currently-useless AI model assets
+    return
+  }
 
   let expectedExt = '.img'
   let ext = path.extname(fsImageName)
@@ -422,15 +487,15 @@ async function unpackFsImageZipEntry(entry: yauzl.Entry, unpackedTmpRoot: string
 
   let fsImageBaseName = path.basename(fsImageName, expectedExt)
 
-  if (!UNPACKABLE_PARTITION_IMAGES.has(fsImageBaseName)) {
-    return
-  }
-
   // extract file system image file
   let readStream = await entry.openReadStream({ validateCrc32: false })
   let fsImagePath = path.join(unpackedTmpRoot, entry.filename)
   let writeStream = (await fs.open(fsImagePath, 'w')).createWriteStream()
   await pipeline(readStream, writeStream)
+
+  if (!UNPACKABLE_PARTITION_IMAGES.has(fsImageBaseName)) {
+    return
+  }
 
   await unpackFsImage(fsImagePath, unpackedTmpRoot)
   await fs.rm(fsImagePath)

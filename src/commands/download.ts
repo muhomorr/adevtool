@@ -76,17 +76,6 @@ export default class Download extends Command {
     }
 
     if (flags.unpack) {
-      for (let image of images) {
-        if (image.isGrapheneOsImage() && image.type === ImageType.Factory) {
-          log(
-            'Skipping unpack of ' +
-              image.fileName +
-              ', since optimized factory images are currently not supported. ' +
-              'Use "-t ota" to unpack the corresponding OTA image instead.',
-          )
-        }
-      }
-
       let imageMap = prepareDeviceImages(await index, types, await deviceConfigs, flags.buildId)
 
       for (let [deviceBuildId, deviceImages] of await imageMap) {

@@ -84,7 +84,9 @@ export async function getHostBinPath(programName: string) {
       'dispol',
       'fsck.erofs',
       'lz4',
+      'lpunpack',
       'ota_extractor',
+      'simg2img',
       'sqlite3',
       'toybox',
     ]

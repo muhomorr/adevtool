@@ -88,10 +88,6 @@ export class DeviceImage {
     return res
   }
 
-  isGrapheneOsImage() {
-    return this.buildId.startsWith(GRAPHENEOS_PSEUDO_BUILD_ID_PREFIX)
-  }
-
   toString() {
     return `'${this.deviceConfig.device.name} ${this.buildId} ${this.type}'`
   }
