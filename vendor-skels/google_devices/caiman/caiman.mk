@@ -109,6 +109,11 @@ TARGET_SYSTEM_EXT_PROP += vendor/google_devices/caiman/sysprop/system_ext.prop
 TARGET_PRODUCT_PROP += vendor/google_devices/caiman/sysprop/product.prop
 TARGET_VENDOR_PROP += vendor/google_devices/caiman/sysprop/vendor.prop
 
+USE_STOCK_KERNEL ?= false
+ifeq ($(USE_STOCK_KERNEL),true)
+  TARGET_KERNEL_DIR := vendor/google_devices/caiman/stock-kernel
+endif
+
 # AOSP overrides for missing proprietary files
 PRODUCT_PACKAGES += \
     ANGLE \

@@ -92,6 +92,11 @@ TARGET_SYSTEM_EXT_PROP += vendor/google_devices/tangorpro/sysprop/system_ext.pro
 TARGET_PRODUCT_PROP += vendor/google_devices/tangorpro/sysprop/product.prop
 TARGET_VENDOR_PROP += vendor/google_devices/tangorpro/sysprop/vendor.prop
 
+USE_STOCK_KERNEL ?= false
+ifeq ($(USE_STOCK_KERNEL),true)
+  TARGET_KERNEL_DIR := vendor/google_devices/tangorpro/stock-kernel
+endif
+
 # AOSP overrides for missing proprietary files
 PRODUCT_PACKAGES += \
     ANGLE \

@@ -112,6 +112,11 @@ TARGET_SYSTEM_EXT_PROP += vendor/google_devices/frankel/sysprop/system_ext.prop
 TARGET_PRODUCT_PROP += vendor/google_devices/frankel/sysprop/product.prop
 TARGET_VENDOR_PROP += vendor/google_devices/frankel/sysprop/vendor.prop
 
+USE_STOCK_KERNEL ?= false
+ifeq ($(USE_STOCK_KERNEL),true)
+  TARGET_KERNEL_DIR := vendor/google_devices/frankel/stock-kernel
+endif
+
 # AOSP overrides for missing proprietary files
 PRODUCT_PACKAGES += \
     ANGLE \
