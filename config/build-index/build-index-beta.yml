@@ -745,3 +745,43 @@ stallion CP41.260717.006:
   factory: 2b9d9b0dc2dcccae62bf98b7323669c6c7205378e74b9aea204a4f3599f75042 https://dl.google.com/developers/android/cinnamonbun/images/factory/stallion_beta-cp41.260717.006-factory-2b9d9b0d.zip
   ota: b54010b5eec51afafe80a761ab38aa749eaef9ffe30b9213f1fe23ff590c32b3 https://dl.google.com/developers/android/cinnamonbun/images/ota/stallion_beta-ota-cp41.260717.006-b54010b5.zip
 
+# 17 QPR2 Beta 3
+bluejay CP41.260731.005.A2:
+  factory: 619869e2de5bb0a813e4683c6ad71f12fbb22586c08968a3700a0b0694190332 https://dl.google.com/developers/android/cinnamonbun/images/factory/bluejay_beta-cp41.260731.005.a2-factory-619869e2.zip
+panther CP41.260731.005.A2:
+  factory: dbb346c945e3385bc53132ea195b002e63e961c5b81a7aa2e786c1e068e039b9 https://dl.google.com/developers/android/cinnamonbun/images/factory/panther_beta-cp41.260731.005.a2-factory-dbb346c9.zip
+cheetah CP41.260731.005.A2:
+  factory: fa8d63e83af2c5a48c3af957d6104ba323b89b4269a37ade3c96b3dcbdcdbc3c https://dl.google.com/developers/android/cinnamonbun/images/factory/cheetah_beta-cp41.260731.005.a2-factory-fa8d63e8.zip
+lynx CP41.260731.005.A2:
+  factory: 9b732add8146ffb24b681c5c9b91d1774b9a128775dabfb5d75f8049641f6f2d https://dl.google.com/developers/android/cinnamonbun/images/factory/lynx_beta-cp41.260731.005.a2-factory-9b732add.zip
+felix CP41.260731.005.A2:
+  factory: 7b7c2d5bd19e549c1eeef4fbc9ca5a47b40d80e337e9800dd0dba5cce7cc2703 https://dl.google.com/developers/android/cinnamonbun/images/factory/felix_beta-cp41.260731.005.a2-factory-7b7c2d5b.zip
+tangorpro CP41.260731.005.A2:
+  factory: 467d549b962166d27d297e7c3055448852fab207d96eff264808b30e786424eb https://dl.google.com/developers/android/cinnamonbun/images/factory/tangorpro_beta-cp41.260731.005.a2-factory-467d549b.zip
+shiba CP41.260731.005.B1:
+  factory: 36fb6e7b19944a03aab29e91f4a2ecd6167fe2f32a9203e2eb4fce18a133743e https://dl.google.com/developers/android/cinnamonbun/images/factory/shiba_beta-cp41.260731.005.b1-factory-36fb6e7b.zip
+husky CP41.260731.005.B1:
+  factory: 6d6e55e593d0aea17e9709625152ecda8df495ebd0b9f0cf423985bd1b28f3a2 https://dl.google.com/developers/android/cinnamonbun/images/factory/husky_beta-cp41.260731.005.b1-factory-6d6e55e5.zip
+akita CP41.260731.005.B1:
+  factory: aab771dda862e68bbaa13bd4aebc0845dca0068df4b3a7e535d186da6d994053 https://dl.google.com/developers/android/cinnamonbun/images/factory/akita_beta-cp41.260731.005.b1-factory-aab771dd.zip
+tokay CP41.260731.005.B1:
+  factory: 8fa738854d3761abd31633e1fc89bd2dc361b6bb8c86b1e4734d1410c13cb289 https://dl.google.com/developers/android/cinnamonbun/images/factory/tokay_beta-cp41.260731.005.b1-factory-8fa73885.zip
+caiman CP41.260731.005.B1:
+  factory: e039b362c82e2c442721a474cfea5dc2af5665df4b81270a095c7603256e0492 https://dl.google.com/developers/android/cinnamonbun/images/factory/caiman_beta-cp41.260731.005.b1-factory-e039b362.zip
+komodo CP41.260731.005.B1:
+  factory: 5f125cf8d08c75690ee9a174254a55924bd230002af8316a086dcd427be97065 https://dl.google.com/developers/android/cinnamonbun/images/factory/komodo_beta-cp41.260731.005.b1-factory-5f125cf8.zip
+comet CP41.260731.005.B1:
+  factory: b72408c1773b0b09c91f7b8327f954f8227fc41bc55ed4db6074839b62e3cf20 https://dl.google.com/developers/android/cinnamonbun/images/factory/comet_beta-cp41.260731.005.b1-factory-b72408c1.zip
+tegu CP41.260731.005.B1:
+  factory: e29d2c1c4df112f3db6a105d368768d376c25efc821fd63aff2f825bfa6452e4 https://dl.google.com/developers/android/cinnamonbun/images/factory/tegu_beta-cp41.260731.005.b1-factory-e29d2c1c.zip
+frankel CP41.260731.005.B1:
+  factory: e72f83f35e3083a57643f6e12ee43a91846967cca51ff65f4c2505f851342562 https://dl.google.com/developers/android/cinnamonbun/images/factory/frankel_beta-cp41.260731.005.b1-factory-e72f83f3.zip
+blazer CP41.260731.005.B1:
+  factory: 45f403a2dc3e2df1d5f03e7677ad9333b06566858969e14edc5b61795879465d https://dl.google.com/developers/android/cinnamonbun/images/factory/blazer_beta-cp41.260731.005.b1-factory-45f403a2.zip
+mustang CP41.260731.005.B1:
+  factory: 17f39573fc426443f97062ada4bd022825a5cb768783ff28fa9aa98240ed9f1d https://dl.google.com/developers/android/cinnamonbun/images/factory/mustang_beta-cp41.260731.005.b1-factory-17f39573.zip
+rango CP41.260731.005.B1:
+  factory: a0b4ffb132640170eaca96489b4d797a74338cfa5cc32eaad5d6c676dae9a62b https://dl.google.com/developers/android/cinnamonbun/images/factory/rango_beta-cp41.260731.005.b1-factory-a0b4ffb1.zip
+stallion CP41.260731.005.B1:
+  factory: 26c778ed0662e22ee27b2850f12241d938019165db9dbae08661824d40844a48 https://dl.google.com/developers/android/cinnamonbun/images/factory/stallion_beta-cp41.260731.005.b1-factory-26c778ed.zip
+
