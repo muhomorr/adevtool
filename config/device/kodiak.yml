@@ -1,0 +1,8 @@
+device:
+  name: kodiak
+  stable_display_size: { width: 1344, height: 2992 }
+  odm_skus:
+    - GBC0H # US: 5G mmWave
+    - G4HCD # ROW including JP: 5G Sub 6GHz
+includes:
+  - common/gen11pixel.yml

@@ -2,6 +2,8 @@ TARGET_BOARD_PLATFORM := gs101
 
 include vendor/adevtool/config/mk/google_devices/common/device-common.mk
 
+AB_OTA_POSTINSTALL_CONFIG += FILESYSTEM_TYPE_system=ext4
+
 PRODUCT_SOONG_NAMESPACES += vendor/adevtool/config/mk/google_devices/platform/gs101
 
 PRODUCT_PACKAGES += GosOverlay

@@ -56,10 +56,12 @@ filters:
       - android:array/config_accessComputerControlKnownSigners = 1975B2F17177BC89A5DFF31F9E64A6CAE281A53DC1D1D59B1D147FE1C82AFA00;7075F275C3B82619A37B1FA393B8F9D793F0B3F55148C6251AA959C340BB74B4;B8EAA018CA7394FD47A3FA7F1FEB7A6C570CD55D9FE968BC3829062B6656AE32;103938EE4537E59E8EE792F654504FB8346FC6B346D0BBC4415FC339FCFC8EC1
       - android:array/config_allowedSecureInstantAppSettings = advertising_id;limit_ad_tracking
       - android:array/config_allowlistPersonalContextHintPublishing = com.google.android.as;com.google.android.apps.pixel.psi;com.google.android.dialer;com.google.android.apps.messaging;com.google.android.apps.weather;com.google.android.apps.pixel.relationships;com.google.android.contacts
+      - android:array/config_allowlistPersonalContextHintPublishing = com.google.android.as;com.google.android.apps.pixel.psi;com.google.android.dialer;com.google.android.apps.messaging;com.google.android.apps.weather;com.google.android.apps.pixel.relationships;com.google.android.contacts;com.google.android.projection.gearhead;com.google.android.apps.nexuslauncher
       - android:array/config_allowlistPersonalContextHintReceiving = com.google.android.as;com.google.android.apps.pixel.psi;com.android.personalcontext
       - android:array/config_allowlistPersonalContextInsightFiltering = com.google.android.apps.nexuslauncher;com.android.systemui
       - android:array/config_allowlistPersonalContextInsightPublishing = com.google.android.apps.pixel.psi;com.android.personalcontext
       - android:array/config_allowlistPersonalContextInsightReceiving = com.google.android.apps.nexuslauncher;com.google.android.dialer;com.google.android.apps.messaging;com.google.android.apps.weather;com.google.android.apps.pixel.relationships;com.google.android.contacts;com.google.android.apps.pixel.psi;com.google.android.projection.gearhead;com.android.systemui;com.google.android.as.oss
+      - android:array/config_allowlistPersonalContextInsightReceiving = com.google.android.apps.nexuslauncher;com.google.android.dialer;com.google.android.apps.messaging;com.google.android.apps.weather;com.google.android.apps.pixel.relationships;com.google.android.contacts;com.google.android.apps.pixel.psi;com.google.android.projection.gearhead;com.android.systemui;com.google.android.as.oss;com.google.android.as
       - android:array/config_allowlistPersonalContextVisualizers = com.google.android.apps.pixel.psi;com.android.systemui;com.google.android.as.oss
       - android:array/config_appFunctionDeviceSettingsPackages = com.android.settings;com.google.android.permissioncontroller;com.google.android.apps.wellbeing
       - android:array/config_appFunctionsDeviceSettingsPackages = com.android.settings;com.google.android.permission;com.google.android.apps.wellbeing
@@ -91,6 +93,7 @@ filters:
       - android:array/config_locationExtraPackageNames = com.google.android.gms.location.history
       - android:array/config_locationProviderPackageNames = com.google.android.gms;com.android.location.fused
       - android:array/config_loggable_dream_prefixes = com.google.;com.android.
+      - android:array/config_messaging_read_restriction_allowlist = com.google.android.apps.pixel.relationships;com.google.android.contacts
       - android:array/config_mobile_hotspot_provision_app|mcc204-mnc4 = com.google.android.tetheringentitlement;com.google.android.tetheringentitlement.CarrierEntitlementActivity
       - android:array/config_mobile_hotspot_provision_app|mcc310-mnc120 = com.google.android.tetheringentitlement;com.google.android.tetheringentitlement.CarrierEntitlementActivity
       - android:array/config_mobile_hotspot_provision_app|mcc310-mnc150 = com.google.android.tetheringentitlement;com.google.android.tetheringentitlement.CarrierEntitlementActivity
@@ -116,6 +119,7 @@ filters:
       - android:array/config_mobile_hotspot_provision_app|mcc313-mnc130 = com.google.android.tetheringentitlement;com.google.android.tetheringentitlement.CarrierEntitlementActivity
       - android:array/config_mobile_hotspot_provision_app|mcc313-mnc140 = com.google.android.tetheringentitlement;com.google.android.tetheringentitlement.CarrierEntitlementActivity
       - android:array/config_notificationDefaultUnsupportedAdjustments = key_type;key_summarization
+      - android:array/config_notificationVibrationPatternToMetricIdMapping = Classic_notification.xml,201;Taps.xml,202;Blip.xml,203;Rumble.xml,204;Waves.xml,205;Soft_rise.xml,206;Tremor.xml,207;Fireworks.xml,208;Rattlesnake.xml,209;Whir.xml,210;Rapid_fire.xml,211;Pulse.xml,212
       - android:array/config_oem_enabled_satellite_country_codes|*
       - android:array/config_packagesExemptFromSuspension = com.google.android.apps.wellbeing;com.android.vending;com.google.android.gms;com.android.systemui;com.android.settings;com.google.android.apps.pixelmigrate;com.google.android.apps.restore
       - android:array/config_pr_dexopt_sync_forced_packages = com.android.vending
@@ -135,6 +139,7 @@ filters:
       - android:array/config_verizon_satellite_enabled_tagids|*
       - android:array/default_wallpaper_component_per_device_color|*
       - android:array/theming_defaults = BLK|SPRITZ|#404945;WHT|TONAL_SPOT|#D9E3DC;BUE|EXPRESSIVE|#81A0F4;DBU|VIBRANT|#1D428A;RED|VIBRANT|#FF5661;*|TONAL_SPOT|home_wallpaper
+      - android:array/theming_defaults = BLK|SPRITZ|#444854;SLV|SPRITZ|#3F484A;GRY|SPRITZ|#A3AF94;BEG|TONAL_SPOT|#F49476;GRN|TONAL_SPOT|#B6B15E;PNK|VIBRANT|#FF7797;PPL|TONAL_SPOT|#BFC6FD;*|TONAL_SPOT|home_wallpaper
       - android:array/theming_defaults = WHT|SPRITZ|#CFC6B4;BLK|SPRITZ|#404945;GRY|SPRITZ|#9A9EAD;GRN|TONAL_SPOT|#B6CF90;PPL|EXPRESSIVE|#BAC3FF;YEL|EXPRESSIVE|#DDEB78;BUE|VIBRANT|#6F9BFF;RED|VIBRANT|#FF6F7F;*|TONAL_SPOT|home_wallpaper
       - android:array/vendor_cross_profile_apps = com.google.android.googlequicksearchbox;com.google.android.inputmethod.latin;com.google.android.projection.gearhead;com.google.android.inputmethod.latin.dev;com.google.android.inputmethod.latin.canary
       - android:array/vendor_disallowed_apps_managed_device|*
@@ -531,7 +536,11 @@ filters:
       - com.android.settings:bool/config_gazeEnabled = true
       - com.android.settings:bool/config_show_communal_settings = true
       - com.android.settings:bool/config_suw_support_face_enroll|*
-      - com.android.settings:string/personal_context_title = Magic Cue
+      - com.android.settings:drawable/ic_light_animations = 2daba4b9ea0810c7cd71ebdb7c0e87f09869a1cb9519df765d02874d9b6a0eb8
+      - com.android.settings:drawable/ic_light_feedback = 46fcaf3b093dbf79b618fb91e6228e1ef205557494a1844931c4d203c445def8
+      - com.android.settings:raw/light_animations_main_illustration|*
+      - com.android.settings:string/personal_context_switch_summary|*
+      - com.android.settings:string/personal_context_title|*
       - com.android.settings:xml/overlays|*
       - com.android.simappdialog:bool/show_sim_app_dialog_illo = true
       - com.android.simappdialog:drawable/$illo_sim_app_dialog__0|*

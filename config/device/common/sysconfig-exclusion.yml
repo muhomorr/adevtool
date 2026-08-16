@@ -2,10 +2,12 @@ sysconfig_exclusions:
   - <allow-association target="com.google.android.apps.pixel.nowplaying" allowed="com.google.android.as"/>
   - <allow-association target="com.google.android.apps.pixel.nowplaying" allowed="com.google.android.as.oss"/>
   - <allow-association target="com.google.android.apps.pixel.psi" allowed="com.google.android.apps.pixel.psi"/>
+  - <allow-association target="com.google.android.apps.pixel.psi" allowed="com.google.android.apps.restore"/>
   - <allow-association target="com.google.android.apps.pixel.psi" allowed="com.google.android.as"/>
   - <allow-association target="com.google.android.apps.pixel.psi" allowed="com.google.android.as.oss"/>
   - <allow-association target="com.google.android.apps.pixel.psi" allowed="com.google.android.providers.media.module"/>
   - <allow-association target="com.google.android.apps.pixel.psi" allowed="com.google.android.settings.intelligence"/>
+  - <allow-association target="com.google.android.apps.pixel.psi" allowed="com.google.android.setupwizard"/>
   - <allow-association target="com.google.android.as" allowed="com.android.bluetooth"/>
   - <allow-association target="com.google.android.as" allowed="com.android.bluetooth.services"/>
   - <allow-association target="com.google.android.as" allowed="com.android.phone"/>
@@ -48,6 +50,7 @@ sysconfig_exclusions:
   - <backup-transport-whitelisted-service service="com.google.android.apps.restore/.transport.D2dTransportService"/>
   - <backup-transport-whitelisted-service service="com.google.android.gms/.backup.BackupTransportService"/>
   - <backup-transport-whitelisted-service service="com.google.android.gms/.backup.component.D2dTransportService"/>
+  - <bugreport-whitelisted package="com.google.android.modem.pms"/>
   - |-
     <component-override package="com.android.documentsui">
       <component class="com.android.documentsui.LauncherActivity" enabled="false"/>
@@ -234,6 +237,12 @@ sysconfig_exclusions:
     <privapp-permissions package="com.android.settings">
       <permission name="android.permission.INSTALL_DYNAMIC_SYSTEM"/>
       <permission name="android.permission.READ_SYSTEM_GRAMMATICAL_GENDER"/>
+    </privapp-permissions>
+  - |-
+    <privapp-permissions package="com.android.settings">
+      <permission name="android.permission.INSTALL_DYNAMIC_SYSTEM"/>
+      <permission name="android.permission.READ_SYSTEM_GRAMMATICAL_GENDER"/>
+      <permission name="android.permission.CONTROL_DEVICE_LIGHTS"/>
     </privapp-permissions>
   # outdated
   - |-

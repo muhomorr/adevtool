@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="config_cameraSoundForcedLanguage" translatable="false" />
+    <array name="config_enable_2g_for_emergency_call_countries" translatable="false" />
+    <array name="config_notificationPriorityLightColorsMap" translatable="false" />
+    <bool name="config_stk_sms_tp_mr_handling" />
+    <color name="config_notificationPriorityLightColorDefault" />
+</resources>

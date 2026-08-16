@@ -1,0 +1,8 @@
+device:
+  name: cubs
+  stable_display_size: { width: 1080, height: 2424 }
+  odm_skus:
+    - GPQQ7 # US: 5G mmWave
+    - GUJ0N # ROW including JP: 5G Sub 6GHz
+includes:
+  - common/gen11pixel.yml

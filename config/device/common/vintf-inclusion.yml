@@ -26,7 +26,9 @@ vintf_inclusions:
   - android.hardware.bluetooth.socket.IBluetoothSocket/lpp
   - android.hardware.bluetooth::IBluetoothHci/default
   - android.hardware.boot.IBootControl/default
+  - android.hardware.boot::IBootControl/default
   - android.hardware.camera.provider.ICameraProvider/internal/0
+  - android.hardware.cas::IMediaCasService/default
   - android.hardware.contexthub.IContextHub/default
   - android.hardware.drm.IDrmFactory/castkey
   - android.hardware.drm.IDrmFactory/clearkey
@@ -37,6 +39,7 @@ vintf_inclusions:
   - android.hardware.graphics.composer3.IComposer/default
   - android.hardware.graphics.composer::IComposer/default
   - android.hardware.graphics.composer::IComposer/vr
+  - android.hardware.graphics.mapper::IMapper/default
   - android.hardware.health.IHealth/default
   - android.hardware.health.storage.IStorage/default
   - android.hardware.input.processor.IInputProcessor/default
@@ -58,18 +61,61 @@ vintf_inclusions:
   - android.hardware.radio.config::IRadioConfig/default
   - android.hardware.radio.data.IRadioData/slot1
   - android.hardware.radio.data.IRadioData/slot2
+  - android.hardware.radio.data.IRadioData/slot3
+  - android.hardware.radio.data.IRadioData/slot4
+  - android.hardware.radio.ims.IRadioIms/slot1
+  - android.hardware.radio.ims.IRadioIms/slot2
+  - android.hardware.radio.ims.IRadioIms/slot3
+  - android.hardware.radio.ims.IRadioIms/slot4
+  - android.hardware.radio.ims.media.IImsMedia/default
   - android.hardware.radio.messaging.IRadioMessaging/slot1
   - android.hardware.radio.messaging.IRadioMessaging/slot2
+  - android.hardware.radio.messaging.IRadioMessaging/slot3
+  - android.hardware.radio.messaging.IRadioMessaging/slot4
+  - android.hardware.radio.modem.IRadioModem/imsSlot1
+  - android.hardware.radio.modem.IRadioModem/imsSlot2
+  - android.hardware.radio.modem.IRadioModem/imsSlot3
+  - android.hardware.radio.modem.IRadioModem/imsSlot4
+  - android.hardware.radio.modem.IRadioModem/se1
+  - android.hardware.radio.modem.IRadioModem/se2
+  - android.hardware.radio.modem.IRadioModem/se3
+  - android.hardware.radio.modem.IRadioModem/se4
   - android.hardware.radio.modem.IRadioModem/slot1
   - android.hardware.radio.modem.IRadioModem/slot2
+  - android.hardware.radio.modem.IRadioModem/slot3
+  - android.hardware.radio.modem.IRadioModem/slot4
+  - android.hardware.radio.network.IRadioNetwork/imsSlot1
+  - android.hardware.radio.network.IRadioNetwork/imsSlot2
+  - android.hardware.radio.network.IRadioNetwork/imsSlot3
+  - android.hardware.radio.network.IRadioNetwork/imsSlot4
   - android.hardware.radio.network.IRadioNetwork/slot1
   - android.hardware.radio.network.IRadioNetwork/slot2
+  - android.hardware.radio.network.IRadioNetwork/slot3
+  - android.hardware.radio.network.IRadioNetwork/slot4
   - android.hardware.radio.sap.ISap/slot1
   - android.hardware.radio.sap.ISap/slot2
+  - android.hardware.radio.sap.ISap/slot3
+  - android.hardware.radio.sap.ISap/slot4
+  - android.hardware.radio.sim.IRadioSim/imsSlot1
+  - android.hardware.radio.sim.IRadioSim/imsSlot2
+  - android.hardware.radio.sim.IRadioSim/imsSlot3
+  - android.hardware.radio.sim.IRadioSim/imsSlot4
+  - android.hardware.radio.sim.IRadioSim/se1
+  - android.hardware.radio.sim.IRadioSim/se2
+  - android.hardware.radio.sim.IRadioSim/se3
+  - android.hardware.radio.sim.IRadioSim/se4
   - android.hardware.radio.sim.IRadioSim/slot1
   - android.hardware.radio.sim.IRadioSim/slot2
+  - android.hardware.radio.sim.IRadioSim/slot3
+  - android.hardware.radio.sim.IRadioSim/slot4
+  - android.hardware.radio.voice.IRadioVoice/imsSlot1
+  - android.hardware.radio.voice.IRadioVoice/imsSlot2
+  - android.hardware.radio.voice.IRadioVoice/imsSlot3
+  - android.hardware.radio.voice.IRadioVoice/imsSlot4
   - android.hardware.radio.voice.IRadioVoice/slot1
   - android.hardware.radio.voice.IRadioVoice/slot2
+  - android.hardware.radio.voice.IRadioVoice/slot3
+  - android.hardware.radio.voice.IRadioVoice/slot4
   - android.hardware.radio::IRadio/slot1
   - android.hardware.radio::IRadio/slot2
   - android.hardware.radio::ISap/slot1
@@ -96,6 +142,7 @@ vintf_inclusions:
   - android.hardware.uwb.IUwb/default
   - android.hardware.vibrator.IVibrator/default
   - android.hardware.vibrator.IVibrator/dual
+  - android.hardware.vibrator.IVibratorManager/default
   - android.hardware.weaver.IWeaver/default
   - android.hardware.wifi.hostapd.IHostapd/default
   - android.hardware.wifi.supplicant.ISupplicant/default
@@ -147,8 +194,11 @@ vintf_inclusions:
   - com.google.pixel.camera.services.cameraidremapper.ICameraIdRemapper/default
   - com.google.pixel.camera.services.lyricconfigprovider.ILyricConfigProvider/default
   - com.google.pixel.modem.logmasklibrary.ILiboemserviceProxy/default
+  - com.google.pixel.modem_logging.alcedo_t900.IAlcedoT900ModemLogging/default
+  - com.google.pixel.modem_logging.IVendorModemLogging/default
   - com.google.pixel.moseyservice.IMoseyService/default
   - com.google.pixel.shared_modem_platform.ISharedModemPlatform/default
+  - google.hardware.image.IComponentStore/default
   - hardware.google.bluetooth.bt_channel_avoidance::IBTChannelAvoidance/default
   - hardware.google.bluetooth.ccc::IBluetoothCcc/default
   - hardware.google.bluetooth.ext::IBluetoothExt/default
@@ -171,6 +221,12 @@ vintf_inclusions:
   - vendor.google.bluetooth_ext.IBluetoothSar/default
   - vendor.google.bluetooth_ext.IBTChannelAvoidance/default
   - vendor.google.camera_ext.ICameraInterferenceAvoidance/default
+  - vendor.google.gnss.gnss_manager.controller.IGnssLoggingController/default
+  - vendor.google.gnss.gnss_manager.controller.IGnssLoggingController/default
+  - vendor.google.gnss.gnss_manager.controller.IGnssVendorConfiguration/default
+  - vendor.google.gnss.gnss_manager.logger.IGnssManagerLogger/default
+  - vendor.google.gnss.gnss_manager.logger.IGnssManagerLogger/gnss_aidl
+  - vendor.google.gnss.gnss_manager.logger.IGnssManagerLogger/gnss_daemon
   - vendor.google.google_battery.IGoogleBattery/default
   - vendor.google.hardware.biometrics.face.IFaceExt/default
   - vendor.google.plat_security.ISecureTimestamp/default
@@ -182,6 +238,72 @@ vintf_inclusions:
   - vendor.google.wifi_ext.IWifiExt/default
   - vendor.google.wireless_charger.IWirelessCharger/default
   - vendor.google.wireless_charger.service.IWlcService/default
+  - vendor.mediatek.hardware.lbs.ILbs/AgpsDebugInterface
+  - vendor.mediatek.hardware.lbs.ILbs/AgpsInterface
+  - vendor.mediatek.hardware.lbs.ILbs/lppe_aidl_server
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_agps2framework
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_agps2gnssAidl
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_agpsd2debugService
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_debugService2agpsd
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_debugService2mnld
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_framework2agps
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_gnssAidl2agps
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_jam2mnl
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_lbs_log_v2s
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_lppe_socket_agps
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_lppe_socket_bt
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_lppe_socket_ipaddr
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_lppe_socket_lbs
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_lppe_socket_network
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_lppe_socket_sensor
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_lppe_socket_wlan
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_meta2mnld
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_mnl2jam
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_mnld2debugService
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_mnld2mtklogger
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_mnld2nlputils
+  - vendor.mediatek.hardware.lbs.ILbs/mtk_mtklogger2mnld
+  - vendor.mediatek.hardware.mtkradioex.data.IMtkRadioExData/slot1
+  - vendor.mediatek.hardware.mtkradioex.data.IMtkRadioExData/slot2
+  - vendor.mediatek.hardware.mtkradioex.data.IMtkRadioExData/slot3
+  - vendor.mediatek.hardware.mtkradioex.data.IMtkRadioExData/slot4
+  - vendor.mediatek.hardware.mtkradioex.dch.IMtkRadioExDc/slot1
+  - vendor.mediatek.hardware.mtkradioex.dch.IMtkRadioExDc/slot2
+  - vendor.mediatek.hardware.mtkradioex.dch.IMtkRadioExDc/slot3
+  - vendor.mediatek.hardware.mtkradioex.dch.IMtkRadioExDc/slot4
+  - vendor.mediatek.hardware.mtkradioex.ims.IMtkRadioExIms/slot1
+  - vendor.mediatek.hardware.mtkradioex.ims.IMtkRadioExIms/slot2
+  - vendor.mediatek.hardware.mtkradioex.ims.IMtkRadioExIms/slot3
+  - vendor.mediatek.hardware.mtkradioex.ims.IMtkRadioExIms/slot4
+  - vendor.mediatek.hardware.mtkradioex.messaging.IMtkRadioExMessaging/slot1
+  - vendor.mediatek.hardware.mtkradioex.messaging.IMtkRadioExMessaging/slot2
+  - vendor.mediatek.hardware.mtkradioex.messaging.IMtkRadioExMessaging/slot3
+  - vendor.mediatek.hardware.mtkradioex.messaging.IMtkRadioExMessaging/slot4
+  - vendor.mediatek.hardware.mtkradioex.modem.IMtkRadioExModem/slot1
+  - vendor.mediatek.hardware.mtkradioex.modem.IMtkRadioExModem/slot2
+  - vendor.mediatek.hardware.mtkradioex.modem.IMtkRadioExModem/slot3
+  - vendor.mediatek.hardware.mtkradioex.modem.IMtkRadioExModem/slot4
+  - vendor.mediatek.hardware.mtkradioex.network.IMtkRadioExNetwork/slot1
+  - vendor.mediatek.hardware.mtkradioex.network.IMtkRadioExNetwork/slot2
+  - vendor.mediatek.hardware.mtkradioex.network.IMtkRadioExNetwork/slot3
+  - vendor.mediatek.hardware.mtkradioex.network.IMtkRadioExNetwork/slot4
+  - vendor.mediatek.hardware.mtkradioex.ntn.IMtkRadioExNtn/slot1
+  - vendor.mediatek.hardware.mtkradioex.ntn.IMtkRadioExNtn/slot2
+  - vendor.mediatek.hardware.mtkradioex.ntn.IMtkRadioExNtn/slot3
+  - vendor.mediatek.hardware.mtkradioex.ntn.IMtkRadioExNtn/slot4
+  - vendor.mediatek.hardware.mtkradioex.rcs.IMtkRadioExRcs/slot1
+  - vendor.mediatek.hardware.mtkradioex.rcs.IMtkRadioExRcs/slot2
+  - vendor.mediatek.hardware.mtkradioex.rcs.IMtkRadioExRcs/slot3
+  - vendor.mediatek.hardware.mtkradioex.rcs.IMtkRadioExRcs/slot4
+  - vendor.mediatek.hardware.mtkradioex.sim.IMtkRadioExSim/slot1
+  - vendor.mediatek.hardware.mtkradioex.sim.IMtkRadioExSim/slot2
+  - vendor.mediatek.hardware.mtkradioex.sim.IMtkRadioExSim/slot3
+  - vendor.mediatek.hardware.mtkradioex.sim.IMtkRadioExSim/slot4
+  - vendor.mediatek.hardware.mtkradioex.voice.IMtkRadioExVoice/slot1
+  - vendor.mediatek.hardware.mtkradioex.voice.IMtkRadioExVoice/slot2
+  - vendor.mediatek.hardware.mtkradioex.voice.IMtkRadioExVoice/slot3
+  - vendor.mediatek.hardware.mtkradioex.voice.IMtkRadioExVoice/slot4
+  - vendor.mediatek.hardware.nvram.INvram/default
   - vendor.qti.hardware.fingerprint.IQfpExtendedFingerprint/default
   - vendor.qti.hardware.fingerprint.IQfpExtendedSession/default
   - vendor.qti.hardware.fingerprint.IQfpExtendedSessionCallback/default

@@ -1,0 +1,8 @@
+device:
+  name: grizzly
+  stable_display_size: { width: 1280, height: 2856 }
+  odm_skus:
+    - G7SWN # US: 5G mmWave
+    - GM45K # ROW including JP: 5G Sub 6GHz
+includes:
+  - common/gen11pixel.yml

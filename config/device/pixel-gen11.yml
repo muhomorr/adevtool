@@ -1,0 +1,7 @@
+type: device-list
+
+devices:
+  - yogi.yml
+  - kodiak.yml
+  - grizzly.yml
+  - cubs.yml

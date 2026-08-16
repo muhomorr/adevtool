@@ -92,6 +92,7 @@ replacement_module_inclusions:
   - android.hardware.fastboot@1.1.recovery # hardware/interfaces/fastboot/1.1 | recovery/system/lib64/android.hardware.fastboot@1.1.so
   - android.hardware.fingerprint.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.hardware.fingerprint.prebuilt.xml
   - android.hardware.gnss-V3-ndk.vendor # hardware/interfaces/gnss/aidl | vendor/lib64/android.hardware.gnss-V3-ndk.so
+  - android.hardware.gnss-V7-ndk.vendor # hardware/interfaces/gnss/aidl | vendor/lib64/android.hardware.gnss-V7-ndk.so
   - android.hardware.gnss.measurement_corrections@1.0.vendor # hardware/interfaces/gnss/measurement_corrections/1.0 | vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.o
   - android.hardware.gnss.measurement_corrections@1.1.vendor # hardware/interfaces/gnss/measurement_corrections/1.1 | vendor/lib64/android.hardware.gnss.measurement_corrections@1.1.o
   - android.hardware.gnss.visibility_control@1.0.vendor # hardware/interfaces/gnss/visibility_control/1.0 | vendor/lib64/android.hardware.gnss.visibility_control@1.0.so
@@ -131,6 +132,7 @@ replacement_module_inclusions:
   - android.hardware.input.processor-V1-ndk.vendor # hardware/interfaces/input/processor/aidl | vendor/lib64/android.hardware.input.processor-V1-ndk.so
   - android.hardware.keymaster-V4-ndk.vendor # hardware/interfaces/keymaster/aidl | vendor/lib64/android.hardware.keymaster-V4-ndk.so
   - android.hardware.light-V2-ndk.vendor # hardware/interfaces/light/aidl | vendor/lib64/android.hardware.light-V2-ndk.so
+  - android.hardware.light-V3-ndk.vendor # hardware/interfaces/light/aidl | vendor/lib64/android.hardware.light-V3-ndk.so
   - android.hardware.location.gps.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.hardware.location.gps.prebuilt.xml
   - android.hardware.media.bufferpool2-V2-ndk.vendor # hardware/interfaces/media/bufferpool/aidl | vendor/lib64/android.hardware.media.bufferpool2-V2-ndk.so
   - android.hardware.media.bufferpool@2.0.vendor # hardware/interfaces/media/bufferpool/2.0 | vendor/lib64/android.hardware.media.bufferpool@2.0.so
@@ -149,10 +151,12 @@ replacement_module_inclusions:
   - android.hardware.neuralnetworks@1.3.vendor # hardware/interfaces/neuralnetworks/1.3 | vendor/lib64/android.hardware.neuralnetworks@1.3.so
   - android.hardware.nfc-service.st # hardware/st/nfc/aidl | vendor/bin/hw/android.hardware.nfc-service.st,vendor/etc/init/nfc-service-default.rc,vendor/etc/vintf/manifest/nfc-servil
   - android.hardware.nfc-V1-ndk.vendor # hardware/interfaces/nfc/aidl | vendor/lib64/android.hardware.nfc-V1-ndk.so
+  - android.hardware.nfc-V2-ndk.vendor # hardware/interfaces/nfc/aidl | vendor/lib64/android.hardware.nfc-V2-ndk.so
   - android.hardware.nfc.ese.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.hardware.nfc.ese.prebuilt.xml
   - android.hardware.nfc.hce.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.hardware.nfc.hce.prebuilt.xml
   - android.hardware.nfc.hcef.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.hardware.nfc.hcef.prebuilt.xml
   - android.hardware.nfc.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.hardware.nfc.prebuilt.xml
+  - android.hardware.nfc2-service.st # hardware/st/nfc/aidl2 | vendor/bin/hw/android.hardware.nfc2-service.st,vendor/etc/init/nfc2-service-default.rc
   - android.hardware.npu-V1-ndk.vendor # hardware/interfaces/npu/aidl | vendor/lib64/android.hardware.npu-V1-ndk.so
   - android.hardware.oemlock-V1-ndk.vendor # hardware/interfaces/oemlock/aidl | vendor/lib64/android.hardware.oemlock-V1-ndk.so
   - android.hardware.opengles.aep.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.hardware.opengles.aep.prebuilt.xml
@@ -167,33 +171,43 @@ replacement_module_inclusions:
   - android.hardware.radio-V1-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio-V1-ndk.so
   - android.hardware.radio-V2-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio-V2-ndk.so
   - android.hardware.radio-V3-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio-V3-ndk.so
+  - android.hardware.radio-V5-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio-V5-ndk.so
   - android.hardware.radio.config-V1-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.config-V1-ndk.so
   - android.hardware.radio.config-V2-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.config-V2-ndk.so
   - android.hardware.radio.config-V3-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.config-V3-ndk.so
+  - android.hardware.radio.config-V5-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.config-V5-ndk.so
   - android.hardware.radio.config@1.0.vendor # hardware/interfaces/radio/config/1.0 | vendor/lib64/android.hardware.radio.config@1.0.so
   - android.hardware.radio.config@1.1.vendor # hardware/interfaces/radio/config/1.1 | vendor/lib64/android.hardware.radio.config@1.1.so
   - android.hardware.radio.config@1.2.vendor # hardware/interfaces/radio/config/1.2 | vendor/lib64/android.hardware.radio.config@1.2.so
   - android.hardware.radio.data-V1-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.data-V1-ndk.so
   - android.hardware.radio.data-V2-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.data-V2-ndk.so
   - android.hardware.radio.data-V3-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.data-V3-ndk.so
+  - android.hardware.radio.data-V5-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.data-V5-ndk.so
   - android.hardware.radio.deprecated@1.0.vendor # hardware/interfaces/radio/deprecated/1.0 | vendor/lib64/android.hardware.radio.deprecated@1.0.so
   - android.hardware.radio.ims-V1-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.ims-V1-ndk.so
+  - android.hardware.radio.ims-V4-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.ims-V4-ndk.so
+  - android.hardware.radio.ims.media-V2-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.ims.media-V2-ndk.so
   - android.hardware.radio.messaging-V1-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.messaging-V1-ndk.so
   - android.hardware.radio.messaging-V2-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.messaging-V2-ndk.so
   - android.hardware.radio.messaging-V3-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.messaging-V3-ndk.so
+  - android.hardware.radio.messaging-V5-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.messaging-V5-ndk.so
   - android.hardware.radio.modem-V1-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.modem-V1-ndk.so
   - android.hardware.radio.modem-V2-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.modem-V2-ndk.so
   - android.hardware.radio.modem-V3-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.modem-V3-ndk.so
+  - android.hardware.radio.modem-V5-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.modem-V5-ndk.so
   - android.hardware.radio.network-V1-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.network-V1-ndk.so
   - android.hardware.radio.network-V2-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.network-V2-ndk.so
   - android.hardware.radio.network-V3-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.network-V3-ndk.so
+  - android.hardware.radio.network-V5-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.network-V5-ndk.so
   - android.hardware.radio.sap-V1-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.sap-V1-ndk.so
   - android.hardware.radio.sim-V1-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.sim-V1-ndk.so
   - android.hardware.radio.sim-V2-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.sim-V2-ndk.so
   - android.hardware.radio.sim-V3-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.sim-V3-ndk.so
+  - android.hardware.radio.sim-V5-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.sim-V5-ndk.so
   - android.hardware.radio.voice-V1-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.voice-V1-ndk.so
   - android.hardware.radio.voice-V2-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.voice-V2-ndk.so
   - android.hardware.radio.voice-V3-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.voice-V3-ndk.so
+  - android.hardware.radio.voice-V5-ndk.vendor # hardware/interfaces/radio/aidl | vendor/lib64/android.hardware.radio.voice-V5-ndk.so
   - android.hardware.radio@1.2.vendor # hardware/interfaces/radio/1.2 | vendor/lib64/android.hardware.radio@1.2.so
   - android.hardware.radio@1.3.vendor # hardware/interfaces/radio/1.3 | vendor/lib64/android.hardware.radio@1.3.so
   - android.hardware.radio@1.4.vendor # hardware/interfaces/radio/1.4 | vendor/lib64/android.hardware.radio@1.4.so
@@ -212,6 +226,7 @@ replacement_module_inclusions:
   - android.hardware.secure_element_gto.xml # hardware/st/secure_element2/secure_element/aidl | vendor/etc/vintf/manifest/android.hardware.secure_element_gto.xml
   - android.hardware.security.keymint-V1-ndk.vendor # hardware/interfaces/security/keymint/aidl | vendor/lib64/android.hardware.security.keymint-V1-ndk.so
   - android.hardware.security.keymint-V3-ndk.vendor # hardware/interfaces/security/keymint/aidl | vendor/lib64/android.hardware.security.keymint-V3-ndk.so
+  - android.hardware.security.keymint-V4-ndk.vendor # hardware/interfaces/security/keymint/aidl | vendor/lib64/android.hardware.security.keymint-V4-ndk.so
   - android.hardware.security.rkp-V3-ndk.vendor # hardware/interfaces/security/rkp/aidl | vendor/lib64/android.hardware.security.rkp-V3-ndk.so
   - android.hardware.security.secretkeeper.trusty # system/core/trusty/secretkeeper | vendor/bin/hw/android.hardware.security.secretkeeper.trusty,vendor/etc/init/android.hardware.sel
   - android.hardware.security.sharedsecret-V1-ndk.vendor # hardware/interfaces/security/sharedsecret/aidl | vendor/lib64/android.hardware.security.sharedsecret-V1-ndk.so
@@ -250,6 +265,7 @@ replacement_module_inclusions:
   - android.hardware.telephony.gsm.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.hardware.telephony.gsm.prebuilt.xml
   - android.hardware.telephony.ims.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.hardware.telephony.ims.prebuilt.xml
   - android.hardware.telephony.ims.singlereg.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.hardware.telephony.ims.singlereg.prebuilt.xml
+  - android.hardware.telephony.satellite.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.hardware.telephony.satellite.prebuilt.xml
   - android.hardware.thermal-V1-ndk.vendor # hardware/interfaces/thermal/aidl | vendor/lib64/android.hardware.thermal-V1-ndk.so
   - android.hardware.thermal-V2-ndk.vendor # hardware/interfaces/thermal/aidl | vendor/lib64/android.hardware.thermal-V2-ndk.so
   - android.hardware.thermal-V3-ndk.vendor # hardware/interfaces/thermal/aidl | vendor/lib64/android.hardware.thermal-V3-ndk.so
@@ -300,6 +316,7 @@ replacement_module_inclusions:
   - android.software.midi.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.software.midi.prebuilt.xml
   - android.software.verified_boot.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/android.software.verified_boot.prebuilt.xml
   - android.system.keystore2-V1-ndk.vendor # system/hardware/interfaces/keystore2/aidl | vendor/lib64/android.system.keystore2-V1-ndk.so
+  - android.system.keystore2-V6-ndk.vendor # system/hardware/interfaces/keystore2/aidl | vendor/lib64/android.system.keystore2-V6-ndk.so
   - android.trusty.stats.nw.setter-cpp.vendor # system/core/trusty/stats/aidl | vendor/lib64/android.trusty.stats.nw.setter-cpp.so
   - ANGLE # external/angle | product/priv-app/ANGLE/ANGLE.apk
   - ArbutusSlab-Regular.ttf # external/google-fonts/arbutus-slab | product/fonts/ArbutusSlab-Regular.ttf
@@ -323,9 +340,11 @@ replacement_module_inclusions:
   - Fraunces-Regular.ttf # external/google-fonts/fraunces | product/fonts/Fraunces-Regular.ttf
   - Fraunces-SemiBold.ttf # external/google-fonts/fraunces | product/fonts/Fraunces-SemiBold.ttf
   - fsck.f2fs.vendor # external/f2fs-tools | vendor/bin/defrag.f2fs,vendor/bin/dump.f2fs,vendor/bin/fsck.f2fs,vendor/bin/resize.f2fs
+  - GbaService # packages/modules/GenericBootstrappingArchitecture | system_ext/priv-app/GbaService/GbaService.apk
   - handheld_core_hardware.prebuilt.xml # frameworks/native/data/etc | vendor/etc/permissions/handheld_core_hardware.prebuilt.xml
   - hfp_codec_capabilities_xml # hardware/interfaces/bluetooth/audio/utils | vendor/etc/aidl/hfp/hfp_codec_capabilities.xml
   - hwservicemanager # system/hwservicemanager | system_ext/bin/hwservicemanager,system_ext/etc/init/hwservicemanager.rc
+  - ImsStack # packages/modules/ImsStack/java | system_ext/priv-app/ImsStack/ImsStack.apk
   - Iwlan # packages/services/Iwlan | system_ext/priv-app/Iwlan/Iwlan.apk
   - Karla-Regular.ttf # external/google-fonts/karla | product/fonts/Karla-Regular.ttf
   - Lato-Bold.ttf # external/google-fonts/lato | product/fonts/Lato-Bold.ttf
@@ -410,11 +429,13 @@ replacement_module_inclusions:
   - libhidltransport.vendor # system/libhidl | vendor/lib64/libhidltransport.so
   - libhidparser # hardware/libhardware/modules/sensors/dynamic_sensor/HidUtils | vendor/lib64/libhidparser.so
   - libhwbinder.vendor # system/libhwbinder | vendor/lib64/libhwbinder.so
+  - libimsstack # packages/modules/ImsStack/native/libimsstack | system_ext/lib64/libimsstack.so
   - libion.vendor # system/memory/libion | vendor/lib64/libion.so
   - libjsoncpp.vendor # external/jsoncpp | vendor/lib64/libjsoncpp.so
   - libkeymaster_messages.vendor # system/keymaster | vendor/lib64/libkeymaster_messages.so
   - libkeymaster_portable.vendor # system/keymaster | vendor/lib64/libkeymaster_portable.so
   - libkeymint_support_V3.vendor # hardware/interfaces/security/keymint/support | vendor/lib64/libkeymint_support_V3.so
+  - libkeymint_support_V4.vendor # hardware/interfaces/security/keymint/support | vendor/lib64/libkeymint_support_V4.so
   - libkeystore-engine-wifi-hidl # system/security/keystore-engine | vendor/lib64/libkeystore-engine-wifi-hidl.so
   - liblazy_static.vendor # external/rust/android-crates-io/crates/lazy_static | vendor/lib64/liblazy_static.dylib.so
   - liblibc.vendor # external/rust/android-crates-io/crates/libc | vendor/lib64/liblibc.dylib.so
@@ -432,11 +453,13 @@ replacement_module_inclusions:
   - libmemoffset.vendor # external/rust/android-crates-io/crates/memoffset | vendor/lib64/libmemoffset.dylib.so
   - libmemunreachable.vendor # system/memory/libmemunreachable | vendor/lib64/libmemunreachable.so
   - libminijail.vendor # external/minijail | vendor/lib64/libminijail.so
+  - libmnl.vendor # external/libmnl | vendor/lib64/libmnl.so
   - libnbaio_mono # frameworks/av/media/libnbaio | vendor/lib64/libnbaio_mono.so
   - libnetutils.vendor # system/core/libnetutils | vendor/lib64/libnetutils.so
   - libnix.vendor # external/rust/android-crates-io/crates/nix | vendor/lib64/libnix.dylib.so
   - libnl.vendor # external/libnl | vendor/lib64/libnl.so
   - libonce_cell.vendor # external/rust/android-crates-io/crates/once_cell | vendor/lib64/libonce_cell.dylib.so
+  - libperfetto_c.vendor # external/perfetto | vendor/lib64/libperfetto_c.so
   - libpng.vendor # external/libpng | vendor/lib64/libpng.so
   - libpower.vendor # hardware/libhardware_legacy | vendor/lib64/libpower.so
   - libprocessgroup.vendor # system/core/libprocessgroup | vendor/lib64/libprocessgroup.so
@@ -463,6 +486,7 @@ replacement_module_inclusions:
   - libstd.vendor # prebuilts/rust | vendor/lib64/libstd.dylib.so
   - libstrsim.vendor # external/rust/android-crates-io/crates/strsim | vendor/lib64/libstrsim.dylib.so
   - libsystem_properties_bindgen_sys.vendor # system/librustutils/rustutils | vendor/lib64/libsystem_properties_bindgen_sys.dylib.so
+  - libsysutils.vendor # system/core/libsysutils | vendor/lib64/libsysutils.so
   - libthiserror.vendor # external/rust/android-crates-io/crates/thiserror | vendor/lib64/libthiserror.dylib.so
   - libtinyalsa.vendor # external/tinyalsa | vendor/lib64/libtinyalsa.so
   - libtinyalsav2.vendor # external/tinyalsa_new | vendor/lib64/libtinyalsav2.so
@@ -482,6 +506,8 @@ replacement_module_inclusions:
   - Lustria-Regular.ttf # external/google-fonts/lustria | product/fonts/Lustria-Regular.ttf
   - Multiuser # packages/apps/Multiuser | system_ext/priv-app/Multiuser/Multiuser.apk
   - nfc-service-default.xml # hardware/st/nfc/aidl | vendor/etc/vintf/manifest/nfc-service-default.xml
+  - nfc2-service-default.xml # hardware/st/nfc/aidl2 | vendor/etc/vintf/manifest/nfc2-service-default.xml
+  - nfc_nci.st21nfc.base # hardware/st/nfc/st21nfc2 | vendor/lib64/nfc_nci.st21nfc.base.so
   - nfc_nci.st21nfc.default # hardware/st/nfc/st21nfc | vendor/lib64/nfc_nci.st21nfc.default.so
   - odm_file_contexts.recovery # system/sepolicy/contexts | recovery/odm_file_contexts
   - odm_property_contexts.recovery # system/sepolicy/contexts | recovery/odm_property_contexts
@@ -489,6 +515,7 @@ replacement_module_inclusions:
   - plat_property_contexts.recovery # system/sepolicy/contexts | recovery/plat_property_contexts
   - plat_service_contexts.recovery # system/sepolicy/contexts | recovery/plat_service_contexts
   - privapp-permlist_com.google.android.iwlan.xml # packages/services/Iwlan | system_ext/etc/permissions/privapp-permlist_com.google.android.iwlan.xml
+  - privapp_permissions_com.android.imsstack # packages/modules/ImsStack/java | system_ext/etc/permissions/com.android.imsstack.xml
   - product_file_contexts.recovery # system/sepolicy/contexts | recovery/product_file_contexts
   - product_property_contexts.recovery # system/sepolicy/contexts | recovery/product_property_contexts
   - product_service_contexts.recovery # system/sepolicy/contexts | recovery/product_service_contexts
@@ -502,6 +529,7 @@ replacement_module_inclusions:
   - SafetyRegulatoryInfo # packages/apps/SafetyRegulatoryInfo | product/app/SafetyRegulatoryInfo/SafetyRegulatoryInfo.apk
   - sensors.dynamic_sensor_hal # hardware/libhardware/modules/sensors/dynamic_sensor | vendor/lib64/hw/sensors.dynamic_sensor_hal.so
   - sepolicy.recovery # system/sepolicy | recovery/sepolicy
+  - sysconfig_com.android.imsstack # packages/modules/ImsStack/java | system_ext/etc/sysconfig/com.android.imsstack.xml
   - sysconfig_com.google.android.iwlan.xml # packages/services/Iwlan | system_ext/etc/sysconfig/sysconfig_com.google.android.iwlan.xml
   - system_ext_file_contexts.recovery # system/sepolicy/contexts | recovery/system_ext_file_contexts
   - system_ext_property_contexts.recovery # system/sepolicy/contexts | recovery/system_ext_property_contexts

@@ -12,7 +12,9 @@ sysconfig_inclusions:
   - <feature name="android.hardware.bluetooth_le.channel_sounding"/>
   - <feature name="android.hardware.felica"/>
   - <feature name="android.hardware.nfc.uicc"/>
+  - <feature name="android.hardware.npu"/>
   - <feature name="android.hardware.strongbox_keystore" version="300"/>
+  - <feature name="android.hardware.strongbox_keystore" version="400"/>
   - <feature name="android.hardware.telephony.euicc"/>
   - <feature name="android.hardware.telephony.euicc.mep"/>
   - <feature name="android.hardware.uwb"/>
@@ -30,6 +32,7 @@ sysconfig_inclusions:
   - <feature name="com.google.android.feature.CONTEXTUAL_SEARCH_LIVE_TRANSLATE"/>
   - <feature name="com.google.android.feature.FIR.PROXIMITY"/>
   - <feature name="com.google.android.feature.GEMINI_EXPERIENCE"/>
+  - <feature name="com.google.android.feature.GEMINI_INTELLIGENCE_EXPERIENCE"/>
   - <feature name="com.google.android.feature.GOOGLE_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_2017_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_2018_EXPERIENCE"/>
@@ -47,6 +50,7 @@ sysconfig_inclusions:
   - <feature name="com.google.android.feature.PIXEL_2024_MIDYEAR_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_2025_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_2025_MIDYEAR_EXPERIENCE"/>
+  - <feature name="com.google.android.feature.PIXEL_2026_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_2026_MIDYEAR_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_EXPERIENCE"/>
   - <feature name="com.google.android.feature.PIXEL_TABLET_2023_EXPERIENCE"/>
@@ -127,6 +131,11 @@ sysconfig_inclusions:
       <install-in user-type="SYSTEM"/>
     </install-in-user-type>
   - |-
+    <install-in-user-type package="com.google.android.modem.pms">
+      <install-in user-type="SYSTEM"/>
+      <install-in user-type="FULL"/>
+    </install-in-user-type>
+  - |-
     <install-in-user-type package="com.android.angle">
       <install-in user-type="FULL"/>
       <install-in user-type="PROFILE"/>
@@ -139,6 +148,10 @@ sysconfig_inclusions:
       <install-in user-type="android.os.usertype.profile.CLONE"/>
       <install-in user-type="android.os.usertype.profile.PRIVATE"/>
     </install-in-user-type>
+  - |-
+    <install-in-user-type package="com.mediatek.satellite.service">
+      <install-in user-type="SYSTEM"/>
+    </install-in-user-type>
   - <library name="androidx.camera.extensions.impl" file="/system_ext/framework/com.google.android.camerax.extensions.jar"/>
   - <library name="com.google.android.camera.experimental2021" file="/vendor/framework/com.google.android.camera.experimental2021.jar"/>
   - <library name="com.google.android.camera.experimental2022" file="/vendor/framework/com.google.android.camera.experimental2022.jar"/>
@@ -147,6 +160,7 @@ sysconfig_inclusions:
   - <library name="com.google.android.camera.experimental2024" file="/vendor/framework/com.google.android.camera.experimental2024.jar"/>
   - <library name="com.google.android.camera.experimental2024_system" file="/system_ext/framework/com.google.android.camera.experimental2024_system.jar"/>
   - <library name="com.google.android.camera.experimental2025" file="/vendor/framework/com.google.android.camera.experimental2025.jar"/>
+  - <library name="com.google.android.camera.experimental2026" file="/vendor/framework/com.google.android.camera.experimental2026.jar"/>
   - <library name="com.google.android.camera.extensions" file="/system_ext/framework/com.google.android.camera.extensions.jar"/>
   - <library name="com.google.android.camerax.extensions" file="/system_ext/framework/com.google.android.camerax.extensions.jar"/>
   - <library name="com.google.android.dialer.support" file="/product/framework/com.google.android.dialer.support.jar"/>

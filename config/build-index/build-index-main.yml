@@ -1,3 +1,51 @@
+yogi CD1A.260618.001.A9:
+  desc: Aug 2026
+  factory: da72a39af8d7af7d59aa58247090e1e27320c35f2d24cbe4f32a4120d6f68979 yogi-cd1a.260618.001.a9-factory-da72a39a.zip
+  ota: 8a6c8928b1159c1502ea718535888d1d8fedf1586bb04ad2cf9a8f03e9001eda yogi-ota-cd1a.260618.001.a9-8a6c8928.zip
+yogi CD1A.260618.001.C3:
+  desc: Aug 2026
+  factory: 4e0bc28e6c828da8153d1c7401e2d1871db5827f1c3e9de8eef36e46dbf41d96 yogi-cd1a.260618.001.c3-factory-4e0bc28e.zip
+  ota: 6618b5412cd037fa1995a972d026d5321d71dbfd7bf89b1fa42a313670b6c103 yogi-ota-cd1a.260618.001.c3-6618b541.zip
+yogi CD1A.260714.001.A9:
+  desc: Aug 2026
+  factory: 0c09a12ce9e64aac17b4389cc926beade475ca3b8b77008be8e0742444fefcf6 yogi-cd1a.260714.001.a9-factory-0c09a12c.zip
+  ota: 922b48f1c0a87797d65395c666333d38b9efd2e3b1ef033508d8be5bc0ad1269 yogi-ota-cd1a.260714.001.a9-922b48f1.zip
+kodiak CD1A.260618.001.A7:
+  desc: Aug 2026
+  factory: ef0c679df66a5a79487a8d6ea20cc751f496cbe6f5d5ea0305941bb7cae429ad kodiak-cd1a.260618.001.a7-factory-ef0c679d.zip
+  ota: b293170df6b2eb75f6fcd691cba506eea645bc78bf1445a8e0d3e1dc2186de8a kodiak-ota-cd1a.260618.001.a7-b293170d.zip
+kodiak CD1A.260618.001.C2:
+  desc: Aug 2026
+  factory: 1b9e03e34028d90fd971b48f8d67d93045092fbb329be77b27046578587e3f22 kodiak-cd1a.260618.001.c2-factory-1b9e03e3.zip
+  ota: f23df0c5df0b50fea08acf5a49d65bf103411db579234d078f665dd56366d33e kodiak-ota-cd1a.260618.001.c2-f23df0c5.zip
+kodiak CD1A.260714.001.A9:
+  desc: Aug 2026
+  factory: b82632479dcc5f770a1cab0782e5df4619c27ccb003a7e2aaf32f64c8bfea4b5 kodiak-cd1a.260714.001.a9-factory-b8263247.zip
+  ota: a765784f220bc6c4b03da4b88ff4362fea757225d5a7753ca8b96c47bb23f718 kodiak-ota-cd1a.260714.001.a9-a765784f.zip
+grizzly CD1A.260618.001.A7:
+  desc: Aug 2026
+  factory: fcbe932441f0e0b8c5137160a41424c6cea3a8ed393a2b0b94b167228d112ada grizzly-cd1a.260618.001.a7-factory-fcbe9324.zip
+  ota: abbce8a6b022297bdf9a6f438d1c859af442d1e459e25f7d2a7d8c333181e6ff grizzly-ota-cd1a.260618.001.a7-abbce8a6.zip
+grizzly CD1A.260618.001.C2:
+  desc: Aug 2026
+  factory: 9403b0f63c04503563357f4d4f968fbc0a535b686e2e7effe926e99de18304a1 grizzly-cd1a.260618.001.c2-factory-9403b0f6.zip
+  ota: bac4ce22326269f22ed58480e3bc005653483efebf5e70b6c2e7f496cec04169 grizzly-ota-cd1a.260618.001.c2-bac4ce22.zip
+grizzly CD1A.260714.001.A9:
+  desc: Aug 2026
+  factory: 86fb81516d54a21c28487745e748aee8e36847dc400a6ab40ef2458146b0becb grizzly-cd1a.260714.001.a9-factory-86fb8151.zip
+  ota: 68ec73febe7602df602441464498eef5c1cb8c9e87190dd1e768eb1af4b66826 grizzly-ota-cd1a.260714.001.a9-68ec73fe.zip
+cubs CD1A.260618.001.A7:
+  desc: Aug 2026
+  factory: fe27e57294fbd0267b97615527613174bf45dcc0acb58825a05b5a914afd7048 cubs-cd1a.260618.001.a7-factory-fe27e572.zip
+  ota: 7f02515d03c4a89b669c8ba537bf307ac080500f8783341a06edc4a1d1a402eb cubs-ota-cd1a.260618.001.a7-7f02515d.zip
+cubs CD1A.260618.001.C2:
+  desc: Aug 2026
+  factory: da6598a3cff43ad4ea78f505ba0141df2b178ca3f4bf6a05619b4097f270cc35 cubs-cd1a.260618.001.c2-factory-da6598a3.zip
+  ota: 4c3f6aaedef37766e6f293b8de091cc99038818a3454ef2e830569806aed7bb6 cubs-ota-cd1a.260618.001.c2-4c3f6aae.zip
+cubs CD1A.260714.001.A9:
+  desc: Aug 2026
+  factory: a529c4361135624068e07d06c01bdfb1d4016e0510ae5a3b5bab03832674cf12 cubs-cd1a.260714.001.a9-factory-a529c436.zip
+  ota: 4834ee9d9e3ef1cff9805922d6671b6056cf0bc6952060fb31c7a49fedf3c5ca cubs-ota-cd1a.260714.001.a9-4834ee9d.zip
 rango BD3A.250808.001:
   desc: Oct 2025
   factory: 8f7b23b725a7f51c28f60acdfce7a7f582b6b5c3df173f71973402365a948e6f rango-bd3a.250808.001-factory-8f7b23b7.zip

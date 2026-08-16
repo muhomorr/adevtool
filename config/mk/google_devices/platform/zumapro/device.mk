@@ -4,6 +4,8 @@ include vendor/adevtool/config/mk/google_devices/common/device-common-gs201-plus
 
 PRODUCT_SOONG_NAMESPACES += vendor/adevtool/config/mk/google_devices/platform/zumapro
 
+AB_OTA_POSTINSTALL_CONFIG += FILESYSTEM_TYPE_system=ext4
+
 TRUSTY_KEYMINT_IMPL := rust
 
 PRODUCT_PACKAGES += GosOverlay

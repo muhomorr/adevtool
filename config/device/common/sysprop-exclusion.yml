@@ -92,11 +92,7 @@ sysprop_exclusions:
   - ro.odm_dlkm.build.tags
   - ro.odm_dlkm.build.uuid
   - ro.odm_dlkm.build.version.incremental
-  - ro.product.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gcf,gsa,gsa_bl1,init_boot,ldfw,modem,pbl,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot # handled elsewhere
-  - ro.product.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gsa,init_boot,ldfw,modem,pbl,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot
-  - ro.product.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gsa,init_boot,ldfw,pbl,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot
-  - ro.product.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gsa,ldfw,modem,pbl,product,system,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm
-  - ro.product.ab_ota_partitions = abl,bl31,boot,cap,cpm,dbc,dbl,dram_init_0,dram_init_1,dram_init_2,dram_init_3,dram_init_4,dram_init_5,dram_init_6,dram_init_7,dram_init_8,dram_init_9,dram_phy,dtbo,gc,gdmc,gsa_bl1,gsa_fw,init_boot,modem,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot
+  - ro.product.ab_ota_partitions # handled by AB_OTA_PARTITIONS declaration
   - ro.product.build.16k_page.enabled = true
   - ro.product.build.date
   - ro.product.build.date.utc
@@ -143,11 +139,7 @@ sysprop_exclusions:
   - ro.system_ext.build.uuid
   - ro.system_ext.build.version.incremental
   - ro.usb.data_protection.disable_when_locked.supported = true
-  - ro.vendor.build.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gcf,gsa,gsa_bl1,init_boot,ldfw,modem,pbl,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot # handled elsewhere
-  - ro.vendor.build.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gsa,init_boot,ldfw,modem,pbl,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot
-  - ro.vendor.build.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gsa,init_boot,ldfw,pbl,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot
-  - ro.vendor.build.ab_ota_partitions = abl,bl1,bl2,bl31,boot,dtbo,gsa,ldfw,modem,pbl,product,system,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm
-  - ro.vendor.build.ab_ota_partitions = abl,bl31,boot,cap,cpm,dbc,dbl,dram_init_0,dram_init_1,dram_init_2,dram_init_3,dram_init_4,dram_init_5,dram_init_6,dram_init_7,dram_init_8,dram_init_9,dram_phy,dtbo,gc,gdmc,gsa_bl1,gsa_fw,init_boot,modem,product,pvmfw,system,system_dlkm,system_ext,tzsw,vbmeta,vbmeta_system,vbmeta_vendor,vendor,vendor_boot,vendor_dlkm,vendor_kernel_boot
+  - ro.vendor.build.ab_ota_partitions # handled by AB_OTA_PARTITIONS declaration
   - ro.vendor.build.date
   - ro.vendor.build.date.utc
   - ro.vendor.build.fingerprint
@@ -165,10 +157,12 @@ sysprop_exclusions:
   - ro.vendor_dlkm.build.tags
   - ro.vendor_dlkm.build.uuid
   - ro.vendor_dlkm.build.version.incremental
+  - ro.virtual_ab.ublk.enabled = true # intentionally disabled, see build/release repo
   - setupwizard.feature.baseline_setupwizard_enabled = true
   - setupwizard.feature.day_night_mode_enabled = true
   - setupwizard.feature.default_locale_enhancement_enabled = true
   - setupwizard.feature.device_info_icon_enabled = true
+  - setupwizard.feature.enable_delightful_setup = true
   - setupwizard.feature.enable_force_two_pane = true
   - setupwizard.feature.enable_gil =
   - setupwizard.feature.enable_gil_logging = true
@@ -177,6 +171,7 @@ sysprop_exclusions:
   - setupwizard.feature.enable_parental_setup = true
   - setupwizard.feature.enable_quick_start_flow = true
   - setupwizard.feature.enable_restore_anytime = true
+  - setupwizard.feature.enable_setup_companion = true
   - setupwizard.feature.enable_tween_setup_flow = true
   - setupwizard.feature.enable_wifi_tracker = true
   - setupwizard.feature.enhanced_setup_design_metrics = true
@@ -184,7 +179,9 @@ sysprop_exclusions:
   - setupwizard.feature.joined_up_loading = true
   - setupwizard.feature.lifecycle_refactoring = true
   - setupwizard.feature.locale_agnostic_enabled = true
+  - setupwizard.feature.multiworker = true
   - setupwizard.feature.notification_refactoring = true
+  - setupwizard.feature.one_tap_enabled = true
   - setupwizard.feature.osmigration = true
   - setupwizard.feature.portal_notification = true
   - setupwizard.feature.provisioning_profile_mode
@@ -199,6 +196,7 @@ sysprop_exclusions:
   - setupwizard.personal_safety_suw_satellite_sos_visible = false
   - setupwizard.theme = glif_expressive # TODO switch to glif_expressive in base OS
   - sota.charge.stop.level
+  - turbo.feature.shutdown_exp = true
   - vendor.audiodump.cca.config
   - vendor.audiodump.enable
   - vendor.audiodump.encode.disable

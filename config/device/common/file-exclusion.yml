@@ -68,12 +68,37 @@ filters:
       - product/fonts/ZillaSlab-SemiBoldItalic.ttf
       - product/framework/com.google.android.dialer.support.jar
       - product/framework/libhwinfo.jar
+      - product/media/bootanimation-2026.zip
+      - product/media/bootanimation-dark-2026.zip
       - product/media/bootanimation-dark.zip
       - product/media/bootanimation.zip
+      - product/media/vibration/notification/Blip.xml
+      - product/media/vibration/notification/Classic_notification.xml
+      - product/media/vibration/notification/Fireworks.xml
+      - product/media/vibration/notification/Pulse.xml
+      - product/media/vibration/notification/Rapid_fire.xml
+      - product/media/vibration/notification/Rattlesnake.xml
+      - product/media/vibration/notification/Rumble.xml
+      - product/media/vibration/notification/Soft_rise.xml
+      - product/media/vibration/notification/Taps.xml
+      - product/media/vibration/notification/Tremor.xml
+      - product/media/vibration/notification/Waves.xml
+      - product/media/vibration/notification/Whir.xml
+      - product/media/vibration/ringtone/Bumps.xml
+      - product/media/vibration/ringtone/Buzz.xml
+      - product/media/vibration/ringtone/Classic_ringtone.xml
+      - product/media/vibration/ringtone/Drumbeat.xml
+      - product/media/vibration/ringtone/Gears.xml
+      - product/media/vibration/ringtone/Heartbeat.xml
+      - product/media/vibration/ringtone/Rhythm.xml
+      - product/media/vibration/ringtone/Snare.xml
+      - product/media/vibration/ringtone/Swirl.xml
+      - product/media/vibration/ringtone/Swoop.xml
       - product/priv-app/DMService/lib/arm/libdmengine.so
       - product/priv-app/DMService/lib/arm/libdmjavaplugin.so
       - product/priv-app/DMService/lib/arm64/libdmengine.so
       - product/priv-app/DMService/lib/arm64/libdmjavaplugin.so
+      - product/wallpaper/image/default_wallpaper_BEG
       - product/wallpaper/image/default_wallpaper_BLK
       - product/wallpaper/image/default_wallpaper_BUE
       - product/wallpaper/image/default_wallpaper_DBU
@@ -89,20 +114,33 @@ filters:
       - product/wallpaper/image/default_wallpaper_YEL
       - product/wallpaper/image/fallback_green.jpg
       - product/wallpaper/image/fallback_green_dark.jpg
+      - product/wallpaper/image/fallback_midnight.jpg
+      - product/wallpaper/image/fallback_midnight_dark.jpg
+      - product/wallpaper/image/fallback_pine.jpg
+      - product/wallpaper/image/fallback_pine_dark.jpg
       - product/wallpaper/image/fallback_sterling.jpg
       - product/wallpaper/image/fallback_sterling_dark.jpg
       - product/wallpaper/image/front_green.jpg
       - product/wallpaper/image/front_green_dark.jpg
+      - product/wallpaper/image/front_midnight.jpg
+      - product/wallpaper/image/front_midnight_dark.jpg
+      - product/wallpaper/image/front_pine.jpg
+      - product/wallpaper/image/front_pine_dark.jpg
       - product/wallpaper/image/front_sterling.jpg
       - product/wallpaper/image/front_sterling_dark.jpg
       - product/wallpaper/image/unicorn/unicorn_wallpaper_BLK
       - product/wallpaper/image/unicorn/unicorn_wallpaper_BUE
       - product/wallpaper/image/unicorn/unicorn_wallpaper_DBU
+      - product/wallpaper/image/unicorn/unicorn_wallpaper_GENERIC
       - product/wallpaper/image/unicorn/unicorn_wallpaper_PPL
       - product/wallpaper/image/unicorn/unicorn_wallpaper_RED
       - product/wallpaper/image/unicorn/unicorn_wallpaper_WHT
       - product/wallpaper/video/green.mp4
       - product/wallpaper/video/green_dark.mp4
+      - product/wallpaper/video/midnight.mp4
+      - product/wallpaper/video/midnight_dark.mp4
+      - product/wallpaper/video/pine.mp4
+      - product/wallpaper/video/pine_dark.mp4
       - product/wallpaper/video/sterling.mp4
       - product/wallpaper/video/sterling_dark.mp4
       - recovery/adb_keys # symlink
@@ -190,6 +228,7 @@ filters:
       - vendor/bin/storage_intelligence.sh # TODO
       - vendor/boot_otas/boot_ota_16k.zip
       - vendor/boot_otas/boot_ota_4k.zip
+      - vendor/etc/fstab.malibu-fips # TODO exclude on rest of devices
       - vendor/etc/init/init.sscoredump.rc
       - vendor/etc/init/mte_launcher.rc # MTE is always enabled on GrapheneOS
       - vendor/etc/init/storage.intelligence.rc # TODO
@@ -199,3 +238,4 @@ filters:
       - vendor_ramdisk/avb/q-developer-gsi.avbpubkey
       - vendor_ramdisk/avb/r-developer-gsi.avbpubkey
       - vendor_ramdisk/avb/s-developer-gsi.avbpubkey
+      - vendor_ramdisk/system/etc/fstab.malibu-fips

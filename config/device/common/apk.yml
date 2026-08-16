@@ -1,4 +1,16 @@
 package_inclusions:
+  com.google.android.modem.persist:
+    max_known_version: 1
+    include_uses_permissions:
+      - com.google.android.modem.pms.permission.READ_MODEM_INFO
+      - com.google.android.modem.pms.permission.USE_MODEM_SERVICE
+  com.mediatek.satellite.service:
+    max_known_version: auto
+    include_uses_permissions:
+      - android.permission.DEVICE_POWER
+      - android.permission.READ_PHONE_STATE
+      - android.permission.RECEIVE_BOOT_COMPLETED
+
   com.android.safetyregulatoryinfo:
     max_known_version: auto
     include_uses_permissions:
@@ -146,6 +158,7 @@ package_inclusions:
   com.google.android.pixelnfc:
     max_known_version: auto
     include_uses_permissions:
+      - com.google.android.apps.pixel.countrydetectionproxy.permission.ACCESS_COUNTRY_PROXY # TODO check data provider
       - com.google.android.pixelnfc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
     flags:
       - include_as_untrusted_app
@@ -180,7 +193,7 @@ package_inclusions:
       - android.permission.MANAGE_USERS
 
   com.google.android.apps.camera.services:
-    max_known_version: 498598
+    max_known_version: 513910
     include_uses_permissions:
       - android.permission.ACCESS_NETWORK_STATE
       - android.permission.ACCESS_WIFI_STATE
@@ -224,7 +237,7 @@ package_inclusions:
       - isolate_from_gmscore_and_finsky
 
   com.google.android.euicc:
-    max_known_version: 235496
+    max_known_version: 236971
     include_uses_permissions:
       - android.permission.ACCESS_NETWORK_STATE
       - android.permission.CAMERA
@@ -275,14 +288,54 @@ package_inclusions:
   com.google.android.modem.pms:
     max_known_version: 1
     include_uses_permissions:
+      - android.permission.ACCESS_BACKGROUND_LOCATION
+      - android.permission.ACCESS_COARSE_LOCATION
+      - android.permission.ACCESS_CONTEXT_HUB
+      - android.permission.ACCESS_FINE_LOCATION
       - android.permission.ACCESS_NETWORK_STATE
       - android.permission.ACCESS_WIFI_STATE
+      - android.permission.ACTIVITY_RECOGNITION
+      - android.permission.BLUETOOTH_CONNECT
       - android.permission.CHANGE_WIFI_STATE
+      - android.permission.INTERACT_ACROSS_USERS
+      - android.permission.LOCAL_MAC_ADDRESS
+      - android.permission.MANAGE_USB
+      - android.permission.MODIFY_AUDIO_ROUTING
+      - android.permission.MODIFY_PHONE_STATE
+      - android.permission.OVERRIDE_WIFI_CONFIG
+      - android.permission.POST_NOTIFICATIONS
+      - android.permission.QUERY_USERS
       - android.permission.READ_PHONE_STATE
       - android.permission.READ_PRIVILEGED_PHONE_STATE
       - android.permission.RECEIVE_BOOT_COMPLETED
+      - android.permission.SCHEDULE_EXACT_ALARM
+      - android.permission.USE_EXACT_ALARM
+      - android.permission.UWB_PRIVILEGED
+      - com.google.android.apps.modem.pixellogger.permission.TRIGGER_CALL_DIAGNOSTICS
+      - com.google.android.carrier.permission.MANAGE_CARRIER_SETTINGS
+      - com.google.android.modem.pms.permission.MODEM_TRACING_AND_ANALYTICS
+      - com.google.android.permission.USE_GRIL
     remove_permissions:
       - android.permission.INTERNET # used for fetching dynamic config
+    pregrantable_permissions:
+      - android.permission.ACCESS_CONTEXT_HUB
+      - android.permission.ACCESS_WIFI_STATE
+      - android.permission.ACTIVITY_RECOGNITION
+      - android.permission.BLUETOOTH_CONNECT
+      - android.permission.CHANGE_WIFI_STATE
+      - android.permission.INTERACT_ACROSS_USERS
+      - android.permission.LOCAL_MAC_ADDRESS
+      - android.permission.MANAGE_USB
+      - android.permission.MODIFY_AUDIO_ROUTING
+      - android.permission.MODIFY_PHONE_STATE
+      - android.permission.OVERRIDE_WIFI_CONFIG
+      - android.permission.POST_NOTIFICATIONS
+      - android.permission.QUERY_USERS
+      - android.permission.READ_PHONE_STATE
+      - android.permission.READ_PRIVILEGED_PHONE_STATE
+      - android.permission.SCHEDULE_EXACT_ALARM
+      - android.permission.UWB_PRIVILEGED
+      - com.google.android.permission.USE_GRIL
 
   com.google.android.rilextension:
      max_known_version: auto
@@ -294,7 +347,7 @@ package_inclusions:
       - android.permission.UPDATE_DEVICE_STATS
 
   com.google.euiccpixel:
-    max_known_version: 20225
+    max_known_version: 20235
     include_uses_permissions:
       - com.google.android.c2dm.permission.RECEIVE
       - com.google.android.providers.gsf.permission.READ_GSERVICES
@@ -497,12 +550,14 @@ package_exclusions:
   - com.android.facelock
   - com.android.frameworks.core.batterystatsviewer
   - com.android.gallery3d
+  - com.android.gbaservice
   - com.android.google.gce.gceservice
   - com.android.hotwordenrollment.okgoogle
   - com.android.hotwordenrollment.tgoogle
   - com.android.hotwordenrollment.xgoogle
   - com.android.htmlviewer
   - com.android.imsserviceentitlement
+  - com.android.imsstack
   - com.android.inputdevices
   - com.android.inputmethod.latin
   - com.android.intentresolver
@@ -617,6 +672,7 @@ package_exclusions:
   - com.google.android.apps.pixel.dcservice
   - com.google.android.apps.pixel.ensemble
   - com.google.android.apps.pixel.familyspace
+  - com.google.android.apps.pixel.launcherconnector
   - com.google.android.apps.pixel.nowplaying
   - com.google.android.apps.pixel.psi # PixelSense / Device Intelligence
   - com.google.android.apps.pixel.subzero
@@ -628,6 +684,7 @@ package_exclusions:
   - com.google.android.apps.stargate
   - com.google.android.apps.turbo # Device Health Services
   - com.google.android.apps.tycho # Google Fi
+  - com.google.android.apps.yourwidget
   - com.google.android.appsearch
   - com.google.android.appsearch.apk
   - com.google.android.art
@@ -752,6 +809,7 @@ package_exclusions:
   - com.google.audio.hearing.visualization.accessibility.scribe # Live Transcribe & Notification
   - com.google.hardware.devicetools.astro
   - com.google.intelligence.sense
+  - com.google.location.lppe.main # TODO consider including it
   - com.google.mainline.adservices
   - com.google.mainline.primary.libs
   - com.google.mainline.telemetry
