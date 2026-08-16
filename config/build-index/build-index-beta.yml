@@ -748,40 +748,58 @@ stallion CP41.260717.006:
 # 17 QPR2 Beta 3
 bluejay CP41.260731.005.A2:
   factory: 619869e2de5bb0a813e4683c6ad71f12fbb22586c08968a3700a0b0694190332 https://dl.google.com/developers/android/cinnamonbun/images/factory/bluejay_beta-cp41.260731.005.a2-factory-619869e2.zip
+  ota: 41a2488b73baa225bc79092dc8783e3b96de0a006f8def0ab0ef3ad6631369ec https://dl.google.com/developers/android/cinnamonbun/images/ota/bluejay_beta-ota-cp41.260731.005.a2-41a2488b.zip
 panther CP41.260731.005.A2:
   factory: dbb346c945e3385bc53132ea195b002e63e961c5b81a7aa2e786c1e068e039b9 https://dl.google.com/developers/android/cinnamonbun/images/factory/panther_beta-cp41.260731.005.a2-factory-dbb346c9.zip
+  ota: 1d1064341d6dbc87ec982db140b4b2703e618696910e33681e6a11be4b4ef1d6 https://dl.google.com/developers/android/cinnamonbun/images/ota/panther_beta-ota-cp41.260731.005.a2-1d106434.zip
 cheetah CP41.260731.005.A2:
   factory: fa8d63e83af2c5a48c3af957d6104ba323b89b4269a37ade3c96b3dcbdcdbc3c https://dl.google.com/developers/android/cinnamonbun/images/factory/cheetah_beta-cp41.260731.005.a2-factory-fa8d63e8.zip
+  ota: 56081508f27fa4739882fe517ce5ae60ce71b0c339b803b3b7b44ea1d81ec07a https://dl.google.com/developers/android/cinnamonbun/images/ota/cheetah_beta-ota-cp41.260731.005.a2-56081508.zip
 lynx CP41.260731.005.A2:
   factory: 9b732add8146ffb24b681c5c9b91d1774b9a128775dabfb5d75f8049641f6f2d https://dl.google.com/developers/android/cinnamonbun/images/factory/lynx_beta-cp41.260731.005.a2-factory-9b732add.zip
+  ota: ee2e43cf71fdd121cc46347dcf539bbeef80f22d1f5c75164c67334326626310 https://dl.google.com/developers/android/cinnamonbun/images/ota/lynx_beta-ota-cp41.260731.005.a2-ee2e43cf.zip
 felix CP41.260731.005.A2:
   factory: 7b7c2d5bd19e549c1eeef4fbc9ca5a47b40d80e337e9800dd0dba5cce7cc2703 https://dl.google.com/developers/android/cinnamonbun/images/factory/felix_beta-cp41.260731.005.a2-factory-7b7c2d5b.zip
+  ota: d4b8123ec97f972eaaff7d5472afd160a160325d1e43cac2a1c7352532a50ed5 https://dl.google.com/developers/android/cinnamonbun/images/ota/felix_beta-ota-cp41.260731.005.a2-d4b8123e.zip
 tangorpro CP41.260731.005.A2:
   factory: 467d549b962166d27d297e7c3055448852fab207d96eff264808b30e786424eb https://dl.google.com/developers/android/cinnamonbun/images/factory/tangorpro_beta-cp41.260731.005.a2-factory-467d549b.zip
+  ota: b64947b2398fe4121a1e1a6b1c1979eff238af6b50603013400829b285dca0c8 https://dl.google.com/developers/android/cinnamonbun/images/ota/tangorpro_beta-ota-cp41.260731.005.a2-b64947b2.zip
 shiba CP41.260731.005.B1:
   factory: 36fb6e7b19944a03aab29e91f4a2ecd6167fe2f32a9203e2eb4fce18a133743e https://dl.google.com/developers/android/cinnamonbun/images/factory/shiba_beta-cp41.260731.005.b1-factory-36fb6e7b.zip
+  ota: 1d3465574e75e85d0ef8d6f7b0080407aae822b818ccbd2d0c1b258b2c21dcc8 https://dl.google.com/developers/android/cinnamonbun/images/ota/shiba_beta-ota-cp41.260731.005.b1-1d346557.zip
 husky CP41.260731.005.B1:
   factory: 6d6e55e593d0aea17e9709625152ecda8df495ebd0b9f0cf423985bd1b28f3a2 https://dl.google.com/developers/android/cinnamonbun/images/factory/husky_beta-cp41.260731.005.b1-factory-6d6e55e5.zip
+  ota: cdcdbb6f4598647c25d5ac8e04bc265a354ca7db57e1bb1a0b8b3c5d52f528ee https://dl.google.com/developers/android/cinnamonbun/images/ota/husky_beta-ota-cp41.260731.005.b1-cdcdbb6f.zip
 akita CP41.260731.005.B1:
   factory: aab771dda862e68bbaa13bd4aebc0845dca0068df4b3a7e535d186da6d994053 https://dl.google.com/developers/android/cinnamonbun/images/factory/akita_beta-cp41.260731.005.b1-factory-aab771dd.zip
+  ota: a6e9768b4f3fd44c535475575217383627565181878887f57e83d5cecd210843 https://dl.google.com/developers/android/cinnamonbun/images/ota/akita_beta-ota-cp41.260731.005.b1-a6e9768b.zip
 tokay CP41.260731.005.B1:
   factory: 8fa738854d3761abd31633e1fc89bd2dc361b6bb8c86b1e4734d1410c13cb289 https://dl.google.com/developers/android/cinnamonbun/images/factory/tokay_beta-cp41.260731.005.b1-factory-8fa73885.zip
+  ota: 40b82dbacb9d35a97f33a381126c8c0f04b356738c337bd445673cbdd9144810 https://dl.google.com/developers/android/cinnamonbun/images/ota/tokay_beta-ota-cp41.260731.005.b1-40b82dba.zip
 caiman CP41.260731.005.B1:
   factory: e039b362c82e2c442721a474cfea5dc2af5665df4b81270a095c7603256e0492 https://dl.google.com/developers/android/cinnamonbun/images/factory/caiman_beta-cp41.260731.005.b1-factory-e039b362.zip
+  ota: 038a740d1790f4da1619e5d56baa2a8d2c81ff687e49e4d0eaca87f98afe7eb0 https://dl.google.com/developers/android/cinnamonbun/images/ota/caiman_beta-ota-cp41.260731.005.b1-038a740d.zip
 komodo CP41.260731.005.B1:
   factory: 5f125cf8d08c75690ee9a174254a55924bd230002af8316a086dcd427be97065 https://dl.google.com/developers/android/cinnamonbun/images/factory/komodo_beta-cp41.260731.005.b1-factory-5f125cf8.zip
+  ota: 02a381118395deec7e4fe316a9350e63819cfb23220a5a0f55f8813a49da08bd https://dl.google.com/developers/android/cinnamonbun/images/ota/komodo_beta-ota-cp41.260731.005.b1-02a38111.zip
 comet CP41.260731.005.B1:
   factory: b72408c1773b0b09c91f7b8327f954f8227fc41bc55ed4db6074839b62e3cf20 https://dl.google.com/developers/android/cinnamonbun/images/factory/comet_beta-cp41.260731.005.b1-factory-b72408c1.zip
+  ota: d47d84b966f8f539551b0dbbf03818c3badb7e30c79df26b1d36042311b6b67e https://dl.google.com/developers/android/cinnamonbun/images/ota/comet_beta-ota-cp41.260731.005.b1-d47d84b9.zip
 tegu CP41.260731.005.B1:
   factory: e29d2c1c4df112f3db6a105d368768d376c25efc821fd63aff2f825bfa6452e4 https://dl.google.com/developers/android/cinnamonbun/images/factory/tegu_beta-cp41.260731.005.b1-factory-e29d2c1c.zip
+  ota: 8c7a614c5a58c91bd3f08b1e6c3cae1cc8aed3f31949579ff7cda69c23c3c3b2 https://dl.google.com/developers/android/cinnamonbun/images/ota/tegu_beta-ota-cp41.260731.005.b1-8c7a614c.zip
 frankel CP41.260731.005.B1:
   factory: e72f83f35e3083a57643f6e12ee43a91846967cca51ff65f4c2505f851342562 https://dl.google.com/developers/android/cinnamonbun/images/factory/frankel_beta-cp41.260731.005.b1-factory-e72f83f3.zip
+  ota: d47c332b026327a56a43ba3901df55706eccc22a4ba9d6098d794aad3c7e5636 https://dl.google.com/developers/android/cinnamonbun/images/ota/frankel_beta-ota-cp41.260731.005.b1-d47c332b.zip
 blazer CP41.260731.005.B1:
   factory: 45f403a2dc3e2df1d5f03e7677ad9333b06566858969e14edc5b61795879465d https://dl.google.com/developers/android/cinnamonbun/images/factory/blazer_beta-cp41.260731.005.b1-factory-45f403a2.zip
+  ota: 7a6f4c1595d65a04bc2ae29ff0ab329781f2be19766d3da8d50350783c203a1e https://dl.google.com/developers/android/cinnamonbun/images/ota/blazer_beta-ota-cp41.260731.005.b1-7a6f4c15.zip
 mustang CP41.260731.005.B1:
   factory: 17f39573fc426443f97062ada4bd022825a5cb768783ff28fa9aa98240ed9f1d https://dl.google.com/developers/android/cinnamonbun/images/factory/mustang_beta-cp41.260731.005.b1-factory-17f39573.zip
+  ota: 9907706522167b219be903568d17370701c3da1a53b072ce9b4582538e1b1d4b https://dl.google.com/developers/android/cinnamonbun/images/ota/mustang_beta-ota-cp41.260731.005.b1-99077065.zip
 rango CP41.260731.005.B1:
   factory: a0b4ffb132640170eaca96489b4d797a74338cfa5cc32eaad5d6c676dae9a62b https://dl.google.com/developers/android/cinnamonbun/images/factory/rango_beta-cp41.260731.005.b1-factory-a0b4ffb1.zip
+  ota: 8e08a2901020b232fe5565a440e3b3cbe8b72751149d524e71f5a0f642eb1944 https://dl.google.com/developers/android/cinnamonbun/images/ota/rango_beta-ota-cp41.260731.005.b1-8e08a290.zip
 stallion CP41.260731.005.B1:
   factory: 26c778ed0662e22ee27b2850f12241d938019165db9dbae08661824d40844a48 https://dl.google.com/developers/android/cinnamonbun/images/factory/stallion_beta-cp41.260731.005.b1-factory-26c778ed.zip
-
+  ota: a44c01bc704cd3f37b182d4221e1c90eaa5aaf41c555a11af2a61fd9df765149 https://dl.google.com/developers/android/cinnamonbun/images/ota/stallion_beta-ota-cp41.260731.005.b1-a44c01bc.zip
