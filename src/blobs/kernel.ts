@@ -13,7 +13,10 @@ export const KERNEL_DIR_RELATIVE_PATH = 'stock-kernel'
 export async function copyKernel(pathResolver: PathResolver, dirs: VendorDirectories) {
   let dstDir = path.join(dirs.out, KERNEL_DIR_RELATIVE_PATH)
   await fs.mkdir(dstDir)
+  await copyKernelInner(pathResolver, dstDir)
+}
 
+export async function copyKernelInner(pathResolver: PathResolver, dstDir: string) {
   let copies: Promise<void>[] = []
 
   let imageLz4 = pathResolver.resolve(Partition.Boot, 'kernel')
