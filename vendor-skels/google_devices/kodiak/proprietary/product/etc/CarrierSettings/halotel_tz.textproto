@@ -1,0 +1,15 @@
+canonical_name: "halotel_tz"
+version: 80000000002
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "enhanced_4g_lte_on_by_default_bool"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1773840083
+}

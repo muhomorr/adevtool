@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">opladen, limiet, optimalisatie voor opladen, oplaadlimiet</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Beperken tot %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Dit helpt de levensduur van de batterij te verlengen. Je telefoon moet af en toe helemaal worden opgeladen om de batterijcapaciteit nauwkeurig te houden.</string>
+    <string name="charging_optimization_summary_off">Uit</string>
+    <string name="charging_optimization_title">Optimalisatie voor opladen</string>
+</resources>

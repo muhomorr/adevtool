@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">充電, 上限, 功能, 充電上限</string>
+    <string name="charging_optimization_entry_summary_charge_limit">充電上限為 %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">這有助延長電池壽命。手機有時需要完全充電，以確保電池容量估算準確。</string>
+    <string name="charging_optimization_summary_off">關閉</string>
+    <string name="charging_optimization_title">充電優化功能</string>
+</resources>

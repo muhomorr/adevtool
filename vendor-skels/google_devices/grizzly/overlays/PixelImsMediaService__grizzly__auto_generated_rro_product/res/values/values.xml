@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="cp_noflow_supported">true</bool>
+    <bool name="enable_session_leak_detection">false</bool>
+    <integer name="audio_switch_mode">2</integer>
+</resources>

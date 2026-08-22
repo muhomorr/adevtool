@@ -1,0 +1,17 @@
+<!--
+    Input:
+        vendor/google/gnss/gnss_manager/gnss-manager.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>vendor.google.gnss.gnss_manager.controller</name>
+        <version>2</version>
+        <fqname>IGnssLoggingController/default</fqname>
+        <fqname>IGnssVendorConfiguration/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.google.gnss.gnss_manager.logger</name>
+        <fqname>IGnssManagerLogger/gnss_aidl</fqname>
+        <fqname>IGnssManagerLogger/gnss_daemon</fqname>
+    </hal>
+</manifest>

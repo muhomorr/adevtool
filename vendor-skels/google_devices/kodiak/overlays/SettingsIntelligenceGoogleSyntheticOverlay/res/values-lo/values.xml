@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">ການສາກໄຟ, ຂີດຈຳກັດ, ການປັບປຸງການສາກໄຟ, ຂີດຈຳກັດການສາກໄຟ</string>
+    <string name="charging_optimization_entry_summary_charge_limit">ຈຳກັດເປັນ %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">ການຕັ້ງຄ່ານີ້ຊ່ວຍຂະຫຍາຍອາຍຸການນຳໃຊ້ແບັດເຕີຣີ. ໂທລະສັບຂອງທ່ານຈະຕ້ອງສາກຈົນເຕັມເປັນບາງເທື່ອເພື່ອໃຫ້ແນ່ໃຈວ່າຄວາມຈຸແບັດເຕີຣີມີຄວາມຖືກຕ້ອງ.</string>
+    <string name="charging_optimization_summary_off">ປິດ</string>
+    <string name="charging_optimization_title">ການເພີ່ມປະສິດທິພາບການສາກໄຟ</string>
+</resources>

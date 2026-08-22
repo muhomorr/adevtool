@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">încărcare, limită, optimizarea încărcării, limită de încărcare</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Limitează la %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Astfel, durata de viață a bateriei se va prelungi. Uneori, telefonul va trebui încărcat complet pentru a asigura indicarea corectă a capacității bateriei.</string>
+    <string name="charging_optimization_summary_off">Dezactivată</string>
+    <string name="charging_optimization_title">Optimizarea încărcării</string>
+</resources>

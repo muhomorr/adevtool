@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">karga, muga, kargaren optimizazioa, kargaren muga</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Kargatu %1$s arte</string>
+    <string name="charging_optimization_footer_message_charging_limit">Bateriaren balio-bizitza luzatzen laguntzen du horrek. Bateriaren ahalmena zehatza dela ziurtatzeko, telefonoa guztiz kargatu beharko da noizean behin.</string>
+    <string name="charging_optimization_summary_off">Desaktibatuta</string>
+    <string name="charging_optimization_title">Kargaren optimizazioa</string>
+</resources>

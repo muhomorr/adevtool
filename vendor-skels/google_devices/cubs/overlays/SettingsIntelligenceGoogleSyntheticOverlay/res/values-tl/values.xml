@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">pag-charge, limitasyon, pag-optimize ng pag-charge, limitasyon sa pag-charge</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Limitahan sa %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Tumutulong itong patagalin ang tagal ng baterya. Paminsan-minsang kailangang ganap na ma-charge ang iyong telepono para masiguradong tumpak ang kapasidad ng baterya.</string>
+    <string name="charging_optimization_summary_off">Naka-off</string>
+    <string name="charging_optimization_title">Pag-optimize ng pag-charge</string>
+</resources>

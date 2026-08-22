@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">заряджання, ліміт, оптимізація заряджання, ліміт заряду</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Обмежити до %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Це допоможе продовжити строк служби акумулятора. Час від часу телефон потрібно повністю заряджати, щоб забезпечити точність даних про ємність акумулятора.</string>
+    <string name="charging_optimization_summary_off">Вимкнено</string>
+    <string name="charging_optimization_title">Оптимізація заряджання</string>
+</resources>

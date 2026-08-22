@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">opladning, grænse, optimering af opladning, opladningsgrænse</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Begræns til %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Dette hjælper med at forlænge batteritiden. Din telefon skal lejlighedsvist lades helt op for at sikre nøjagtig batterikapacitet.</string>
+    <string name="charging_optimization_summary_off">Deaktiveret</string>
+    <string name="charging_optimization_title">Optimering af opladning</string>
+</resources>

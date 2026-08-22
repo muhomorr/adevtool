@@ -1,0 +1,30 @@
+canonical_name: "gigsky_us"
+version: 80000000002
+apns {
+  apn {
+    name: "GigSky"
+    value: "gigsky"
+    type: DEFAULT
+  }
+}
+configs {
+  config {
+    key: "force_home_network_bool"
+    bool_value: true
+  }
+  config {
+    key: "inflate_signal_strength_bool"
+    bool_value: false
+  }
+  config {
+    key: "rilext.carrier_viwifi_independent_vowifi"
+    text_value: "1"
+  }
+  config {
+    key: "rilext.ignore_volte_vilte_for_23g"
+    text_value: "true"
+  }
+}
+last_updated {
+  seconds: 1779286099
+}

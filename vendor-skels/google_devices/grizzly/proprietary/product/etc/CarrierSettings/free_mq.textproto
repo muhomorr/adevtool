@@ -1,0 +1,34 @@
+canonical_name: "free_mq"
+version: 80000000005
+apns {
+  apn {
+    name: "Free Mq"
+    value: "free.mq"
+    type: DEFAULT
+    type: MMS
+    mmsc: "http://mms.free.mq"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "enhanced_4g_lte_on_by_default_bool"
+    bool_value: false
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 614400
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1774445347
+}

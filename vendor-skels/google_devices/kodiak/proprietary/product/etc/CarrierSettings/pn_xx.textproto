@@ -1,0 +1,64 @@
+canonical_name: "pn_xx"
+version: 80000000004
+configs {
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 2
+    }
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "cellular_usage_setting_int"
+    int_value: 2
+  }
+  config {
+    key: "enhanced_4g_lte_on_by_default_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_roaming_supported_3gpp_network_types_int_array"
+    int_array {
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_3gpp_network_types_int_array"
+    int_array {
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "is_private_network_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1780502918
+}

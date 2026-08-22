@@ -1,0 +1,383 @@
+canonical_name: "test001_zz"
+version: 80000000010
+apns {
+  apn {
+    name: "TEST_DEFAULT"
+    value: "default"
+    type: DEFAULT
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+}
+configs {
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_vt_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
+    int_array {
+      item: 2
+      item: 4
+    }
+  }
+  config {
+    key: "ims.sa_disable_policy_for_emergency_int"
+    int_value: 0
+  }
+  config {
+    key: "ims.sa_disable_policy_int"
+    int_value: 0
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_roaming_supported_3gpp_network_types_int_array"
+    int_array {
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_3gpp_network_types_int_array"
+    int_array {
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.scan_limited_service_after_volte_failure_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 0
+      item: 1
+      item: 2
+      item: 3
+      item: 4
+      item: 5
+      item: 6
+      item: 7
+      item: 8
+      item: 9
+      item: 10
+      item: 11
+      item: 12
+      item: 13
+      item: 14
+      item: 15
+      item: 16
+      item: 17
+      item: 18
+      item: 19
+      item: 20
+      item: 21
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 6
+      item: 5
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "96"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+            }
+          }
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 2
+          }
+        }
+      }
+      config {
+        key: "97"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+            }
+          }
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 0
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "114"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+            }
+          }
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 2
+          }
+        }
+      }
+      config {
+        key: "115"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+            }
+          }
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 0
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 97
+          item: 96
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 115
+          item: 114
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 127
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "sip:mmtel@conf-factory.test.3gpp.com"
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.codec_attribute_cmr_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 2
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bandwidth_int"
+            int_value: 5
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 0
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_channels_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_dtx_bool"
+            bool_value: true
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_dtx_recv_bool"
+            bool_value: true
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.prack_supported_for_18x_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.session_refresher_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvt.h264_payload_description_bundle"
+    bundle {
+      config {
+        key: "119"
+        bundle {
+          config {
+            key: "imsvt.h264_video_codec_attribute_profile_level_id_string"
+            text_value: "42C00C"
+          }
+          config {
+            key: "imsvt.video_codec_attribute_frame_rate_int"
+            int_value: 15
+          }
+          config {
+            key: "imsvt.video_codec_attribute_packetization_mode_int"
+            int_value: 0
+          }
+          config {
+            key: "imsvt.video_codec_attribute_resolution_int_array"
+            int_array {
+              item: 240
+              item: 320
+            }
+          }
+        }
+      }
+      config {
+        key: "120"
+        bundle {
+          config {
+            key: "imsvt.h264_video_codec_attribute_profile_level_id_string"
+            text_value: "42C00C"
+          }
+          config {
+            key: "imsvt.video_codec_attribute_frame_rate_int"
+            int_value: 15
+          }
+          config {
+            key: "imsvt.video_codec_attribute_packetization_mode_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvt.video_codec_attribute_resolution_int_array"
+            int_array {
+              item: 240
+              item: 320
+            }
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvt.video_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvt.h264_payload_type_int_array"
+        int_array {
+          item: 119
+          item: 120
+        }
+      }
+      config {
+        key: "imsvt.hevc_payload_type_int_array"
+        int_array {
+          item: 125
+        }
+      }
+    }
+  }
+  config {
+    key: "rilext.config_device_vinr_available"
+    text_value: "1"
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1773840083
+}

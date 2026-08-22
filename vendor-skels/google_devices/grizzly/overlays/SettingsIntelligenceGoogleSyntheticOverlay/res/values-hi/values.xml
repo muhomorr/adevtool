@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">बैटरी चार्ज हो रही है, सीमा, चार्जिंग ऑप्टिमाइज़ेशन, चार्ज करने की तय सीमा</string>
+    <string name="charging_optimization_entry_summary_charge_limit">बैटरी %1$s तक चार्ज होगी</string>
+    <string name="charging_optimization_footer_message_charging_limit">इससे बैटरी लाइफ़ बढ़ाने में मदद मिलती है. बैटरी की क्षमता के बारे में सटीक जानकारी देने के लिए, आपको अपने फ़ोन को कभी-कभी पूरी तरह चार्ज करना पड़ेगा.</string>
+    <string name="charging_optimization_summary_off">बंद है</string>
+    <string name="charging_optimization_title">चार्जिंग ऑप्टिमाइज़ेशन</string>
+</resources>

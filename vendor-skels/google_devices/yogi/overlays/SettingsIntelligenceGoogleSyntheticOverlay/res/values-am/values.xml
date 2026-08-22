@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">የኃይል መሙያ፣ ገደብ፣ የኃይል መሙያ ማመቻቸት፣ የኃይል መሙያ ገደብ</string>
+    <string name="charging_optimization_entry_summary_charge_limit">እስከ %1$s ገድብ</string>
+    <string name="charging_optimization_footer_message_charging_limit">ይህ የባትሪ የዕድሜ ዘመንን ለማራዘም ያግዛል። ትክክለኛ የባትሪ አቅምን ለማረጋገጥ ስልክዎ አልፎ አልፎ ሙሉ በሙሉ ኃይል መሙላት ያስፈልገዋል።</string>
+    <string name="charging_optimization_summary_off">አጥፋ</string>
+    <string name="charging_optimization_title">የኃይል መሙላት ማትባት</string>
+</resources>

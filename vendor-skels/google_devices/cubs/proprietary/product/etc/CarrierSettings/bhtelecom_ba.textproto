@@ -1,0 +1,115 @@
+canonical_name: "bhtelecom_ba"
+version: 80000000001
+apns {
+  apn {
+    name: "BHMobileInternet"
+    value: "active.bhmobile.ba"
+    type: DEFAULT
+    type: SUPL
+    protocol: IPV4V6
+  }
+  apn {
+    name: "BHMobileMMS"
+    value: "mms.bhmobile.ba"
+    type: MMS
+    mmsc: "http://mms.bhmobile.ba/servlets/mms"
+    mmsc_proxy: "195.222.56.41"
+    mmsc_proxy_port: "8080"
+    protocol: IPV4V6
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "XCAP"
+    value: "xcap"
+    type: XCAP
+    bearer_bitmask: "1|2|3|9|10|11|13|14|15|20"
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "+38761123123"
+  }
+  config {
+    key: "imssms.sms_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imssms.sms_over_ims_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsss.ut_iptype_home_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.ut_iptype_roaming_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 1
+      item: 2
+      item: 3
+      item: 4
+      item: 5
+      item: 6
+      item: 7
+      item: 12
+      item: 17
+      item: 18
+      item: 19
+      item: 20
+      item: 21
+      item: 13
+      item: 14
+      item: 15
+      item: 16
+      item: 8
+      item: 10
+      item: 11
+      item: 9
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "xcap_apn_name_string"
+    text_value: "xcap"
+  }
+}
+last_updated {
+  seconds: 1770819190
+}

@@ -1,0 +1,452 @@
+canonical_name: "orange_pl"
+version: 80000000009
+apns {
+  apn {
+    name: "Orange Internet"
+    value: "internetipv6"
+    type: DEFAULT
+    type: SUPL
+    user: "internet"
+    password: "internet"
+    authtype: 1
+    protocol: IPV6
+    user_editable: false
+  }
+  apn {
+    name: "Orange MMS"
+    value: "mms"
+    type: MMS
+    user: "mms"
+    password: "mms"
+    authtype: 1
+    mmsc: "http://mms.orange.pl"
+    mmsc_proxy: "192.168.6.104"
+    mmsc_proxy_port: "8080"
+    user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV6
+    roaming_protocol: IPV6
+    user_visible: false
+  }
+  apn {
+    name: "hos"
+    value: "hos"
+    type: XCAP
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "call_barring_visibility_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "B67AFFCDA89E3193B1595036D7C6CDBE22BE5CA24C9F6CF93FC6B48F91D7310D:com.orange.phone,pl.orange.mojeorange,com.orange.update"
+      item: "B71C30C980EE10E1C53FE17F21323D4A518F1BFFCC2917DF26A9098364AA9B26:com.orange.rn.dop"
+    }
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_name_override_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_name_string"
+    text_value: "Orange"
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "config_plans_package_override_string"
+    text_value: "pl.orange.mojeorange"
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "*501"
+  }
+  config {
+    key: "display_hd_plus_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
+    int_array {
+      item: 2
+      item: 4
+      item: 5
+      item: 6
+    }
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_register_support_int_array"
+    int_array {
+      item: 2
+      item: 4
+    }
+  }
+  config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1100
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1100
+  }
+  config {
+    key: "ims.request_uri_type_int"
+    int_value: 1
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 8000
+  }
+  config {
+    key: "imssms.sms_rp_cause_values_to_fallback_int_array"
+    int_array {
+      item: 1
+      item: 8
+      item: 10
+      item: 11
+      item: 21
+      item: 27
+      item: 28
+      item: 29
+      item: 30
+      item: 38
+      item: 41
+      item: 42
+      item: 47
+      item: 50
+      item: 69
+      item: 81
+      item: 95
+      item: 96
+      item: 97
+      item: 98
+      item: 99
+      item: 111
+      item: 127
+    }
+  }
+  config {
+    key: "imssms.sms_rp_cause_values_to_retry_over_ims_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 1
+      item: 2
+      item: 3
+      item: 4
+      item: 5
+      item: 6
+      item: 7
+      item: 12
+      item: 17
+      item: 18
+      item: 19
+      item: 21
+      item: 13
+      item: 14
+      item: 15
+      item: 16
+      item: 8
+      item: 11
+      item: 9
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 5
+      item: 6
+      item: 3
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "100"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 0
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 2
+          }
+        }
+      }
+      config {
+        key: "101"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "98"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 0
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 2
+          }
+        }
+      }
+      config {
+        key: "99"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.codec_attribute_mode_change_capability_int"
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 101
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 99
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 106
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 96
+          item: 97
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "96"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bandwidth_int"
+            int_value: 2
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 3
+              item: 6
+            }
+          }
+        }
+      }
+      config {
+        key: "97"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 180000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 180000
+  }
+  config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+      item: 0
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 5
+      item: 14
+    }
+  }
+  config {
+    key: "iwlan.ike_device_identity_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
+  }
+  config {
+    key: "qns.idle_wifi_rssi_int_array"
+    int_array {
+      item: -65
+      item: -75
+    }
+  }
+  config {
+    key: "qns.idle_wifi_rssi_without_cellular_int_array"
+    int_array {
+      item: -85
+      item: -90
+    }
+  }
+  config {
+    key: "qns.mms_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.voice_wifi_rssi_int_array"
+    int_array {
+      item: -65
+      item: -75
+    }
+  }
+  config {
+    key: "qns.voice_wifi_rssi_without_cellular_int_array"
+    int_array {
+      item: -85
+      item: -90
+    }
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 11
+  }
+  config {
+    key: "wfc_spn_use_root_locale"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1779121563
+}

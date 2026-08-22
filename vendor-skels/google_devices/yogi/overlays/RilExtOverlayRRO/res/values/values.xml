@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config_ril_daemon_service_name" translatable="false">vendor.ril-daemon-mtk</string>
+</resources>

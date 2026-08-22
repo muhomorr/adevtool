@@ -1,0 +1,15 @@
+ro.chipname u:object_r:deprecated_soc_prop:s0 exact string
+ro.hardware.chipname u:object_r:deprecated_soc_prop:s0 exact string
+ro.mediatek.platform u:object_r:deprecated_soc_prop:s0 exact string
+persist.vendor.radio.bootwithlpm u:object_r:sota_prop:s0
+persist.sys.ssr.last_detection_time u:object_r:system_ssrdump_prop:s0 exact uint
+persist.device_config.pixel_faceauth. u:object_r:device_config_faceauth_native_prop:s0
+ims.reg_retry_time u:object_r:ims_prop:s0 prefix int
+ims.emergency_call_fail_cause u:object_r:ims_prop:s0 prefix int
+persist.rilext. u:object_r:system_ril_ext_prop:s0
+rilext. u:object_r:system_ril_ext_prop:s0
+pixelsystemservice.device.contextualawarenessbool u:object_r:pixelsystemservice_contextualawareness_prop:s0 exact bool
+persist.fingerprint.screenprotector.config u:object_r:fingerprint_sp_prop:s0 exact string
+telephony.ril.ntn_sim_deact u:object_r:telephony_ril_ntn_sim_deact_prop:s0 exact bool
+telephony.ril.ntn_demo_mode u:object_r:telephony_ntn_demo_mode_prop:s0 exact bool
+persist.sys.hdcp_checking u:object_r:usb_control_prop:s0 exact string

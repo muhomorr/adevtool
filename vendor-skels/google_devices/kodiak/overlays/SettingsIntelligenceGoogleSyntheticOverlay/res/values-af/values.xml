@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">laai, limiet, laai-optimering, laailimiet</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Beperk tot %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Dit help om die batteryleeftyd te verleng. Jou foon sal soms moet vol laai om akkurate batterykapasiteit te verseker.</string>
+    <string name="charging_optimization_summary_off">Af</string>
+    <string name="charging_optimization_title">Laai-optimering</string>
+</resources>

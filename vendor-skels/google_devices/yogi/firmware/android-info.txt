@@ -1,0 +1,5 @@
+require board=yogi
+
+require version-bootloader=spacecraft-17.4-15938155
+require version-baseband=a900a-MP_260716-260716-M-15880348
+require partition-exists=vendor_kernel_boot

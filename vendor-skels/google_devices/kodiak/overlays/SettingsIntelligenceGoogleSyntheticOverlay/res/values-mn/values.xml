@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">цэнэглэх, хязгаар, цэнэглэх оновчлол, цэнэглэх хязгаар</string>
+    <string name="charging_optimization_entry_summary_charge_limit">%1$s-р хязгаарлах</string>
+    <string name="charging_optimization_footer_message_charging_limit">Энэ нь батарейн эдэлгээг уртасгахад тусална. Таны утас батарейн багтаамж үнэн зөв эсэхийг нягтлахын тулд үе үе бүрэн цэнэглэгдэх шаардлагатай болно.</string>
+    <string name="charging_optimization_summary_off">Унтраалттай</string>
+    <string name="charging_optimization_title">Цэнэглэх оновчлол</string>
+</resources>

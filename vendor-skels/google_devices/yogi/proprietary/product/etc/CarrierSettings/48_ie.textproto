@@ -1,0 +1,29 @@
+canonical_name: "48_ie"
+version: 80000000004
+apns {
+  apn {
+    name: "48 Internet"
+    value: "48months.liffeytelecom.com"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    user: "User"
+    authtype: 1
+    mmsc: "http://mmc1/servlets/mms"
+    mmsc_proxy: "10.1.11.19"
+    mmsc_proxy_port: "8080"
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "enhanced_4g_lte_on_by_default_bool"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1774445347
+}

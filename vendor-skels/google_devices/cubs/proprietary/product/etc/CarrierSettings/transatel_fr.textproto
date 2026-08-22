@@ -1,0 +1,30 @@
+canonical_name: "transatel_fr"
+version: 80000000006
+apns {
+  apn {
+    name: "Internet"
+    value: "mobiledata"
+    type: DEFAULT
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "cellular_usage_setting_int"
+    int_value: 2
+  }
+  config {
+    key: "enhanced_4g_lte_on_by_default_bool"
+    bool_value: false
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1773236749
+}

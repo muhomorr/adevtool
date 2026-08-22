@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">kuchaji, kikomo, kuboresha hali ya kuchaji, kikomo cha chaji</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Kikomo cha %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Hatua hii husaidia kuongeza muda wa matumizi ya betri. Mara kwa mara, simu yako itahitaji kuchaji kikamilifu ili kuhakikisha kiwango sahihi cha uwezo wa betri.</string>
+    <string name="charging_optimization_summary_off">Kimezimwa</string>
+    <string name="charging_optimization_title">Kuboresha hali ya kuchaji</string>
+</resources>

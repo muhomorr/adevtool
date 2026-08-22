@@ -1,0 +1,2 @@
+typeattribute pcc_component halclientdomain;
+typeattribute pcc_component hal_ambience_hub_client;

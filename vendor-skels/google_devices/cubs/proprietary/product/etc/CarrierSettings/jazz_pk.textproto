@@ -1,0 +1,44 @@
+canonical_name: "jazz_pk"
+version: 80000000006
+apns {
+  apn {
+    name: "Mobilink WAP GPRS"
+    value: "connect.mobilinkworld.com"
+    type: DEFAULT
+    type: SUPL
+    user: "Mobilink"
+    password: "Mobilink"
+  }
+  apn {
+    name: "Mobilink MMS"
+    value: "mms.mobilinkworld.com"
+    type: MMS
+    user: "Mobilink"
+    password: "Mobilink"
+    mmsc: "http://mms/"
+    mmsc_proxy: "172.25.20.12"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "enhanced_4g_lte_on_by_default_bool"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1770819190
+}

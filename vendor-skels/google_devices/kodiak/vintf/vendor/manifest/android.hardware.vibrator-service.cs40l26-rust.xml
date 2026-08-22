@@ -1,0 +1,12 @@
+<!--
+    Input:
+        vendor/google/haptics/hal/cs40l26/android.hardware.vibrator-service.cs40l26-rust.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.vibrator</name>
+        <version>4</version>
+        <fqname>IVibrator/default</fqname>
+        <fqname>IVibratorManager/default</fqname>
+    </hal>
+</manifest>

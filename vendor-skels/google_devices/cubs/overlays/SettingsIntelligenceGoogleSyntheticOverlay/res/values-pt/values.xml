@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">carregamento, limite, otimização de carregamento, limite de carregamento</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Limitar a %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Isso ajuda a prolongar a vida útil da bateria. Às vezes, o celular vai carregar totalmente para que a leitura de capacidade da bateria continue precisa.</string>
+    <string name="charging_optimization_summary_off">Desativada</string>
+    <string name="charging_optimization_title">Otimização de carregamento</string>
+</resources>

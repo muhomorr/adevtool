@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">nabíjení, limit, optimalizace nabíjení, limit nabíjení</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Omezit na %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Optimalizace pomáhá prodloužit životnost baterie. Občas se telefon bude muset nabít naplno, aby bylo možné přesně měřit kapacitu baterie.</string>
+    <string name="charging_optimization_summary_off">Vypnuto</string>
+    <string name="charging_optimization_title">Optimalizace nabíjení</string>
+</resources>

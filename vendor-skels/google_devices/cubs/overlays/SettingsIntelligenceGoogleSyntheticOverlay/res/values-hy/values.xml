@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">լիցքավորում, սահմանաչափ, լիցքավորման օպտիմալացում, լիցքավորման սահմանաչափ</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Առավելագույնը՝ %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Սա օգնում է երկարացնել մարտկոցի աշխատաժամանակը։ Ձեր հեռախոսը ժամանակ առ ժամանակ պետք է ամբողջությամբ լիցքավորեք՝ մարտկոցի ճշգրիտ տարողունակությունն ապահովելու համար։</string>
+    <string name="charging_optimization_summary_off">Անջատված է</string>
+    <string name="charging_optimization_title">Լիցքավորման օպտիմալացում</string>
+</resources>

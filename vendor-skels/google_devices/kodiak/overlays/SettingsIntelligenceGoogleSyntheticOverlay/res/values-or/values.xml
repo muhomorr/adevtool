@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">ଚାର୍ଜିଂ, ସୀମା, ଚାର୍ଜିଂ ଅପ୍ଟିମାଇଜେସନ, ଚାର୍ଜ ସୀମା</string>
+    <string name="charging_optimization_entry_summary_charge_limit">%1$sରେ ସୀମିତ କରନ୍ତୁ</string>
+    <string name="charging_optimization_footer_message_charging_limit">ଏହା ବେଟେରୀର ଲାଇଫସ୍ପାନକୁ ବଢ଼ାଇବାରେ ସାହାଯ୍ୟ କରେ। ସଠିକ ବେଟେରୀ କ୍ଷମତା ସୁନିଶ୍ଚିତ କରିବା ପାଇଁ ଆପଣଙ୍କ ଫୋନକୁ ବେଳେବେଳେ ସମ୍ପୂର୍ଣ୍ଣ ଚାର୍ଜ କରିବା ଆବଶ୍ୟକ ହେବ।</string>
+    <string name="charging_optimization_summary_off">ବନ୍ଦ ଅଛି</string>
+    <string name="charging_optimization_title">ଚାର୍ଜିଂ ଅପ୍ଟିମାଇଜେସନ</string>
+</resources>

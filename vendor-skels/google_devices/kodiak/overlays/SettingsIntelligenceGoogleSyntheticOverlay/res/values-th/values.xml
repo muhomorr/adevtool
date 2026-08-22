@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">การชาร์จ, ขีดจำกัด, การเพิ่มประสิทธิภาพการชาร์จ, ขีดจำกัดการชาร์จ</string>
+    <string name="charging_optimization_entry_summary_charge_limit">จำกัดที่ %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">การตั้งค่านี้ช่วยยืดอายุการใช้งานแบตเตอรี่ โทรศัพท์จะชาร์จจนเต็มเป็นครั้งคราวเพื่อให้ค่าความจุแบตเตอรี่มีความถูกต้อง</string>
+    <string name="charging_optimization_summary_off">ปิด</string>
+    <string name="charging_optimization_title">การเพิ่มประสิทธิภาพการชาร์จ</string>
+</resources>

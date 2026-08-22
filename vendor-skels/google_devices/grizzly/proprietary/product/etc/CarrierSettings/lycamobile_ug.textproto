@@ -1,0 +1,24 @@
+canonical_name: "lycamobile_ug"
+version: 80000000003
+apns {
+  apn {
+    name: "lycamobile"
+    value: "data.lycamobile.ug"
+    type: DEFAULT
+    type: SUPL
+    authtype: 1
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "enhanced_4g_lte_on_by_default_bool"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1773840083
+}

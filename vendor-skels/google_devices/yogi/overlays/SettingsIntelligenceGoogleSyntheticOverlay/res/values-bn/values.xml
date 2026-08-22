@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">চার্জিং, সীমা, চার্জিং অপ্টিমাইজেশন, চার্জের সীমা</string>
+    <string name="charging_optimization_entry_summary_charge_limit">%1$s-এ সীমিত</string>
+    <string name="charging_optimization_footer_message_charging_limit">এটি ব্যাটারির আয়ু বাড়াতে সাহায্য করে। ব্যাটারির ক্ষমতা সংক্রান্ত সঠিক রিডিং দিতে, আপনার ফোন কখনও কখনও সম্পূর্ণ চার্জ দিতে হবে।</string>
+    <string name="charging_optimization_summary_off">বন্ধ আছে</string>
+    <string name="charging_optimization_title">চার্জিং অপ্টিমাইজেশন</string>
+</resources>

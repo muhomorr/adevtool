@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">شحن، حدّ أقصى، تحسين الشحن، حدّ أقصى للشحن</string>
+    <string name="charging_optimization_entry_summary_charge_limit">الشحن حتى %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">يساعد هذا الإعداد في إطالة عمر البطارية. وللعلم، يجب شحن هاتفك بالكامل من حين لآخر لضمان دقة قراءات سعة البطارية.</string>
+    <string name="charging_optimization_summary_off">غير مفعّل</string>
+    <string name="charging_optimization_title">تحسين الشحن</string>
+</resources>

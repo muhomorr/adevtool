@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">càrrega, límit, optimització de la càrrega, límit de càrrega</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Limita al %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Això ajuda a allargar la vida útil de la bateria. De tant en tant, el telèfon haurà de carregar-se completament per garantir que la capacitat de la bateria sigui precisa.</string>
+    <string name="charging_optimization_summary_off">Desactivat</string>
+    <string name="charging_optimization_title">Optimització de la càrrega</string>
+</resources>

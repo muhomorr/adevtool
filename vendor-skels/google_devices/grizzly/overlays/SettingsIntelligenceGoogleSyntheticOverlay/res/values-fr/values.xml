@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">recharge, limite, optimisation de la recharge, limite de recharge</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Limiter à %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Cela contribue à prolonger la durée de vie de la batterie. Votre téléphone devra parfois se recharger complètement pour garantir la précision des mesures de la capacité de la batterie.</string>
+    <string name="charging_optimization_summary_off">Désactivée</string>
+    <string name="charging_optimization_title">Optimisation de la recharge</string>
+</resources>

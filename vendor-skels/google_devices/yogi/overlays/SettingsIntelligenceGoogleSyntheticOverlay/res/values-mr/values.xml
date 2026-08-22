@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">चार्जिंग, मर्यादा, चार्जिंग ऑप्टिमायझेशन, चार्जिंगची मर्यादा</string>
+    <string name="charging_optimization_entry_summary_charge_limit">%1$s इथपर्यंत मर्यादित ठेवा</string>
+    <string name="charging_optimization_footer_message_charging_limit">यामुळे बॅटरीचा कालावधी वाढवण्यात मदत होते. बॅटरीच्या अचूक क्षमतेची खात्री करण्यासाठी, तुमचा फोन अधूनमधून पूर्णपणे चार्ज करावा लागेल.</string>
+    <string name="charging_optimization_summary_off">बंद आहे</string>
+    <string name="charging_optimization_title">चार्जिंग ऑप्टिमायझेशन</string>
+</resources>

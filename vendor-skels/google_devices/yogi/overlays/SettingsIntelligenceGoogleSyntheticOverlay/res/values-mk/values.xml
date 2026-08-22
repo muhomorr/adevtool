@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">полнење, ограничување, оптимизација на полнење, ограничување за полнење</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Ограничете на %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Ова помага да се продолжи работниот век на батеријата. Повремено, телефонот ќе треба да се наполни целосно за да се гарантира прецизен капацитет на батеријата.</string>
+    <string name="charging_optimization_summary_off">Исклучено</string>
+    <string name="charging_optimization_title">Оптимизација на полнењето</string>
+</resources>

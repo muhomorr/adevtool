@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright 2024 Google Inc. All Rights Reserved-->
+<permissions>
+    <privapp-permissions package="com.google.android.modem.pms">
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.READ_PHONE_STATE"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="com.google.android.permission.USE_GRIL" />
+
+        <!-- Permission for checking modem restart conditions -->
+        <!-- READ_PRIVILEGED_PHONE_STATE and READ_PHONE_STATE are also required for modem restart control -->
+        <permission name="android.permission.ACCESS_WIFI_STATE"/>
+        <permission name="android.permission.CHANGE_WIFI_STATE"/>
+
+        <!-- Permission for schedule exact alarms -->
+        <permission name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+        <!-- Permission for registering wifi soft AP config change (registerSoftApCallback) -->
+        <permission name="android.permission.OVERRIDE_WIFI_CONFIG"/>
+
+        <!-- Permission for checking UWB state -->
+        <permission name="android.permission.UWB_PRIVILEGED"/>
+
+        <!-- Permission for activity transition API for SmartOOS and MTPL/SAR/AIT decisions -->
+        <permission name="android.permission.ACTIVITY_RECOGNITION"/>
+
+        <!-- Permission for checking DisplayPort state -->
+        <permission name="android.permission.MANAGE_USB" />
+
+        <!-- Permission for Bluetooth pairing monitor for MTPL/SAR/AIT decisions -->
+        <permission name="android.permission.BLUETOOTH_CONNECT"/>
+
+        <!-- Permission for checking audio output state -->
+        <permission name="android.permission.MODIFY_AUDIO_ROUTING" />
+
+        <!-- Permission for accessing Android Context Hub (CHRE) for NanoApps monitoring -->
+        <permission name="android.permission.ACCESS_CONTEXT_HUB" />
+
+        <!-- Permissions to handle the multiple users -->
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.QUERY_USERS"/>
+
+        <!-- Permissions to access the device mac address -->
+        <permission name="android.permission.LOCAL_MAC_ADDRESS"/>
+    </privapp-permissions>
+</permissions>

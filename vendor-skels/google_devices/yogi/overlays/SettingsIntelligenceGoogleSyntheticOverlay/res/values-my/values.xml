@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">အားသွင်းခြင်း၊ ကန့်သတ်ချက်၊ အားသွင်းမှု ပိုကောင်းအောင်လုပ်ခြင်း၊ အားသွင်းခြင်း ကန့်သတ်ချက်</string>
+    <string name="charging_optimization_entry_summary_charge_limit">%1$s သို့ ကန့်သတ်ခြင်း</string>
+    <string name="charging_optimization_footer_message_charging_limit">၎င်းသည် ဘက်ထရီသက်တမ်းကို ရှည်စေသည်။ ဘက်ထရီသိုလှောင်နိုင်မှု ပမာဏ တိကျမှန်ကန်ကြောင်း သေချာစေရန်အတွက် သင့်ဖုန်းကို ရံဖန်ရံခါ အားအပြည့်သွင်းရပါမည်။</string>
+    <string name="charging_optimization_summary_off">ပိတ်</string>
+    <string name="charging_optimization_title">အားသွင်းမှု ပိုကောင်းအောင်လုပ်ခြင်း</string>
+</resources>

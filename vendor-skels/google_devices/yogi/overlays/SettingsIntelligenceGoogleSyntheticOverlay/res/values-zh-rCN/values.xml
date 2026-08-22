@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">充电, 限制, 充电优化, 充电限制, charging, limit, charging optimization, charge limit</string>
+    <string name="charging_optimization_entry_summary_charge_limit">充电上限为 %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">此设置有助于延长电池寿命。手机偶尔需要充满电，以确保电池容量数据准确无误。</string>
+    <string name="charging_optimization_summary_off">已关闭</string>
+    <string name="charging_optimization_title">充电优化</string>
+</resources>

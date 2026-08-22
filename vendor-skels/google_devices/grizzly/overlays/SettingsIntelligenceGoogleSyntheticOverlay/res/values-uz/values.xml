@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">quvvatlash, cheklov, quvvatlashni optimallash, quvvatlash cheklovi</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Maksimal %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Bu batareyaning ishlash muddatini uzaytirishga yordam beradi. Aniq batareya sigʻimini taʼminlash uchun telefon vaqti-vaqti bilan toʻliq quvvatlanishi kerak.</string>
+    <string name="charging_optimization_summary_off">Oʻchiq</string>
+    <string name="charging_optimization_title">Optimal quvvatlash</string>
+</resources>

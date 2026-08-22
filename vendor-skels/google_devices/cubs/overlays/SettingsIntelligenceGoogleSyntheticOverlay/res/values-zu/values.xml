@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">iyashaja, umkhawulo, ukulinganisela ukushaja, umkhawulo wokushaja</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Linganisela ku-%1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Lokhu kusiza ukunweba isikhathi sokuphila kwebhethri. Ngezikhathi ezithile ifoni yakho izodinga ukushaja ngokugcwele ukuze kuqinisekiswe umthamo webhethri onembile.</string>
+    <string name="charging_optimization_summary_off">Kuvaliwe</string>
+    <string name="charging_optimization_title">Ukulungiselela ukushaja</string>
+</resources>

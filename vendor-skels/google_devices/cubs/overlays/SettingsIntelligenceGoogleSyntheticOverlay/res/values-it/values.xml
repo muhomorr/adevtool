@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">ricarica, limite, ottimizzazione ricarica, limite di ricarica</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Limita a %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Questo aiuta a prolungare la durata della batteria. Di tanto in tanto, lo smartphone dovrà caricarsi completamente per garantire letture accurate della capacità della batteria.</string>
+    <string name="charging_optimization_summary_off">Off</string>
+    <string name="charging_optimization_title">Ottimizzazione ricarica</string>
+</resources>

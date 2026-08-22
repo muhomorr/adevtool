@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="face_error_vendor">
+        <item>सर्टिफ़िकेट की समयसीमा खत्म हो गई है</item>
+        <item>सेंसर कुछ समय के लिए बंद कर दिया गया है</item>
+        <item>चेहरे की पहचान करने में गड़बड़ी हुई</item>
+        <item>फ़ेस अनलॉक की सुविधा उपलब्ध नहीं है. फ़ोन बहुत गर्म है.</item>
+        <item>फ़ेस अनलॉक की सुविधा को फिर से सेट अप करने की ज़रूरत है</item>
+        <item>रोशनी को अडजस्ट करें और डिवाइस को स्थिर रखें</item>
+    </array>
+    <string name="biometric_app_setting_name">फ़िंगरप्रिंट या फ़ेस अनलॉक सुविधा का इस्तेमाल करें</string>
+    <string name="biometric_dialog_default_subtitle">जारी रखने के लिए, फ़िंगरप्रिंट या फ़ेस अनलॉक सुविधा का इस्तेमाल करें</string>
+    <string name="biometric_or_screen_lock_app_setting_name">स्क्रीन लॉक, फ़िंगरप्रिंट या फ़ेस अनलॉक सुविधा का इस्तेमाल करें</string>
+    <string name="biometric_or_screen_lock_dialog_default_subtitle">जारी रखने के लिए, स्क्रीन लॉक, फ़िंगरप्रिंट या फ़ेस अनलॉक सुविधा का इस्तेमाल करें</string>
+    <string name="face_recalibrate_notification_content">फ़ेस अनलॉक की सुविधा शायद तब तक काम न करें, जब तक आपने अपने चेहरे को फिर से रजिस्टर न कराया हो</string>
+    <string name="face_recalibrate_notification_name">फ़ेस अनलॉक की सुविधा</string>
+    <string name="face_recalibrate_notification_title">कृपया अपने चेहरे की फिर से पहचान कराएं</string>
+</resources>

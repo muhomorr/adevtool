@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">ఛార్జింగ్, పరిమితి, ఛార్జింగ్ ఆప్టిమైజేషన్, ఛార్జ్ పరిమితి</string>
+    <string name="charging_optimization_entry_summary_charge_limit">%1$s‌కు పరిమితి</string>
+    <string name="charging_optimization_footer_message_charging_limit">ఇది బ్యాటరీ లైఫ్‌ను పెంచడంలో సహాయపడుతుంది. ఖచ్చితమైన బ్యాటరీ సామర్థ్యాన్ని నిర్ధారించడానికి, మీ ఫోన్‌ను అప్పుడప్పుడు పూర్తిగా ఛార్జ్ చేయాల్సి రావచ్చు.</string>
+    <string name="charging_optimization_summary_off">ఆఫ్ చేయండి</string>
+    <string name="charging_optimization_title">ఛార్జింగ్ ఆప్టిమైజేషన్</string>
+</resources>

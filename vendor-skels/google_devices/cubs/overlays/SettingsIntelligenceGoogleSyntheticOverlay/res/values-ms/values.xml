@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">Pengecasan, had, pengoptimuman pengecasan, had pengecasan</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Hadkan kepada %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Tindakan ini membantu untuk melanjutkan jangka hayat bateri. Telefon anda perlu dicas sepenuhnya sekali-sekala untuk memastikan kapasiti bateri yang tepat.</string>
+    <string name="charging_optimization_summary_off">Mati</string>
+    <string name="charging_optimization_title">Pengoptimuman pengecasan</string>
+</resources>

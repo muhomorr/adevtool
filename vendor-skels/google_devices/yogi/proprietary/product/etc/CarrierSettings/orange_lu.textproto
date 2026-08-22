@@ -1,0 +1,208 @@
+canonical_name: "orange_lu"
+version: 80000000005
+apns {
+  apn {
+    name: "Orange"
+    value: "orange.lu"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    mmsc: "http://mms.orange.lu"
+    mmsc_proxy: "212.88.139.44"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
+    int_array {
+      item: 2
+      item: 4
+      item: 5
+      item: 6
+    }
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_register_support_int_array"
+    int_array {
+      item: 2
+      item: 4
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 8000
+  }
+  config {
+    key: "imsemergency.emergency_scan_timer_sec_int"
+    int_value: 5
+  }
+  config {
+    key: "imssms.sms_rp_cause_values_to_fallback_int_array"
+    int_array {
+      item: 1
+      item: 8
+      item: 10
+      item: 11
+      item: 21
+      item: 27
+      item: 28
+      item: 29
+      item: 30
+      item: 38
+      item: 41
+      item: 42
+      item: 47
+      item: 50
+      item: 69
+      item: 81
+      item: 95
+      item: 96
+      item: 97
+      item: 98
+      item: 99
+      item: 111
+      item: 127
+    }
+  }
+  config {
+    key: "imssms.sms_rp_cause_values_to_retry_over_ims_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 10
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 127
+          item: 126
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "126"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+        }
+      }
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bandwidth_int"
+            int_value: 2
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 3
+              item: 6
+            }
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1769617097
+}

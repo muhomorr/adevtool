@@ -1,0 +1,41 @@
+canonical_name: "only_yt"
+version: 80000000005
+apns {
+  apn {
+    name: "Only Internet"
+    value: "internet"
+    type: DEFAULT
+    type: DUN
+    type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "Only MMS"
+    value: "mms"
+    type: MMS
+    mmsc: "http://mmsc.telcooi.re:9091"
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "enhanced_4g_lte_on_by_default_bool"
+    bool_value: false
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 614400
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+}
+last_updated {
+  seconds: 1774445347
+}

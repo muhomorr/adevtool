@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">hleðsla, takmörk, fínstillt hleðsla, hleðslumörk</string>
+    <string name="charging_optimization_entry_summary_charge_limit">Takmarka við %1$s</string>
+    <string name="charging_optimization_footer_message_charging_limit">Þetta hjálpar til við að lengja endingartíma rafhlöðunnar. Þú þarft að fullhlaða símann þinn endrum og sinnum til að tryggja rétta rafhlöðurýmd.</string>
+    <string name="charging_optimization_summary_off">Slökkt</string>
+    <string name="charging_optimization_title">Fínstillt hleðsla</string>
+</resources>

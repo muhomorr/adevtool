@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_limit_indexing_keywords">şarj, limit, şarjın optimallaşdırılması, şarj limiti</string>
+    <string name="charging_optimization_entry_summary_charge_limit">%1$s üçün limit</string>
+    <string name="charging_optimization_footer_message_charging_limit">Bu, batareyanın ömrünü uzatmağa kömək edir. Dəqiq batareya tutumunu təmin etmək üçün telefon vaxtaşırı tam şarj edilməlidir.</string>
+    <string name="charging_optimization_summary_off">Deaktiv</string>
+    <string name="charging_optimization_title">Şarj optimizasiyası</string>
+</resources>

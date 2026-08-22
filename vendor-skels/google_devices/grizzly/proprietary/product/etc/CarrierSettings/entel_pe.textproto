@@ -1,0 +1,50 @@
+canonical_name: "entel_pe"
+version: 80000000002
+apns {
+  apn {
+    name: "Entel PE"
+    value: "entel.pe"
+    type: DEFAULT
+    type: DUN
+    authtype: 0
+    user_editable: false
+  }
+  apn {
+    name: "Entel MMS"
+    value: "mms.entel.pe"
+    type: MMS
+    authtype: 0
+    mmsc: "http://mms.entel.pe"
+    mmsc_proxy: "10.0.215.74"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "Entel Location"
+    value: "location.entel.pe"
+    type: SUPL
+    server: "http://location.entel.pe"
+    authtype: 0
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.sip_over_ipsec_enabled_bool"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1775052027
+}

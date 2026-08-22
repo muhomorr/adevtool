@@ -1,0 +1,231 @@
+canonical_name: "google5glab_us"
+version: 80000000006
+apns {
+  apn {
+    name: "internet.alkaa"
+    value: "internet.alkaa"
+    type: DEFAULT
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    profile_id: 0
+  }
+  apn {
+    name: "ims.alkaa"
+    value: "ims.alkaa"
+    type: IMS
+    protocol: IPV4V6
+    profile_id: 1
+  }
+  apn {
+    name: "em.alkaa"
+    value: "em.alkaa"
+    type: EMERGENCY
+    protocol: IPV4V6
+    profile_id: 2
+  }
+  apn {
+    name: "3g.alkaa"
+    value: "3g.alkaa"
+    type: DEFAULT
+    bearer_bitmask: "1|2|3|9|10|11|13|15"
+    profile_id: 3
+  }
+}
+configs {
+  config {
+    key: "bsf.bsf_server_fqdn_string"
+    text_value: "bsf.mtvt.ericsson.ca"
+  }
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 8090
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_vt_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_roaming_supported_3gpp_network_types_int_array"
+    int_array {
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_3gpp_network_types_int_array"
+    int_array {
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+    }
+  }
+  config {
+    key: "imsss.ut_as_server_fqdn_string"
+    text_value: "xcap.ims.ericsson.ca"
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 0
+      item: 1
+      item: 2
+      item: 3
+      item: 4
+      item: 5
+      item: 6
+      item: 7
+      item: 8
+      item: 9
+      item: 10
+      item: 11
+      item: 12
+      item: 13
+      item: 14
+      item: 15
+      item: 16
+      item: 17
+      item: 18
+      item: 19
+      item: 20
+      item: 21
+    }
+  }
+  config {
+    key: "imsvoice.audio_as_bandwidth_kbps_int"
+    int_value: 49
+  }
+  config {
+    key: "imsvoice.audio_rr_bandwidth_bps_int"
+    int_value: 3750
+  }
+  config {
+    key: "imsvoice.audio_rs_bandwidth_bps_int"
+    int_value: 1250
+  }
+  config {
+    key: "imsvt.h264_payload_description_bundle"
+    bundle {
+      config {
+        key: "115"
+        bundle {
+          config {
+            key: "imsvt.avc_sprop_parameter_sets_string"
+            text_value: "Z0LAFtoHgUZA,aM4G8g=="
+          }
+          config {
+            key: "imsvt.h264_video_codec_attribute_profile_level_id_string"
+            text_value: "42C01E"
+          }
+          config {
+            key: "imsvt.video_codec_attribute_frame_rate_int"
+            int_value: 24
+          }
+          config {
+            key: "imsvt.video_codec_attribute_packetization_mode_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvt.video_codec_attribute_resolution_int_array"
+            int_array {
+              item: 480
+              item: 640
+            }
+          }
+        }
+      }
+      config {
+        key: "116"
+        bundle {
+          config {
+            key: "imsvt.avc_sprop_parameter_sets_string"
+            text_value: "Z0LAFtoHgUZA,aM4G8g=="
+          }
+          config {
+            key: "imsvt.h264_video_codec_attribute_profile_level_id_string"
+            text_value: "42C01E"
+          }
+          config {
+            key: "imsvt.video_codec_attribute_frame_rate_int"
+            int_value: 20
+          }
+          config {
+            key: "imsvt.video_codec_attribute_packetization_mode_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvt.video_codec_attribute_resolution_int_array"
+            int_array {
+              item: 240
+              item: 320
+            }
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvt.video_as_bandwidth_kbps_int"
+    int_value: 512
+  }
+  config {
+    key: "imsvt.video_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvt.h264_payload_type_int_array"
+        int_array {
+          item: 115
+          item: 116
+        }
+      }
+    }
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1779121563
+}

@@ -1,0 +1,1 @@
+runtime_resource_overlay { name: "RilExtOverlayRRO", soc_specific: true, }

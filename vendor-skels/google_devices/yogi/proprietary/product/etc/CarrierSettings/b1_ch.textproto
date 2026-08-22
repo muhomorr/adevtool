@@ -1,0 +1,35 @@
+canonical_name: "b1_ch"
+version: 80000000005
+apns {
+  apn {
+    name: "MUCHO"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+    type: DUN
+    type: IA
+    user_editable: false
+  }
+  apn {
+    name: "ims"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "enabledMMS"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1775052027
+}
