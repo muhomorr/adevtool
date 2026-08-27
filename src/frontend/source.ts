@@ -15,7 +15,12 @@ import { BuildIndex, ImageType } from '../images/build-index'
 import { DeviceImage } from '../images/device-image'
 import { downloadDeviceImage } from '../images/download'
 import { exists, isDirectory, isFile, listFilesRecursive } from '../util/fs'
-import { UNPACKABLE_BOOT_PARTITION_IMAGES, UNPACKABLE_PARTITION_IMAGES } from '../util/partitions'
+import {
+  Partition,
+  STANDARD_PARTITION_IMAGES,
+  UNPACKABLE_BOOT_PARTITIONS,
+  UNPACKABLE_PARTITION_IMAGES,
+} from '../util/partitions'
 import { spawnAsync, spawnAsyncNoOut } from '../util/process'
 
 export interface DeviceImages {
@@ -93,7 +98,7 @@ export async function prepareDeviceImages(
       let dir = getUnpackedImageDirPath(imageToUnpack)
       images.unpackedFactoryImageDir = dir
 
-      if (await isFile(path.join(dir, 'dtbo.img'))) {
+      if (await isFile(path.join(dir, Partition.Dtbo + PARTITION_IMAGE_EXTENSION + PARTITION_SIZE_EXTENSION))) {
         return
       }
 
@@ -479,13 +484,11 @@ async function unpackFsImageZipEntry(entry: yauzl.Entry, unpackedTmpRoot: string
     return
   }
 
-  let expectedExt = '.img'
+  let expectedExt = PARTITION_IMAGE_EXTENSION
   let ext = path.extname(fsImageName)
   if (ext !== expectedExt) {
     return
   }
-
-  let fsImageBaseName = path.basename(fsImageName, expectedExt)
 
   // extract file system image file
   let readStream = await entry.openReadStream({ validateCrc32: false })
@@ -493,24 +496,48 @@ async function unpackFsImageZipEntry(entry: yauzl.Entry, unpackedTmpRoot: string
   let writeStream = (await fs.open(fsImagePath, 'w')).createWriteStream()
   await pipeline(readStream, writeStream)
 
-  if (!UNPACKABLE_PARTITION_IMAGES.has(fsImageBaseName)) {
-    return
+  if (await unpackFsImage(fsImagePath, unpackedTmpRoot)) {
+    await fs.rm(fsImagePath)
   }
+}
 
-  await unpackFsImage(fsImagePath, unpackedTmpRoot)
-  await fs.rm(fsImagePath)
+const PARTITION_IMAGE_EXTENSION = '.img'
+const PARTITION_SIZE_EXTENSION = '.part_size'
+const FS_TYPE_FILE_NAME_SUFFIX = '.fs_type'
+
+export async function getFsType(unpackedOsImagePath: string, partitionName: string) {
+  let filePath = path.join(unpackedOsImagePath, partitionName + PARTITION_IMAGE_EXTENSION + FS_TYPE_FILE_NAME_SUFFIX)
+  return await fs.readFile(filePath, 'utf8')
+}
+
+export async function hasStandardPartition(unpackedOsImagePath: string, partitionName: string) {
+  let filePath = path.join(unpackedOsImagePath, partitionName + PARTITION_IMAGE_EXTENSION + PARTITION_SIZE_EXTENSION)
+  return await isFile(filePath)
+}
+
+export async function getPartitionSize(unpackedOsImagePath: string, partitionName: string) {
+  let filePath = path.join(unpackedOsImagePath, partitionName + PARTITION_IMAGE_EXTENSION + PARTITION_SIZE_EXTENSION)
+  return parseInt(await fs.readFile(filePath, 'utf8'))
 }
 
 async function unpackFsImage(fsImagePath: string, baseDestinationDir: string) {
   let fsImageName = path.basename(fsImagePath)
 
-  let expectedExt = '.img'
   let ext = path.extname(fsImageName)
-  if (ext !== expectedExt) {
+  if (ext !== PARTITION_IMAGE_EXTENSION) {
     return false
   }
 
-  let fsImageBaseName = path.basename(fsImageName, expectedExt)
+  let fsImageBaseName = path.basename(fsImageName, PARTITION_IMAGE_EXTENSION)
+
+  if (!STANDARD_PARTITION_IMAGES.has(fsImageBaseName)) {
+    return false
+  }
+
+  await fs.writeFile(
+    path.join(baseDestinationDir, fsImageName + PARTITION_SIZE_EXTENSION),
+    (await fs.stat(fsImagePath)).size.toString(),
+  )
 
   if (!UNPACKABLE_PARTITION_IMAGES.has(fsImageBaseName)) {
     return false
@@ -519,12 +546,13 @@ async function unpackFsImage(fsImagePath: string, baseDestinationDir: string) {
   let destinationDir = path.join(baseDestinationDir, fsImageBaseName)
   await fs.mkdir(destinationDir)
 
-  if (UNPACKABLE_BOOT_PARTITION_IMAGES.has(fsImageBaseName)) {
+  if (UNPACKABLE_BOOT_PARTITIONS.has(fsImageBaseName)) {
     await unpackBootImage(fsImagePath, destinationDir)
     return true
   }
 
-  await dumpFsImage(fsImagePath, destinationDir)
+  let fsType = await dumpFsImage(fsImagePath, destinationDir)
+  await fs.writeFile(path.join(baseDestinationDir, fsImageName + FS_TYPE_FILE_NAME_SUFFIX), fsType)
 
   // unpack compressed APKs
   await Promise.all(
@@ -608,6 +636,7 @@ async function dumpFsImage(fsImagePath: string, destinationDir: string) {
     assert(fsType === FsType.EROFS)
     await dumpErofs(fsImagePath, destinationDir)
   }
+  return fsType
 }
 
 async function dumpExt4(fsImagePath: string, destinationDir: string) {

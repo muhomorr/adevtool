@@ -1,29 +1,5 @@
 include vendor/adevtool/config/mk/google_devices/common/BoardConfig-common.mk
 
-BOARD_GOOGLE_DYNAMIC_PARTITIONS_PARTITION_LIST := \
-    system \
-    system_dlkm \
-    system_ext \
-    product \
-    vendor \
-    vendor_dlkm
-
-# Set error limit to BOARD_SUPER_PARTITON_SIZE - 500MB
-BOARD_SUPER_PARTITION_ERROR_LIMIT := 8006926336
-
-# Build a separate system_dlkm partition
-BOARD_USES_SYSTEM_DLKMIMAGE := true
-BOARD_SYSTEM_DLKMIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_SYSTEM_DLKM := system_dlkm
-
-BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
-BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 0x800000
-BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 0x04000000
-BOARD_DTBOIMG_PARTITION_SIZE := 0x01000000
-
-# Build vendor kernel boot image
-BOARD_VENDOR_KERNEL_BOOTIMAGE_PARTITION_SIZE := 0x04000000
-
 BOARD_SYSTEM_KERNEL_MODULES_BLOCKLIST_FILE := $(KERNEL_MODULE_DIR)/system_dlkm.modules.blocklist
 
 # Kernel modules that are listed in vendor_kernel_boot.modules.load

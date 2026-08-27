@@ -5,6 +5,7 @@ import { getVersionCheckFilePath, VendorDirectories } from '../blobs/build'
 import { BlobEntry } from '../blobs/entry'
 import { PartPath } from '../blobs/file-list'
 import { KERNEL_DIR_RELATIVE_PATH } from '../blobs/kernel'
+import { getPartitionMakefileLines } from '../blobs/partition-images'
 import { DeviceConfig } from '../config/device'
 import { RELATIVE_ADEVTOOL_PATH } from '../config/paths'
 import { SystemState } from '../config/system-state'
@@ -407,26 +408,7 @@ export async function genBoardMakefile(
       ),
   )
 
-  let systemFsType = config.device.system_fs_type
-
-  let missingOtaParts = propResults.missingOtaParts
-
-  // Build vendor?
-  if (missingOtaParts.includes(Partition.Vendor)) {
-    blocks.push(`BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ${systemFsType}`)
-  }
-
-  // Build DLKM partitions?
-  if (missingOtaParts.includes(Partition.VendorDlkm)) {
-    blocks.push(`BOARD_USES_VENDOR_DLKMIMAGE := true
-BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := ${systemFsType}
-TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm`)
-  }
-  if (missingOtaParts.includes(Partition.OdmDlkm)) {
-    blocks.push(`BOARD_USES_ODM_DLKIMAGE := true
-BOARD_ODM_DLKIMAGE_FILE_SYSTEM_TYPE := ${systemFsType}
-TARGET_COPY_OUT_ODM_DLKM := odm_dlkm`)
-  }
+  blocks.push((await getPartitionMakefileLines(pathResolver.basePath)).join('\n'))
 
   for (let part of [Partition.VendorBoot, Partition.InitBoot]) {
     let filePath = path.join(pathResolver.basePath, part, MKBOOTIMG_ARGS_FILE_NAME)
@@ -504,7 +486,7 @@ TARGET_COPY_OUT_ODM_DLKM := odm_dlkm`)
   }
 
   if (!isForStateCollectionBuild) {
-    addContBlock(blocks, 'AB_OTA_PARTITIONS', missingOtaParts)
+    addContBlock(blocks, 'AB_OTA_PARTITIONS', propResults.missingOtaParts)
   }
 
   if (fwPaths !== null) {

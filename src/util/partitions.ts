@@ -294,44 +294,32 @@ export const ALL_SYS_PARTITIONS = new Set([Partition.System, ...EXT_PARTITIONS])
 export type RegularSysPartition = Partition.System | ExtSysPartition
 export const REGULAR_SYS_PARTITIONS = new Set([Partition.System, ...EXT_SYS_PARTITIONS])
 
-export type BootPartition =
-  | Partition.Boot
-  | Partition.Dt
-  | Partition.Dtbo
-  | Partition.InitBoot
-  | Partition.Ramdisk_16k
-  | Partition.VendorRamdisk
-  | Partition.VendorKernelBoot
-
-export const BOOT_PARTITIONS = new Set([
+export const UNPACKABLE_BOOT_PARTITIONS = new Set<string>([
   Partition.Boot,
   Partition.InitBoot,
   Partition.VendorBoot,
-  Partition.VendorRamdisk,
   Partition.VendorKernelBoot,
 ])
 
-export enum PartitionImage {
-  System = 'system',
-  SystemDlkm = 'system_dlkm',
-  SystemExt = 'system_ext',
-  Product = 'product',
-  Vendor = 'vendor',
-  VendorDlkm = 'vendor_dlkm',
-  Odm = 'odm',
-  OdmDlkm = 'odm_dlkm',
-}
-
-export enum BootPartitionImage {
-  Boot = 'boot',
-  InitBoot = 'init_boot',
-  VendorBoot = 'vendor_boot',
-  VendorKernelBoot = 'vendor_kernel_boot',
-}
-
-export const UNPACKABLE_PARTITION_IMAGES = new Set<string>([
-  ...Object.values(PartitionImage),
-  ...Object.values(BootPartitionImage),
+export const NON_UNPACKABLE_BOOT_PARTITIONS = new Set<string>([
+  Partition.Dt,
+  Partition.Dtbo,
+  Partition.PvmFw,
 ])
 
-export const UNPACKABLE_BOOT_PARTITION_IMAGES = new Set<string>(Object.values(BootPartitionImage))
+export const UNPACKABLE_PARTITION_IMAGES = new Set<string>([
+  Partition.System,
+  Partition.SystemDlkm,
+  Partition.SystemExt,
+  Partition.Product,
+  Partition.Vendor,
+  Partition.VendorDlkm,
+  Partition.Odm,
+  Partition.OdmDlkm,
+  ...UNPACKABLE_BOOT_PARTITIONS,
+])
+
+export const STANDARD_PARTITION_IMAGES = new Set<string>([
+  ...UNPACKABLE_PARTITION_IMAGES,
+  ...NON_UNPACKABLE_BOOT_PARTITIONS,
+])
