@@ -33,8 +33,6 @@ export interface DeviceConfig {
     name: string
     platform: string
     vendor: string
-    // file system type of OS partitions
-    system_fs_type: FsType
     build_id: string
     is_beta_build_id: boolean
     backport_build_id: string | undefined

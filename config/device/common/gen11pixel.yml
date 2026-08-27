@@ -3,5 +3,4 @@ includes:
 
 device:
   platform: malibu
-  system_fs_type: erofs
   build_id: CD1A.260714.001.A9
