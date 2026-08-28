@@ -36,10 +36,6 @@ BOARD_DO_NOT_STRIP_VENDOR_KERNEL_RAMDISK_MODULES := true
 KERNEL_MODULE_DIR := $(TARGET_KERNEL_DIR)
 KERNEL_MODULES := $(wildcard $(KERNEL_MODULE_DIR)/*.ko)
 
-
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(KERNEL_MODULE_DIR)/vendor_dlkm.modules.blocklist
-
-# Protected VM firmware
-BOARD_PVMFWIMAGE_PARTITION_SIZE := 0x00100000
 
 BOARD_VENDOR_SEPOLICY_DIRS += vendor/adevtool/config/mk/google_devices/common/sepolicy/vendor
