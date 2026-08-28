@@ -44,7 +44,18 @@ export async function getPartitionMakefileLines(unpackedOsImagePath: string) {
   assert(await isFile(superEmptyImg), superEmptyImg)
   let lpdumpBin = await getHostBinPath('lpdump')
   let dumpJson = await spawnAsync(lpdumpBin, ['--json', superEmptyImg])
-  let dump = JSON.parse(dumpJson) as LpDump
+  let dump = JSON.parse(dumpJson, (key, value) => {
+    switch (key) {
+      case 'alignment':
+      case 'block_size':
+      case 'maximum_size':
+      case 'size':
+      case 'total_size':
+        assert(typeof value === 'string', superEmptyImg)
+        return Number(value)
+    }
+    return value
+  }) as LpDump
 
   let slots = ['_a', '_b']
 
@@ -55,14 +66,12 @@ export async function getPartitionMakefileLines(unpackedOsImagePath: string) {
     assert(dump.block_devices.length === 1, superEmptyImg)
     let superBlockDevice = dump.block_devices[0]
     assert(superBlockDevice.name === 'super', superEmptyImg)
-    assert(superBlockDevice.block_size == 4096, superEmptyImg)
-    assert(superBlockDevice.alignment == 1048576, superEmptyImg)
+    assert(superBlockDevice.block_size === 4096, superEmptyImg)
+    assert(superBlockDevice.alignment === 1048576, superEmptyImg)
     assert(superBlockDevice.size > 0, superEmptyImg)
-    assert(dump.super_device.total_size == superBlockDevice.size, superEmptyImg)
+    assert(dump.super_device.total_size === superBlockDevice.size, superEmptyImg)
     res.push('BOARD_SUPER_PARTITION_SIZE := ' + superBlockDevice.size)
-    res.push(
-      'BOARD_SUPER_PARTITION_ERROR_LIMIT := ' + (superBlockDevice.size - /* 500 MiB */ 500 * (1 << 20)),
-    )
+    res.push('BOARD_SUPER_PARTITION_ERROR_LIMIT := ' + (superBlockDevice.size - /* 500 MiB */ 500 * (1 << 20)))
   }
   {
     let groupsByName = _.keyBy(dump.groups, 'name')
