@@ -12,7 +12,7 @@ import { assertDefined, mapGet, updateMultiMap, updateMultiSet } from '../util/d
 import { isDirectory, isFile, listFilesRecursive, readFile } from '../util/fs'
 import { spawnGit, spawnGitNoOut } from '../util/git'
 import { log } from '../util/log'
-import { spawnAsync2, spawnAsyncNoOut, spawnAsyncStdin } from '../util/process'
+import { spawnAsync2, spawnAsyncNoOut, spawnAsyncStdin, spawnAsyncUnchecked } from '../util/process'
 import { ManifestConfig } from './generate-manifest'
 
 export class ApplyBulletinPatches extends Command {
@@ -224,6 +224,47 @@ export class ApplyBulletinPatches extends Command {
           yearMonth + '-android-bulletin-partner-preview' + nameInfix + '-patches.zip',
         )
         assert(await isFile(patchesZip), patchesZip)
+        {
+          let patchesZipSig = patchesZip + '.asc'
+          assert(await isFile(patchesZipSig), patchesZipSig)
+          let gpgRes = await spawnAsyncUnchecked({
+            command: 'gpg',
+            args: ['--status-fd', '1', '--batch', '--no-tty', '--verify', patchesZipSig, patchesZip],
+          })
+          let gpgStatus = gpgRes.stdout.toString()
+          let gpgErrMsg = () => {
+            let head = `Signature verification failed for ${path.basename(patchesZip)} inside ${bulletinSrc}.`
+            let gpgOut = `GPG status:
+${gpgStatus}
+GPG log:
+${gpgRes.stderr.toString()}`
+            if (gpgStatus.includes('[GNUPG:] NO_PUBKEY')) {
+              return `${head}
+
+Check whether Google's public keys are imported into local GPG keyring. Google's public key can be fetched from https://services.google.com/corporate/publickey.txt
+
+${gpgOut}`
+            } else {
+              return head + '\n' + gpgOut
+            }
+          }
+          if (gpgRes.exitCode !== 0) {
+            throw new Error(gpgErrMsg())
+          }
+          let gpgLines = gpgStatus.split('\n')
+          if (
+            !gpgLines.includes('[GNUPG:] GOODSIG 7A05683927600322 Android Security (Bulletins) <security@android.com>')
+          ) {
+            throw new Error(gpgErrMsg())
+          }
+          let validSigLine = gpgLines.find(l =>
+            l.startsWith('[GNUPG:] VALIDSIG 4E93FA977B2160FDE4330AAC7A05683927600322 '),
+          )
+          if (validSigLine === undefined || !validSigLine.endsWith(' 4E93FA977B2160FDE4330AAC7A05683927600322')) {
+            throw new Error(gpgErrMsg())
+          }
+          log(`${path.basename(patchesZip)}: ${validSigLine}`)
+        }
         let res = await spawnAsync2({
           command: '/bin/unzip',
           args: ['-q', patchesZip],
