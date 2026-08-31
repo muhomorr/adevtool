@@ -483,6 +483,7 @@ export class ApplyBulletinPatches extends Command {
           'format-patch',
           '--keep-subject',
           '--zero-commit',
+          '--full-index',
           '--no-signature',
           '--output-directory',
           path.join(processedPatchesDir, e.path),
