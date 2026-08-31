@@ -223,7 +223,7 @@ export class ApplyBulletinPatches extends Command {
           basePath,
           yearMonth + '-android-bulletin-partner-preview' + nameInfix + '-patches.zip',
         )
-        assert(await isFile(patchIndexJsonPath), patchesZip)
+        assert(await isFile(patchesZip), patchesZip)
         let res = await spawnAsync2({
           command: '/bin/unzip',
           args: ['-q', patchesZip],
