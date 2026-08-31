@@ -1,7 +1,8 @@
 import assert from 'assert'
-import child_process, { SpawnOptions } from 'child_process'
+import child_process, { IOType, SpawnOptions } from 'child_process'
 import { promises as fs } from 'fs'
 import { FileHandle } from 'fs/promises'
+import { maybePlural } from './cli'
 import { assertNonNull } from './data'
 
 export async function spawnAsyncNoOut(
@@ -19,8 +20,7 @@ export async function spawnAsyncStdin(
   stdinData: Buffer,
   isStderrLineAllowed?: (s: string) => boolean,
 ) {
-  let stdout = await spawnAsync(command, args, isStderrLineAllowed, stdinData)
-  return stdout
+  return await spawnAsync(command, args, isStderrLineAllowed, stdinData)
 }
 
 export async function spawnAsync(
@@ -33,21 +33,64 @@ export async function spawnAsync(
   return (await spawnAsync2({ command, args, isStderrLineAllowed, stdinData, allowedExitCodes })).toString()
 }
 
-export interface SpawnCmd {
+export interface BaseSpawnCmd {
   command: string
   args: ReadonlyArray<string>
-  isStderrLineAllowed?: (s: string) => boolean
   stdinData?: Buffer
   stdinFileSource?: string
   stdoutFileSink?: string
   spawnOpts?: SpawnOptions
   handleStdoutBuffer?: (buf: Buffer) => void
+}
+
+export interface SpawnCmd extends BaseSpawnCmd {
+  isStderrLineAllowed?: (s: string) => boolean
   allowedExitCodes?: number[]
+}
+
+export interface SpawnResult {
+  readonly spawnargs: string[]
+  readonly exitCode: number
+  readonly stdout: Buffer<ArrayBuffer>
+  readonly stderr: Buffer<ArrayBuffer>
 }
 
 // Returns stdout. If there's stderr output, all lines of it should pass the isStderrLineAllowed check
 export async function spawnAsync2(cmd: SpawnCmd) {
-  let spawnOpts = cmd.spawnOpts ?? {} as SpawnOptions
+  let res = await spawnAsyncUnchecked(cmd)
+
+  let allowedExitCodes = cmd.allowedExitCodes ?? [0]
+  if (!allowedExitCodes.includes(res.exitCode)) {
+    throw new Error(
+      spawnargsStr(res.spawnargs) +
+        ' returned ' +
+        res.exitCode +
+        (res.stderr.length > 0 ? ', stderr: ' + res.stderr.toString() : ''),
+    )
+  }
+
+  if (res.stderr.length === 0) {
+    return res.stdout
+  }
+
+  let stderr = res.stderr.toString()
+  let isStderrLineAllowed = cmd.isStderrLineAllowed
+  if (isStderrLineAllowed === undefined) {
+    throw new Error(spawnargsStr(res.spawnargs) + ': unexpected stderr ' + stderr)
+  }
+  let unexpectedLines = stderr.split('\n').filter(line => line.length !== 0 && !isStderrLineAllowed(line))
+  if (unexpectedLines.length > 0) {
+    throw new Error(
+      spawnargsStr(res.spawnargs) +
+        `: unexpected stderr line${maybePlural(unexpectedLines)}:\n` +
+        unexpectedLines.join('\n'),
+    )
+  }
+  return res.stdout
+}
+
+export async function spawnAsyncUnchecked(cmd: BaseSpawnCmd) {
+  let spawnOpts = cmd.spawnOpts ?? ({} as SpawnOptions)
   let fileHandles: FileHandle[] = []
   if (cmd.stdinFileSource !== undefined) {
     let fh = await fs.open(cmd.stdinFileSource, 'r')
@@ -55,7 +98,8 @@ export async function spawnAsync2(cmd: SpawnCmd) {
     spawnOpts.stdio = [fh.fd, 'pipe', 'pipe']
   }
   if (cmd.stdoutFileSink !== undefined) {
-    let stdio = spawnOpts.stdio ?? ['pipe', 'pipe', 'pipe']
+    assert(spawnOpts.stdio === undefined || Array.isArray(spawnOpts.stdio))
+    let stdio = (spawnOpts.stdio as Array<IOType | number>) ?? ['pipe', 'pipe', 'pipe']
     let fh = await fs.open(cmd.stdoutFileSink, 'w')
     fileHandles.push(fh)
     stdio[1] = fh.fd
@@ -69,7 +113,9 @@ export async function spawnAsync2(cmd: SpawnCmd) {
     stdin.end()
   }
 
-  let promise = new Promise((resolve, reject) => {
+  return new Promise<SpawnResult>((resolve, reject) => {
+    proc.on('error', err => reject(err))
+
     let stdoutBufs: Buffer[] = []
     let stderrBufs: Buffer[] = []
 
@@ -90,34 +136,18 @@ export async function spawnAsync2(cmd: SpawnCmd) {
       for (let fd of fileHandles) {
         fd.close()
       }
-      let stderr = ''
-
-      if (stderrBufs.length > 0) {
-        stderr = Buffer.concat(stderrBufs).toString()
-      }
-
-      let allowedExitCodes = cmd.allowedExitCodes ?? [0]
-
-      if (code !== null && allowedExitCodes.includes(code)) {
-        if (stderr.length > 0) {
-          if (cmd.isStderrLineAllowed === undefined) {
-            reject(new Error('unexpected stderr ' + stderr))
-          } else {
-            for (let line of stderr.split('\n')) {
-              if (line.length > 0 && !cmd.isStderrLineAllowed(line)) {
-                reject(new Error('unexpected stderr line ' + line))
-              }
-            }
-          }
-        }
-        resolve(Buffer.concat(stdoutBufs))
+      if (code === null) {
+        reject(new Error(spawnargsStr(proc.spawnargs) + ' returned a null exit code'))
       } else {
-        reject(new Error(proc.spawnargs + ' returned ' + code + (stderr.length > 0 ? ', stderr: ' + stderr : '')))
+        resolve({
+          spawnargs: proc.spawnargs,
+          exitCode: code,
+          stdout: Buffer.concat(stdoutBufs),
+          stderr: Buffer.concat(stderrBufs),
+        })
       }
     })
   })
-
-  return promise as Promise<Buffer>
 }
 
 export function lastLine(buf: Buffer) {
@@ -140,4 +170,8 @@ export function lastLine(buf: Buffer) {
     return str.slice(start, end)
   }
   return ''
+}
+
+function spawnargsStr(spawnargs: string[]) {
+  return "'" + spawnargs.join(' ') + "'"
 }
