@@ -151,14 +151,26 @@ export class ApplyBulletinPatches extends Command {
                 throw new Error('invalid versions dir ' + versionsDir + ' ; ' + versions)
               }
             }
-            let latestVersionDir = path.join(versionsDir, versions[versions.length - 1])
-
+            let latestVersionDir: string
             let patchesIndexSuffix = '-patches-index.json'
-            let indices = (await fs.readdir(latestVersionDir))
-              .filter(e => e.endsWith(patchesIndexSuffix))
-              .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
-            assert(indices.length > 0, latestVersionDir)
-            log('found ' + indices[indices.length - 1])
+            let indices: string[]
+            for (;;) {
+              let versionDirName = assertDefined(versions.pop())
+              latestVersionDir = path.join(versionsDir, versionDirName)
+              let relVersionDirPath = path.relative(bpbDir, latestVersionDir)
+              indices = (await fs.readdir(latestVersionDir))
+                .filter(e => e.endsWith(patchesIndexSuffix))
+                .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+              if (indices.length === 0) {
+                log(relVersionDirPath + ' does not include a patch-index file')
+                if (versions.length === 0) {
+                  throw new Error('all versions lack a patch-index file in versions dir ' + versionsDir)
+                }
+                continue
+              }
+              log('found ' + indices[indices.length - 1] + ' in ' + relVersionDirPath)
+              break
+            }
 
             let indexName = indices[indices.length - 1]
             let baseName = indexName.slice(0, -patchesIndexSuffix.length)
