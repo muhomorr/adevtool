@@ -7,7 +7,6 @@
         <item>@string/color_mode_option_natural</item>
         <item>@string/color_mode_option_boosted</item>
         <item>@string/color_mode_option_boosted</item>
-        <item>@string/color_mode_option_saturated</item>
         <item>@string/color_mode_option_automatic</item>
     </string-array>
     <!-- Display settings screen, Color mode options. Must be the same length and order as
@@ -22,8 +21,6 @@
         <item>1</item>
         <!-- gs101-specific boosted color mode-->
         <item>256</item>
-        <!-- COLOR_MODE_SATURATED-->
-        <item>2</item>
         <!-- COLOR_MODE_AUTOMATIC-->
         <item>3</item>
     </integer-array>
