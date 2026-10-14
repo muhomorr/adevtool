@@ -23,6 +23,8 @@ PRODUCT_MODEL := Pixel 7
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
 
+$(call soong_config_set,bootanimation_zip,canvas_size,1080)
+
 PRODUCT_SHIPPING_API_LEVEL := 33
 TARGET_BOOTLOADER_BOARD_NAME := panther
 TARGET_SCREEN_DENSITY := 420

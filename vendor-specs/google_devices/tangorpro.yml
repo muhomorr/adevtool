@@ -6329,7 +6329,7 @@ sysprop: dir
 sysprop/product.prop: 717f11ff4fa0fcdd728db2a6ec39029d910733b90950693f47cc826075242a53
 sysprop/system_ext.prop: 0edea4b06dc375aa3b8a3c05de71899ebcecfe02539e831e53d431d190aa718a
 sysprop/vendor.prop: 624b8dbd4fd829e700cceb3a25ae4e0124125490b3ab6554b48e0f47a1a6b8c0
-tangorpro.mk: aa9582f3d230fea74248155a9218ac03c3077d6c5cb16abb5b461bb3cac9a175
+tangorpro.mk: 799b5194ac16c7b56ad396a55fd63a543bcfc70b56b178b5ecb11d1633995dce
 vintf: dir
 vintf/Android.bp: c9ffd08891ecb53ae8e9094354e795dd69f8739b43792c4ad4b3bc7c768affcf
 vintf/product: dir

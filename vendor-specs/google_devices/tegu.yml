@@ -23,7 +23,7 @@ firmware/radio.img: f67042883998e2079aafcddc0aeaae6064dc7278c1b73877fe223e00edcc
 firmware/tzsw.img: 182b00d4274b5e75a227048e2840901b48ab04fee33b6e7a60c23b87ce8b26b6
 gservices-flags: dir
 gservices-flags/Android.bp: 94473cf2b0c7f85669a03be61380c939f4b7fb2049b0a64560b2d0b6b80c4610
-gservices-flags/flags.txt: 0493ae1ff11862430163524b421bf6ad6a5ab9249771851c8b4a12c32934a1e5
+gservices-flags/flags.txt: 0abb56972192c9211d7f7a8f26ccc9025b8435be3939e2ac7b35100d0dab7dc5
 overlays: dir
 overlays/AdaptiveHapticsTeguOverlay: dir
 overlays/AdaptiveHapticsTeguOverlay/Android.bp: 7516e16fea9cd621311e591c4c26072918f46c741db8dfed1e84b984eea9db72
@@ -6289,7 +6289,7 @@ sysprop: dir
 sysprop/product.prop: 6c36d835587304e7a22607c3098cf9fe9776222f2220a4cef2800f4f85bf7aa8
 sysprop/system_ext.prop: 24b7e6e3078f9563354b69ee741b824a6b81fed4747c32ba7ce77b696b67584c
 sysprop/vendor.prop: 00fe4b6c7aa111f7e2697329a7a4701cf68528167e12c82bd9fb55ace1726cd5
-tegu.mk: 3719cf0f2d7474018ca7fa79b009805b69f4098b4562aa93d50f79de0baa693a
+tegu.mk: d8a5ca25e59dce7e42b578e76f272598adb42392211b13e9b5d0fc5389ce5223
 vintf: dir
 vintf/Android.bp: c9ffd08891ecb53ae8e9094354e795dd69f8739b43792c4ad4b3bc7c768affcf
 vintf/product: dir

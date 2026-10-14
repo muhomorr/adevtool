@@ -23,6 +23,8 @@ PRODUCT_MODEL := Pixel 6
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
 
+$(call soong_config_set,bootanimation_zip,canvas_size,1080)
+
 PRODUCT_SHIPPING_API_LEVEL := 31
 TARGET_BOOTLOADER_BOARD_NAME := oriole
 TARGET_SCREEN_DENSITY := 420

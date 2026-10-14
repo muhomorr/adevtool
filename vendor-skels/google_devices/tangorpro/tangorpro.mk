@@ -22,6 +22,8 @@ PRODUCT_MODEL := Pixel Tablet
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
 
+$(call soong_config_set,bootanimation_zip,canvas_size,1600)
+
 PRODUCT_SHIPPING_API_LEVEL := 33
 TARGET_BOOTLOADER_BOARD_NAME := tangorpro
 TARGET_SCREEN_DENSITY := 320

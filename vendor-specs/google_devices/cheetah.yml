@@ -5,7 +5,7 @@ README.md: b90194d0c8cb88f06c70ddd46cfa92a28b11ee252f7d70808e7f07142b17bdc8
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
 apk-parser-config/apk-parser-config.pb: c56a2d3809aa83bc13fae1b8410f1b69ef5a030a86ab246d5a289752fdb65c63
-cheetah.mk: 7fc5a1df38a2b53211d6c296ce86a8c61691ccb249256ac1f85fcb7360594f60
+cheetah.mk: 1c42d2d8e09d5252424d16ec8c568a3f2d975360fb098cc563c0073fdd2dc6ab
 cmds-for-envsetup.sh: fb4bd526e4529d3e7a6ca1cd1dafdb61bb68e7584edfbb822a5f25aa92652a48
 firmware: dir
 firmware/abl.img: 5ad783500a2aff13c6c4d4336a2636eb78de71b6dd924121ef889a39d4648cd1

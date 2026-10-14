@@ -23,6 +23,8 @@ PRODUCT_MODEL := Pixel 8 Pro
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
 
+$(call soong_config_set,bootanimation_zip,canvas_size,1344)
+
 PRODUCT_BRAND_FOR_ATTESTATION := google
 PRODUCT_DEVICE_FOR_ATTESTATION := husky
 PRODUCT_MANUFACTURER_FOR_ATTESTATION := Google

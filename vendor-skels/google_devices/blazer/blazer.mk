@@ -23,6 +23,8 @@ PRODUCT_MODEL := Pixel 10 Pro
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
 
+$(call soong_config_set,bootanimation_zip,canvas_size,1280)
+
 PRODUCT_BRAND_FOR_ATTESTATION := google
 PRODUCT_DEVICE_FOR_ATTESTATION := blazer
 PRODUCT_MANUFACTURER_FOR_ATTESTATION := Google
