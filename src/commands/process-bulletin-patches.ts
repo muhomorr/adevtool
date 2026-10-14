@@ -609,10 +609,12 @@ ${gpgOut}`
         }),
       )
 
+      let collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' })
+
       let cveInfoStr =
         Array.from(cveInfoMap.entries())
           .map(([severity, cves]) => {
-            return severity + '\n' + Array.from(cves).toSorted().join('\n')
+            return severity + '\n' + Array.from(cves).toSorted(collator.compare).join('\n')
           })
           .toSorted()
           .join('\n\n') + '\n'
@@ -623,7 +625,13 @@ ${gpgOut}`
             if (severity === 'Unknown') {
               severity = 'Unclassified'
             }
-            return '                        <li>' + severity + ': ' + Array.from(cves).toSorted().join(', ') + '</li>'
+            return (
+              '                        <li>' +
+              severity +
+              ': ' +
+              Array.from(cves).toSorted(collator.compare).join(', ') +
+              '</li>'
+            )
           })
           .toSorted()
           .join('\n') + '\n'
