@@ -619,7 +619,20 @@ ${gpgOut}`
           .toSorted()
           .join('\n\n') + '\n'
       await fs.writeFile(path.join(processedPatchesDir, 'cve-info.txt'), cveInfoStr)
+
+      let androidVersion = baseAndroidVersion.toUpperCase().replaceAll('.0.0', '').replaceAll('-', ' ')
+      let months = bulletinDirs
+        .map(dir => dir.yearMonth)
+        .toSorted()
+        .map(s => getYearMonthFull(s))
+      assert(months.length >= 2)
+      let monthsList = months.slice(0, -1).join(', ') + ' and ' + months[months.length - 1]
       let cveInfoHtml =
+        '                    ' +
+        `<p>All of the Android ${androidVersion} security patches from the current ${monthsList} ` +
+        `Android Security Bulletins are included in the security preview release. List of additional fixed CVEs:</p>` +
+        '\n\n                    <ul>\n'
+      cveInfoHtml +=
         Array.from(cveInfoMap.entries())
           .map(([severity, cves]) => {
             if (severity === 'Unknown') {
@@ -634,7 +647,7 @@ ${gpgOut}`
             )
           })
           .toSorted()
-          .join('\n') + '\n'
+          .join('\n') + '\n                    </ul>\n'
       await fs.writeFile(path.join(processedPatchesDir, 'cve-info-html-fragment.txt'), cveInfoHtml)
     }
 
@@ -798,6 +811,14 @@ async function pruneUnusedSkipEntries(skippedPatchesDir: PatchesDir, usedSkipEnt
       log('removed empty patches-to-skip dir: ' + path.relative(dirPath, dir))
     })
   }
+}
+
+function getYearMonthFull(yearMonth: string) {
+  let parts = yearMonth.split('-')
+  assert(parts.length === 2, yearMonth)
+  let monthNumber = Number(parts[1])
+  let date = new Date(2000, monthNumber - 1, 1)
+  return date.toLocaleString('en-US', { month: 'long' }) + ' ' + parts[0]
 }
 
 enum BulletinType {
