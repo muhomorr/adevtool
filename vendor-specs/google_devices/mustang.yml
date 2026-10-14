@@ -37,7 +37,7 @@ firmware/tzsw.img: 012ff7fe2006629124990fcf587e1d212b298d6344167dd7f6e3cf4e7651a
 gservices-flags: dir
 gservices-flags/Android.bp: 94473cf2b0c7f85669a03be61380c939f4b7fb2049b0a64560b2d0b6b80c4610
 gservices-flags/flags.txt: 01153ea2667c6cbb838fe6adad958a9af5432970deb58cd059622c5dc1e755ab
-mustang.mk: 76fb32fb05849fc535eb26b2fe7e80138b9bd5a233bf11b56ded0458f7169daf
+mustang.mk: f5a155ee851419dbc161382d0f428cc81ba7fff4ddfd4ba68a3febd1678ca75b
 overlays: dir
 overlays/AmbientCueOverlay: dir
 overlays/AmbientCueOverlay/Android.bp: 1d197f1edf799e16ab7788bddc38254286b520466f6209b5d32aaf8d41913ea4

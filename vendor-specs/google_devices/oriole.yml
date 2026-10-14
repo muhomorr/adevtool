@@ -22,7 +22,7 @@ firmware/tzsw.img: 9e533484ea491a13c37d76a84a573a763dd007e307d0d9f3ccf11917966ac
 gservices-flags: dir
 gservices-flags/Android.bp: 94473cf2b0c7f85669a03be61380c939f4b7fb2049b0a64560b2d0b6b80c4610
 gservices-flags/flags.txt: 3f8ff3f302b84410b908971ae859130b0b299d4e2da963d6593135c736c070ae
-oriole.mk: aad8d982b1519d5b80f42fae3c176f5df64ab2b22da9aa5b4b5c5279f11b3eb1
+oriole.mk: 76a95fa6ba6f6b4d33083c4122836009cdcb6546df3d6cdc1bc794a732d95d39
 overlays: dir
 overlays/Android.bp: c9ffd08891ecb53ae8e9094354e795dd69f8739b43792c4ad4b3bc7c768affcf
 overlays/CellBroadcastReceiverOverlay: dir

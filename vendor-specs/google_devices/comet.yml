@@ -6,7 +6,7 @@ apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
 apk-parser-config/apk-parser-config.pb: b61e185366238acddbf83337c8a9465e673cf8fc8d45e61b7c249fcd2d883224
 cmds-for-envsetup.sh: 70ecfb4f4fc97e5e703b1aa56362c5167950118784d224e0db52b56b41da1034
-comet.mk: 68529eb26608e64ea7c58925484cecf9c8a75a21f8aa1aeba08b41c4d3a87bdb
+comet.mk: 0d73aa695ea9e6f9f424e4411860980dbf3ac3e44d7230f1047ceddd83042ef6
 firmware: dir
 firmware/abl.img: 7acae28ed682b0281461f1160e360a8ce328f1404d49a2cdf3851d6973163fc8
 firmware/android-info.txt: df9568d639c86923562e76a640731d7ef20c8839e546ffd8c64c2ea8888cdc43
@@ -24,7 +24,7 @@ firmware/radio.img: eb256a7362fcb5277f6a71e91798494ab1cc22525598d86c477c8e5d5b73
 firmware/tzsw.img: f4e925a875171956ede2df832aad19e7ae99f5d5089cec18cd62864f56c40231
 gservices-flags: dir
 gservices-flags/Android.bp: 94473cf2b0c7f85669a03be61380c939f4b7fb2049b0a64560b2d0b6b80c4610
-gservices-flags/flags.txt: 41d5c404393ba12567b7cda397fee6f6b29bc083a7a53ff9f4bfddb022337636
+gservices-flags/flags.txt: b6a82df80381504f538c521c521dd406f935cc7bde1d6ec18c872f2904f0264b
 overlays: dir
 overlays/Android.bp: c9ffd08891ecb53ae8e9094354e795dd69f8739b43792c4ad4b3bc7c768affcf
 overlays/CellBroadcastReceiverOverlay: dir

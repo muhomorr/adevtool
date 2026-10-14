@@ -5,7 +5,7 @@ README.md: 982cac6e61cdbf5cd9c3dc0fdc543d18a7c70cc153e5a79ec5c7031ab6687f07
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
 apk-parser-config/apk-parser-config.pb: a6a28077b614b28845f7db8d2bb0a6ef9a8bd1e3f61c8380888ab1ff92ff47f2
-bluejay.mk: 6b20cea998c085cd44e07feee36df85fe5927a1110f1e1070da6dff1a5c2ab88
+bluejay.mk: 9e740adf0d1b175f10fccdc1524d3dc39de79175963d9e22067d16a5e35a18cf
 cmds-for-envsetup.sh: 04e8095efdfd2cc2a02704dea67225e5162163d802274062ae8579377900acc9
 firmware: dir
 firmware/abl.img: f4928f9f90a49b5bdb655d0d8d73af3a5d43e7f1b1cef05a1bf6106bbe6ded0b

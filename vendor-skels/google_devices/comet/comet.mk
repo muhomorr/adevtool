@@ -23,6 +23,8 @@ PRODUCT_MODEL := Pixel 9 Pro Fold
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
 
+$(call soong_config_set,bootanimation_zip,canvas_size,1080)
+
 PRODUCT_BRAND_FOR_ATTESTATION := google
 PRODUCT_DEVICE_FOR_ATTESTATION := comet
 PRODUCT_MANUFACTURER_FOR_ATTESTATION := Google

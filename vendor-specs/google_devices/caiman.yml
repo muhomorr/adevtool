@@ -5,7 +5,7 @@ README.md: fe4b06af3237c7bd41dfd0591ef37b487b46837830aba990607367cf40dd2727
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
 apk-parser-config/apk-parser-config.pb: 6882cf5f27d74b32c11647516496abf0dfa60b165255e6af05d96db2de2aa683
-caiman.mk: 8c77c4e636d20206d88da30be96f563f466e95de789f5326ac822f97c93fb463
+caiman.mk: 9bc152cde95036e12b875fb7772aac8c0107ce5f47e306bc4c3298a60205b49c
 cmds-for-envsetup.sh: 86f7297e23402dfa7a3e6e7ac4187abbb7aca0fea18cd7d68d337075c99dadfa
 firmware: dir
 firmware/abl.img: 19accd9e6fd423e79bac7741e6710cf3303b7a388d85dd31094fa00269e6c70a
@@ -24,7 +24,7 @@ firmware/radio.img: eb256a7362fcb5277f6a71e91798494ab1cc22525598d86c477c8e5d5b73
 firmware/tzsw.img: 14b9ed8f8b1daf05c09092615ff2a4bd724b6a25bcc8fc552496de8ae766efd2
 gservices-flags: dir
 gservices-flags/Android.bp: 94473cf2b0c7f85669a03be61380c939f4b7fb2049b0a64560b2d0b6b80c4610
-gservices-flags/flags.txt: 41d5c404393ba12567b7cda397fee6f6b29bc083a7a53ff9f4bfddb022337636
+gservices-flags/flags.txt: b6a82df80381504f538c521c521dd406f935cc7bde1d6ec18c872f2904f0264b
 overlays: dir
 overlays/Android.bp: c9ffd08891ecb53ae8e9094354e795dd69f8739b43792c4ad4b3bc7c768affcf
 overlays/CellBroadcastReceiverOverlay: dir

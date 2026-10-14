@@ -5571,7 +5571,7 @@ proprietary/vendor_ramdisk/lib/firmware/drv2624.bin: 6f2fc984f141b6fbbe740c69682
 proprietary/vendor_ramdisk/system: dir
 proprietary/vendor_ramdisk/system/etc: dir
 proprietary/vendor_ramdisk/system/etc/fstab.gs101: 492ee89dd2bc92c428740612f0219a5d5611207bfb736d1228b631a8310b2953
-raven.mk: 185a6d944a1a6181813fbf1d0cbc43d9f2a7854aed60708c4273c1902615f494
+raven.mk: 3b3c6af83525c9795d776ce363c759a41293b6ff479a19ae1c515ceb54b9b249
 sepolicy: dir
 sepolicy/product: dir
 sepolicy/product/private: dir

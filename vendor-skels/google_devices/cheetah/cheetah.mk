@@ -23,6 +23,8 @@ PRODUCT_MODEL := Pixel 7 Pro
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
 
+$(call soong_config_set,bootanimation_zip,canvas_size,1440)
+
 PRODUCT_SHIPPING_API_LEVEL := 33
 TARGET_BOOTLOADER_BOARD_NAME := cheetah
 TARGET_SCREEN_DENSITY := 560

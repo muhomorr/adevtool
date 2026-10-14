@@ -23,7 +23,7 @@ firmware/radio.img: eb256a7362fcb5277f6a71e91798494ab1cc22525598d86c477c8e5d5b73
 firmware/tzsw.img: 14b9ed8f8b1daf05c09092615ff2a4bd724b6a25bcc8fc552496de8ae766efd2
 gservices-flags: dir
 gservices-flags/Android.bp: 94473cf2b0c7f85669a03be61380c939f4b7fb2049b0a64560b2d0b6b80c4610
-gservices-flags/flags.txt: 41d5c404393ba12567b7cda397fee6f6b29bc083a7a53ff9f4bfddb022337636
+gservices-flags/flags.txt: b6a82df80381504f538c521c521dd406f935cc7bde1d6ec18c872f2904f0264b
 overlays: dir
 overlays/Android.bp: c9ffd08891ecb53ae8e9094354e795dd69f8739b43792c4ad4b3bc7c768affcf
 overlays/CellBroadcastReceiverOverlay: dir
@@ -7769,7 +7769,7 @@ sysprop: dir
 sysprop/product.prop: 231048916374611a4232284c1c75776bdcf90f03990a1a6a0f1e5cb864a19d7a
 sysprop/system_ext.prop: 24b7e6e3078f9563354b69ee741b824a6b81fed4747c32ba7ce77b696b67584c
 sysprop/vendor.prop: 6970d456da51e199552d3f7eded1a6ac11b6ba6b5571b1f9e2d3fbfa00651141
-tokay.mk: 8b6081f7ba4e5745ccdcd9d9a9181a93e77bb011620450195f61d7bb4ae3662c
+tokay.mk: 20baf6dba4f4686648c165b5124b8801e68dec76dcac379bd90035677ac777b1
 vintf: dir
 vintf/Android.bp: c9ffd08891ecb53ae8e9094354e795dd69f8739b43792c4ad4b3bc7c768affcf
 vintf/product: dir
